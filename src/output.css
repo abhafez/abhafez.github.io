@@ -44,12 +44,17 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
+    --color-twitter: #1da1f2;
     --color-meta-light: #818182;
     --color-meta: #52525B;
     --color-box: #F4F4F5;
     --color-primary-title: #6639c6;
+    --color-primary-200: #321F6B;
+    --color-primary-300: #56369B;
     --color-text: #311e6a;
     --color-sep: #d4d4d8;
+    --color-dark: #09090B;
+    --color-category-1: #441457;
   }
 }
 @layer base {
@@ -533,6 +538,9 @@
   }
   .bg-\[\#574381\] {
     background-color: #574381;
+  }
+  .bg-\[\#D2A8FF\] {
+    background-color: #D2A8FF;
   }
   .bg-box {
     background-color: var(--color-box);
