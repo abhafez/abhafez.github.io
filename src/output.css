@@ -58,14 +58,19 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
+    --color-twitter: #1da1f2;
     --color-meta-light: #818182;
     --color-meta: #52525B;
     --color-box: #F4F4F5;
     --color-primary-title: #6639c6;
+    --color-primary-200: #321F6B;
+    --color-primary-300: #56369B;
     --color-text: #311e6a;
     --color-sep: #d4d4d8;
+    --color-dark: #09090B;
     --color-green: #20B486;
     --color-teal-box: #A3DEE0;
+    --color-category-1: #441457;
   }
 }
 @layer base {
@@ -314,6 +319,9 @@
   }
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
+  }
+  .mt-6 {
+    margin-top: calc(var(--spacing) * 6);
   }
   .mt-16 {
     margin-top: calc(var(--spacing) * 16);
