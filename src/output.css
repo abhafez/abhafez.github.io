@@ -54,18 +54,19 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
+    --color-sep: #d4d4d8;
+    --color-box: #F4F4F5;
     --color-meta-light: #818182;
     --color-meta: #52525B;
-    --color-box: #F4F4F5;
     --color-primary-title: #6639c6;
     --color-primary-200: #321F6B;
     --color-text: #311e6a;
-    --color-sep: #d4d4d8;
     --color-meta-dark: #d2d2d5;
+    --color-meta-light-2: #A1A1AA;
     --color-box-2: #242429;
     --color-dark: #131316;
-    --color-green: #20B486;
     --color-teal-box: #A3DEE0;
+    --color-green: #20B486;
   }
 }
 @layer base {
@@ -726,6 +727,9 @@
   .bg-zinc-300\/20 {
     background-color: color-mix(in oklab, var(--color-zinc-300) 20%, transparent);
   }
+  .fill-meta-light {
+    fill: var(--color-meta-light);
+  }
   .stroke-primary-200 {
     stroke: var(--color-primary-200);
   }
@@ -1204,6 +1208,11 @@
   .dark\:bg-dark {
     &:where(.dark, .dark *) {
       background-color: var(--color-dark);
+    }
+  }
+  .dark\:fill-meta-light-2 {
+    &:where(.dark, .dark *) {
+      fill: var(--color-meta-light-2);
     }
   }
   .dark\:stroke-neutral-50 {
