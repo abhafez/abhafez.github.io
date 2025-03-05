@@ -1,36 +1,39 @@
 <!doctype html>
-<html lang="en" class="light">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8"/>
     <link rel="icon" type="image/svg+xml" href="/vite.svg"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="src/output.css"/>
-    <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet"/>
+    <script src="src/js/scripts.js" defer></script>
     <title>Inner Courses</title>
 </head>
 <body>
 <header dir="rtl" class="flex justify-between items-center px-5 h-20 border-b border-sep dark:bg-dark">
     <div class="container md:m-auto flex flex-row justify-between items-center">
-        <img src="src/assets/images/logo/logo.svg" alt="logo" class="h-9"/>
-        <nav class="hidden lg:block">
-            <ul class="flex flex-row gap-5 items-center">
-                <li class="h-12 px-8 py-4 bg-Primary rounded-3xl shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)] justify-center items-center gap-1 overflow-hidden bg-primary-title">
-                    <span class="text-white text-base font-medium leading-none">الدورات التعليمية</span>
-                </li>
-                <li>
-                    <span class="text-text dark:text-neutral-50 text-base font-medium leading-none"> الدورات الاستشارية</span>
-                </li>
-                <li>
-                    <span class="text-text dark:text-neutral-50 text-base font-medium leading-none"> الدورات الرياضية</span>
-                </li>
-            </ul>
-        </nav>
+        <div class="flex gap-10">
 
+            <img src="src/assets/images/logo/logo.svg" alt="logo" class="h-9"/>
+
+            <nav class="hidden lg:block">
+                <ul class="flex flex-row gap-5 items-center">
+                    <li class="h-12 px-8 py-4 bg-Primary rounded-3xl shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)] justify-center items-center gap-1 overflow-hidden bg-primary-title">
+                        <span class="text-white text-base font-medium leading-none">الدورات التعليمية</span>
+                    </li>
+                    <li>
+                        <span class="text-text dark:text-neutral-50 text-base font-medium leading-none"> الدورات الاستشارية</span>
+                    </li>
+                    <li>
+                        <span class="text-text dark:text-neutral-50 text-base font-medium leading-none"> الدورات الرياضية</span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
 
         <section class="hidden lg:block">
             <div class="w-52 h-10 px-4 py-4 bg-Field rounded-lg border border-sep justify-start items-center gap-2.5 inline-flex">
                 <label>
-                    <input type="text" class="w-36 h-8 text-right text-Meta text-base font-normal font-['Ping AR']"
+                    <input type="text" class="w-36 h-8 text-right text-meta text-base font-normal font-['Ping AR']"
                            placeholder="البحث"/>
                 </label>
                 <div data-svg-wrapper>
@@ -41,7 +44,8 @@
                 </div>
             </div>
         </section>
-        <div class="flex justify-center items-center">
+
+        <div class="justify-center items-center hidden lg:flex">
             <span class="text-text dark:text-neutral-50 text-base font-medium leading-none"> المكتبة</span>
             <span class="text-Text dark:text-neutral-50 text-base font-medium font-['Inter'] leading-10">SAR</span>
             <img class="inline-block" src="src/assets/images/ksa-flag.png" alt="عربي"/>
@@ -59,7 +63,8 @@
             </button>
 
         </div>
-        <div class="flex justify-between gap-7 items-center">
+
+        <div class="flex md:hidden justify-between gap-7 items-center">
             <!-- Search Button ICON -->
             <div data-svg-wrapper class="block md:hidden">
                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -81,7 +86,7 @@
     </div>
 </header>
 
-<main class="bg-box dark:bg-dark">
+<main class="bg-box dark:bg-dark px-5">
     <div class="container m-auto pt-4">
         <nav id="bread-crumb" dir="rtl">
             <div class="h-8 items-center gap-2 flex">
@@ -125,7 +130,7 @@
             </div>
         </div>
 
-        <div dir="rtl" class="h-8 justify-start items-center flex mb-5">
+        <div dir="rtl" class="h-8 justify-start items-center flex mb-5 [&_span]:dark:text-text-invert">
             <button class="px-5 pt-3 pb-2 bg-primary-title rounded-3xl justify-start items-center gap-2 flex">
                 <span class="text-white text-base font-medium leading-none">المختارة</span>
             </button>
@@ -161,11 +166,13 @@
 
             <div class="w-24 h-8 relative flex-1">
                 <div class="w-24 h-8 left-0 top-0 absolute">
-                    <div class="w-14 left-0 top-0 absolute text-black text-xl font-normal ">تصفية</div>
+                    <div class="dark:text-text-invert w-14 left-0 top-0 absolute text-black text-xl font-normal">تصفية
+                    </div>
                     <div data-svg-wrapper class="left-[66px] top-[3px] absolute">
-                        <svg width="27" height="25" viewBox="0 0 27 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="dark:stroke-text-invert stroke-black" width="27" height="25" viewBox="0 0 27 25"
+                             fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M23.7858 7.14292H9.64293M7.0715 7.14292H3.21436M23.7858 19.0477H9.64293M7.0715 19.0477H3.21436M17.3572 13.0953H3.21436M23.7858 13.0953H19.9286M8.35721 4.76196C8.69821 4.76196 9.02523 4.88739 9.26635 5.11065C9.50747 5.3339 9.64293 5.63671 9.64293 5.95244V8.33339C9.64293 8.64913 9.50747 8.95193 9.26635 9.17518C9.02523 9.39844 8.69821 9.52387 8.35721 9.52387C8.01622 9.52387 7.68919 9.39844 7.44808 9.17518C7.20696 8.95193 7.0715 8.64913 7.0715 8.33339V5.95244C7.0715 5.63671 7.20696 5.3339 7.44808 5.11065C7.68919 4.88739 8.01622 4.76196 8.35721 4.76196V4.76196ZM8.35721 16.6667C8.69821 16.6667 9.02523 16.7921 9.26635 17.0154C9.50747 17.2387 9.64293 17.5415 9.64293 17.8572V20.2382C9.64293 20.5539 9.50747 20.8567 9.26635 21.0799C9.02523 21.3032 8.69821 21.4286 8.35721 21.4286C8.01622 21.4286 7.68919 21.3032 7.44808 21.0799C7.20696 20.8567 7.0715 20.5539 7.0715 20.2382V17.8572C7.0715 17.5415 7.20696 17.2387 7.44808 17.0154C7.68919 16.7921 8.01622 16.6667 8.35721 16.6667ZM18.6429 10.7143C18.9839 10.7143 19.3109 10.8398 19.5521 11.063C19.7932 11.2863 19.9286 11.5891 19.9286 11.9048V14.2858C19.9286 14.6015 19.7932 14.9043 19.5521 15.1276C19.3109 15.3508 18.9839 15.4762 18.6429 15.4762C18.3019 15.4762 17.9749 15.3508 17.7338 15.1276C17.4927 14.9043 17.3572 14.6015 17.3572 14.2858V11.9048C17.3572 11.5891 17.4927 11.2863 17.7338 11.063C17.9749 10.8398 18.3019 10.7143 18.6429 10.7143V10.7143Z"
-                                  stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                  stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </div>
                 </div>
@@ -192,7 +199,7 @@
                             <div class="h-10 relative items-center">
                                 <div dir='rtl'
                                      class="px-3 w-40 h-10 flex justify-items-start gap-5 items-center rounded-full backdrop-blur-blur bg-white">
-                                    <img class="h-8"
+                                    <img alt="" class="h-8"
                                          src="https://d1yhje8j0hmqsr.cloudfront.net/2024/02/118616244_3158001587570928_9132823863992071769_n.png"/>
                                     <span class="text-right text-text text-xs font-bold leading-normal"> شهادة كامبردج</span>
                                 </div>
@@ -201,16 +208,16 @@
                         </div>
                     </figure>
                     <div class="h-60 px-5 pt-5 pb-4 flex-col justify-start items-start gap-2.5 flex">
-                        <div class="self-stretch h-14 text-center text-text text-xl font-bold leading-7">
+                        <div class="self-stretch h-14 text-center text-text text-xl font-bold leading-7 dark:text-text-invert">
                             تنمية مهارات الإتيكيت الوظيفي في المؤسسات التعليمية
                         </div>
                         <div class="self-stretch text-center">
-                            <span class="text-primary-title text-sm font-bold leading-normal">مستوى متقدم</span>
-                            <span class="text-primary-title text-sm font-bold leading-normal mx-3">10 ساعات</span>
-                            <span class="text-green text-sm font-bold leading-normal">بعد 4 أيام</span>
+                            <span class="text-primary-title dark:text-ِِprimary-title-2 text-sm font-bold leading-normal">مستوى متقدم</span>
+                            <span class="text-primary-title dark:text-ِِprimary-title-2 text-sm font-bold leading-normal mx-3">10 ساعات</span>
+                            <span class="text-green dark:text-green-2 text-sm font-bold leading-normal">بعد 4 أيام</span>
                         </div>
 
-                        <div class="w-full h-12 text-right text-Meta text-sm font-normal leading-normal">
+                        <div class="w-full h-12 text-right text-meta text-sm font-normal leading-normal dark:text-text-invert">
                             هو نص وهمي يستخدم في صناعة الطباعة وتصميم المواقع كحشو في التصميمات قبل إدخال النصوص
                         </div>
 
@@ -218,7 +225,7 @@
                             <div class="w-full h-px border border-sep"></div>
                             <div class="w-full h-6 justify-between items-center inline-flex">
                                 <div class="grow shrink basis-0 h-6 justify-start items-end gap-0.5 flex">
-                                    <div class="text-Meta text-xs font-medium">ر.س</div>
+                                    <div class="text-meta text-xs font-medium">ر.س</div>
                                     <div class="text-text">
                                         <span class="text-Primary-Title-2 text-xl font-bold font-['Inter']">125</span>
                                         <span class="text-Primary-Title-2 text-sm font-medium font-['Inter']">.65</span>
@@ -238,10 +245,10 @@
                                     </div>
                                 </div>
                                 <div class="grow shrink basis-0 h-5 justify-end items-center gap-1 flex">
-                                    <div class="text-right text-Meta text-xs font-medium leading-tight">
+                                    <div class="text-right text-meta text-xs font-medium leading-tight">
                                         عبد الرحمن حافظ
                                     </div>
-                                    <img class="inline-block size-6 rounded-full ring-2 ring-white bg-[#d9d9d9]"
+                                    <img alt="" class="inline-block size-6 rounded-full ring-2 ring-white bg-[#d9d9d9]"
                                          src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"/>
                                 </div>
                             </div>
@@ -256,16 +263,17 @@
             <button class="h-12 px-8 py-4 rounded-3xl shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)] border-2 border-primary-title justify-center items-center gap-1 inline-flex">
                 <span class="text-PrimaryBanner text-base font-bold text-primary-title leading-none">للمزيد من الدورات</span>
             </button>
-            <div class="text-black text-base font-normal ">عرض
+            <div class="text-black dark:text-white text-base font-normal ">عرض
                 <span>1–16</span> من <span>32</span> نتيجة
             </div>
         </div>
 
         <!--    Separator بالتعاون مع-->
         <div class="h-8 mb-6 justify-center items-baseline gap-3 flex">
-            <div class="grow shrink basis-0 h-px bg-sep"></div>
-            <div class="text-text text-xl font-bold leading-loose tracking-tight">بالتعاون مع</div>
-            <div class="grow shrink basis-0 h-px bg-sep"></div>
+            <div class="grow shrink basis-0 h-px bg-sep dark:bg-sep/20"></div>
+            <div class="text-text text-xl font-bold leading-loose tracking-tight dark:text-text-invert">بالتعاون مع
+            </div>
+            <div class="grow shrink basis-0 h-px bg-sep dark:bg-sep/20"></div>
         </div>
 
         <!--    Ministers, institutes and universities -->
@@ -274,76 +282,81 @@
                 <div class="flex-col justify-start items-center gap-2 flex">
                     <div class="w-20 h-20 relative">
                         <div class="w-20 h-20 left-0 top-0 absolute flex-col justify-center items-center gap-5 inline-flex">
-                            <img class="w-14 h-16" src="src/assets/images/edu-g-7.png"/>
+                            <img alt="" class="w-14 h-16" src="src/assets/images/edu-g-7.png"/>
                         </div>
                     </div>
-                    <div class="max-w-20 text-center text-Meta text-xs font-medium">المؤسسة العامة للتدريب
+                    <div class="max-w-20 text-center text-meta dark:text-wheat text-xs font-medium">المؤسسة العامة
+                        للتدريب
                         المهني والتقني
                     </div>
                 </div>
                 <div class="flex-col justify-start items-center gap-2 inline-flex">
                     <div class="w-20 h-20 relative">
                         <div class="w-20 h-20 left-0 top-0 absolute flex-col justify-center items-center gap-5 inline-flex">
-                            <img class="w-20 h-16" src="src/assets/images/edu-g-6.png"/>
+                            <img alt="" class="w-20 h-16" src="src/assets/images/edu-g-6.png"/>
                         </div>
                     </div>
-                    <div class="max-w-20 text-center text-Meta text-xs font-medium">معهد أبناء المستقبل
+                    <div class="max-w-20 text-center text-meta dark:text-wheat text-xs font-medium">معهد أبناء المستقبل
                     </div>
                 </div>
                 <div class="flex-col justify-start items-center gap-2 inline-flex">
                     <div class="w-20 h-20 relative">
                         <div class="w-20 h-20 px-5 left-0 top-0 absolute justify-center items-center gap-5 inline-flex">
-                            <img class="w-9 h-16" src="src/assets/images/edu-g-5.png"/>
+                            <img alt="" class="w-9 h-16" src="src/assets/images/edu-g-5.png"/>
                         </div>
                     </div>
-                    <div class="max-w-20 text-center text-Meta text-xs font-medium">المركز الوطنى للتعليم
+                    <div class="max-w-20 text-center text-meta dark:text-wheat text-xs font-medium">المركز الوطنى
+                        للتعليم
                         الالكترونى
                     </div>
                 </div>
                 <div class="flex-col justify-start items-center gap-2 inline-flex">
                     <div class="w-20 h-20 relative">
                         <div class="w-20 h-20 left-0 top-0 absolute flex-col justify-center items-center gap-5 inline-flex">
-                            <img class="w-16 h-16" src="src/assets/images/edu-g-4.png"/>
+                            <img alt="" class="w-16 h-16" src="src/assets/images/edu-g-4.png"/>
                         </div>
                     </div>
-                    <div class="max-w-20 text-center text-Meta text-xs font-medium">هاي فلايرز للتدريب</div>
+                    <div class="max-w-20 text-center text-meta dark:text-wheat text-xs font-medium">هاي فلايرز للتدريب
+                    </div>
                 </div>
                 <div class="flex-col justify-start items-center gap-2 inline-flex">
                     <div class="w-20 h-20 relative">
                         <div class="w-20 h-20 left-0 top-0 absolute flex-col justify-center items-center gap-5 inline-flex">
-                            <img class="w-16 h-16" src="src/assets/images/edu-g-3.png"/>
+                            <img alt="" class="w-16 h-16" src="src/assets/images/edu-g-3.png"/>
                         </div>
                     </div>
-                    <div class="max-w-20 text-center text-Meta text-xs font-medium">التزامن للتعليم الرقمي
+                    <div class="max-w-20 text-center text-meta dark:text-wheat text-xs font-medium">التزامن للتعليم
+                        الرقمي
                     </div>
                 </div>
                 <div class="flex-col justify-start items-center gap-2 inline-flex">
                     <div class="w-20 h-20 relative">
                         <div class="w-20 h-20 py-2.5 left-0 top-0 absolute flex-col justify-start items-start gap-5 inline-flex">
-                            <img class="" src="src/assets/images/edu-g-3.svg"/>
+                            <img alt="" class="" src="src/assets/images/edu-g-3.svg"/>
                         </div>
                     </div>
-                    <div class="max-w-20 text-center text-Meta text-xs font-medium">هيئة تقويم التعليم
+                    <div class="max-w-20 text-center text-meta dark:text-wheat text-xs font-medium">هيئة تقويم التعليم
                         والتدريب
                     </div>
                 </div>
                 <div class="flex-col justify-start items-center gap-2 inline-flex">
                     <div class="w-20 h-20 relative">
                         <div class="w-20 h-20 left-0 top-0 absolute flex-col justify-center items-center gap-5 inline-flex">
-                            <img class="" src="src/assets/images/edu-g-2.3.svg"/>
+                            <img alt="" class="" src="src/assets/images/edu-g-2.3.svg"/>
                         </div>
                     </div>
-                    <div class="max-w-20 text-center text-Meta text-xs font-medium">جامعة كامبردج برنامج
+                    <div class="max-w-20 text-center text-meta dark:text-wheat text-xs font-medium">جامعة كامبردج برنامج
                         المعلمين
                     </div>
                 </div>
                 <div class="flex-col justify-start items-center gap-2 inline-flex">
                     <div class="w-20 h-20 relative">
                         <div class="w-20 h-20 left-0 top-0 absolute flex-col justify-center items-center gap-5 inline-flex">
-                            <img class="" src="src/assets/images/edu-g-1.svg"/>
+                            <img alt="" class="" src="src/assets/images/edu-g-1.svg"/>
                         </div>
                     </div>
-                    <div class="max-w-20 text-center text-Meta text-xs font-medium">وزارة التعليم بالسعودية
+                    <div class="max-w-20 text-center text-meta dark:text-wheat text-xs font-medium">وزارة التعليم
+                        بالسعودية
                     </div>
                 </div>
             </div>
@@ -354,15 +367,24 @@
             <div class="h-72 w-full  bg-Box-Blend-Teal-2 rounded-3xl items-start justify-between overflow-hidden bg-teal-box">
                 <div class="h-72 pr-12 py-14 items-center flex justify-between ms-40">
                     <div class="relative">
-                        <img alt="" class="top-0 left-0 z-10" src="src/assets/images/logo/aanaab-logo-for-teal.svg"/>
+                        <!--                     Large -->
+                        <div class="lg:block w-[453.47px] h-[325.02px] relative top-0 left-0 z-10">
+                            <div data-svg-wrapper class="left-[15px] top-0 absolute">
+                                <svg class="dark:fill-[#404040] fill-[#F4F4F5]" width="281" height="324"
+                                     viewBox="0 0 281 324" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M45.7357 231.696C57.6571 231.696 69.0902 236.557 77.5199 245.21C85.9496 253.863 90.6853 265.599 90.6853 277.836C90.6853 290.073 85.9496 301.808 77.5199 310.461C69.0902 319.114 57.6571 323.975 45.7357 323.975C33.8143 323.975 22.3813 319.114 13.9516 310.461C5.52192 301.808 0.786133 290.073 0.786133 277.836C0.786133 265.599 5.52192 253.863 13.9516 245.21C22.3813 236.557 33.8143 231.696 45.7357 231.696ZM45.7357 116.336C57.6571 116.336 69.0902 121.197 77.5199 129.85C85.9496 138.502 90.6853 150.238 90.6853 162.475C90.6853 174.712 85.9496 186.448 77.5199 195.101C69.0902 203.754 57.6571 208.615 45.7357 208.615C39.8328 208.615 33.9878 207.421 28.5342 205.102C23.0807 202.784 18.1256 199.385 13.9516 195.101C9.77765 190.816 6.46658 185.73 4.20766 180.132C1.94873 174.534 0.786133 168.534 0.786133 162.475C0.786133 156.416 1.94873 150.416 4.20766 144.818C6.46658 139.22 9.77765 134.134 13.9516 129.85C18.1256 125.565 23.0807 122.166 28.5342 119.848C33.9878 117.529 39.8328 116.336 45.7357 116.336ZM135.635 174.012C147.558 174.012 158.993 178.874 167.424 187.528C175.855 196.182 180.592 207.92 180.592 220.159C180.592 232.398 175.855 244.136 167.424 252.79C158.993 261.445 147.558 266.307 135.635 266.307C123.711 266.307 112.277 261.445 103.845 252.79C95.4143 244.136 90.6778 232.398 90.6778 220.159C90.6778 207.92 95.4143 196.182 103.845 187.528C112.277 178.874 123.711 174.012 135.635 174.012ZM135.635 58.6592C141.587 58.5799 147.496 59.7149 153.018 61.9982C158.539 64.2815 163.564 67.6678 167.801 71.9605C172.037 76.2532 175.401 81.3668 177.697 87.0046C179.993 92.6424 181.176 98.6921 181.176 104.803C181.176 110.913 179.993 116.963 177.697 122.601C175.401 128.238 172.037 133.352 167.801 137.645C163.564 141.937 158.539 145.324 153.018 147.607C147.496 149.89 141.587 151.025 135.635 150.946C123.814 150.789 112.528 145.858 104.223 137.221C95.918 128.585 91.2612 116.938 91.2612 104.803C91.2612 92.6674 95.918 81.0205 104.223 72.384C112.528 63.7476 123.814 58.8167 135.635 58.6592ZM45.7357 0.975098C57.6571 0.975098 69.0902 5.83621 77.5199 14.4891C85.9496 23.1419 90.6853 34.8777 90.6853 47.1146C90.6853 59.3516 85.9496 71.0874 77.5199 79.7402C69.0902 88.393 57.6571 93.2542 45.7357 93.2542C39.8328 93.2542 33.9878 92.0607 28.5342 89.742C23.0807 87.4233 18.1256 84.0247 13.9516 79.7402C9.77765 75.4557 6.46658 70.3694 4.20766 64.7715C1.94873 59.1736 0.786133 53.1738 0.786133 47.1146C0.786133 41.0555 1.94873 35.0557 4.20766 29.4578C6.46658 23.8599 9.77765 18.7735 13.9516 14.4891C18.1256 10.2046 23.0807 6.80599 28.5342 4.48726C33.9878 2.16853 39.8328 0.975098 45.7357 0.975098ZM235.433 116.343C241.385 116.264 247.294 117.399 252.816 119.682C258.337 121.966 263.362 125.352 267.599 129.645C271.835 133.937 275.199 139.051 277.495 144.689C279.791 150.327 280.973 156.376 280.973 162.487C280.973 168.597 279.791 174.647 277.495 180.285C275.199 185.923 271.835 191.036 267.599 195.329C263.362 199.622 258.337 203.008 252.816 205.291C247.294 207.575 241.385 208.71 235.433 208.63C204.669 208.63 188.703 176.632 169.353 162.483C188.703 148.318 204.669 116.343 235.433 116.343Z"
+                                          fill="" fill-opacity="0.5"/>
+                                </svg>
+                            </div>
+                        </div>
                         <img alt="" class="absolute top-10 -left-36 z-20" src="src/assets/images/two-s-girls.png"/>
                     </div>
 
-                    <div class="w-1/2 flex-col justify-start items-end gap-4 inline-flex">
-                        <div class="h-16 text-right text-text text-2xl font-bold capitalize leading-loose text-text">
+                    <div class="w-1/2 flex-col justify-start items-end gap-4 inline-flex ">
+                        <div class="h-16 text-right text-text text-2xl font-bold capitalize leading-loose dark:text-text-invert">
                             دورات الرخص المهنية
                         </div>
-                        <div class="text-right text-text text-sm font-normal capitalize leading-snug">
+                        <div class="text-right text-text text-sm font-normal capitalize leading-snug dark:text-text-invert">
                             هو نص
                             وهمي يستخدم في صناعة الطباعة وتصميم المواقع كحشو في التصميمات قبل إدخال النصوص وتصميم
                             المواقع
@@ -370,7 +392,7 @@
                             في التصميمات قبل إدخال النصوص
                         </div>
                         <div class="justify-end items-center gap-12 inline-flex">
-                            <button class="h-12 px-8 py-4 bg-Primary rounded-3xl shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)] justify-center items-center gap-1 overflow-hidden bg-primary-title">
+                            <button class="h-12 px-8 py-4 bg-Primary rounded-3xl shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)] justify-center items-center gap-1 overflow-hidden bg-primary-title dark:bg-primary-400">
                                 <span class="justify-start items-end gap-1.5 flex ">
                             <span data-svg-wrapper class="relative">
                                 <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
@@ -379,7 +401,7 @@
                                           stroke-width="1.73333" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
                             </span>
-                            <span class="text-white text-base font-bold leading-none">دورات الرخص المهنية</span>
+                            <span class="text-white text-base font-bold leading-none ">دورات الرخص المهنية</span>
                         </span>
                             </button>
                         </div>
@@ -413,7 +435,7 @@
                      fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_1490_29295)">
                         <path d="M22.2234 0.975098H1.77187C0.792187 0.975098 0 1.74854 0 2.70479V23.2407C0 24.197 0.792187 24.9751 1.77187 24.9751H22.2234C23.2031 24.9751 24 24.197 24 23.2454V2.70479C24 1.74854 23.2031 0.975098 22.2234 0.975098ZM7.12031 21.4267H3.55781V9.97041H7.12031V21.4267ZM5.33906 8.40947C4.19531 8.40947 3.27188 7.48603 3.27188 6.34697C3.27188 5.20791 4.19531 4.28447 5.33906 4.28447C6.47813 4.28447 7.40156 5.20791 7.40156 6.34697C7.40156 7.48135 6.47813 8.40947 5.33906 8.40947ZM20.4516 21.4267H16.8937V15.8579C16.8937 14.5313 16.8703 12.8204 15.0422 12.8204C13.1906 12.8204 12.9094 14.2688 12.9094 15.7642V21.4267H9.35625V9.97041H12.7687V11.536H12.8156C13.2891 10.636 14.4516 9.68447 16.1813 9.68447C19.7859 9.68447 20.4516 12.0563 20.4516 15.1407V21.4267Z"
-                              fill="#818182"/>
+                              fill="#A1A1AA"/>
                     </g>
                     <defs>
                         <clipPath id="clip0_1490_29295">
@@ -423,36 +445,34 @@
                 </svg>
             </a>
             <a href="#" aria-label="Facebook">
-                <div data-svg-wrapper className="relative">
-                    <svg class="fill-meta-light dark:fill-meta-light-2" width="24" height="24" viewBox="0 0 24 24"
-                         fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_1490_26692)">
-                            <path d="M24 11.9985C24 5.37111 18.6274 -0.00146484 12 -0.00146484C5.37258 -0.00146484 0 5.37111 0 11.9985C0 17.988 4.3882 22.9525 10.125 23.8528V15.4673H7.07812V11.9985H10.125V9.35479C10.125 6.34729 11.9166 4.68604 14.6576 4.68604C15.9701 4.68604 17.3438 4.92041 17.3438 4.92041V7.87354H15.8306C14.34 7.87354 13.875 8.79861 13.875 9.74854V11.9985H17.2031L16.6711 15.4673H13.875V23.8528C19.6118 22.9525 24 17.988 24 11.9985Z"
-                                  fill="#A1A1AA"/>
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_1490_26692">
-                                <rect width="24" height="24" fill="white" transform="translate(0 -0.00146484)"/>
-                            </clipPath>
-                        </defs>
-                    </svg>
-                </div>
+                <svg class="fill-meta-light dark:fill-meta-light-2" width="24" height="24" viewBox="0 0 24 24"
+                     fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1490_26692)">
+                        <path d="M24 11.9985C24 5.37111 18.6274 -0.00146484 12 -0.00146484C5.37258 -0.00146484 0 5.37111 0 11.9985C0 17.988 4.3882 22.9525 10.125 23.8528V15.4673H7.07812V11.9985H10.125V9.35479C10.125 6.34729 11.9166 4.68604 14.6576 4.68604C15.9701 4.68604 17.3438 4.92041 17.3438 4.92041V7.87354H15.8306C14.34 7.87354 13.875 8.79861 13.875 9.74854V11.9985H17.2031L16.6711 15.4673H13.875V23.8528C19.6118 22.9525 24 17.988 24 11.9985Z"
+                              fill="#A1A1AA"/>
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_1490_26692">
+                            <rect width="24" height="24" fill="white" transform="translate(0 -0.00146484)"/>
+                        </clipPath>
+                    </defs>
+                </svg>
             </a>
         </div>
         <div>
             <nav aria-label="navigation">
-                <ul class="mb-4 mt-16 md:mt-0 flex justify-center gap-4 font-medium text-meta">
+                <ul class="mb-4 mt-16 md:mt-0 flex justify-center gap-4 font-medium text-meta dark:text-wheat">
                     <li><a href="#" class="text-sm">التواصل</a></li>
                     <li><a href="#" class="text-sm">الخصوصية و الأحكام</a></li>
                     <li><a href="#" class="text-sm">المدونة</a></li>
                     <li><a href="#" class="text-sm">من نحن</a></li>
                 </ul>
-                <p class="hidden text-sm font-normal md:block"> جميع الحقوق محفوظة © منصة أعناب</p>
+                <p class="hidden text-sm font-normal md:block dark:text-zinc-400"> جميع الحقوق محفوظة © منصة أعناب</p>
             </nav>
         </div>
         <div class="mt-16 md:mt-0 text-sm">
             <img src="src/assets/images/footer_logo.svg" alt="platform" class="m-auto mb-2.5"/>
-            <p class="text-sm font-normal md:hidden">
+            <p class="text-sm font-normal md:hidden dark:text-zinc-400">
                 جميع الحقوق محفوظة © منصة أعناب
             </p>
         </div>
@@ -460,12 +480,4 @@
 </footer>
 <!--Footer End-->
 </body>
-<script>
-    document.addEventListener("keydown", (event) => {
-        if (event.ctrlKey && event.key.toLowerCase() === "i") {
-            event.preventDefault(); // Prevents any default behavior
-            document.documentElement.classList.toggle("dark");
-        }
-    });
-</script>
 </html>

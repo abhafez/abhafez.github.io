@@ -70,12 +70,14 @@
 @theme {
     --color-sep: #d4d4d8;
     --color-box: #F4F4F5;
+    --color-wheat: #d2d2d4;
     --color-meta-light: #818182;
     --color-meta: #52525B;
     --color-twitter: #1da1f2;
     --color-ِِprimary-title-2: #A983FC;
     --color-primary-title: #6639c6;
     --color-primary-300: #56369B;
+    --color-primary-400: #38246d;
     --color-primary-200: #321F6B;
     --color-text: #311e6a;
     --color-category-1: #441457;
@@ -88,6 +90,7 @@
 
     --color-teal-box: #A3DEE0;
     --color-green: #20B486;
+    --color-green-2: #30E8AF;
 
 }
 
