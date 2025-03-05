@@ -78,6 +78,7 @@
     --color-primary-300: #56369B;
     --color-primary-200: #321F6B;
     --color-text: #311e6a;
+    --color-category-1: #441457;
     /* Dark Mode */
     --color-text-invert: #FAFAFA;
     --color-meta-dark: #d2d2d5;
@@ -88,7 +89,6 @@
     --color-teal-box: #A3DEE0;
     --color-green: #20B486;
 
-    --color-category-1: #441457;
 }
 
 
