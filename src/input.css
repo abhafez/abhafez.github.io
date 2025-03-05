@@ -72,20 +72,20 @@
     --color-meta-light: #818182;
     --color-meta: #52525B;
     --color-box: #F4F4F5;
+    --color-box-2: #242429;
     --color-primary-title: #6639c6;
+    --color-ِِprimary-title-2: #A983FC;
     --color-primary-200: #321F6B;
     --color-primary-300: #56369B;
     --color-text: #311e6a;
     --color-sep: #d4d4d8;
-    --color-dark: #09090B;
-
+    --color-dark: #131316;
 
     --color-green: #20B486;
 
     --color-teal-box: #A3DEE0;
     --color-category-1: #441457;
 }
-
 
 
 :root {
@@ -100,6 +100,10 @@
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+    cursor: pointer;
 }
 
 /*@media (prefers-color-scheme: light) {*/
