@@ -10,24 +10,74 @@
 </head>
 <body>
 <header dir="rtl" class="flex justify-between items-center px-5 h-20 border-b border-sep">
-    <img src="src/assets/images/logo/logo.svg" alt="logo" class="h-9"/>
+    <div class="container md:m-auto flex flex-row justify-between items-center">
 
-    <div class="flex justify-between gap-7 items-center">
-        <!-- Search Button -->
-        <div data-svg-wrapper>
-            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M21.4408 18.8679H20.0858L19.6055 18.4048C21.3445 16.3877 22.3003 13.8125 22.2985 11.1492C22.2985 8.94412 21.6446 6.78853 20.4195 4.95505C19.1944 3.12157 17.4531 1.69255 15.4159 0.848689C13.3786 0.00483079 11.1369 -0.215961 8.97412 0.214234C6.81139 0.64443 4.82478 1.70629 3.26554 3.26554C1.70629 4.82478 0.64443 6.81139 0.214234 8.97412C-0.215961 11.1369 0.00483079 13.3786 0.848689 15.4159C1.69255 17.4531 3.12157 19.1944 4.95505 20.4195C6.78853 21.6446 8.94412 22.2985 11.1492 22.2985C13.9108 22.2985 16.4494 21.2865 18.4048 19.6055L18.8679 20.0858V21.4408L27.4443 30L30 27.4443L21.4408 18.8679ZM11.1492 18.8679C6.87822 18.8679 3.43054 15.4202 3.43054 11.1492C3.43054 6.87822 6.87822 3.43054 11.1492 3.43054C15.4202 3.43054 18.8679 6.87822 18.8679 11.1492C18.8679 15.4202 15.4202 18.8679 11.1492 18.8679Z"
-                      fill="#52525B"/>
-            </svg>
-        </div>
+        <img src="src/assets/images/logo/logo.svg" alt="logo" class="h-9"/>
 
-        <!-- Hamburger Menu -->
-        <div data-svg-wrapper>
+        <nav>
+            <ul class="flex flex-row gap-5 items-center">
+                <li class="h-12 px-8 py-4 bg-Primary rounded-3xl shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)] justify-center items-center gap-1 overflow-hidden bg-primary-title">
+                    <span class="text-white text-base font-medium leading-none">الدورات التعليمية</span>
+                </li>
+                <li>
+                    <span class="text-text text-base font-medium leading-none"> الدورات الاستشارية</span>
+                </li>
+                <li>
+                    <span class="text-text text-base font-medium leading-none"> الدورات الرياضية</span>
+                </li>
+            </ul>
+        </nav>
+
+
+        <section>
+            <div class="w-52 h-10 px-4 py-4 bg-Field rounded-lg border border-sep justify-start items-center gap-2.5 inline-flex">
+                <label>
+                    <input type="text" class="w-36 h-8 text-right text-Meta text-base font-normal font-['Ping AR']"
+                           placeholder="البحث"/>
+                </label>
+                <div data-svg-wrapper>
+                    <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.4167 9.87907H9.75834L9.525 9.65407C10.3699 8.67409 10.8343 7.42298 10.8333 6.12907C10.8333 5.05776 10.5157 4.0105 9.92046 3.11973C9.32527 2.22897 8.4793 1.5347 7.48954 1.12472C6.49977 0.714749 5.41066 0.607481 4.35993 0.816485C3.3092 1.02549 2.34404 1.54138 1.58651 2.29891C0.828973 3.05644 0.313085 4.0216 0.104082 5.07233C-0.104921 6.12306 0.00234696 7.21217 0.412322 8.20194C0.822296 9.19171 1.51656 10.0377 2.40733 10.6329C3.2981 11.2281 4.34535 11.5457 5.41667 11.5457C6.75834 11.5457 7.99167 11.0541 8.94167 10.2374L9.16667 10.4707V11.1291L13.3333 15.2874L14.575 14.0457L10.4167 9.87907ZM5.41667 9.87907C3.34167 9.87907 1.66667 8.20407 1.66667 6.12907C1.66667 4.05407 3.34167 2.37907 5.41667 2.37907C7.49167 2.37907 9.16667 4.05407 9.16667 6.12907C9.16667 8.20407 7.49167 9.87907 5.41667 9.87907Z"
+                              fill="#52525B"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <div class="flex justify-center items-center">
+            <span class="text-text text-base font-medium leading-none"> المكتبة</span>
+            <span class="text-Text text-base font-medium font-['Inter'] leading-10">SAR</span>
+            <img class="inline-block" src="src/assets/images/ksa-flag.png" alt="عربي"/>
+
             <div data-svg-wrapper class="relative">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.29688 16.1371L9.2958 16.1361C7.13522 14.1769 5.40233 12.6016 4.20082 11.1316C3.00755 9.67172 2.41699 8.4076 2.41699 7.08333C2.41699 4.92344 4.09698 3.25 6.25033 3.25C7.4736 3.25 8.66009 3.82334 9.4312 4.7218L10.0003 5.38491L10.5695 4.7218C11.3406 3.82334 12.5271 3.25 13.7503 3.25C15.9037 3.25 17.5837 4.92344 17.5837 7.08333C17.5837 8.4076 16.9931 9.67172 15.7998 11.1316C14.5983 12.6016 12.8654 14.1769 10.7049 16.1361L10.7038 16.1371L10.0003 16.7774L9.29688 16.1371Z"
+                          stroke="#321F6B" stroke-width="1.5"/>
+                </svg>
+            </div>
+
+            <button class=" h-10 px-6 pt-0.5 bg-primary-title rounded-full shadow-[0px_12px_53px_0px_rgba(0,0,0,0.04)] justify-center items-center gap-2.5 inline">
+                <span class="text-center text-white text-base font-medium">دخول</span>
+            </button>
+
+        </div>
+        <div class="flex justify-between gap-7 items-center">
+            <!-- Search Button -->
+            <div data-svg-wrapper class="block md:hidden">
                 <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.5 24C7.5 24.8284 8.1716 25.5 9 25.5H28.5C29.3284 25.5 30 24.8284 30 24C30 23.1716 29.3284 22.5 28.5 22.5H9C8.1716 22.5 7.5 23.1717 7.5 24ZM28.5 16.5H1.5C0.671602 16.5 0 15.8283 0 15C0 14.1716 0.671602 13.5 1.5 13.5H28.5C29.3284 13.5 30 14.1716 30 15C30 15.8283 29.3284 16.5 28.5 16.5ZM28.5 7.5H15C14.1717 7.5 13.5 6.8284 13.5 6C13.5 5.17166 14.1717 4.5 15 4.5H28.5C29.3284 4.5 30 5.17166 30 6C30 6.8284 29.3284 7.5 28.5 7.5Z"
+                    <path d="M21.4408 18.8679H20.0858L19.6055 18.4048C21.3445 16.3877 22.3003 13.8125 22.2985 11.1492C22.2985 8.94412 21.6446 6.78853 20.4195 4.95505C19.1944 3.12157 17.4531 1.69255 15.4159 0.848689C13.3786 0.00483079 11.1369 -0.215961 8.97412 0.214234C6.81139 0.64443 4.82478 1.70629 3.26554 3.26554C1.70629 4.82478 0.64443 6.81139 0.214234 8.97412C-0.215961 11.1369 0.00483079 13.3786 0.848689 15.4159C1.69255 17.4531 3.12157 19.1944 4.95505 20.4195C6.78853 21.6446 8.94412 22.2985 11.1492 22.2985C13.9108 22.2985 16.4494 21.2865 18.4048 19.6055L18.8679 20.0858V21.4408L27.4443 30L30 27.4443L21.4408 18.8679ZM11.1492 18.8679C6.87822 18.8679 3.43054 15.4202 3.43054 11.1492C3.43054 6.87822 6.87822 3.43054 11.1492 3.43054C15.4202 3.43054 18.8679 6.87822 18.8679 11.1492C18.8679 15.4202 15.4202 18.8679 11.1492 18.8679Z"
                           fill="#52525B"/>
                 </svg>
+            </div>
+
+            <!-- Hamburger Menu -->
+            <div data-svg-wrapper class="block md:hidden">
+                <div data-svg-wrapper class="relative">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.5 24C7.5 24.8284 8.1716 25.5 9 25.5H28.5C29.3284 25.5 30 24.8284 30 24C30 23.1716 29.3284 22.5 28.5 22.5H9C8.1716 22.5 7.5 23.1717 7.5 24ZM28.5 16.5H1.5C0.671602 16.5 0 15.8283 0 15C0 14.1716 0.671602 13.5 1.5 13.5H28.5C29.3284 13.5 30 14.1716 30 15C30 15.8283 29.3284 16.5 28.5 16.5ZM28.5 7.5H15C14.1717 7.5 13.5 6.8284 13.5 6C13.5 5.17166 14.1717 4.5 15 4.5H28.5C29.3284 4.5 30 5.17166 30 6C30 6.8284 29.3284 7.5 28.5 7.5Z"
+                              fill="#52525B"/>
+                    </svg>
+                </div>
             </div>
         </div>
     </div>
@@ -132,20 +182,23 @@
                                 class="absolute inset-0 size-full object-cover transition duration-700 ease-out hover:scale-105"
                                 src="https://aanaab-uploads-v1.s3.amazonaws.com/courses/thumbnail/533/%D8%AB%D9%85%D9%86%D9%8A%D9%84-%D8%A8%D8%B1%D8%A7%D9%85%D8%AC-%D8%B9%D9%84%D8%A7%D8%AC%D9%8A%D8%A9.jpg"
                         >
-                        <div class="w-80 h-10 pr-80 left-[20.21px] top-[18px] absolute justify-start items-center inline-flex">
-                            <div class="h-10 relative flex-row justify-between items-center flex w-fit ">
-                                <div class="w-40 h-10 rounded-full backdrop-blur-blur bg-white">
-                                    <img class=" h-10 rounded-full"
-                                         src="https://aanaab-uploads-v1.s3.amazonaws.com/courses/thumbnail/533/%D8%AB%D9%85%D9%86%D9%8A%D9%84-%D8%A8%D8%B1%D8%A7%D9%85%D8%AC-%D8%B9%D9%84%D8%A7%D8%AC%D9%8A%D8%A9.jpg"/>
-                                </div>
-                                <div data-svg-wrapper class="relative">
-                                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9.50489 16.9999L9.50381 16.9989C7.34323 15.0397 5.61034 13.4644 4.40882 11.9944C3.21555 10.5345 2.625 9.27039 2.625 7.94613C2.625 5.78623 4.30499 4.11279 6.45833 4.11279C7.68161 4.11279 8.86809 4.68614 9.63921 5.58459L10.2083 6.2477L10.7775 5.58459C11.5486 4.68614 12.7351 4.11279 13.9583 4.11279C16.1117 4.11279 17.7917 5.78623 17.7917 7.94613C17.7917 9.27039 17.2011 10.5345 16.0078 11.9944C14.8063 13.4644 13.0734 15.0397 10.9129 16.9989L10.9118 16.9999L10.2083 17.6402L9.50489 16.9999Z"
-                                              stroke="white" stroke-width="1.5"/>
-                                    </svg>
+                        <div class="h-10 w-full top-[18px] absolute justify-between items-center flex px-6">
+                            <div data-svg-wrapper class="relative">
+                                <svg width="21" height="21" viewBox="0 0 21 21" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.50489 16.9999L9.50381 16.9989C7.34323 15.0397 5.61034 13.4644 4.40882 11.9944C3.21555 10.5345 2.625 9.27039 2.625 7.94613C2.625 5.78623 4.30499 4.11279 6.45833 4.11279C7.68161 4.11279 8.86809 4.68614 9.63921 5.58459L10.2083 6.2477L10.7775 5.58459C11.5486 4.68614 12.7351 4.11279 13.9583 4.11279C16.1117 4.11279 17.7917 5.78623 17.7917 7.94613C17.7917 9.27039 17.2011 10.5345 16.0078 11.9944C14.8063 13.4644 13.0734 15.0397 10.9129 16.9989L10.9118 16.9999L10.2083 17.6402L9.50489 16.9999Z"
+                                          stroke="white" stroke-width="1.5"/>
+                                </svg>
+                            </div>
+                            <div class="h-10 relative items-center">
+                                <div dir='rtl'
+                                     class="px-3 w-40 h-10 flex justify-items-start gap-5 items-center rounded-full backdrop-blur-blur bg-white">
+                                    <img class="h-8"
+                                         src="https://d1yhje8j0hmqsr.cloudfront.net/2024/02/118616244_3158001587570928_9132823863992071769_n.png"/>
+                                    <span class="text-right text-text text-xs font-bold leading-normal"> شهادة كامبردج</span>
                                 </div>
                             </div>
+
                         </div>
                     </figure>
                     <div class="h-60 px-5 pt-5 pb-4 flex-col justify-start items-start gap-2.5 flex">
@@ -167,9 +220,9 @@
                             <div class="w-full h-6 justify-between items-center inline-flex">
                                 <div class="grow shrink basis-0 h-6 justify-start items-end gap-0.5 flex">
                                     <div class="text-Meta text-xs font-medium">ر.س</div>
-                                    <div><span
-                                            class="text-Primary-Title-2 text-xl font-bold font-['Inter']">125</span><span
-                                            class="text-Primary-Title-2 text-sm font-medium font-['Inter']">.65</span>
+                                    <div class="text-text">
+                                        <span class="text-Primary-Title-2 text-xl font-bold font-['Inter']">125</span>
+                                        <span class="text-Primary-Title-2 text-sm font-medium font-['Inter']">.65</span>
                                     </div>
                                 </div>
                                 <div class="justify-end items-center flex">
@@ -221,7 +274,7 @@
                 <div class="flex-col justify-start items-center gap-2 flex">
                     <div class="w-20 h-20 relative">
                         <div class="w-20 h-20 left-0 top-0 absolute flex-col justify-center items-center gap-5 inline-flex">
-                            <img class="w-14 h-16" src="https://placehold.co/55x63"/>
+                            <img class="w-14 h-16" src="src/assets/images/edu-g-7.png"/>
                         </div>
                     </div>
                     <div class="max-w-20 text-center text-Meta text-xs font-medium">المؤسسة العامة للتدريب
@@ -231,7 +284,7 @@
                 <div class="flex-col justify-start items-center gap-2 inline-flex">
                     <div class="w-20 h-20 relative">
                         <div class="w-20 h-20 left-0 top-0 absolute flex-col justify-center items-center gap-5 inline-flex">
-                            <img class="w-20 h-16" src="https://placehold.co/77x65"/>
+                            <img class="w-20 h-16" src="src/assets/images/edu-g-6.png"/>
                         </div>
                     </div>
                     <div class="max-w-20 text-center text-Meta text-xs font-medium">معهد أبناء المستقبل
@@ -240,7 +293,7 @@
                 <div class="flex-col justify-start items-center gap-2 inline-flex">
                     <div class="w-20 h-20 relative">
                         <div class="w-20 h-20 px-5 left-0 top-0 absolute justify-center items-center gap-5 inline-flex">
-                            <img class="w-9 h-16" src="https://placehold.co/35x71"/>
+                            <img class="w-9 h-16" src="src/assets/images/edu-g-5.png"/>
                         </div>
                     </div>
                     <div class="max-w-20 text-center text-Meta text-xs font-medium">المركز الوطنى للتعليم
@@ -248,9 +301,9 @@
                     </div>
                 </div>
                 <div class="flex-col justify-start items-center gap-2 inline-flex">
-                    <div class="h-20 relative">
-                        <div class="h-20 left-0 top-0 absolute flex-col justify-center items-center gap-5 inline-flex">
-                            <img class="w-20 h-14" src="https://placehold.co/79x56"/>
+                    <div class="w-20 h-20 relative">
+                        <div class="w-20 h-20 left-0 top-0 absolute flex-col justify-center items-center gap-5 inline-flex">
+                            <img class="w-16 h-16" src="src/assets/images/edu-g-4.png"/>
                         </div>
                     </div>
                     <div class="max-w-20 text-center text-Meta text-xs font-medium">هاي فلايرز للتدريب</div>
@@ -258,7 +311,7 @@
                 <div class="flex-col justify-start items-center gap-2 inline-flex">
                     <div class="w-20 h-20 relative">
                         <div class="w-20 h-20 left-0 top-0 absolute flex-col justify-center items-center gap-5 inline-flex">
-                            <img class="w-16 h-16" src="https://placehold.co/63x63"/>
+                            <img class="w-16 h-16" src="src/assets/images/edu-g-3.png"/>
                         </div>
                     </div>
                     <div class="max-w-20 text-center text-Meta text-xs font-medium">التزامن للتعليم الرقمي
@@ -277,7 +330,7 @@
                 <div class="flex-col justify-start items-center gap-2 inline-flex">
                     <div class="w-20 h-20 relative">
                         <div class="w-20 h-20 left-0 top-0 absolute flex-col justify-center items-center gap-5 inline-flex">
-                            <img class="" src="src/assets/images/edu-g-2.svg"/>
+                            <img class="" src="src/assets/images/edu-g-2.3.svg"/>
                         </div>
                     </div>
                     <div class="max-w-20 text-center text-Meta text-xs font-medium">جامعة كامبردج برنامج
@@ -318,7 +371,7 @@
                         </div>
                         <div class="justify-end items-center gap-12 inline-flex">
                             <button class="h-12 px-8 py-4 bg-Primary rounded-3xl shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)] justify-center items-center gap-1 overflow-hidden bg-primary-title">
-                        <span class="justify-start items-end gap-1.5 flex ">
+                                <span class="justify-start items-end gap-1.5 flex ">
                             <span data-svg-wrapper class="relative">
                                 <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
