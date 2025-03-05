@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="light">
+<html lang="en" class="light" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
@@ -345,6 +345,7 @@
         >
           <figure class="relative h-0 overflow-hidden pb-[56.25%]">
             <img
+              alt=""
               class="size-full absolute inset-0 object-cover transition duration-700 ease-out hover:scale-105"
               src="https://aanaab-uploads-v1.s3.amazonaws.com/courses/thumbnail/533/%D8%AB%D9%85%D9%86%D9%8A%D9%84-%D8%A8%D8%B1%D8%A7%D9%85%D8%AC-%D8%B9%D9%84%D8%A7%D8%AC%D9%8A%D8%A9.jpg"
             />
@@ -645,21 +646,25 @@
       </div>
     </div>
 
-    <!-- TEAL SECTION -->
-    <section class="pb-14">
+    <!-- #region professional license section -->
+    <section class="pb-14" id="professional-license-section">
       <div
         class="bg-teal-box w-full items-center justify-between overflow-hidden rounded-3xl lg:h-[330px] lg:items-start"
       >
         <div
-          class="flex h-full w-full flex-col-reverse items-center justify-center py-14 lg:h-72 lg:flex-row"
+          class="flex h-full w-full flex-col-reverse items-center justify-center py-14 lg:h-72 lg:flex-row-reverse"
         >
-          <div class="relative flex-1">
+          <!--  zzzzzzzzzzzzzz -->
+          <div
+            id="professional-license-section-images"
+            class="relative flex-1"
+          >
             <div
               class="relative top-0 right-0 z-10 h-[325.02px] w-[453.47px] lg:block"
             >
               <div
                 data-svg-wrapper
-                class="top-15 absolute left-1/4 lg:left-7/12 lg:top-5"
+                class="top-15 lg:left-2/12 absolute left-1/4 lg:top-5"
               >
                 <svg
                   class="fill-[#F4F4F5] dark:fill-[#404040]"
@@ -680,28 +685,32 @@
             <img
               src="src/assets/images/two-s-girls.png"
               alt=""
-              class="absolute top-20 left-2/12 z-20 lg:top-10 lg:left-1/6"
+              class="left-2/12 lg:left-1/6 absolute top-20 z-20 lg:top-10"
             />
           </div>
           <div
-            class="flex flex-col items-end justify-start gap-4 px-6 lg:w-1/2 lg:px-10"
+            id="professional-license-section-text"
+            class="flex flex-col items-start justify-start gap-4 px-6 lg:w-1/2 lg:px-10"
           >
-            <div
+            <h4
               class="text-text dark:text-text-invert h-16 text-right text-2xl font-bold capitalize leading-loose"
             >
               دورات الرخص المهنية
-            </div>
-            <div
+            </h4>
+            <p
               class="text-text dark:text-text-invert mt-6 text-right text-sm font-normal capitalize leading-snug lg:mt-0"
             >
               هو نص وهمي يستخدم في صناعة الطباعة وتصميم المواقع كحشو في
               التصميمات قبل إدخال النصوص وتصميم المواقع كحشو في التصميمات
               قبل إدخال النصوص
-            </div>
+            </p>
             <button
               class="bg-Primary bg-primary-title dark:bg-primary-400 h-12 items-center justify-center gap-1 overflow-hidden rounded-3xl px-8 py-4 shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)]"
             >
-                  <span class="flex items-end justify-start gap-1.5">
+                  <span class="flex items-center justify-start gap-1.5">
+                    <span class="text-base font-bold leading-none text-white">
+                      دورات الرخص المهنية
+                    </span>
                     <span data-svg-wrapper class="relative">
                       <svg
                         width="17"
@@ -719,15 +728,13 @@
                         />
                       </svg>
                     </span>
-                    <span class="text-base font-bold leading-none text-white">
-                      دورات الرخص المهنية
-                    </span>
                   </span>
             </button>
           </div>
         </div>
       </div>
     </section>
+    <!-- #endregion professional license section -->
   </div>
 </main>
 
