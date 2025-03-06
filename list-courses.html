@@ -10,7 +10,6 @@
 </head>
 <body>
 <header
-  dir="rtl"
   class="border-sep dark:bg-dark flex h-20 items-center justify-between border-b px-5"
 >
   <div
@@ -53,7 +52,7 @@
         <label>
           <input
             type="text"
-            class="text-meta font-['Ping AR'] h-8 w-36 text-right text-base font-normal"
+            class="text-meta h-8 w-36 text-right text-base font-normal"
             placeholder="البحث"
           />
         </label>
@@ -76,19 +75,59 @@
 
     <div class="hidden items-center justify-center lg:flex">
           <span
-            class="text-text text-base font-medium leading-none dark:text-neutral-50"
+            class="text-text text-base font-medium leading-none dark:text-neutral-50 me-10"
           >
             المكتبة</span
           >
-      <span
-        class="text-Text font-['Inter'] text-base font-medium leading-10 dark:text-neutral-50"
-      >SAR</span
-      >
-      <img
-        class="inline-block"
-        src="src/assets/images/ksa-flag.png"
-        alt="عربي"
-      />
+
+      <!-- TODO: Handle Currency Selection -->
+      <div class="dropdown relative inline-block me-4">
+            <span
+              class="text-text text-base font-medium leading-10 dark:text-neutral-50"
+            >SAR
+            </span>
+        <ul class="dropdown-menu absolute hidden pt-1 text-gray-700">
+          <li class="">
+            <a
+              class="whitespace-no-wrap block bg-gray-200 py-2 px-4 hover:bg-gray-400"
+              href="#"
+            >SAR</a
+            >
+          </li>
+          <li class="">
+            <a
+              class="whitespace-no-wrap block bg-gray-200 py-2 px-4 hover:bg-gray-400"
+              href="#"
+            >USD</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="dropdown relative inline-block me-4">
+        <img
+          class="inline-block"
+          src="src/assets/images/ksa-flag.png"
+          alt="عربي"
+        />
+        <ul class="dropdown-menu absolute hidden pt-1 text-gray-700">
+          <li class="">
+            <img
+              class="inline-block"
+              src="src/assets/images/ksa-flag.png"
+              alt="عربي"
+            />
+          </li>
+          <li class="">
+            🇺🇸
+            <img
+              class="inline-block"
+              src="src/assets/images/ksa-flag.png"
+              alt="EN"
+            />
+          </li>
+        </ul>
+      </div>
+
 
       <div data-svg-wrapper class="relative">
         <svg
@@ -157,7 +196,7 @@
 
 <main class="bg-box dark:bg-dark px-5">
   <div class="container m-auto pt-4">
-    <nav id="bread-crumb" dir="rtl">
+    <nav id="bread-crumb">
       <div class="flex h-8 items-center gap-2">
         <div
           class="text-meta dark:text-meta-dark h-8 w-14 text-center text-base font-normal capitalize leading-loose"
@@ -185,7 +224,7 @@
       >
         <div data-svg-wrapper class="relative h-full w-full">
           <svg
-            class="-top-13 start-0 absolute"
+            class="-top-13 absolute left-0"
             width="694"
             height="186"
             viewBox="0 0 694 186"
@@ -242,7 +281,6 @@
 
     <div
       class="[&_span]:dark:text-text-invert mb-8 flex h-8 items-center justify-start"
-      dir="rtl"
     >
       <button
         class="bg-primary-title flex items-center justify-start gap-2 rounded-3xl px-5 pt-3 pb-2"
@@ -336,10 +374,9 @@
     </div>
 
     <article
-      dir="rtl"
       class="xs:grid-cols-2 xs:gap-4 grid grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-3 lg:gap-6 2xl:grid-cols-4"
     >
-      <div dir="ltr" class="course-card w-auto">
+      <div class="course-card w-auto">
         <div
           class="dark:bg-box-2 flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-lg"
         >
@@ -369,7 +406,6 @@
               </div>
               <div class="relative h-10 items-center">
                 <div
-                  dir="rtl"
                   class="backdrop-blur-blur flex h-10 w-40 items-center justify-items-start gap-5 rounded-full bg-white px-3"
                 >
                   <img
@@ -424,52 +460,61 @@
                 class="inline-flex h-6 w-full items-center justify-between"
               >
                 <div
-                  class="flex h-6 shrink grow basis-0 items-end justify-start gap-0.5"
+                  class="flex h-5 shrink grow basis-0 items-center justify-start gap-1"
                 >
-                  <div class="text-meta text-xs font-medium">ر.س</div>
-                  <div class="text-text">
-                        <span
-                          class="text-Primary-Title-2 font-['Inter'] text-xl font-bold"
-                        >125</span
-                        >
-                    <span
-                      class="text-Primary-Title-2 font-['Inter'] text-sm font-medium"
-                    >.65</span
-                    >
-                  </div>
-                </div>
-                <div class="flex items-center justify-end">
-                  <div class="flex -space-x-2 overflow-hidden">
-                    <img
-                      class="size-7 inline-block rounded-full ring-4 ring-white"
-                      src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                      alt=""
-                    />
-                    <img
-                      class="size-7 inline-block rounded-full ring-4 ring-white"
-                      src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
-                      alt=""
-                    />
-                    <span
-                      class="size-7 inline-block rounded-full border-4 border-[#cfcfcf] bg-[#d9d9d9] pt-1 text-[10px]"
-                    >
-                          +3K
-                        </span>
-                  </div>
-                </div>
-                <div
-                  class="flex h-5 shrink grow basis-0 items-center justify-end gap-1"
-                >
-                  <div
-                    class="text-meta text-right text-xs font-medium leading-tight"
-                  >
-                    عبد الرحمن حافظ
-                  </div>
+                  <!-- Lecturer image -->
                   <img
                     alt=""
                     class="size-6 inline-block rounded-full bg-[#d9d9d9] ring-2 ring-white"
                     src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
                   />
+                  <h6
+                    class="text-meta mx-2 text-right text-xs font-medium leading-tight"
+                  >
+                    <!-- Lecturer name -->
+                    عبد الرحمن حافظ
+                  </h6>
+                </div>
+                <div class="flex items-center justify-end">
+                  <div class="flex -space-x-2 overflow-hidden">
+                    <!-- Counts -->
+                    <span
+                      class="size-7 z-50 inline-block rounded-full border-4 border-[#cfcfcf] bg-[#d9d9d9] pt-1 text-[10px]"
+                    >
+                          3K+
+                        </span>
+                    <!-- Students images -->
+                    <img
+                      class="size-7 z-40 inline-block rounded-full border-2 border-white ring-0 ring-white"
+                      src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+                      alt=""
+                    />
+                    <img
+                      class="size-7 inline-block rounded-full border-2 border-white ring-0 ring-white"
+                      src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <!-- Price -->
+                <div
+                  class="flex h-6 shrink grow basis-0 items-end justify-end gap-0.5"
+                >
+                  <div class="text-text dark:text-ِِprimary-title-2">
+                    <!-- Currency -->
+                    <span class="text-meta text-xs font-medium">ر.س</span>
+                    <span
+                      dir="ltr"
+                      class="text-xl font-bold"
+                    >
+                          <!-- Riyals / Main Currency -->
+                          125
+                          <span class="text-sm font-medium">
+                            <!-- Halala / Change -->
+                            .65
+                          </span>
+                        </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -480,19 +525,27 @@
 
     <div
       id="pages-count"
-      class="mt-6 mb-14 flex h-12 items-center justify-between md:w-1/2"
+      class="relative mt-6 mb-14 flex h-12 items-center justify-center"
     >
+      <div
+        class="start-0 absolute text-base font-normal text-black dark:text-white"
+      >
+        عرض
+        <!-- Display Range -->
+        <span>1–16</span> من
+        <!-- Total Results -->
+        <span>32</span>
+        نتيجة
+      </div>
       <button
         class="border-primary-title inline-flex h-12 items-center justify-center gap-1 rounded-3xl border-2 px-8 py-4 shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)]"
       >
             <span
               class="text-PrimaryBanner text-primary-title text-base font-bold leading-none"
-            >للمزيد من الدورات</span
             >
+              للمزيد من الدورات
+            </span>
       </button>
-      <div class="text-base font-normal text-black dark:text-white">
-        عرض <span>1–16</span> من <span>32</span> نتيجة
-      </div>
     </div>
 
     <!--  #region  Partners section start -->
@@ -509,9 +562,9 @@
 
     <!-- Partners -->
     <!--    TODO: Start Here -->
-    <section class="h-48 flex-col items-start justify-start gap-6 md:flex">
+    <section class="h-48 min-h-fit  ">
       <ul
-        class="[&li]:flex [&li]:flex-col [&li]:items-center [&li]:justify-start [&li]:gap-2 flex items-start justify-between self-stretch"
+        class="[&li]:flex [&li]:flex-col [&li]:items-center [&li]:justify-start [&li]:gap-2 h-fit min-h-fit grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 justify-between self-stretch"
       >
         <li>
           <figure class="relative h-20 w-20">
@@ -659,33 +712,8 @@
         >
           <div
             id="professional-license-section-images"
-            class="relative flex-1"
+            class="relative top-0 right-0 z-10 h-[325.02px] w-[453.47px] flex-1 lg:block"
           >
-            <div
-              class="relative top-0 right-0 z-10 h-[325.02px] w-[453.47px] lg:block"
-            >
-              <div
-                data-svg-wrapper
-                class="top-15 lg:left-2/12 absolute left-1/4 lg:top-5"
-              >
-                <svg
-                  class="fill-[#F4F4F5] dark:fill-[#404040]"
-                  width="281"
-                  height="324"
-                  viewBox="0 0 281 324"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                  focusable="false"
-                >
-                  <path
-                    d="M45.7357 231.696C57.6571 231.696 69.0902 236.557 77.5199 245.21C85.9496 253.863 90.6853 265.599 90.6853 277.836C90.6853 290.073 85.9496 301.808 77.5199 310.461C69.0902 319.114 57.6571 323.975 45.7357 323.975C33.8143 323.975 22.3813 319.114 13.9516 310.461C5.52192 301.808 0.786133 290.073 0.786133 277.836C0.786133 265.599 5.52192 253.863 13.9516 245.21C22.3813 236.557 33.8143 231.696 45.7357 231.696ZM45.7357 116.336C57.6571 116.336 69.0902 121.197 77.5199 129.85C85.9496 138.502 90.6853 150.238 90.6853 162.475C90.6853 174.712 85.9496 186.448 77.5199 195.101C69.0902 203.754 57.6571 208.615 45.7357 208.615C39.8328 208.615 33.9878 207.421 28.5342 205.102C23.0807 202.784 18.1256 199.385 13.9516 195.101C9.77765 190.816 6.46658 185.73 4.20766 180.132C1.94873 174.534 0.786133 168.534 0.786133 162.475C0.786133 156.416 1.94873 150.416 4.20766 144.818C6.46658 139.22 9.77765 134.134 13.9516 129.85C18.1256 125.565 23.0807 122.166 28.5342 119.848C33.9878 117.529 39.8328 116.336 45.7357 116.336ZM135.635 174.012C147.558 174.012 158.993 178.874 167.424 187.528C175.855 196.182 180.592 207.92 180.592 220.159C180.592 232.398 175.855 244.136 167.424 252.79C158.993 261.445 147.558 266.307 135.635 266.307C123.711 266.307 112.277 261.445 103.845 252.79C95.4143 244.136 90.6778 232.398 90.6778 220.159C90.6778 207.92 95.4143 196.182 103.845 187.528C112.277 178.874 123.711 174.012 135.635 174.012ZM135.635 58.6592C141.587 58.5799 147.496 59.7149 153.018 61.9982C158.539 64.2815 163.564 67.6678 167.801 71.9605C172.037 76.2532 175.401 81.3668 177.697 87.0046C179.993 92.6424 181.176 98.6921 181.176 104.803C181.176 110.913 179.993 116.963 177.697 122.601C175.401 128.238 172.037 133.352 167.801 137.645C163.564 141.937 158.539 145.324 153.018 147.607C147.496 149.89 141.587 151.025 135.635 150.946C123.814 150.789 112.528 145.858 104.223 137.221C95.918 128.585 91.2612 116.938 91.2612 104.803C91.2612 92.6674 95.918 81.0205 104.223 72.384C112.528 63.7476 123.814 58.8167 135.635 58.6592ZM45.7357 0.975098C57.6571 0.975098 69.0902 5.83621 77.5199 14.4891C85.9496 23.1419 90.6853 34.8777 90.6853 47.1146C90.6853 59.3516 85.9496 71.0874 77.5199 79.7402C69.0902 88.393 57.6571 93.2542 45.7357 93.2542C39.8328 93.2542 33.9878 92.0607 28.5342 89.742C23.0807 87.4233 18.1256 84.0247 13.9516 79.7402C9.77765 75.4557 6.46658 70.3694 4.20766 64.7715C1.94873 59.1736 0.786133 53.1738 0.786133 47.1146C0.786133 41.0555 1.94873 35.0557 4.20766 29.4578C6.46658 23.8599 9.77765 18.7735 13.9516 14.4891C18.1256 10.2046 23.0807 6.80599 28.5342 4.48726C33.9878 2.16853 39.8328 0.975098 45.7357 0.975098ZM235.433 116.343C241.385 116.264 247.294 117.399 252.816 119.682C258.337 121.966 263.362 125.352 267.599 129.645C271.835 133.937 275.199 139.051 277.495 144.689C279.791 150.327 280.973 156.376 280.973 162.487C280.973 168.597 279.791 174.647 277.495 180.285C275.199 185.923 271.835 191.036 267.599 195.329C263.362 199.622 258.337 203.008 252.816 205.291C247.294 207.575 241.385 208.71 235.433 208.63C204.669 208.63 188.703 176.632 169.353 162.483C188.703 148.318 204.669 116.343 235.433 116.343Z"
-                    fill=""
-                    fill-opacity="0.5"
-                  />
-                </svg>
-              </div>
-            </div>
             <img
               src="src/assets/images/two-s-girls.png"
               alt=""
