@@ -127,14 +127,14 @@ button {
 /*    }*/
 /*}*/
 
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
+/*.dropdown:hover .dropdown-menu {*/
+/*    display: block;*/
+/*}*/
 
-.dropdown:hover .dropdown-menu,
-.dropdown-menu:hover {
-    display: block;
-}
+/*.dropdown:hover .dropdown-menu,*/
+/*.dropdown-menu:hover {*/
+/*    display: block;*/
+/*}*/
 
 .arrow-top:after {
     content: " ";
