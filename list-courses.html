@@ -75,13 +75,13 @@
 
     <div class="hidden items-center justify-center lg:flex">
           <span
-            class="text-text text-base font-medium leading-none dark:text-neutral-50 me-10"
+            class="text-text me-10 text-base font-medium leading-none dark:text-neutral-50"
           >
             المكتبة</span
           >
 
       <!-- TODO: Handle Currency Selection -->
-      <div class="dropdown relative inline-block me-4">
+      <div class="dropdown me-4 relative inline-block">
             <span
               class="text-text text-base font-medium leading-10 dark:text-neutral-50"
             >SAR
@@ -103,13 +103,13 @@
           </li>
         </ul>
       </div>
-      <div class="dropdown relative inline-block me-4">
+      <div class="dropdown  me-4 relative inline-block ">
         <img
           class="inline-block"
           src="src/assets/images/ksa-flag.png"
           alt="عربي"
         />
-        <ul class="dropdown-menu absolute hidden pt-1 text-gray-700">
+        <ul class="dropdown-menu arrow-top border border-gray-50 arrow-top absolute hidden pt-1 text-gray-700">
           <li class="">
             <img
               class="inline-block"
@@ -127,7 +127,6 @@
           </li>
         </ul>
       </div>
-
 
       <div data-svg-wrapper class="relative">
         <svg
@@ -503,10 +502,7 @@
                   <div class="text-text dark:text-ِِprimary-title-2">
                     <!-- Currency -->
                     <span class="text-meta text-xs font-medium">ر.س</span>
-                    <span
-                      dir="ltr"
-                      class="text-xl font-bold"
-                    >
+                    <span dir="ltr" class="text-xl font-bold">
                           <!-- Riyals / Main Currency -->
                           125
                           <span class="text-sm font-medium">
@@ -562,16 +558,20 @@
 
     <!-- Partners -->
     <!--    TODO: Start Here -->
-    <section class="h-48 min-h-fit  ">
+    <section class="h-48 min-h-fit">
       <ul
-        class="[&li]:flex [&li]:flex-col [&li]:items-center [&li]:justify-start [&li]:gap-2 h-fit min-h-fit grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 justify-between self-stretch"
+        class="[&li]:flex [&li]:flex-col [&li]:items-center [&li]:justify-start [&li]:gap-2 grid h-fit min-h-fit grid-cols-2 justify-between self-stretch sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8"
       >
         <li>
           <figure class="relative h-20 w-20">
             <div
               class="left-0 top-0 flex h-20 w-20 flex-col items-center justify-center gap-5"
             >
-              <img alt="" class="" src="src/assets/images/edu-g-1.svg" />
+              <img
+                alt=""
+                class="size-10"
+                src="src/assets/images/edu-g-1.svg"
+              />
             </div>
             <figcaption
               class="max-w-20 text-meta dark:text-wheat text-center text-xs font-medium"
@@ -585,7 +585,10 @@
             <div
               class="left-0 top-0 flex h-20 w-20 flex-col items-center justify-center gap-5"
             >
-              <img alt="" class="" src="src/assets/images/edu-g-2.3.svg" />
+              <img
+                class="size-10"
+                src="src/assets/images/partners/cambridge-logo.svg"
+              />
             </div>
             <figcaption
               class="max-w-20 text-meta dark:text-wheat text-center text-xs font-medium"
