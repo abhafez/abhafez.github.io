@@ -9,6 +9,7 @@ const dropdownIds = ["user-menu", "currency-menu", "locale-switcher"]; // Add yo
 
 // Meny controller
 $(document).ready(function () {
+  // control dropdown menus
   dropdownIds.forEach((menuId) => {
     const $dropdown = $(`#${menuId}`).closest(".dropdown"); // Find parent dropdown container
     const $menu = $(`#${menuId}`); // Dropdown menu
