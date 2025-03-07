@@ -131,6 +131,11 @@ button {
     display: block;
 }
 
+.dropdown:hover .dropdown-menu,
+.dropdown-menu:hover {
+    display: block;
+}
+
 .arrow-top:after {
     content: " ";
     position: absolute;
