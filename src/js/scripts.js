@@ -1,5 +1,5 @@
 document.addEventListener("keydown", (event) => {
-  if (event.ctrlKey && event.key.toLowerCase() === "t") {
+  if (event.ctrlKey && event.key.toLowerCase() === "l") {
     event.preventDefault();
     document.documentElement.classList.toggle("dark");
   }
