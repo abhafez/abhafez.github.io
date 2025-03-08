@@ -1,162 +1,325 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/output.css" />
-    <link href="https://cdn.lineicons.com/5.0/lineicons.css" rel="stylesheet" />
+<html lang="en" class="light" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/output.css" />
+  <script src="src/js/jquery.js"></script>
+  <script src="src/js/scripts.js" defer></script>
     <title>Aanaab</title>
   </head>
-  <body dir="rtl" class="light">
-    <!--Header-->
-    <!-- TODO: large screen -->
-    <header
-      dir="rtl"
-      class="flex justify-between items-center px-5 h-20 border-b border-sep"
-    >
-      <img src="src/assets/images/logo/logo.svg" alt="logo" class="h-9" />
+  <body >
+    <!--Header Start-->
+    <header class="border-sep dark:bg-dark flex h-20 items-center justify-between border-b px-5">
+      <div class="container flex flex-row items-center justify-between md:m-auto">
+        <div class="flex items-center gap-10">
+          <img src="src/assets/images/logo/logo.svg" alt="logo" class="h-9" />
 
-      <div class="flex justify-between gap-7 items-center">
-        <!-- Search Button -->
-        <div data-svg-wrapper>
-          <svg
-            width="30"
-            height="30"
-            viewBox="0 0 30 30"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M21.4408 18.8679H20.0858L19.6055 18.4048C21.3445 16.3877 22.3003 13.8125 22.2985 11.1492C22.2985 8.94412 21.6446 6.78853 20.4195 4.95505C19.1944 3.12157 17.4531 1.69255 15.4159 0.848689C13.3786 0.00483079 11.1369 -0.215961 8.97412 0.214234C6.81139 0.64443 4.82478 1.70629 3.26554 3.26554C1.70629 4.82478 0.64443 6.81139 0.214234 8.97412C-0.215961 11.1369 0.00483079 13.3786 0.848689 15.4159C1.69255 17.4531 3.12157 19.1944 4.95505 20.4195C6.78853 21.6446 8.94412 22.2985 11.1492 22.2985C13.9108 22.2985 16.4494 21.2865 18.4048 19.6055L18.8679 20.0858V21.4408L27.4443 30L30 27.4443L21.4408 18.8679ZM11.1492 18.8679C6.87822 18.8679 3.43054 15.4202 3.43054 11.1492C3.43054 6.87822 6.87822 3.43054 11.1492 3.43054C15.4202 3.43054 18.8679 6.87822 18.8679 11.1492C18.8679 15.4202 15.4202 18.8679 11.1492 18.8679Z"
-              fill="#52525B"
-            />
-          </svg>
+          <nav class="hidden lg:block">
+            <ul class="flex flex-row items-center gap-5">
+              <li class="bg-Primary bg-primary-title h-12 items-center justify-center gap-1 overflow-hidden rounded-3xl px-8 py-3 shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)]">
+                <span class="text-base font-medium leading-none text-white">الدورات التعليمية</span>
+              </li>
+              <li>
+                <span class="text-text text-base font-medium leading-none dark:text-neutral-50"> الدورات الاستشارية</span>
+              </li>
+              <li>
+                <span class="text-text text-base font-medium leading-none dark:text-neutral-50"> الدورات الرياضية</span>
+              </li>
+            </ul>
+          </nav>
         </div>
 
-        <!-- Hamburger Menu -->
-        <div data-svg-wrapper>
-          <div data-svg-wrapper class="relative">
-            <svg
-              width="30"
-              height="30"
-              viewBox="0 0 30 30"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+        <section class="hidden xl:block">
+          <div class="bg-Field border-sep inline-flex h-10 w-52 items-center justify-start gap-2.5 rounded-lg border px-4 py-4">
+            <label>
+              <input type="text" class="text-meta h-8 w-36 text-right text-base font-normal" placeholder="البحث" />
+            </label>
+            <div data-svg-wrapper>
+              <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.4167 9.87907H9.75834L9.525 9.65407C10.3699 8.67409 10.8343 7.42298 10.8333 6.12907C10.8333 5.05776 10.5157 4.0105 9.92046 3.11973C9.32527 2.22897 8.4793 1.5347 7.48954 1.12472C6.49977 0.714749 5.41066 0.607481 4.35993 0.816485C3.3092 1.02549 2.34404 1.54138 1.58651 2.29891C0.828973 3.05644 0.313085 4.0216 0.104082 5.07233C-0.104921 6.12306 0.00234696 7.21217 0.412322 8.20194C0.822296 9.19171 1.51656 10.0377 2.40733 10.6329C3.2981 11.2281 4.34535 11.5457 5.41667 11.5457C6.75834 11.5457 7.99167 11.0541 8.94167 10.2374L9.16667 10.4707V11.1291L13.3333 15.2874L14.575 14.0457L10.4167 9.87907ZM5.41667 9.87907C3.34167 9.87907 1.66667 8.20407 1.66667 6.12907C1.66667 4.05407 3.34167 2.37907 5.41667 2.37907C7.49167 2.37907 9.16667 4.05407 9.16667 6.12907C9.16667 8.20407 7.49167 9.87907 5.41667 9.87907Z"
+                  fill="#52525B"
+                />
+              </svg>
+            </div>
+          </div>
+        </section>
+
+        <div class="flex items-center justify-center">
+          <span class="text-text me-10 hidden text-base font-medium leading-none dark:text-neutral-50 lg:block"> المكتبة</span>
+
+          <!-- TODO: Handle Currency Selection -->
+          <!-- Currency Start -->
+          <div class="dropdown me-4 relative hidden lg:block">
+            <div class="text-text text-base font-medium leading-10 dark:text-neutral-50">
+              SAR
+              <!--Currency Change Menu Start-->
+              <div
+                role="menu"
+                id="currency-menu"
+                aria-label="Currency menu"
+                class="dropdown-menu min-w-14 -start-7 absolute mx-4 mt-0 hidden w-14 max-w-fit rounded-xl border border-black/10 bg-white p-4 shadow-lg"
+              >
+                <span
+                  aria-hidden="true"
+                  class="rotate-225 absolute left-[22px] -top-[17px] h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"
+                ></span>
+                <ul class="text-end">
+                  <li aria-label="USD">
+                    <!-- USD -->
+                    <a class="text-base font-medium leading-10 text-[#311e6a]" href="#"> $ </a>
+                  </li>
+                </ul>
+              </div>
+              <!--Currency Change Menu End-->
+            </div>
+          </div>
+          <!--      Currency End -->
+          <!--      Language Switch Start -->
+          <div id="locale-switcher-button" class="dropdown me-4 relative hidden lg:block">
+            <img class="inline-block" src="src/assets/images/header/ar.svg" alt="عربي" />
+            <!--Language Switch Menu Start-->
+            <div
+              role="menu"
+              id="locale-switcher"
+              aria-label="Change Language"
+              class="dropdown-menu -start-12 w-18 max-w-18 min-w-18 absolute mx-4 mt-2 hidden rounded-xl border border-black/10 bg-white p-4 shadow-lg"
             >
+              <span
+                aria-hidden="true"
+                class="rotate-225 absolute left-[22px] -top-[17px] flex h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"
+              ></span>
+
+              <ul>
+                <li class="flex justify-center">
+                  <a href="#">
+                    <img aria-label="English" src="src/assets/images/header/en.svg" alt="home" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!--Language Switch Menu End-->
+          </div>
+          <!-- Language Switch End -->
+          <!-- Favorite Heart Start -->
+          <div id="favorite-button" data-svg-wrapper class="ms-2.5 relative hidden lg:block">
+            <svg class="stroke-primary-200 dark:stroke-neutral-50" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
-                d="M7.5 24C7.5 24.8284 8.1716 25.5 9 25.5H28.5C29.3284 25.5 30 24.8284 30 24C30 23.1716 29.3284 22.5 28.5 22.5H9C8.1716 22.5 7.5 23.1717 7.5 24ZM28.5 16.5H1.5C0.671602 16.5 0 15.8283 0 15C0 14.1716 0.671602 13.5 1.5 13.5H28.5C29.3284 13.5 30 14.1716 30 15C30 15.8283 29.3284 16.5 28.5 16.5ZM28.5 7.5H15C14.1717 7.5 13.5 6.8284 13.5 6C13.5 5.17166 14.1717 4.5 15 4.5H28.5C29.3284 4.5 30 5.17166 30 6C30 6.8284 29.3284 7.5 28.5 7.5Z"
-                fill="#52525B"
+                d="M9.29688 16.1371L9.2958 16.1361C7.13522 14.1769 5.40233 12.6016 4.20082 11.1316C3.00755 9.67172 2.41699 8.4076 2.41699 7.08333C2.41699 4.92344 4.09698 3.25 6.25033 3.25C7.4736 3.25 8.66009 3.82334 9.4312 4.7218L10.0003 5.38491L10.5695 4.7218C11.3406 3.82334 12.5271 3.25 13.7503 3.25C15.9037 3.25 17.5837 4.92344 17.5837 7.08333C17.5837 8.4076 16.9931 9.67172 15.7998 11.1316C14.5983 12.6016 12.8654 14.1769 10.7049 16.1361L10.7038 16.1371L10.0003 16.7774L9.29688 16.1371Z"
+                stroke=""
+                stroke-width="1.5"
               />
             </svg>
           </div>
+          <!--      Favorite Heart End -->
+
+          <!-- Login Button -->
+          <button
+            id="login-button"
+            class="bg-primary-title ms-4 hidden h-10 items-center justify-center gap-2.5 rounded-full px-6 pt-0.5 shadow-[0px_12px_53px_0px_rgba(0,0,0,0.04)] lg:inline"
+          >
+            <span class="text-center text-base font-medium text-white">دخول</span>
+          </button>
+          <!--      Login Button End -->
+
+          <!-- Search Button ICON -->
+          <div class="relative">
+            <!-- Search Icon Button -->
+            <div class="ms-2.5 cursor-pointer xl:hidden" id="search-icon" data-svg-wrapper>
+              <svg class="fill-meta dark:fill-white" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21.4408 18.8679H20.0858L19.6055 18.4048C21.3445 16.3877 22.3003 13.8125 22.2985 11.1492C22.2985 8.94412 21.6446 6.78853 20.4195 4.95505C19.1944 3.12157 17.4531 1.69255 15.4159 0.848689C13.3786 0.00483079 11.1369 -0.215961 8.97412 0.214234C6.81139 0.64443 4.82478 1.70629 3.26554 3.26554C1.70629 4.82478 0.64443 6.81139 0.214234 8.97412C-0.215961 11.1369 0.00483079 13.3786 0.848689 15.4159C1.69255 17.4531 3.12157 19.1944 4.95505 20.4195C6.78853 21.6446 8.94412 22.2985 11.1492 22.2985C13.9108 22.2985 16.4494 21.2865 18.4048 19.6055L18.8679 20.0858V21.4408L27.4443 30L30 27.4443L21.4408 18.8679ZM11.1492 18.8679C6.87822 18.8679 3.43054 15.4202 3.43054 11.1492C3.43054 6.87822 6.87822 3.43054 11.1492 3.43054C15.4202 3.43054 18.8679 6.87822 18.8679 11.1492C18.8679 15.4202 15.4202 18.8679 11.1492 18.8679Z"
+                  fill=""
+                />
+              </svg>
+            </div>
+
+            <!-- Search Input (Initially Hidden) -->
+
+            <!-- Modal Wrapper -->
+            <div id="search-modal" class="invisible fixed inset-0 z-50 flex items-center justify-center bg-black/50 opacity-0 backdrop-blur-sm transition-opacity duration-500">
+              <div class="relative w-full max-w-md rounded-lg bg-white p-4 shadow-lg">
+                <!-- Close Button -->
+                <button id="close-search" class="end-3 absolute top-3 text-gray-500 hover:text-gray-700">✖</button>
+                <!-- Search Input -->
+                <label>
+                  <input
+                    type="text"
+                    id="search-input"
+                    placeholder="ابحث هنا..."
+                    class="focus:ring-primary-title w-full rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2"
+                  />
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- user menu -->
+          <div id="user-menu-button" role="menu" class="dropdown ms-2.5 relative flex items-center justify-center gap-3">
+            <div class="bg-primary-title hidden h-12 w-12 items-center justify-center rounded-full pt-1 text-lg font-bold text-white lg:flex">
+              <!-- Name Initials -->
+              HN
+            </div>
+            <!-- Burger Menu -->
+            <div class="dropdown ms-2.5 lg:hidden" data-svg-wrapper>
+              <div data-svg-wrapper class="relative">
+                <svg class="fill-meta dark:fill-white" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M7.5 24C7.5 24.8284 8.1716 25.5 9 25.5H28.5C29.3284 25.5 30 24.8284 30 24C30 23.1716 29.3284 22.5 28.5 22.5H9C8.1716 22.5 7.5 23.1717 7.5 24ZM28.5 16.5H1.5C0.671602 16.5 0 15.8283 0 15C0 14.1716 0.671602 13.5 1.5 13.5H28.5C29.3284 13.5 30 14.1716 30 15C30 15.8283 29.3284 16.5 28.5 16.5ZM28.5 7.5H15C14.1717 7.5 13.5 6.8284 13.5 6C13.5 5.17166 14.1717 4.5 15 4.5H28.5C29.3284 4.5 30 5.17166 30 6C30 6.8284 29.3284 7.5 28.5 7.5Z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <!-- User Menu Start -->
+            <div
+              role="menu"
+              id="user-menu"
+              aria-label="User menu"
+              class="max-w-72 dropdown-menu -end-7 absolute top-14 z-30 mx-4 hidden w-72 rounded-xl border border-black/10 bg-white bg-blue-100 p-4 shadow-lg"
+            >
+              <span
+                aria-hidden="true"
+                class="rotate-225 absolute left-[39px] -top-[17px] h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"
+              ></span>
+
+              <div class="flex items-center gap-3 pb-3">
+                <!--    Menu name and e-mail-->
+                <div class="bg-primary-title flex h-12 w-12 items-center justify-center rounded-full pt-1 text-lg font-bold text-white">
+                  <!-- Name Initials -->
+                  HN
+                </div>
+                <div>
+                  <!--      name -->
+                  <p class="text-sm font-bold text-[#311e6a]">هبة نبيل</p>
+                  <!--        email -->
+                  <p class="text-sm text-gray-500">Heba@gmail.com</p>
+                </div>
+              </div>
+              <hr class="my-3 border-t border-t-black/10" />
+              <!-- Menu Items -->
+              <nav class="[&_li]:text-base [&_li]:font-medium [&_li]:cursor-pointer [&_li]:text-meta-light [&_li]:hover:text-primary-title mt-3 space-y-3 text-gray-700">
+                <ul>
+                  <!--    Item -->
+                  <li aria-label="My Courses">
+                    <a href="">دوراتي</a>
+                  </li>
+                  <!-- End Item -->
+                  <!--    Item -->
+                  <li aria-label="My Certificates">
+                    <a href="">شهاداتي</a>
+                  </li>
+                  <!-- End Item -->
+                  <!--    Item -->
+                  <li aria-label="My Wishlist">
+                    <a href="">مفضلتي</a>
+                  </li>
+                  <!-- End Item -->
+                  <!--    Item -->
+                  <li aria-label="My Cart">
+                    <a href="">السلة</a>
+                  </li>
+                </ul>
+                <hr class="my-3 border-t border-t-black/10" />
+                <ul>
+                  <!-- End Item -->
+                  <!--    Item -->
+                  <li aria-label="Dashboard">
+                    <a href=""> لوحة التحكم </a>
+                  </li>
+                  <!-- End Item -->
+                  <!--    Item -->
+                  <li aria-label="Community">
+                    <a href="">المجتمع</a>
+                  </li>
+                </ul>
+                <hr class="my-3 border-t border-t-black/10" />
+                <ul>
+                  <!-- End Item -->
+                  <!--    Item -->
+                  <li aria-label="Profile">
+                    <a href="">الملف الشخصي </a>
+                  </li>
+                  <!-- End Item -->
+                  <!--    Item -->
+                  <li aria-label="Notifications">
+                    <a href="">الإشعارات</a>
+                  </li>
+                  <!-- End Item -->
+                  <!--    Item -->
+                  <li aria-label="Orders">
+                    <a href="">سجل المشتريات</a>
+                  </li>
+                  <li aria-label="Help Center">
+                    <a href="">مركز التعليمات</a>
+                  </li>
+                  <!-- End Item -->
+                  <!--    Item -->
+                </ul>
+                <hr class="mt-4 border-t border-t-black/10" />
+                <!-- Logout Start -->
+                <div class="pe-2 mt-4 flex justify-between">
+                  <a aria-label="Logout" href="#" class="flex cursor-pointer items-center font-bold text-red-600 hover:text-red-700"> خروج </a>
+                  <img src="src/assets/images/header/logout.svg" alt="logout" />
+                </div>
+              </nav>
+              <!-- Logout END -->
+            </div>
+            <!-- User Menu End -->
+          </div>
+          <!--      user menu End -->
         </div>
       </div>
     </header>
     <!--Header End-->
 
     <!--Banner Section start-->
-    <div
-      class="dark container m-auto mb-12 dar:bg-dark mt-16 relative flex items-center justify-between"
-    >
-      <div
-        class="opacity-50 w-[414px] h-[414px] absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
-      >
-        <div
-          class="w-[162px] h-[162px] left-[126px] top-[126px] absolute rounded-full border border-zinc-300"
-        ></div>
-        <div
-          class="w-[265px] h-[265px] left-[75px] top-[75px] absolute rounded-full border border-zinc-300"
-        ></div>
-        <div
-          class="w-[344px] h-[344px] left-[35px] top-[35px] absolute rounded-full border border-zinc-300"
-        ></div>
-        <div
-          class="w-[414px] h-[414px] left-0 top-0 absolute rounded-full border border-zinc-300"
-        ></div>
+    <div class="dark dar:bg-dark container relative m-auto mb-12 mt-16 flex items-center justify-between">
+      <div class="absolute left-1/2 top-1/2 h-[414px] w-[414px] -translate-x-1/2 -translate-y-1/2 transform opacity-50">
+        <div class="absolute left-[126px] top-[126px] h-[162px] w-[162px] rounded-full border border-zinc-300"></div>
+        <div class="absolute left-[75px] top-[75px] h-[265px] w-[265px] rounded-full border border-zinc-300"></div>
+        <div class="absolute left-[35px] top-[35px] h-[344px] w-[344px] rounded-full border border-zinc-300"></div>
+        <div class="absolute left-0 top-0 h-[414px] w-[414px] rounded-full border border-zinc-300"></div>
       </div>
-      <div
-        class="text-right w-1/2 pe-20 flex flex-col items-start justify-center z-10"
-      >
-        <p
-          class="text-[64px] font-bold font-['Ping AR'] leading-[78px]"
-          style="font-size: 64px"
-        >
+      <div class="pe-20 z-10 flex w-1/2 flex-col items-start justify-center text-right">
+        <p class="font-['Ping AR'] text-[64px] font-bold leading-[78px]" style="font-size: 64px">
           <span style="color: #6639c6">الدورة </span>
           <span class="text-[#20b486]">الرياضية</span>
         </p>
-        <p
-          style="font-size: 64px; color: #6639c6"
-          class="font-bold font-['Ping AR'] leading-[78px] mb-8"
-        >
-          للإدارة وصناعة الرياضة
-        </p>
+        <p style="font-size: 64px; color: #6639c6" class="font-['Ping AR'] mb-8 font-bold leading-[78px]">للإدارة وصناعة الرياضة</p>
         <p class="text-right">
-          <span
-            style="color: #311e6a"
-            class="text-base font-normal font-['Ping AR']"
-            >تهدف هذه الدورة إلى تأهيل كوادر قادرة على إدارة وتطوير القطاع
-            الرياضي. سيتعلم المتدربون المهارات الأساسية في إدارة الفعاليات
-            الرياضية، والتسويق الرياضي، وإدارة المنشآت الرياضية. كما سيتعرفون
-            على أحدث التطورات في صناعة الرياضة، مما يجعلهم قادرين على المساهمة
-            في تطوير الحركة الرياضية والعمل في القطاع الرياضي.<br /><br />تقديم:
-            سامي دبور<br /></span
-          ><span class="text-[#20b486] text-base font-normal font-['Ping AR']"
-            >الدوره مقابل 488.75 ريال سعودي</span
-          >
+          <span style="color: #311e6a" class="font-['Ping AR'] text-base font-normal"
+            >تهدف هذه الدورة إلى تأهيل كوادر قادرة على إدارة وتطوير القطاع الرياضي. سيتعلم المتدربون المهارات الأساسية في إدارة الفعاليات الرياضية، والتسويق الرياضي، وإدارة المنشآت
+            الرياضية. كما سيتعرفون على أحدث التطورات في صناعة الرياضة، مما يجعلهم قادرين على المساهمة في تطوير الحركة الرياضية والعمل في القطاع الرياضي.<br /><br />تقديم: سامي
+            دبور<br /></span
+          ><span class="font-['Ping AR'] text-base font-normal text-[#20b486]">الدوره مقابل 488.75 ريال سعودي</span>
         </p>
         <div class="mt-8">
           <button
-            class="cursor-pointer h-[52px] px-8 py-[18px] bg-[#6639c6] rounded-[32px] shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)] shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)] justify-center items-center gap-1 inline-flex overflow-hidden"
+            class="inline-flex h-[52px] cursor-pointer items-center justify-center gap-1 overflow-hidden rounded-[32px] bg-[#6639c6] px-8 py-[18px] shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)] shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)]"
           >
-            <span
-              class="shadow-[1px_5px_22px_4px_rgba(0,0,0,0.15)] justify-start items-end gap-1.5 flex"
-            >
-              <span
-                class="text-white text-base font-bold font-['Ping Ar'] leading-none"
-              >
-                أنضم للدروه الرياضيه
-              </span>
+            <span class="flex items-end justify-start gap-1.5 shadow-[1px_5px_22px_4px_rgba(0,0,0,0.15)]">
+              <span class="font-['Ping Ar'] text-base font-bold leading-none text-white"> أنضم للدروه الرياضيه </span>
             </span>
           </button>
           <button
-            class="cursor-pointer h-[52px] px-8 py-[18px] rounded-[32px] shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)] shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)] border-2 border-[#6639c6] justify-center items-center gap-1 inline-flex"
+            class="inline-flex h-[52px] cursor-pointer items-center justify-center gap-1 rounded-[32px] border-2 border-[#6639c6] px-8 py-[18px] shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)] shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)]"
           >
-            <div class="justify-start items-end gap-1.5 flex">
-              <div
-                class="text-[#6639c6] text-base font-bold font-['Ping AR'] leading-none"
-              >
-                أستكشف الباقات
-              </div>
+            <div class="flex items-end justify-start gap-1.5">
+              <div class="font-['Ping AR'] text-base font-bold leading-none text-[#6639c6]">أستكشف الباقات</div>
             </div>
           </button>
         </div>
       </div>
-      <div
-        class="w-1/2 h-[672px] bg-no-repeat bg-center bg-contain flex items-start justify-center z-10 relative"
-        style="background-image: url('/src/assets/images/Teacher.svg')"
-      >
+      <div class="relative z-10 flex h-[672px] w-1/2 items-start justify-center bg-contain bg-center bg-no-repeat" style="background-image: url('/src/assets/images/Teacher.svg')">
         <div
-          class="w-[164px] h-[87px] px-4 py-3.5 bg-white rounded-[18.36px] shadow-[0px_0px_0px_1px_rgba(0,0,0,0.20)] justify-start items-center gap-3 inline-flex overflow-hidden flex-row-reverse absolute top-16 left-28"
+          class="absolute top-16 left-28 inline-flex h-[87px] w-[164px] flex-row-reverse items-center justify-start gap-3 overflow-hidden rounded-[18.36px] bg-white px-4 py-3.5 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.20)]"
         >
           <div data-svg-wrapper>
-            <svg
-              width="54"
-              height="54"
-              viewBox="16.5 16.5 54 54"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg width="54" height="54" viewBox="16.5 16.5 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g filter="url(#filter0_d_1251_34620)">
-                <rect
-                  x="16.2656"
-                  y="16.5"
-                  width="54"
-                  height="54"
-                  rx="27"
-                  fill="#321F6B"
-                  shape-rendering="crispEdges"
-                />
+                <rect x="16.2656" y="16.5" width="54" height="54" rx="27" fill="#321F6B" shape-rendering="crispEdges" />
                 <path
                   d="M53.0156 41.3334H33.5156M47.599 32.6667V37.0001M38.9323 32.6667V37.0001M38.7156 54.3334H47.8156C49.6358 54.3334 50.5459 54.3334 51.2411 53.9792C51.8526 53.6676 52.3498 53.1704 52.6614 52.5589C53.0156 51.8637 53.0156 50.9536 53.0156 49.1334V40.0334C53.0156 38.2132 53.0156 37.3032 52.6614 36.6079C52.3498 35.9964 51.8526 35.4992 51.2411 35.1876C50.5459 34.8334 49.6358 34.8334 47.8156 34.8334H38.7156C36.8955 34.8334 35.9854 34.8334 35.2902 35.1876C34.6786 35.4992 34.1814 35.9964 33.8699 36.6079C33.5156 37.3032 33.5156 38.2132 33.5156 40.0334V49.1334C33.5156 50.9536 33.5156 51.8637 33.8699 52.5589C34.1814 53.1704 34.6786 53.6676 35.2902 53.9792C35.9854 54.3334 36.8955 54.3334 38.7156 54.3334Z"
                   stroke="white"
@@ -166,76 +329,31 @@
                 />
               </g>
               <defs>
-                <filter
-                  id="filter0_d_1251_34620"
-                  x="-21.9844"
-                  y="-3.39"
-                  width="130.5"
-                  height="130.5"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB"
-                >
+                <filter id="filter0_d_1251_34620" x="-21.9844" y="-3.39" width="130.5" height="130.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                   <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
-                  />
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                   <feOffset dy="18.36" />
                   <feGaussianBlur stdDeviation="19.125" />
                   <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 0.0509804 0 0 0 0 0.0470588 0 0 0 0 0.219608 0 0 0 0.15 0"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in2="BackgroundImageFix"
-                    result="effect1_dropShadow_1251_34620"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="effect1_dropShadow_1251_34620"
-                    result="shape"
-                  />
+                  <feColorMatrix type="matrix" values="0 0 0 0 0.0509804 0 0 0 0 0.0470588 0 0 0 0 0.219608 0 0 0 0.15 0" />
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1251_34620" />
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1251_34620" result="shape" />
                 </filter>
               </defs>
             </svg>
           </div>
-          <div class="flex-col justify-start items-start gap-0.5 inline-flex">
-            <div
-              class="w-[46px] h-[31px] text-[#311e6a] text-[25px] font-bold font-['Ping AR']"
-            >
-              20
-            </div>
-            <div class="text-zinc-600 text-base font-normal font-['Ping AR']">
-              ساعه
-            </div>
+          <div class="inline-flex flex-col items-start justify-start gap-0.5">
+            <div class="font-['Ping AR'] h-[31px] w-[46px] text-[25px] font-bold text-[#311e6a]">20</div>
+            <div class="font-['Ping AR'] text-base font-normal text-zinc-600">ساعه</div>
           </div>
         </div>
         <div
-          class="w-[164px] h-[87px] px-4 py-3.5 bg-white rounded-[18.36px] shadow-[0px_0px_0px_1px_rgba(0,0,0,0.20)] justify-start items-center gap-3 inline-flex overflow-hidden flex-row-reverse absolute top-52 left-36"
+          class="absolute top-52 left-36 inline-flex h-[87px] w-[164px] flex-row-reverse items-center justify-start gap-3 overflow-hidden rounded-[18.36px] bg-white px-4 py-3.5 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.20)]"
         >
           <div data-svg-wrapper>
-            <svg
-              width="54"
-              height="54"
-              viewBox="16.5 16.5 54 54"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg width="54" height="54" viewBox="16.5 16.5 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g filter="url(#filter0_d_1251_34626)">
-                <rect
-                  x="16.7344"
-                  y="16.5"
-                  width="54"
-                  height="54"
-                  rx="27"
-                  fill="#D2A8FF"
-                  shape-rendering="crispEdges"
-                />
+                <rect x="16.7344" y="16.5" width="54" height="54" rx="27" fill="#D2A8FF" shape-rendering="crispEdges" />
                 <path
                   d="M53.4844 41.3334H33.9844M48.0677 32.6667V37.0001M39.401 32.6667V37.0001M40.4844 47.8334L42.651 50.0001L47.526 45.1251M39.1844 54.3334H48.2844C50.1045 54.3334 51.0146 54.3334 51.7098 53.9792C52.3214 53.6676 52.8186 53.1704 53.1301 52.5589C53.4844 51.8637 53.4844 50.9536 53.4844 49.1334V40.0334C53.4844 38.2132 53.4844 37.3032 53.1301 36.6079C52.8186 35.9964 52.3214 35.4992 51.7098 35.1876C51.0146 34.8334 50.1045 34.8334 48.2844 34.8334H39.1844C37.3642 34.8334 36.4541 34.8334 35.7589 35.1876C35.1474 35.4992 34.6502 35.9964 34.3386 36.6079C33.9844 37.3032 33.9844 38.2132 33.9844 40.0334V49.1334C33.9844 50.9536 33.9844 51.8637 34.3386 52.5589C34.6502 53.1704 35.1474 53.6676 35.7589 53.9792C36.4541 54.3334 37.3642 54.3334 39.1844 54.3334Z"
                   stroke="white"
@@ -245,76 +363,31 @@
                 />
               </g>
               <defs>
-                <filter
-                  id="filter0_d_1251_34626"
-                  x="-21.5156"
-                  y="-3.39"
-                  width="130.5"
-                  height="130.5"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB"
-                >
+                <filter id="filter0_d_1251_34626" x="-21.5156" y="-3.39" width="130.5" height="130.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                   <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
-                  />
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                   <feOffset dy="18.36" />
                   <feGaussianBlur stdDeviation="19.125" />
                   <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 0.0509804 0 0 0 0 0.0470588 0 0 0 0 0.219608 0 0 0 0.15 0"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in2="BackgroundImageFix"
-                    result="effect1_dropShadow_1251_34626"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="effect1_dropShadow_1251_34626"
-                    result="shape"
-                  />
+                  <feColorMatrix type="matrix" values="0 0 0 0 0.0509804 0 0 0 0 0.0470588 0 0 0 0 0.219608 0 0 0 0.15 0" />
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1251_34626" />
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1251_34626" result="shape" />
                 </filter>
               </defs>
             </svg>
           </div>
-          <div class="flex-col justify-start items-start gap-0.5 inline-flex">
-            <div
-              class="w-[46px] h-[31px] text-[#311e6a] text-[25px] font-bold font-['Ping AR']"
-            >
-              30
-            </div>
-            <div class="text-zinc-600 text-base font-normal font-['Ping AR']">
-              أيام
-            </div>
+          <div class="inline-flex flex-col items-start justify-start gap-0.5">
+            <div class="font-['Ping AR'] h-[31px] w-[46px] text-[25px] font-bold text-[#311e6a]">30</div>
+            <div class="font-['Ping AR'] text-base font-normal text-zinc-600">أيام</div>
           </div>
         </div>
         <div
-          class="w-[165px] h-[87px] px-4 py-3.5 bg-white rounded-[18.36px] shadow-[0px_0px_0px_1px_rgba(0,0,0,0.20)] justify-start items-center gap-3 inline-flex overflow-hidden flex-row-reverse absolute top-80 right-16"
+          class="absolute top-80 right-16 inline-flex h-[87px] w-[165px] flex-row-reverse items-center justify-start gap-3 overflow-hidden rounded-[18.36px] bg-white px-4 py-3.5 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.20)]"
         >
           <div data-svg-wrapper>
-            <svg
-              width="54"
-              height="54"
-              viewBox="16.5 16.5 54 54"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg width="54" height="54" viewBox="16.5 16.5 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g filter="url(#filter0_d_1251_34614)">
-                <rect
-                  x="16.7344"
-                  y="16.5"
-                  width="54"
-                  height="54"
-                  rx="27"
-                  fill="#6639C6"
-                  shape-rendering="crispEdges"
-                />
+                <rect x="16.7344" y="16.5" width="54" height="54" rx="27" fill="#6639C6" shape-rendering="crispEdges" />
                 <path
                   d="M53.4844 41.3334H33.9844M48.0677 32.6667V37.0001M39.401 32.6667V37.0001M39.1844 54.3334H48.2844C50.1045 54.3334 51.0146 54.3334 51.7098 53.9792C52.3214 53.6676 52.8186 53.1704 53.1301 52.5589C53.4844 51.8637 53.4844 50.9536 53.4844 49.1334V40.0334C53.4844 38.2132 53.4844 37.3032 53.1301 36.6079C52.8186 35.9964 52.3214 35.4992 51.7098 35.1876C51.0146 34.8334 50.1045 34.8334 48.2844 34.8334H39.1844C37.3642 34.8334 36.4541 34.8334 35.7589 35.1876C35.1474 35.4992 34.6502 35.9964 34.3386 36.6079C33.9844 37.3032 33.9844 38.2132 33.9844 40.0334V49.1334C33.9844 50.9536 33.9844 51.8637 34.3386 52.5589C34.6502 53.1704 35.1474 53.6676 35.7589 53.9792C36.4541 54.3334 37.3642 54.3334 39.1844 54.3334Z"
                   stroke="white"
@@ -324,53 +397,22 @@
                 />
               </g>
               <defs>
-                <filter
-                  id="filter0_d_1251_34614"
-                  x="-21.5156"
-                  y="-3.39"
-                  width="130.5"
-                  height="130.5"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB"
-                >
+                <filter id="filter0_d_1251_34614" x="-21.5156" y="-3.39" width="130.5" height="130.5" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                   <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
-                  />
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                   <feOffset dy="18.36" />
                   <feGaussianBlur stdDeviation="19.125" />
                   <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 0.0509804 0 0 0 0 0.0470588 0 0 0 0 0.219608 0 0 0 0.15 0"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in2="BackgroundImageFix"
-                    result="effect1_dropShadow_1251_34614"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="effect1_dropShadow_1251_34614"
-                    result="shape"
-                  />
+                  <feColorMatrix type="matrix" values="0 0 0 0 0.0509804 0 0 0 0 0.0470588 0 0 0 0 0.219608 0 0 0 0.15 0" />
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1251_34614" />
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1251_34614" result="shape" />
                 </filter>
               </defs>
             </svg>
           </div>
-          <div class="flex-col justify-start items-start gap-0.5 inline-flex">
-            <div
-              class="w-[46px] h-[31px] text-[#311e6a] text-[25px] font-bold font-['Ping AR']"
-            >
-              4
-            </div>
-            <div class="text-zinc-600 text-base font-normal font-['Ping AR']">
-              اسابيع
-            </div>
+          <div class="inline-flex flex-col items-start justify-start gap-0.5">
+            <div class="font-['Ping AR'] h-[31px] w-[46px] text-[25px] font-bold text-[#311e6a]">4</div>
+            <div class="font-['Ping AR'] text-base font-normal text-zinc-600">اسابيع</div>
           </div>
         </div>
       </div>
@@ -378,20 +420,10 @@
     <!--Banner Section end-->
 
     <!--Services Cards Section Start-->
-    <div
-      class="container m-auto mb-12 mt-16 grid grid-cols-1 md:grid-cols-2 gap-8"
-    >
-      <div
-        class="h-[149px] px-10 py-7 bg-[#e0ccff] rounded-[20px] justify-between items-center inline-flex overflow-hidden flex-row-reverse relative"
-      >
+    <div class="container m-auto mb-12 mt-16 grid grid-cols-1 gap-8 md:grid-cols-2">
+      <div class="relative inline-flex h-[149px] flex-row-reverse items-center justify-between overflow-hidden rounded-[20px] bg-[#e0ccff] px-10 py-7">
         <div data-svg-wrapper class="absolute left-0">
-          <svg
-            width="321"
-            height="150"
-            viewBox="0 0 321 150"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg width="321" height="150" viewBox="0 0 321 150" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M176.832 16.1344C176.832 -17.8975 204.417 -45.4822 238.449 -45.4822C272.48 -45.4822 300.065 -17.8975 300.065 16.1344C300.065 50.1662 272.48 77.7509 238.449 77.7509H179.296C177.937 77.7509 176.832 76.6461 176.832 75.2865V16.1344Z"
               fill="#6639C6"
@@ -428,81 +460,31 @@
           </svg>
         </div>
         <div data-svg-wrapper class="relative">
-          <svg
-            width="36"
-            height="37"
-            viewBox="0 0 36 37"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M22.4995 27.6497L13.4995 18.6497L22.4995 9.64966"
-              stroke="#321F6B"
-              stroke-width="2.16667"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
+          <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.4995 27.6497L13.4995 18.6497L22.4995 9.64966" stroke="#321F6B" stroke-width="2.16667" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </div>
-        <div
-          class="grow shrink basis-0 flex-col justify-start items-start inline-flex"
-        >
-          <div
-            class="text-right text-[#6639c6] text-[32px] font-bold font-['Ping Ar']"
-          >
-            أعناب الاستشارية
-          </div>
-          <div class="self-stretch justify-start items-baseline inline-flex">
-            <div
-              class="text-right text-[#311e6a] text-[26px] font-medium font-['Ping Ar']"
-            >
-              التدريب الاحترافي عالي الكفاءة
-            </div>
+        <div class="inline-flex shrink grow basis-0 flex-col items-start justify-start">
+          <div class="font-['Ping Ar'] text-right text-[32px] font-bold text-[#6639c6]">أعناب الاستشارية</div>
+          <div class="inline-flex items-baseline justify-start self-stretch">
+            <div class="font-['Ping Ar'] text-right text-[26px] font-medium text-[#311e6a]">التدريب الاحترافي عالي الكفاءة</div>
           </div>
         </div>
       </div>
-      <div
-        class="h-[149px] px-10 py-7 bg-[#e0ccff] rounded-[20px] justify-end items-center inline-flex overflow-hidden flex-row-reverse relative"
-      >
-        <div class="w-[332.66px] h-[322.66px] absolute left-0">
-          <div
-            class="w-[182.66px] h-[182.66px] left-[150px] top-[140px] absolute bg-[#6639c6]/10 rounded-full"
-          ></div>
-          <div
-            class="w-[182.66px] h-[182.66px] left-0 top-0 absolute bg-[#a3dee0] rounded-full"
-          ></div>
+      <div class="relative inline-flex h-[149px] flex-row-reverse items-center justify-end overflow-hidden rounded-[20px] bg-[#e0ccff] px-10 py-7">
+        <div class="absolute left-0 h-[322.66px] w-[332.66px]">
+          <div class="absolute left-[150px] top-[140px] h-[182.66px] w-[182.66px] rounded-full bg-[#6639c6]/10"></div>
+          <div class="absolute left-0 top-0 h-[182.66px] w-[182.66px] rounded-full bg-[#a3dee0]"></div>
         </div>
         <div data-svg-wrapper class="relative">
-          <svg
-            width="36"
-            height="37"
-            viewBox="0 0 36 37"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M22.499 27.6497L13.499 18.6497L22.499 9.64966"
-              stroke="#321F6B"
-              stroke-width="2.16667"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
+          <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.499 27.6497L13.499 18.6497L22.499 9.64966" stroke="#321F6B" stroke-width="2.16667" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </div>
-        <div
-          class="grow shrink basis-0 flex-col justify-start items-start inline-flex"
-        >
-          <div
-            class="text-right text-[#6639c6] text-[32px] font-bold font-['Ping Ar']"
-          >
-            أعناب التعليمية
-          </div>
-          <div class="self-stretch justify-start items-baseline inline-flex">
-            <div
-              class="text-right text-[#311e6a] text-[26px] font-medium font-['Ping Ar']"
-            >
-              التدريب الخاص بالمجال التعليمى
-            </div>
+        <div class="inline-flex shrink grow basis-0 flex-col items-start justify-start">
+          <div class="font-['Ping Ar'] text-right text-[32px] font-bold text-[#6639c6]">أعناب التعليمية</div>
+          <div class="inline-flex items-baseline justify-start self-stretch">
+            <div class="font-['Ping Ar'] text-right text-[26px] font-medium text-[#311e6a]">التدريب الخاص بالمجال التعليمى</div>
           </div>
         </div>
       </div>
@@ -511,51 +493,23 @@
 
     <!-- Aanaab For Sports Section Start -->
     <div class="container m-auto mb-12 mt-16" dir="ltr">
-      <div
-        class="h-[149px] px-[42px] py-10 bg-[#6639c6] rounded-[20px] flex-col justify-center items-center gap-[11px] inline-flex w-full"
-      >
-        <div class="self-stretch justify-between items-center inline-flex">
-          <button
-            class="px-8 py-[18px] bg-white rounded-[32px] justify-center items-center gap-1 flex cursor-pointer"
-          >
-            <div class="justify-start items-end gap-1.5 flex">
-              <div
-                class="text-[#6639c6] text-base font-bold font-['Ping AR'] leading-none"
-              >
-                أعناب للجهات
-              </div>
+      <div class="inline-flex h-[149px] w-full flex-col items-center justify-center gap-[11px] rounded-[20px] bg-[#6639c6] px-[42px] py-10">
+        <div class="inline-flex items-center justify-between self-stretch">
+          <button class="flex cursor-pointer items-center justify-center gap-1 rounded-[32px] bg-white px-8 py-[18px]">
+            <div class="flex items-end justify-start gap-1.5">
+              <div class="font-['Ping AR'] text-base font-bold leading-none text-[#6639c6]">أعناب للجهات</div>
             </div>
           </button>
-          <div class="justify-start items-center gap-5 flex">
-            <div class="justify-start items-baseline gap-[11px] flex">
-              <div
-                class="text-right text-[#27e7ca] text-[26px] font-medium font-['Ping Ar']"
-              >
-                الجهات الرياضيه
-              </div>
+          <div class="flex items-center justify-start gap-5">
+            <div class="flex items-baseline justify-start gap-[11px]">
+              <div class="font-['Ping Ar'] text-right text-[26px] font-medium text-[#27e7ca]">الجهات الرياضيه</div>
               <div class="text-right">
-                <span class="text-white text-[42px] font-bold font-['Ping Ar']"
-                  >أعناب </span
-                ><span class="text-white text-[42px] font-bold font-['Ping Ar']"
-                  >للجهات</span
-                >
+                <span class="font-['Ping Ar'] text-[42px] font-bold text-white">أعناب </span><span class="font-['Ping Ar'] text-[42px] font-bold text-white">للجهات</span>
               </div>
             </div>
             <div data-svg-wrapper>
-              <svg
-                width="48"
-                height="69"
-                viewBox="0 0 48 69"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M6 42.6487V24.6487C6 23.5441 6.89543 22.6487 8 22.6487H14"
-                  stroke="#D2A8FF"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
+              <svg width="48" height="69" viewBox="0 0 48 69" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 42.6487V24.6487C6 23.5441 6.89543 22.6487 8 22.6487H14" stroke="#D2A8FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                 <path
                   d="M22 16.6499V9.65261C22 8.66868 22.4825 7.74728 23.2912 7.18683C24.0999 6.62639 25.1321 6.49813 26.0534 6.84361L40.7022 12.337C41.4829 12.6297 42 13.3759 42 14.2096V42.6499"
                   stroke="#D2A8FF"
@@ -570,34 +524,10 @@
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 />
-                <path
-                  d="M44 42.6487H4"
-                  stroke="#D2A8FF"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M20 35.6487H26"
-                  stroke="#D2A8FF"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M20 29.6487H26"
-                  stroke="#D2A8FF"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M20 23.6487H26"
-                  stroke="#D2A8FF"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
+                <path d="M44 42.6487H4" stroke="#D2A8FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M20 35.6487H26" stroke="#D2A8FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M20 29.6487H26" stroke="#D2A8FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M20 23.6487H26" stroke="#D2A8FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </div>
           </div>
@@ -607,168 +537,58 @@
     <!-- Aanaab For Sports Section End -->
 
     <!-- Video Section Start -->
-    <div
-      class="w-full min-h-[640px] bg-center bg-cover bg-no-repeat relative px-24 py-48 mb-24"
-      style="background-image: url('src/assets/images/frame.jpeg')"
-    >
+    <div class="relative mb-24 min-h-[640px] w-full bg-cover bg-center bg-no-repeat px-24 py-48" style="background-image: url('src/assets/images/frame.jpeg')">
       <div class="absolute inset-0 bg-gray-800 opacity-60"></div>
       >
-      <div
-        class="flex-col justify-start items-end gap-[22px] inline-flex z-10 relative"
-        dir="ltr"
-      >
-        <div
-          class="text-right text-white text-[32px] font-bold font-['Ping AR'] leading-loose"
-        >
-          أهداف الدورة
-        </div>
-        <div class="self-stretch justify-end items-start gap-[9px] inline-flex">
-          <div
-            class="grow shrink basis-0 h-[27px] text-right text-white text-xl font-bold font-['Ping AR'] capitalize"
-          >
+      <div class="relative z-10 inline-flex flex-col items-end justify-start gap-[22px]" dir="ltr">
+        <div class="font-['Ping AR'] text-right text-[32px] font-bold leading-loose text-white">أهداف الدورة</div>
+        <div class="inline-flex items-start justify-end gap-[9px] self-stretch">
+          <div class="font-['Ping AR'] h-[27px] shrink grow basis-0 text-right text-xl font-bold capitalize text-white">
             فهم أبعاد الإدارة الرياضية المختلفة.<br /><br /><br /><br /><br /><br />
           </div>
           <div data-svg-wrapper>
-            <svg
-              width="20"
-              height="25"
-              viewBox="0 0 20 25"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M16.6668 9.64868L7.50016 18.8153L3.3335 14.6487"
-                stroke="#20B486"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
+            <svg width="20" height="25" viewBox="0 0 20 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.6668 9.64868L7.50016 18.8153L3.3335 14.6487" stroke="#20B486" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </div>
         </div>
-        <div class="self-stretch justify-end items-start gap-[9px] inline-flex">
-          <div
-            class="grow shrink basis-0 h-[27px] text-right text-white text-xl font-bold font-['Ping AR'] capitalize"
-          >
-            اكتساب المهارات العملية لإدارة المؤسسات الرياضية.
-          </div>
+        <div class="inline-flex items-start justify-end gap-[9px] self-stretch">
+          <div class="font-['Ping AR'] h-[27px] shrink grow basis-0 text-right text-xl font-bold capitalize text-white">اكتساب المهارات العملية لإدارة المؤسسات الرياضية.</div>
           <div data-svg-wrapper>
-            <svg
-              width="20"
-              height="25"
-              viewBox="0 0 20 25"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M16.6668 9.64868L7.50016 18.8153L3.3335 14.6487"
-                stroke="#20B486"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
+            <svg width="20" height="25" viewBox="0 0 20 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.6668 9.64868L7.50016 18.8153L3.3335 14.6487" stroke="#20B486" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </div>
         </div>
-        <div class="self-stretch justify-end items-start gap-[9px] inline-flex">
-          <div
-            class="grow shrink basis-0 h-[27px] text-right text-white text-xl font-bold font-['Ping AR'] capitalize"
-          >
-            تطوير استراتيجيات تسويقية فعالة في المجال الرياضي.
-          </div>
+        <div class="inline-flex items-start justify-end gap-[9px] self-stretch">
+          <div class="font-['Ping AR'] h-[27px] shrink grow basis-0 text-right text-xl font-bold capitalize text-white">تطوير استراتيجيات تسويقية فعالة في المجال الرياضي.</div>
           <div data-svg-wrapper>
-            <svg
-              width="20"
-              height="25"
-              viewBox="0 0 20 25"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M16.6668 9.64868L7.50016 18.8153L3.3335 14.6487"
-                stroke="#20B486"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
+            <svg width="20" height="25" viewBox="0 0 20 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.6668 9.64868L7.50016 18.8153L3.3335 14.6487" stroke="#20B486" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </div>
         </div>
-        <div class="self-stretch justify-end items-start gap-[9px] inline-flex">
-          <div
-            class="grow shrink basis-0 h-[27px] text-right text-white text-xl font-bold font-['Ping AR'] capitalize"
-          >
-            تنظيم وإدارة الفعاليات الرياضية بنجاح.
-          </div>
+        <div class="inline-flex items-start justify-end gap-[9px] self-stretch">
+          <div class="font-['Ping AR'] h-[27px] shrink grow basis-0 text-right text-xl font-bold capitalize text-white">تنظيم وإدارة الفعاليات الرياضية بنجاح.</div>
           <div data-svg-wrapper>
-            <svg
-              width="20"
-              height="25"
-              viewBox="0 0 20 25"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M16.6668 9.64868L7.50016 18.8153L3.3335 14.6487"
-                stroke="#20B486"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
+            <svg width="20" height="25" viewBox="0 0 20 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.6668 9.64868L7.50016 18.8153L3.3335 14.6487" stroke="#20B486" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </div>
         </div>
-        <div class="self-stretch justify-end items-start gap-[9px] inline-flex">
-          <div
-            class="grow shrink basis-0 h-[27px] text-right text-white text-xl font-bold font-['Ping AR'] capitalize"
-          >
-            إدارة المنشآت الرياضية بشكل فعال.
-          </div>
+        <div class="inline-flex items-start justify-end gap-[9px] self-stretch">
+          <div class="font-['Ping AR'] h-[27px] shrink grow basis-0 text-right text-xl font-bold capitalize text-white">إدارة المنشآت الرياضية بشكل فعال.</div>
           <div data-svg-wrapper>
-            <svg
-              width="20"
-              height="25"
-              viewBox="0 0 20 25"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M16.6668 9.64868L7.50016 18.8153L3.3335 14.6487"
-                stroke="#20B486"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
+            <svg width="20" height="25" viewBox="0 0 20 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16.6668 9.64868L7.50016 18.8153L3.3335 14.6487" stroke="#20B486" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </div>
         </div>
       </div>
-      <div
-        data-svg-wrapper
-        class="absolute inset-0 flex items-center justify-center"
-      >
-        <svg
-          width="110"
-          height="110"
-          viewBox="0 0 110 110"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <foreignObject
-            x="-20.8115"
-            y="-20.6628"
-            width="151.623"
-            height="151.623"
-          >
-            <div
-              xmlns="http://www.w3.org/1999/xhtml"
-              style="
-                backdrop-filter: blur(10.5px);
-                clip-path: url(#bgblur_0_1251_34634_clip_path);
-                height: 100%;
-                width: 100%;
-              "
-            ></div>
+      <div data-svg-wrapper class="absolute inset-0 flex items-center justify-center">
+        <svg width="110" height="110" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <foreignObject x="-20.8115" y="-20.6628" width="151.623" height="151.623">
+            <div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter: blur(10.5px); clip-path: url(#bgblur_0_1251_34634_clip_path); height: 100%; width: 100%"></div>
           </foreignObject>
           <path
             data-figma-bg-blur-radius="21"
@@ -783,10 +603,7 @@
             fill="white"
           />
           <defs>
-            <clipPath
-              id="bgblur_0_1251_34634_clip_path"
-              transform="translate(20.8115 20.6628)"
-            >
+            <clipPath id="bgblur_0_1251_34634_clip_path" transform="translate(20.8115 20.6628)">
               <path
                 d="M1.18848 55.1485C1.18848 84.8678 25.2811 108.96 54.9999 108.96C84.7188 108.96 108.811 84.8678 108.811 55.1485C108.811 25.4293 84.7188 1.33707 54.9999 1.33707C25.2811 1.33707 1.18848 25.4293 1.18848 55.1485Z"
               />
@@ -798,103 +615,42 @@
     <!-- Video Section End -->
 
     <!-- Sport Courses Banner Start -->
-    <div class="dark container m-auto mb-12 dar:bg-dark">
-      <h3
-        class="mb-5 h-6 text-center text-[26px] font-bold leading-[21px] text-text"
-      >
-        الدورة الرياضية
-      </h3>
-      <div
-        dir="ltr"
-        class="inline-flex h-[359px] w-auto flex-col items-start justify-end gap-2.5 overflow-hidden rounded-[20px] bg-[#3d3da2]"
-      >
-        <div
-          class="inline-flex h-[359px] items-end justify-start gap-4 self-stretch px-6"
-        >
-          <img
-            class="h-[337.07px] w-[391px]"
-            src="src/assets/images/cards/sport-courses.svg"
-          />
-          <div
-            class="inline-flex shrink grow basis-0 flex-col items-end justify-center gap-[26px] self-stretch"
-          >
-            <div
-              class="inline-flex h-10 items-center justify-center gap-2 rounded-[20px] bg-white px-3.5 pt-0.5"
-            >
-              <div
-                class="text-right text-xs font-bold leading-normal text-[#311e6a]"
-              >
-                شهادة كامبردج
-              </div>
-              <img
-                class="h-[22px] w-[19.03px]"
-                src="src/assets/images/edu-9.png"
-              />
+    <div class="dark dar:bg-dark container m-auto mb-12">
+      <h3 class="text-text mb-5 h-6 text-center text-[26px] font-bold leading-[21px]">الدورة الرياضية</h3>
+      <div dir="ltr" class="inline-flex h-[359px] w-auto flex-col items-start justify-end gap-2.5 overflow-hidden rounded-[20px] bg-[#3d3da2]">
+        <div class="inline-flex h-[359px] items-end justify-start gap-4 self-stretch px-6">
+          <img class="h-[337.07px] w-[391px]" src="src/assets/images/cards/sport-courses.svg" />
+          <div class="inline-flex shrink grow basis-0 flex-col items-end justify-center gap-[26px] self-stretch">
+            <div class="inline-flex h-10 items-center justify-center gap-2 rounded-[20px] bg-white px-3.5 pt-0.5">
+              <div class="text-right text-xs font-bold leading-normal text-[#311e6a]">شهادة كامبردج</div>
+              <img class="h-[22px] w-[19.03px]" src="src/assets/images/edu-9.png" />
             </div>
-            <div
-              class="flex h-[133px] flex-col items-start justify-start self-stretch"
-            >
-              <div
-                class="h-16 self-stretch text-right text-[26px] font-bold capitalize leading-loose text-white"
-              >
-                الإدارة الرياضية و صناعة الرياضة
-              </div>
+            <div class="flex h-[133px] flex-col items-start justify-start self-stretch">
+              <div class="h-16 self-stretch text-right text-[26px] font-bold capitalize leading-loose text-white">الإدارة الرياضية و صناعة الرياضة</div>
               <div dir="rtl" class="self-stretch text-right">
-                <span
-                  dir="rtl"
-                  class="text-base font-medium capitalize leading-[23px] text-[#77ffd4] inline-block"
-                  >4 أشهر - 150 ساعه
-                </span>
-                <span
-                  class="text-sm font-normal capitalize leading-[23px] text-white"
-                >
-                  شهادة كامبريدج في القيادة التربوية مصممة لمساعدة القادة على
-                  تطوير تفكيرهم وممارساتهم المهنية، من خلال دراسة القيادة
-                  الناجحة والتركيز على الأفكار والتحديات الرئيسية ونظريات
-                  القيادة. تعتمد الشهادة على مفهوم أن تعلم القيادة عملية نشطة
-                  يبني فيها الممارسون المعرفة من تجربتهم. يساعد التدريب على
-                  تحفيز التفكير وتحدي الافتراضات وتشكيل الممارسات القيادية.
+                <span dir="rtl" class="inline-block text-base font-medium capitalize leading-[23px] text-[#77ffd4]">4 أشهر - 150 ساعه </span>
+                <span class="text-sm font-normal capitalize leading-[23px] text-white">
+                  شهادة كامبريدج في القيادة التربوية مصممة لمساعدة القادة على تطوير تفكيرهم وممارساتهم المهنية، من خلال دراسة القيادة الناجحة والتركيز على الأفكار والتحديات
+                  الرئيسية ونظريات القيادة. تعتمد الشهادة على مفهوم أن تعلم القيادة عملية نشطة يبني فيها الممارسون المعرفة من تجربتهم. يساعد التدريب على تحفيز التفكير وتحدي
+                  الافتراضات وتشكيل الممارسات القيادية.
                 </span>
               </div>
             </div>
             <div class="relative h-[52px]">
               <button
-                class="left-0 top-0 inline-flex h-[52px] items-center justify-center gap-1 overflow-hidden rounded-[32px] bg-primary-title px-8 py-[18px] shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)] cursor-pointer"
+                class="bg-primary-title left-0 top-0 inline-flex h-[52px] cursor-pointer items-center justify-center gap-1 overflow-hidden rounded-[32px] px-8 py-[18px] shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)]"
               >
                 <div class="flex items-end justify-start gap-3.5">
                   <span data-svg-wrapper="true" class="relative">
-                    <svg
-                      width="17"
-                      height="17"
-                      viewBox="0 0 17 17"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M10.501 12.4966L6.50098 8.49658L10.501 4.49658"
-                        stroke="white"
-                        stroke-width="1.73333"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.501 12.4966L6.50098 8.49658L10.501 4.49658" stroke="white" stroke-width="1.73333" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                   </span>
-                  <span class="text-base font-bold leading-none text-white">
-                    أنضم للدوره | 299
-                  </span>
+                  <span class="text-base font-bold leading-none text-white"> أنضم للدوره | 299 </span>
                 </div>
               </button>
-              <div
-                data-svg-wrapper="true"
-                class="absolute left-[48px] top-[15.50px]"
-              >
-                <svg
-                  width="12"
-                  height="14"
-                  viewBox="0 0 12 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+              <div data-svg-wrapper="true" class="absolute left-[48px] top-[15.50px]">
+                <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M7.83181 12.1564C7.65848 12.7276 7.5439 13.3475 7.5 13.9976L11.1682 12.8387C11.3415 12.2676 11.456 11.6476 11.5 10.9976L7.83181 12.1564Z"
                     fill="white"
@@ -914,45 +670,20 @@
 
     <!-- Partners section start -->
     <div class="container m-auto mb-12">
-      <div
-        dir="ltr"
-        class="h-[177.42px] pt-6 flex-col justify-start items-start gap-6 inline-flex w-full"
-      >
-        <div
-          class="self-stretch justify-center items-baseline gap-3 inline-flex"
-        >
-          <div class="grow shrink basis-0 h-px bg-zinc-300"></div>
-          <div
-            class="text-[#311e6a] text-xl font-bold font-['Ping AR'] leading-loose tracking-tight"
-          >
-            بالتعاون مع
-          </div>
-          <div class="grow shrink basis-0 h-px bg-zinc-300"></div>
+      <div dir="ltr" class="inline-flex h-[177.42px] w-full flex-col items-start justify-start gap-6 pt-6">
+        <div class="inline-flex items-baseline justify-center gap-3 self-stretch">
+          <div class="h-px shrink grow basis-0 bg-zinc-300"></div>
+          <div class="font-['Ping AR'] text-xl font-bold leading-loose tracking-tight text-[#311e6a]">بالتعاون مع</div>
+          <div class="h-px shrink grow basis-0 bg-zinc-300"></div>
         </div>
-        <div
-          class="self-stretch justify-center items-center grid grid-cols-2 gap-6 md:mx-32 md:px-16"
-        >
-          <div class="h-[97.42px] justify-center items-center gap-[13px] flex">
-            <img
-              class="w-[124px] h-[97.42px]"
-              src="src/assets/images/image 84.png"
-            />
-            <div
-              class="text-[#311e6a] text-base font-bold font-['Ping AR'] leading-relaxed tracking-tight"
-            >
-              شهادات معتمدة من
-            </div>
+        <div class="grid grid-cols-2 items-center justify-center gap-6 self-stretch md:mx-32 md:px-16">
+          <div class="flex h-[97.42px] items-center justify-center gap-[13px]">
+            <img class="h-[97.42px] w-[124px]" src="src/assets/images/image 84.png" />
+            <div class="font-['Ping AR'] text-base font-bold leading-relaxed tracking-tight text-[#311e6a]">شهادات معتمدة من</div>
           </div>
-          <div class="h-[96.60px] justify-center items-center gap-[13px] flex">
-            <img
-              class="w-[78px] h-[96.60px]"
-              src="src/assets/images/image 86.svg"
-            />
-            <div
-              class="text-[#311e6a] text-base font-bold font-['Ping AR'] leading-relaxed tracking-tight"
-            >
-              برنامج مقدم من
-            </div>
+          <div class="flex h-[96.60px] items-center justify-center gap-[13px]">
+            <img class="h-[96.60px] w-[78px]" src="src/assets/images/image 86.svg" />
+            <div class="font-['Ping AR'] text-base font-bold leading-relaxed tracking-tight text-[#311e6a]">برنامج مقدم من</div>
           </div>
         </div>
       </div>
@@ -962,235 +693,99 @@
 
     <!--Cards Section End-->
     <!--Price Comparison Start-->
-    <main class="border-sep border-t bg-box py-6 pt-24" dir="rtl">
-      <header class="flex flex-col items-center justify-center mb-12">
-        <div class="text-center text-xl font-medium text-text">
-          بإمكانكم شراء كل دورة على حدة
-        </div>
-        <div
-          class="inline-flex h-8 w-[400px] items-baseline justify-center gap-[15px]"
-        >
+    <main class="border-sep bg-box border-t py-6 pt-24" dir="rtl">
+      <header class="mb-12 flex flex-col items-center justify-center">
+        <div class="text-text text-center text-xl font-medium">بإمكانكم شراء كل دورة على حدة</div>
+        <div class="inline-flex h-8 w-[400px] items-baseline justify-center gap-[15px]">
           <div class="h-px shrink grow basis-0 bg-zinc-300"></div>
-          <div class="text-center text-xl font-medium text-meta-light">أو</div>
+          <div class="text-meta-light text-center text-xl font-medium">أو</div>
           <div class="h-px shrink grow basis-0 bg-zinc-300"></div>
         </div>
-        <div
-          class="inline-flex h-[51px] w-[400px] flex-col items-start justify-start gap-2"
-        >
-          <div
-            class="self-stretch text-center text-[32px] font-bold text-primary-title"
-          >
-            شراء باقات أعناب للأفراد
-          </div>
+        <div class="inline-flex h-[51px] w-[400px] flex-col items-start justify-start gap-2">
+          <div class="text-primary-title self-stretch text-center text-[32px] font-bold">شراء باقات أعناب للأفراد</div>
         </div>
       </header>
-      <article
-        class="flex flex-col items-center justify-center gap-10 pb-20 sm:gap-2 md:flex-row container mx-auto"
-      >
+      <article class="container mx-auto flex flex-col items-center justify-center gap-10 pb-20 sm:gap-2 md:flex-row">
         <section
-          class="inline-flex h-[503px] w-[374px] flex-col items-center justify-start gap-[26px] rounded-[20px] border border-zinc-300 p-[26px] shadow-[0px_4px_6px_-2px_rgba(16 24 40 0.03)] bg-white"
+          class="shadow-[0px_4px_6px_-2px_rgba(16 24 40 0.03)] inline-flex h-[503px] w-[374px] flex-col items-center justify-start gap-[26px] rounded-[20px] border border-zinc-300 bg-white p-[26px]"
         >
-          <div
-            class="flex flex-col items-center justify-start gap-[9px] py-0.5"
-          >
+          <div class="flex flex-col items-center justify-start gap-[9px] py-0.5">
             <div class="flex flex-col items-center justify-start">
-              <div
-                class="text-right text-lg font-bold tracking-tight text-[#20b486]"
-              >
-                باقة 10 دورات
-              </div>
-              <div
-                class="text-right text-xs font-bold tracking-tight text-[#ff2d55]"
-              >
-                بسعر 7 دورات (تخفيض %75)
-              </div>
+              <div class="text-right text-lg font-bold tracking-tight text-[#20b486]">باقة 10 دورات</div>
+              <div class="text-right text-xs font-bold tracking-tight text-[#ff2d55]">بسعر 7 دورات (تخفيض %75)</div>
             </div>
-            <div
-              class="inline-flex items-baseline justify-center gap-1.5 text-primary-title"
-            >
+            <div class="text-primary-title inline-flex items-baseline justify-center gap-1.5">
               <div class="text-xs font-bold capitalize">ريال</div>
-              <div class="font-['Inter'] text-[42px] font-bold capitalize">
-                1000
-              </div>
+              <div class="font-['Inter'] text-[42px] font-bold capitalize">1000</div>
               <div class="text-sm font-bold capitalize"></div>
             </div>
           </div>
           <div class="h-px self-stretch bg-zinc-300"></div>
-          <div
-            class="flex h-[172px] flex-col items-start justify-start self-stretch py-1.5"
-          >
-            <div
-              class="flex h-10 flex-col items-end justify-center gap-5 self-stretch"
-            >
-              <div
-                class="inline-flex w-[301.50px] items-start justify-end gap-[11px]"
-              >
+          <div class="flex h-[172px] flex-col items-start justify-start self-stretch py-1.5">
+            <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
+              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
-                  <div
-                    class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]"
-                  >
-                    <div
-                      class="absolute left-0 top-0 h-5 w-5 rounded-[624.38px] bg-primary-title"
-                    ></div>
+                  <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
+                    <div class="bg-primary-title absolute left-0 top-0 h-5 w-5 rounded-[624.38px]"></div>
                   </div>
-                  <div
-                    data-svg-wrapper="true"
-                    class="absolute left-[3px] top-[3px]"
-                  >
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 15 15"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844"
-                        stroke="white"
-                        stroke-width="1.25"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
+                  <div data-svg-wrapper="true" class="absolute left-[3px] top-[3px]">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                   </div>
                 </div>
-                <div
-                  class="h-10 w-[258px] text-right text-sm font-normal leading-[23px] text-text"
-                >
-                  10 دورات مدفوعة
-                </div>
+                <div class="text-text h-10 w-[258px] text-right text-sm font-normal leading-[23px]">10 دورات مدفوعة</div>
               </div>
             </div>
-            <div
-              class="flex h-10 flex-col items-end justify-center gap-5 self-stretch"
-            >
-              <div
-                class="inline-flex w-[301.50px] items-start justify-end gap-[11px]"
-              >
+            <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
+              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
-                  <div
-                    class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]"
-                  >
-                    <div
-                      class="absolute left-0 top-0 h-5 w-5 rounded-[624.38px] bg-primary-title"
-                    ></div>
+                  <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
+                    <div class="bg-primary-title absolute left-0 top-0 h-5 w-5 rounded-[624.38px]"></div>
                   </div>
-                  <div
-                    data-svg-wrapper="true"
-                    class="absolute left-[3px] top-[3px]"
-                  >
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 15 15"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844"
-                        stroke="white"
-                        stroke-width="1.25"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
+                  <div data-svg-wrapper="true" class="absolute left-[3px] top-[3px]">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                   </div>
                 </div>
-                <div
-                  class="h-10 w-[258px] text-right text-sm font-normal leading-[23px] text-text"
-                >
-                  10 شهادات
-                </div>
+                <div class="text-text h-10 w-[258px] text-right text-sm font-normal leading-[23px]">10 شهادات</div>
               </div>
             </div>
-            <div
-              class="flex h-10 flex-col items-end justify-center gap-5 self-stretch"
-            >
-              <div
-                class="inline-flex w-[301.50px] items-start justify-end gap-[11px]"
-              >
+            <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
+              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
-                  <div
-                    class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]"
-                  >
-                    <div
-                      class="absolute left-0 top-0 h-5 w-5 rounded-[624.38px] bg-primary-title"
-                    ></div>
+                  <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
+                    <div class="bg-primary-title absolute left-0 top-0 h-5 w-5 rounded-[624.38px]"></div>
                   </div>
-                  <div
-                    data-svg-wrapper="true"
-                    class="absolute left-[3px] top-[3px]"
-                  >
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 15 15"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844"
-                        stroke="white"
-                        stroke-width="1.25"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
+                  <div data-svg-wrapper="true" class="absolute left-[3px] top-[3px]">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                   </div>
                 </div>
-                <div
-                  class="h-10 w-[258px] text-right text-sm font-normal leading-[23px] text-text"
-                >
-                  أي عدد من الدورات المجانية
-                </div>
+                <div class="text-text h-10 w-[258px] text-right text-sm font-normal leading-[23px]">أي عدد من الدورات المجانية</div>
               </div>
             </div>
-            <div
-              class="flex h-10 flex-col items-end justify-center gap-5 self-stretch"
-            >
-              <div
-                class="inline-flex w-[301.50px] items-start justify-end gap-[11px]"
-              >
+            <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
+              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
-                  <div
-                    class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]"
-                  >
-                    <div
-                      class="absolute left-0 top-0 h-5 w-5 rounded-[624.38px] bg-primary-title"
-                    ></div>
+                  <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
+                    <div class="bg-primary-title absolute left-0 top-0 h-5 w-5 rounded-[624.38px]"></div>
                   </div>
-                  <div
-                    data-svg-wrapper="true"
-                    class="absolute left-[3px] top-[3px]"
-                  >
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 15 15"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844"
-                        stroke="white"
-                        stroke-width="1.25"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
+                  <div data-svg-wrapper="true" class="absolute left-[3px] top-[3px]">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                   </div>
                 </div>
-                <div
-                  class="h-10 w-[258px] text-right text-sm font-normal leading-[23px] text-text"
-                >
-                  تستهلك خلال 3 سنوات
-                </div>
+                <div class="text-text h-10 w-[258px] text-right text-sm font-normal leading-[23px]">تستهلك خلال 3 سنوات</div>
               </div>
             </div>
           </div>
           <div class="h-px self-stretch bg-zinc-300"></div>
           <button
-            class="inline-flex items-center justify-center gap-1 overflow-hidden rounded-[32px] px-8 py-[16px] transition-all duration-200 bg-primary-title text-white shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)]"
+            class="bg-primary-title inline-flex items-center justify-center gap-1 overflow-hidden rounded-[32px] px-8 py-[16px] text-white shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)] transition-all duration-200"
           >
             <span class="flex items-end justify-start gap-1.5">
               <span class="text-base font-bold leading-none">أنضم للدوره</span>
@@ -1198,209 +793,85 @@
           </button>
         </section>
         <section
-          class="inline-flex h-[503px] w-[374px] flex-col items-center justify-start gap-[26px] rounded-[20px] border border-zinc-300 p-[26px] shadow-[0px_4px_6px_-2px_rgba(16 24 40 0.03)] bg-primary-title md:mx-16"
+          class="shadow-[0px_4px_6px_-2px_rgba(16 24 40 0.03)] bg-primary-title inline-flex h-[503px] w-[374px] flex-col items-center justify-start gap-[26px] rounded-[20px] border border-zinc-300 p-[26px] md:mx-16"
         >
-          <div
-            class="flex flex-col items-center justify-start gap-[9px] py-0.5"
-          >
+          <div class="flex flex-col items-center justify-start gap-[9px] py-0.5">
             <div class="flex flex-col items-center justify-start">
-              <div
-                class="text-right text-lg font-bold tracking-tight text-[#30e8ae]"
-              >
-                باقة 10 دورات
-              </div>
-              <div
-                class="text-right text-xs font-bold tracking-tight text-[#ff99ac]"
-              >
-                بسعر 7 دورات (تخفيض %75)
-              </div>
+              <div class="text-right text-lg font-bold tracking-tight text-[#30e8ae]">باقة 10 دورات</div>
+              <div class="text-right text-xs font-bold tracking-tight text-[#ff99ac]">بسعر 7 دورات (تخفيض %75)</div>
             </div>
-            <div
-              class="inline-flex items-baseline justify-center gap-1.5 text-white"
-            >
+            <div class="inline-flex items-baseline justify-center gap-1.5 text-white">
               <div class="text-xs font-bold capitalize">ريال</div>
-              <div class="font-['Inter'] text-[42px] font-bold capitalize">
-                1000
-              </div>
+              <div class="font-['Inter'] text-[42px] font-bold capitalize">1000</div>
               <div class="text-sm font-bold capitalize"></div>
             </div>
           </div>
           <div class="h-px self-stretch bg-zinc-300/20"></div>
-          <div
-            class="flex h-[172px] flex-col items-start justify-start self-stretch py-1.5"
-          >
-            <div
-              class="flex h-10 flex-col items-end justify-center gap-5 self-stretch"
-            >
-              <div
-                class="inline-flex w-[301.50px] items-start justify-end gap-[11px]"
-              >
+          <div class="flex h-[172px] flex-col items-start justify-start self-stretch py-1.5">
+            <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
+              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
-                  <div
-                    class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]"
-                  >
-                    <div
-                      class="absolute left-0 top-0 h-5 w-5 rounded-[624.38px] bg-white"
-                    ></div>
+                  <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
+                    <div class="absolute left-0 top-0 h-5 w-5 rounded-[624.38px] bg-white"></div>
                   </div>
-                  <div
-                    data-svg-wrapper="true"
-                    class="absolute left-[3px] top-[3px]"
-                  >
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 15 15"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844"
-                        stroke="#6639C6"
-                        stroke-width="1.25"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
+                  <div data-svg-wrapper="true" class="absolute left-[3px] top-[3px]">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="#6639C6" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                   </div>
                 </div>
-                <div
-                  class="h-10 w-[258px] text-right text-sm font-normal leading-[23px] text-neutral-50"
-                >
-                  10 دورات مدفوعة
-                </div>
+                <div class="h-10 w-[258px] text-right text-sm font-normal leading-[23px] text-neutral-50">10 دورات مدفوعة</div>
               </div>
             </div>
-            <div
-              class="flex h-10 flex-col items-end justify-center gap-5 self-stretch"
-            >
-              <div
-                class="inline-flex w-[301.50px] items-start justify-end gap-[11px]"
-              >
+            <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
+              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
-                  <div
-                    class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]"
-                  >
-                    <div
-                      class="absolute left-0 top-0 h-5 w-5 rounded-[624.38px] bg-white"
-                    ></div>
+                  <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
+                    <div class="absolute left-0 top-0 h-5 w-5 rounded-[624.38px] bg-white"></div>
                   </div>
-                  <div
-                    data-svg-wrapper="true"
-                    class="absolute left-[3px] top-[3px]"
-                  >
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 15 15"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844"
-                        stroke="#6639C6"
-                        stroke-width="1.25"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
+                  <div data-svg-wrapper="true" class="absolute left-[3px] top-[3px]">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="#6639C6" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                   </div>
                 </div>
-                <div
-                  class="h-10 w-[258px] text-right text-sm font-normal leading-[23px] text-neutral-50"
-                >
-                  10 شهادات
-                </div>
+                <div class="h-10 w-[258px] text-right text-sm font-normal leading-[23px] text-neutral-50">10 شهادات</div>
               </div>
             </div>
-            <div
-              class="flex h-10 flex-col items-end justify-center gap-5 self-stretch"
-            >
-              <div
-                class="inline-flex w-[301.50px] items-start justify-end gap-[11px]"
-              >
+            <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
+              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
-                  <div
-                    class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]"
-                  >
-                    <div
-                      class="absolute left-0 top-0 h-5 w-5 rounded-[624.38px] bg-white"
-                    ></div>
+                  <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
+                    <div class="absolute left-0 top-0 h-5 w-5 rounded-[624.38px] bg-white"></div>
                   </div>
-                  <div
-                    data-svg-wrapper="true"
-                    class="absolute left-[3px] top-[3px]"
-                  >
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 15 15"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844"
-                        stroke="#6639C6"
-                        stroke-width="1.25"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
+                  <div data-svg-wrapper="true" class="absolute left-[3px] top-[3px]">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="#6639C6" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                   </div>
                 </div>
-                <div
-                  class="h-10 w-[258px] text-right text-sm font-normal leading-[23px] text-neutral-50"
-                >
-                  أي عدد من الدورات المجانية
-                </div>
+                <div class="h-10 w-[258px] text-right text-sm font-normal leading-[23px] text-neutral-50">أي عدد من الدورات المجانية</div>
               </div>
             </div>
-            <div
-              class="flex h-10 flex-col items-end justify-center gap-5 self-stretch"
-            >
-              <div
-                class="inline-flex w-[301.50px] items-start justify-end gap-[11px]"
-              >
+            <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
+              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
-                  <div
-                    class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]"
-                  >
-                    <div
-                      class="absolute left-0 top-0 h-5 w-5 rounded-[624.38px] bg-white"
-                    ></div>
+                  <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
+                    <div class="absolute left-0 top-0 h-5 w-5 rounded-[624.38px] bg-white"></div>
                   </div>
-                  <div
-                    data-svg-wrapper="true"
-                    class="absolute left-[3px] top-[3px]"
-                  >
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 15 15"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844"
-                        stroke="#6639C6"
-                        stroke-width="1.25"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
+                  <div data-svg-wrapper="true" class="absolute left-[3px] top-[3px]">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="#6639C6" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                   </div>
                 </div>
-                <div
-                  class="h-10 w-[258px] text-right text-sm font-normal leading-[23px] text-neutral-50"
-                >
-                  تستهلك خلال 3 سنوات
-                </div>
+                <div class="h-10 w-[258px] text-right text-sm font-normal leading-[23px] text-neutral-50">تستهلك خلال 3 سنوات</div>
               </div>
             </div>
           </div>
           <div class="h-px self-stretch bg-zinc-300/20"></div>
           <button
-            class="inline-flex items-center justify-center gap-1 overflow-hidden rounded-[32px] px-8 py-[16px] transition-all duration-200 border-2 border-white text-white bg-transparent hover:bg-primary-title/10"
+            class="hover:bg-primary-title/10 inline-flex items-center justify-center gap-1 overflow-hidden rounded-[32px] border-2 border-white bg-transparent px-8 py-[16px] text-white transition-all duration-200"
           >
             <span class="flex items-end justify-start gap-1.5">
               <span class="text-base font-bold leading-none">أنضم للدوره</span>
@@ -1408,209 +879,85 @@
           </button>
         </section>
         <section
-          class="inline-flex h-[503px] w-[374px] flex-col items-center justify-start gap-[26px] rounded-[20px] border border-zinc-300 p-[26px] shadow-[0px_4px_6px_-2px_rgba(16,24,40,0.03)] bg-white"
+          class="inline-flex h-[503px] w-[374px] flex-col items-center justify-start gap-[26px] rounded-[20px] border border-zinc-300 bg-white p-[26px] shadow-[0px_4px_6px_-2px_rgba(16,24,40,0.03)]"
         >
-          <div
-            class="flex flex-col items-center justify-start gap-[9px] py-0.5"
-          >
+          <div class="flex flex-col items-center justify-start gap-[9px] py-0.5">
             <div class="flex flex-col items-center justify-start">
-              <div
-                class="text-right text-lg font-bold tracking-tight text-[#20b486]"
-              >
-                باقة 10 دورات
-              </div>
-              <div
-                class="text-right text-xs font-bold tracking-tight text-[#ff2d55]"
-              >
-                بسعر 7 دورات (تخفيض %75)
-              </div>
+              <div class="text-right text-lg font-bold tracking-tight text-[#20b486]">باقة 10 دورات</div>
+              <div class="text-right text-xs font-bold tracking-tight text-[#ff2d55]">بسعر 7 دورات (تخفيض %75)</div>
             </div>
-            <div
-              class="inline-flex items-baseline justify-center gap-1.5 text-primary-title"
-            >
+            <div class="text-primary-title inline-flex items-baseline justify-center gap-1.5">
               <div class="text-xs font-bold capitalize">ريال</div>
-              <div class="font-['Inter'] text-[42px] font-bold capitalize">
-                1000
-              </div>
+              <div class="font-['Inter'] text-[42px] font-bold capitalize">1000</div>
               <div class="text-sm font-bold capitalize"></div>
             </div>
           </div>
           <div class="h-px self-stretch bg-zinc-300"></div>
-          <div
-            class="flex h-[172px] flex-col items-start justify-start self-stretch py-1.5"
-          >
-            <div
-              class="flex h-10 flex-col items-end justify-center gap-5 self-stretch"
-            >
-              <div
-                class="inline-flex w-[301.50px] items-start justify-end gap-[11px]"
-              >
+          <div class="flex h-[172px] flex-col items-start justify-start self-stretch py-1.5">
+            <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
+              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
-                  <div
-                    class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]"
-                  >
-                    <div
-                      class="absolute left-0 top-0 h-5 w-5 rounded-[624.38px] bg-primary-title"
-                    ></div>
+                  <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
+                    <div class="bg-primary-title absolute left-0 top-0 h-5 w-5 rounded-[624.38px]"></div>
                   </div>
-                  <div
-                    data-svg-wrapper="true"
-                    class="absolute left-[3px] top-[3px]"
-                  >
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 15 15"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844"
-                        stroke="white"
-                        stroke-width="1.25"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
+                  <div data-svg-wrapper="true" class="absolute left-[3px] top-[3px]">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                   </div>
                 </div>
-                <div
-                  class="h-10 w-[258px] text-right text-sm font-normal leading-[23px] text-text"
-                >
-                  10 دورات مدفوعة
-                </div>
+                <div class="text-text h-10 w-[258px] text-right text-sm font-normal leading-[23px]">10 دورات مدفوعة</div>
               </div>
             </div>
-            <div
-              class="flex h-10 flex-col items-end justify-center gap-5 self-stretch"
-            >
-              <div
-                class="inline-flex w-[301.50px] items-start justify-end gap-[11px]"
-              >
+            <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
+              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
-                  <div
-                    class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]"
-                  >
-                    <div
-                      class="absolute left-0 top-0 h-5 w-5 rounded-[624.38px] bg-primary-title"
-                    ></div>
+                  <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
+                    <div class="bg-primary-title absolute left-0 top-0 h-5 w-5 rounded-[624.38px]"></div>
                   </div>
-                  <div
-                    data-svg-wrapper="true"
-                    class="absolute left-[3px] top-[3px]"
-                  >
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 15 15"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844"
-                        stroke="white"
-                        stroke-width="1.25"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
+                  <div data-svg-wrapper="true" class="absolute left-[3px] top-[3px]">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                   </div>
                 </div>
-                <div
-                  class="h-10 w-[258px] text-right text-sm font-normal leading-[23px] text-text"
-                >
-                  10 شهادات
-                </div>
+                <div class="text-text h-10 w-[258px] text-right text-sm font-normal leading-[23px]">10 شهادات</div>
               </div>
             </div>
-            <div
-              class="flex h-10 flex-col items-end justify-center gap-5 self-stretch"
-            >
-              <div
-                class="inline-flex w-[301.50px] items-start justify-end gap-[11px]"
-              >
+            <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
+              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
-                  <div
-                    class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]"
-                  >
-                    <div
-                      class="absolute left-0 top-0 h-5 w-5 rounded-[624.38px] bg-primary-title"
-                    ></div>
+                  <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
+                    <div class="bg-primary-title absolute left-0 top-0 h-5 w-5 rounded-[624.38px]"></div>
                   </div>
-                  <div
-                    data-svg-wrapper="true"
-                    class="absolute left-[3px] top-[3px]"
-                  >
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 15 15"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844"
-                        stroke="white"
-                        stroke-width="1.25"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
+                  <div data-svg-wrapper="true" class="absolute left-[3px] top-[3px]">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                   </div>
                 </div>
-                <div
-                  class="h-10 w-[258px] text-right text-sm font-normal leading-[23px] text-text"
-                >
-                  أي عدد من الدورات المجانية
-                </div>
+                <div class="text-text h-10 w-[258px] text-right text-sm font-normal leading-[23px]">أي عدد من الدورات المجانية</div>
               </div>
             </div>
-            <div
-              class="flex h-10 flex-col items-end justify-center gap-5 self-stretch"
-            >
-              <div
-                class="inline-flex w-[301.50px] items-start justify-end gap-[11px]"
-              >
+            <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
+              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
-                  <div
-                    class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]"
-                  >
-                    <div
-                      class="absolute left-0 top-0 h-5 w-5 rounded-[624.38px] bg-primary-title"
-                    ></div>
+                  <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
+                    <div class="bg-primary-title absolute left-0 top-0 h-5 w-5 rounded-[624.38px]"></div>
                   </div>
-                  <div
-                    data-svg-wrapper="true"
-                    class="absolute left-[3px] top-[3px]"
-                  >
-                    <svg
-                      width="15"
-                      height="15"
-                      viewBox="0 0 15 15"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844"
-                        stroke="white"
-                        stroke-width="1.25"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></path>
+                  <div data-svg-wrapper="true" class="absolute left-[3px] top-[3px]">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                   </div>
                 </div>
-                <div
-                  class="h-10 w-[258px] text-right text-sm font-normal leading-[23px] text-text"
-                >
-                  تستهلك خلال 3 سنوات
-                </div>
+                <div class="text-text h-10 w-[258px] text-right text-sm font-normal leading-[23px]">تستهلك خلال 3 سنوات</div>
               </div>
             </div>
           </div>
           <div class="h-px self-stretch bg-zinc-300"></div>
           <button
-            class="inline-flex items-center justify-center gap-1 overflow-hidden rounded-[32px] px-8 py-[16px] transition-all duration-200 bg-primary-title text-white shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)]"
+            class="bg-primary-title inline-flex items-center justify-center gap-1 overflow-hidden rounded-[32px] px-8 py-[16px] text-white shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)] transition-all duration-200"
           >
             <span class="flex items-end justify-start gap-1.5">
               <span class="text-base font-bold leading-none">أنضم للدوره</span>
@@ -1622,76 +969,31 @@
     <!--Price Comparison END-->
     <!-- Testimonials Section Start -->
     <div class="container mx-auto flex justify-center">
-      <div
-        dir="ltr"
-        class="h-[407px] py-[60px] flex-col justify-start items-center gap-6 inline-flex"
-      >
-        <div class="h-[51px] flex-col justify-start items-start gap-2 flex">
-          <div
-            class="self-stretch text-center text-[#6639c6] text-[32px] font-bold font-['Ping AR']"
-          >
-            قالوا عنا
-          </div>
+      <div dir="ltr" class="inline-flex h-[407px] flex-col items-center justify-start gap-6 py-[60px]">
+        <div class="flex h-[51px] flex-col items-start justify-start gap-2">
+          <div class="font-['Ping AR'] self-stretch text-center text-[32px] font-bold text-[#6639c6]">قالوا عنا</div>
         </div>
-        <div
-          class="self-stretch h-[212px] px-[114px] flex-col justify-start items-center gap-6 flex"
-        >
-          <div
-            class="self-stretch justify-center items-center gap-5 inline-flex"
-          >
+        <div class="flex h-[212px] flex-col items-center justify-start gap-6 self-stretch px-[114px]">
+          <div class="inline-flex items-center justify-center gap-5 self-stretch">
             <div
-              class="grow shrink basis-0 h-[212px] pb-px bg-white rounded-3xl shadow-[0px_4px_6px_-2px_rgba(16,24,40,0.03)] shadow-[0px_20px_40px_-15px_rgba(16,24,40,0.07)] shadow-[0px_2px_0px_0px_rgba(212,212,216,1.00)] border border-zinc-300 justify-center items-end flex"
+              class="flex h-[212px] shrink grow basis-0 items-end justify-center rounded-3xl border border-zinc-300 bg-white pb-px shadow-[0px_4px_6px_-2px_rgba(16,24,40,0.03)] shadow-[0px_20px_40px_-15px_rgba(16,24,40,0.07)] shadow-[0px_2px_0px_0px_rgba(212,212,216,1.00)]"
             >
-              <img
-                class="w-[140px] h-[184px] rounded-bl-[27px]"
-                src="src/assets/images/persons/p3.png"
-              />
-              <div
-                class="grow shrink basis-0 self-stretch pl-4 pr-6 pt-6 pb-[23px] flex-col justify-start items-start gap-4 inline-flex"
-              >
-                <div
-                  class="w-[220px] text-right text-zinc-600 text-sm font-normal font-['Ping AR'] leading-normal"
-                >
-                  مع اطلاعي المعقول عن كل ما يستجد بالتعليم ألا أنه في ظني أكثر
-                  ما يطور العملية التعليمية لدى المعلم هي “الممارسة الواعية
-                  والموضوعية” للتعليم.
+              <img class="h-[184px] w-[140px] rounded-bl-[27px]" src="src/assets/images/persons/p3.png" />
+              <div class="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-4 self-stretch pl-4 pr-6 pt-6 pb-[23px]">
+                <div class="font-['Ping AR'] w-[220px] text-right text-sm font-normal leading-normal text-zinc-600">
+                  مع اطلاعي المعقول عن كل ما يستجد بالتعليم ألا أنه في ظني أكثر ما يطور العملية التعليمية لدى المعلم هي “الممارسة الواعية والموضوعية” للتعليم.
                 </div>
-                <div
-                  class="self-stretch justify-end items-center gap-2.5 inline-flex"
-                >
-                  <div class="flex-col justify-start items-end inline-flex">
-                    <div
-                      class="self-stretch text-right text-[#311e6a] text-base font-bold font-['Ping AR'] leading-[17.60px]"
-                    >
-                      تهاني المليليح
-                    </div>
-                    <div
-                      class="w-[133px] text-right text-zinc-600 text-sm font-normal font-['Ping AR'] leading-tight"
-                    >
-                      معلمة كيمياء
-                    </div>
-                    <div
-                      class="w-[79.07px] h-3.5 text-[#ff9500] text-sm font-black font-['Font Awesome 5 Pro'] leading-[14px]"
-                    >
+                <div class="inline-flex items-center justify-end gap-2.5 self-stretch">
+                  <div class="inline-flex flex-col items-end justify-start">
+                    <div class="font-['Ping AR'] self-stretch text-right text-base font-bold leading-[17.60px] text-[#311e6a]">تهاني المليليح</div>
+                    <div class="font-['Ping AR'] w-[133px] text-right text-sm font-normal leading-tight text-zinc-600">معلمة كيمياء</div>
+                    <div class="font-['Font Awesome 5 Pro'] h-3.5 w-[79.07px] text-sm font-black leading-[14px] text-[#ff9500]">
                       <img src="src/assets/images/Symbol.png" alt="star" />
                     </div>
                   </div>
                   <div data-svg-wrapper>
-                    <svg
-                      width="49"
-                      height="49"
-                      viewBox="0 0 49 49"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect
-                        x="0.333008"
-                        y="0.568604"
-                        width="48"
-                        height="48"
-                        rx="24"
-                        fill="#6639C6"
-                      />
+                    <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="0.333008" y="0.568604" width="48" height="48" rx="24" fill="#6639C6" />
                       <path
                         d="M20.867 24.6386C20.99 24.5861 21.1222 24.5589 21.2558 24.5584C21.3895 24.5579 21.5219 24.5842 21.6452 24.6358C21.7686 24.6874 21.8803 24.7631 21.9738 24.8586C22.0674 24.9541 22.1408 25.0674 22.1898 25.1917C22.2388 25.3161 22.2624 25.449 22.2592 25.5827C22.2559 25.7163 22.2259 25.8479 22.1709 25.9697C22.1159 26.0916 22.0371 26.2012 21.939 26.292C21.841 26.3828 21.7257 26.4531 21.6 26.4986C20.9315 26.762 20.3578 27.2205 19.9535 27.8144C19.5492 28.4083 19.333 29.1101 19.333 29.8286V31.5686C19.333 31.8338 19.4384 32.0882 19.6259 32.2757C19.8134 32.4632 20.0678 32.5686 20.333 32.5686H28.333C28.5982 32.5686 28.8526 32.4632 29.0401 32.2757C29.2277 32.0882 29.333 31.8338 29.333 31.5686V29.9216C29.3331 29.1801 29.1079 28.456 28.6871 27.8454C28.2664 27.2348 27.67 26.7665 26.977 26.5026C26.8505 26.4587 26.7342 26.3899 26.6348 26.3002C26.5355 26.2105 26.4551 26.1018 26.3985 25.9805C26.342 25.8592 26.3103 25.7277 26.3055 25.5939C26.3007 25.4602 26.3228 25.3268 26.3704 25.2017C26.4181 25.0766 26.4904 24.9624 26.583 24.8658C26.6757 24.7692 26.7868 24.6921 26.9098 24.6392C27.0327 24.5863 27.1651 24.5587 27.2989 24.5579C27.4328 24.5571 27.5654 24.5832 27.689 24.6346C28.7606 25.0428 29.6829 25.7669 30.3337 26.7111C30.9844 27.6553 31.3329 28.7749 31.333 29.9216V31.5686C31.333 32.3643 31.0169 33.1273 30.4543 33.6899C29.8917 34.2525 29.1287 34.5686 28.333 34.5686H20.333C19.5374 34.5686 18.7743 34.2525 18.2117 33.6899C17.6491 33.1273 17.333 32.3643 17.333 31.5686V29.8286C17.3331 28.7088 17.6703 27.6149 18.3006 26.6892C18.9309 25.7636 19.8251 25.0491 20.867 24.6386ZM24.333 14.5686C25.3939 14.5686 26.4113 14.99 27.1614 15.7402C27.9116 16.4903 28.333 17.5077 28.333 18.5686V20.5686C28.333 21.6295 27.9116 22.6469 27.1614 23.397C26.4113 24.1472 25.3939 24.5686 24.333 24.5686C23.2721 24.5686 22.2547 24.1472 21.5046 23.397C20.7544 22.6469 20.333 21.6295 20.333 20.5686V18.5686C20.333 17.5077 20.7544 16.4903 21.5046 15.7402C22.2547 14.99 23.2721 14.5686 24.333 14.5686V14.5686ZM24.333 16.5686C23.8026 16.5686 23.2939 16.7793 22.9188 17.1544C22.5437 17.5295 22.333 18.0382 22.333 18.5686V20.5686C22.333 21.099 22.5437 21.6077 22.9188 21.9828C23.2939 22.3579 23.8026 22.5686 24.333 22.5686C24.8634 22.5686 25.3721 22.3579 25.7472 21.9828C26.1223 21.6077 26.333 21.099 26.333 20.5686V18.5686C26.333 18.0382 26.1223 17.5295 25.7472 17.1544C25.3721 16.7793 24.8634 16.5686 24.333 16.5686Z"
                         fill="#C1C7CD"
@@ -1702,57 +1004,24 @@
               </div>
             </div>
             <div
-              class="grow shrink basis-0 h-[212px] pb-px bg-white rounded-3xl shadow-[0px_4px_6px_-2px_rgba(16,24,40,0.03)] shadow-[0px_20px_40px_-15px_rgba(16,24,40,0.07)] shadow-[0px_2px_0px_0px_rgba(212,212,216,1.00)] border border-zinc-300 justify-center items-end flex"
+              class="flex h-[212px] shrink grow basis-0 items-end justify-center rounded-3xl border border-zinc-300 bg-white pb-px shadow-[0px_4px_6px_-2px_rgba(16,24,40,0.03)] shadow-[0px_20px_40px_-15px_rgba(16,24,40,0.07)] shadow-[0px_2px_0px_0px_rgba(212,212,216,1.00)]"
             >
-              <img
-                class="w-[140px] h-[184px] rounded-bl-[27px]"
-                src="src/assets/images/persons/p2.png"
-              />
-              <div
-                class="grow shrink basis-0 self-stretch pl-4 pr-6 pt-6 pb-[23px] flex-col justify-start items-start gap-4 inline-flex"
-              >
-                <div
-                  class="w-[220px] text-right text-zinc-600 text-sm font-normal font-['Ping AR'] leading-normal"
-                >
-                  مع اطلاعي المعقول عن كل ما يستجد بالتعليم ألا أنه في ظني أكثر
-                  ما يطور العملية التعليمية لدى المعلم هي “الممارسة الواعية
-                  والموضوعية” للتعليم.
+              <img class="h-[184px] w-[140px] rounded-bl-[27px]" src="src/assets/images/persons/p2.png" />
+              <div class="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-4 self-stretch pl-4 pr-6 pt-6 pb-[23px]">
+                <div class="font-['Ping AR'] w-[220px] text-right text-sm font-normal leading-normal text-zinc-600">
+                  مع اطلاعي المعقول عن كل ما يستجد بالتعليم ألا أنه في ظني أكثر ما يطور العملية التعليمية لدى المعلم هي “الممارسة الواعية والموضوعية” للتعليم.
                 </div>
-                <div
-                  class="self-stretch justify-end items-center gap-2.5 inline-flex"
-                >
-                  <div class="flex-col justify-start items-end inline-flex">
-                    <div
-                      class="self-stretch text-right text-[#311e6a] text-base font-bold font-['Ping AR'] leading-[17.60px]"
-                    >
-                      سلمى أحمد
-                    </div>
-                    <div
-                      class="w-[133px] text-right text-zinc-600 text-sm font-normal font-['Ping AR'] leading-tight"
-                    >
-                      معلمة أنجليزى
-                    </div>
-                    <div
-                      class="w-[79.07px] h-3.5 text-[#ff9500] text-sm font-black font-['Font Awesome 5 Pro'] leading-[14px]"
-                    >
+                <div class="inline-flex items-center justify-end gap-2.5 self-stretch">
+                  <div class="inline-flex flex-col items-end justify-start">
+                    <div class="font-['Ping AR'] self-stretch text-right text-base font-bold leading-[17.60px] text-[#311e6a]">سلمى أحمد</div>
+                    <div class="font-['Ping AR'] w-[133px] text-right text-sm font-normal leading-tight text-zinc-600">معلمة أنجليزى</div>
+                    <div class="font-['Font Awesome 5 Pro'] h-3.5 w-[79.07px] text-sm font-black leading-[14px] text-[#ff9500]">
                       <img src="src/assets/images/Symbol.png" alt="star" />
                     </div>
                   </div>
                   <div data-svg-wrapper>
-                    <svg
-                      width="48"
-                      height="49"
-                      viewBox="0 0 48 49"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect
-                        y="0.568604"
-                        width="48"
-                        height="48"
-                        rx="24"
-                        fill="#6639C6"
-                      />
+                    <svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect y="0.568604" width="48" height="48" rx="24" fill="#6639C6" />
                       <path
                         d="M20.534 24.6386C20.6569 24.5861 20.7892 24.5589 20.9228 24.5584C21.0565 24.5579 21.1889 24.5842 21.3122 24.6358C21.4355 24.6874 21.5473 24.7631 21.6408 24.8586C21.7344 24.9541 21.8078 25.0674 21.8568 25.1917C21.9058 25.3161 21.9294 25.449 21.9262 25.5827C21.9229 25.7163 21.8929 25.8479 21.8379 25.9697C21.7829 26.0916 21.7041 26.2012 21.606 26.292C21.508 26.3828 21.3927 26.4531 21.267 26.4986C20.5985 26.762 20.0248 27.2205 19.6205 27.8144C19.2162 28.4083 19 29.1101 19 29.8286V31.5686C19 31.8338 19.1054 32.0882 19.2929 32.2757C19.4804 32.4632 19.7348 32.5686 20 32.5686H28C28.2652 32.5686 28.5196 32.4632 28.7071 32.2757C28.8946 32.0882 29 31.8338 29 31.5686V29.9216C29.0001 29.1801 28.7749 28.456 28.3541 27.8454C27.9334 27.2348 27.337 26.7665 26.644 26.5026C26.5175 26.4587 26.4012 26.3899 26.3018 26.3002C26.2024 26.2105 26.1221 26.1018 26.0655 25.9805C26.009 25.8592 25.9773 25.7277 25.9725 25.5939C25.9677 25.4602 25.9897 25.3268 26.0374 25.2017C26.0851 25.0766 26.1574 24.9624 26.25 24.8658C26.3427 24.7692 26.4538 24.6921 26.5767 24.6392C26.6997 24.5863 26.832 24.5587 26.9659 24.5579C27.0998 24.5571 27.2324 24.5832 27.356 24.6346C28.4276 25.0428 29.3499 25.7669 30.0006 26.7111C30.6514 27.6553 30.9999 28.7749 31 29.9216V31.5686C31 32.3643 30.6839 33.1273 30.1213 33.6899C29.5587 34.2525 28.7956 34.5686 28 34.5686H20C19.2044 34.5686 18.4413 34.2525 17.8787 33.6899C17.3161 33.1273 17 32.3643 17 31.5686V29.8286C17.0001 28.7088 17.3373 27.6149 17.9676 26.6892C18.5978 25.7636 19.4921 25.0491 20.534 24.6386ZM24 14.5686C25.0609 14.5686 26.0783 14.99 26.8284 15.7402C27.5786 16.4903 28 17.5077 28 18.5686V20.5686C28 21.6295 27.5786 22.6469 26.8284 23.397C26.0783 24.1472 25.0609 24.5686 24 24.5686C22.9391 24.5686 21.9217 24.1472 21.1716 23.397C20.4214 22.6469 20 21.6295 20 20.5686V18.5686C20 17.5077 20.4214 16.4903 21.1716 15.7402C21.9217 14.99 22.9391 14.5686 24 14.5686V14.5686ZM24 16.5686C23.4696 16.5686 22.9609 16.7793 22.5858 17.1544C22.2107 17.5295 22 18.0382 22 18.5686V20.5686C22 21.099 22.2107 21.6077 22.5858 21.9828C22.9609 22.3579 23.4696 22.5686 24 22.5686C24.5304 22.5686 25.0391 22.3579 25.4142 21.9828C25.7893 21.6077 26 21.099 26 20.5686V18.5686C26 18.0382 25.7893 17.5295 25.4142 17.1544C25.0391 16.7793 24.5304 16.5686 24 16.5686Z"
                         fill="#C1C7CD"
@@ -1763,58 +1032,24 @@
               </div>
             </div>
             <div
-              class="grow shrink basis-0 h-[212px] pb-px bg-white rounded-3xl shadow-[0px_4px_6px_-2px_rgba(16,24,40,0.03)] shadow-[0px_20px_40px_-15px_rgba(16,24,40,0.07)] shadow-[0px_2px_0px_0px_rgba(212,212,216,1.00)] border border-zinc-300 justify-center items-end flex"
+              class="flex h-[212px] shrink grow basis-0 items-end justify-center rounded-3xl border border-zinc-300 bg-white pb-px shadow-[0px_4px_6px_-2px_rgba(16,24,40,0.03)] shadow-[0px_20px_40px_-15px_rgba(16,24,40,0.07)] shadow-[0px_2px_0px_0px_rgba(212,212,216,1.00)]"
             >
-              <img
-                class="w-[140px] h-[184px] rounded-bl-[27px]"
-                src="src/assets/images/persons/p1.png"
-              />
-              <div
-                class="grow shrink basis-0 self-stretch pl-4 pr-6 pt-6 pb-[23px] flex-col justify-start items-start gap-4 inline-flex"
-              >
-                <div
-                  class="w-[220px] text-right text-zinc-600 text-sm font-normal font-['Ping AR'] leading-normal"
-                >
-                  مع اطلاعي المعقول عن كل ما يستجد بالتعليم ألا أنه في ظني أكثر
-                  ما يطور العملية التعليمية لدى المعلم هي “الممارسة الواعية
-                  والموضوعية” للتعليم.
+              <img class="h-[184px] w-[140px] rounded-bl-[27px]" src="src/assets/images/persons/p1.png" />
+              <div class="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-4 self-stretch pl-4 pr-6 pt-6 pb-[23px]">
+                <div class="font-['Ping AR'] w-[220px] text-right text-sm font-normal leading-normal text-zinc-600">
+                  مع اطلاعي المعقول عن كل ما يستجد بالتعليم ألا أنه في ظني أكثر ما يطور العملية التعليمية لدى المعلم هي “الممارسة الواعية والموضوعية” للتعليم.
                 </div>
-                <div
-                  class="self-stretch justify-end items-center gap-2.5 inline-flex"
-                >
-                  <div class="flex-col justify-start items-end inline-flex">
-                    <div
-                      class="self-stretch text-right text-[#311e6a] text-base font-bold font-['Ping AR'] leading-[17.60px]"
-                    >
-                      أحمد مراد
-                    </div>
-                    <div
-                      class="w-[133px] text-right text-zinc-600 text-sm font-normal font-['Ping AR'] leading-tight"
-                    >
-                      معلم رياضيات
-                    </div>
-                    <div
-                      class="w-[79.07px] h-3.5 text-[#ff9500] text-sm font-black font-['Font Awesome 5 Pro'] leading-[14px]"
-                    >
+                <div class="inline-flex items-center justify-end gap-2.5 self-stretch">
+                  <div class="inline-flex flex-col items-end justify-start">
+                    <div class="font-['Ping AR'] self-stretch text-right text-base font-bold leading-[17.60px] text-[#311e6a]">أحمد مراد</div>
+                    <div class="font-['Ping AR'] w-[133px] text-right text-sm font-normal leading-tight text-zinc-600">معلم رياضيات</div>
+                    <div class="font-['Font Awesome 5 Pro'] h-3.5 w-[79.07px] text-sm font-black leading-[14px] text-[#ff9500]">
                       <img src="src/assets/images/Symbol.png" alt="star" />
                     </div>
                   </div>
                   <div data-svg-wrapper>
-                    <svg
-                      width="49"
-                      height="49"
-                      viewBox="0 0 49 49"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <rect
-                        x="0.666992"
-                        y="0.568604"
-                        width="48"
-                        height="48"
-                        rx="24"
-                        fill="#6639C6"
-                      />
+                    <svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="0.666992" y="0.568604" width="48" height="48" rx="24" fill="#6639C6" />
                       <path
                         d="M21.201 24.6386C21.3239 24.5861 21.4562 24.5589 21.5898 24.5584C21.7235 24.5579 21.8559 24.5842 21.9792 24.6358C22.1025 24.6874 22.2143 24.7631 22.3078 24.8586C22.4013 24.9541 22.4748 25.0674 22.5238 25.1917C22.5728 25.3161 22.5964 25.449 22.5931 25.5827C22.5899 25.7163 22.5599 25.8479 22.5049 25.9697C22.4499 26.0916 22.3711 26.2012 22.273 26.292C22.1749 26.3828 22.0597 26.4531 21.934 26.4986C21.2655 26.762 20.6918 27.2205 20.2875 27.8144C19.8832 28.4083 19.667 29.1101 19.667 29.8286V31.5686C19.667 31.8338 19.7723 32.0882 19.9599 32.2757C20.1474 32.4632 20.4018 32.5686 20.667 32.5686H28.667C28.9322 32.5686 29.1866 32.4632 29.3741 32.2757C29.5616 32.0882 29.667 31.8338 29.667 31.5686V29.9216C29.6671 29.1801 29.4419 28.456 29.0211 27.8454C28.6003 27.2348 28.004 26.7665 27.311 26.5026C27.1845 26.4587 27.0682 26.3899 26.9688 26.3002C26.8694 26.2105 26.7891 26.1018 26.7325 25.9805C26.676 25.8592 26.6443 25.7277 26.6395 25.5939C26.6347 25.4602 26.6567 25.3268 26.7044 25.2017C26.7521 25.0766 26.8244 24.9624 26.917 24.8658C27.0097 24.7692 27.1208 24.6921 27.2437 24.6392C27.3667 24.5863 27.499 24.5587 27.6329 24.5579C27.7668 24.5571 27.8994 24.5832 28.023 24.6346C29.0946 25.0428 30.0169 25.7669 30.6676 26.7111C31.3184 27.6553 31.6669 28.7749 31.667 29.9216V31.5686C31.667 32.3643 31.3509 33.1273 30.7883 33.6899C30.2257 34.2525 29.4626 34.5686 28.667 34.5686H20.667C19.8713 34.5686 19.1083 34.2525 18.5457 33.6899C17.9831 33.1273 17.667 32.3643 17.667 31.5686V29.8286C17.6671 28.7088 18.0043 27.6149 18.6346 26.6892C19.2648 25.7636 20.1591 25.0491 21.201 24.6386ZM24.667 14.5686C25.7279 14.5686 26.7453 14.99 27.4954 15.7402C28.2456 16.4903 28.667 17.5077 28.667 18.5686V20.5686C28.667 21.6295 28.2456 22.6469 27.4954 23.397C26.7453 24.1472 25.7279 24.5686 24.667 24.5686C23.6061 24.5686 22.5887 24.1472 21.8386 23.397C21.0884 22.6469 20.667 21.6295 20.667 20.5686V18.5686C20.667 17.5077 21.0884 16.4903 21.8386 15.7402C22.5887 14.99 23.6061 14.5686 24.667 14.5686V14.5686ZM24.667 16.5686C24.1366 16.5686 23.6279 16.7793 23.2528 17.1544C22.8777 17.5295 22.667 18.0382 22.667 18.5686V20.5686C22.667 21.099 22.8777 21.6077 23.2528 21.9828C23.6279 22.3579 24.1366 22.5686 24.667 22.5686C25.1974 22.5686 25.7061 22.3579 26.0812 21.9828C26.4563 21.6077 26.667 21.099 26.667 20.5686V18.5686C26.667 18.0382 26.4563 17.5295 26.0812 17.1544C25.7061 16.7793 25.1974 16.5686 24.667 16.5686Z"
                         fill="#C1C7CD"
@@ -1832,20 +1067,10 @@
 
     <!-- Aanaab Projects Section Start -->
     <div dir="ltr" class="container mx-auto mb-12">
-      <div
-        class="h-[382.25px] bg-[#a3dee0] rounded-[30px] justify-center items-start inline-flex overflow-hidden container mx-auto relative"
-      >
-        <div
-          class="h-[382.25px] px-[50px] py-[60px] justify-between items-center flex w-full"
-        >
+      <div class="container relative mx-auto inline-flex h-[382.25px] items-start justify-center overflow-hidden rounded-[30px] bg-[#a3dee0]">
+        <div class="flex h-[382.25px] w-full items-center justify-between px-[50px] py-[60px]">
           <div data-svg-wrapper class="absolute left-2">
-            <svg
-              width="315"
-              height="354"
-              viewBox="0 0 315 354"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg width="315" height="354" viewBox="0 0 315 354" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M50.9951 252.749C64.367 252.749 77.1913 258.072 86.6467 267.548C96.1021 277.023 101.414 289.874 101.414 303.274C101.414 316.674 96.1021 329.526 86.6467 339.001C77.1913 348.476 64.367 353.799 50.9951 353.799C37.6231 353.799 24.799 348.476 15.3436 339.001C5.8882 329.526 0.576172 316.674 0.576172 303.274C0.576172 289.874 5.8882 277.023 15.3436 267.548C24.799 258.072 37.6231 252.749 50.9951 252.749ZM50.9951 126.424C64.367 126.424 77.1913 131.747 86.6467 141.222C96.1021 150.697 101.414 163.549 101.414 176.949C101.414 190.349 96.1021 203.2 86.6467 212.675C77.1913 222.151 64.367 227.474 50.9951 227.474C44.374 227.474 37.8177 226.167 31.7006 223.628C25.5835 221.089 20.0254 217.367 15.3436 212.675C10.6617 207.984 6.9478 202.414 4.41402 196.284C1.88023 190.154 0.576172 183.584 0.576172 176.949C0.576172 170.314 1.88023 163.744 4.41402 157.614C6.9478 151.484 10.6617 145.914 15.3436 141.222C20.0254 136.53 25.5835 132.809 31.7006 130.27C37.8177 127.73 44.374 126.424 50.9951 126.424ZM151.833 189.582C165.207 189.582 178.033 194.906 187.49 204.383C196.947 213.86 202.26 226.713 202.26 240.116C202.26 253.518 196.947 266.371 187.49 275.848C178.033 285.325 165.207 290.649 151.833 290.649C138.459 290.649 125.632 285.325 116.175 275.848C106.718 266.371 101.406 253.518 101.406 240.116C101.406 226.713 106.718 213.86 116.175 204.383C125.632 194.906 138.459 189.582 151.833 189.582ZM151.833 63.265C158.51 63.1781 165.137 64.4209 171.331 66.9213C177.524 69.4217 183.161 73.1298 187.913 77.8305C192.665 82.5312 196.438 88.1309 199.013 94.3046C201.589 100.478 202.915 107.103 202.915 113.794C202.915 120.486 201.589 127.11 199.013 133.284C196.438 139.458 192.665 145.057 187.913 149.758C183.161 154.459 177.524 158.167 171.331 160.667C165.137 163.168 158.51 164.411 151.833 164.324C138.573 164.151 125.915 158.752 116.599 149.294C107.283 139.837 102.06 127.083 102.06 113.794C102.06 100.506 107.283 87.7517 116.599 78.2943C125.915 68.837 138.573 63.4374 151.833 63.265ZM50.9951 0.0979004C64.367 0.0979007 77.1913 5.42107 86.6467 14.8964C96.1021 24.3717 101.414 37.2229 101.414 50.623C101.414 64.0231 96.1021 76.8744 86.6467 86.3497C77.1913 95.825 64.367 101.148 50.9951 101.148C44.374 101.148 37.8177 99.8413 31.7006 97.3022C25.5835 94.763 20.0254 91.0414 15.3436 86.3497C10.6617 81.658 6.9478 76.0882 4.41402 69.9582C1.88023 63.8282 0.576172 57.2581 0.576172 50.623C0.576172 43.988 1.88023 37.4179 4.41402 31.2879C6.9478 25.1579 10.6617 19.5881 15.3436 14.8964C20.0254 10.2047 25.5835 6.48302 31.7006 3.9439C37.8177 1.40477 44.374 0.0979003 50.9951 0.0979004ZM263.774 126.432C270.451 126.345 277.078 127.588 283.272 130.088C289.465 132.589 295.102 136.297 299.854 140.998C304.606 145.698 308.379 151.298 310.954 157.472C313.53 163.645 314.856 170.27 314.856 176.961C314.856 183.653 313.53 190.278 310.954 196.451C308.379 202.625 304.606 208.225 299.854 212.925C295.102 217.626 289.465 221.334 283.272 223.834C277.078 226.335 270.451 227.578 263.774 227.491C229.266 227.491 211.359 192.451 189.654 176.957C211.359 161.446 229.266 126.432 263.774 126.432Z"
                 fill="#F4F4F5"
@@ -1854,31 +1079,11 @@
             </svg>
           </div>
           <div data-svg-wrapper class="relative">
-            <svg
-              width="316"
-              height="354"
-              viewBox="0 0 316 354"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-            >
-              <rect
-                width="315"
-                height="371"
-                transform="translate(0.714844 0.449463)"
-                fill="url(#pattern0_1642_7524)"
-              />
+            <svg width="316" height="354" viewBox="0 0 316 354" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <rect width="315" height="371" transform="translate(0.714844 0.449463)" fill="url(#pattern0_1642_7524)" />
               <defs>
-                <pattern
-                  id="pattern0_1642_7524"
-                  patternContentUnits="objectBoundingBox"
-                  width="1"
-                  height="1"
-                >
-                  <use
-                    xlink:href="#image0_1642_7524"
-                    transform="matrix(0.00112276 0 0 0.000953289 0.107033 0)"
-                  />
+                <pattern id="pattern0_1642_7524" patternContentUnits="objectBoundingBox" width="1" height="1">
+                  <use xlink:href="#image0_1642_7524" transform="matrix(0.00112276 0 0 0.000953289 0.107033 0)" />
                 </pattern>
                 <image
                   id="image0_1642_7524"
@@ -1890,68 +1095,32 @@
               </defs>
             </svg>
           </div>
-          <div
-            class="w-[699px] flex-col justify-start items-end gap-4 inline-flex"
-          >
-            <div
-              class="w-[542px] text-right text-[#6639c6] text-[42px] font-bold font-['Ping AR'] leading-[42px]"
-            >
-              مشاريع أعناب
-            </div>
-            <div
-              class="self-stretch text-right text-[#311e6a] text-[32px] font-bold font-['Ping AR'] capitalize leading-[49px]"
-            >
+          <div class="inline-flex w-[699px] flex-col items-end justify-start gap-4">
+            <div class="font-['Ping AR'] w-[542px] text-right text-[42px] font-bold leading-[42px] text-[#6639c6]">مشاريع أعناب</div>
+            <div class="font-['Ping AR'] self-stretch text-right text-[32px] font-bold capitalize leading-[49px] text-[#311e6a]">
               لتطوير أداء معلمي ومعلمات المملكة العربية السعودية
             </div>
-            <div
-              class="w-[695px] text-right text-[#311e6a] text-base font-normal font-['Ping AR']"
-            >
-              هو نص وهمي يستخدم في صناعة الطباعة وتصميم المواقع كحشو في
-              التصميمات قبل إدخال النصوص النهائية. يُستخدم لتمثيل النصوص وكيفية
-              تنظيمها داخل التصميمات. النص.
+            <div class="font-['Ping AR'] w-[695px] text-right text-base font-normal text-[#311e6a]">
+              هو نص وهمي يستخدم في صناعة الطباعة وتصميم المواقع كحشو في التصميمات قبل إدخال النصوص النهائية. يُستخدم لتمثيل النصوص وكيفية تنظيمها داخل التصميمات. النص.
             </div>
-            <div class="justify-end items-center gap-[50px] inline-flex">
-              <div class="justify-center items-center gap-[11px] flex">
-                <div
-                  class="text-center text-zinc-600 text-[13px] font-medium font-['Ping AR']"
-                >
-                  المركز الوطني للتطوير المهني التعليمي
-                </div>
-                <div
-                  class="grow shrink basis-0 self-stretch flex-col justify-center items-center gap-[14.56px] inline-flex"
-                >
-                  <img
-                    class="w-[59.71px] h-[58.25px]"
-                    src="src/assets/images/edu-2.svg"
-                  />
+            <div class="inline-flex items-center justify-end gap-[50px]">
+              <div class="flex items-center justify-center gap-[11px]">
+                <div class="font-['Ping AR'] text-center text-[13px] font-medium text-zinc-600">المركز الوطني للتطوير المهني التعليمي</div>
+                <div class="inline-flex shrink grow basis-0 flex-col items-center justify-center gap-[14.56px] self-stretch">
+                  <img class="h-[58.25px] w-[59.71px]" src="src/assets/images/edu-2.svg" />
                 </div>
               </div>
-              <div class="justify-center items-center gap-[18px] flex">
-                <div
-                  class="text-center text-zinc-600 text-[13px] font-medium font-['Ping AR']"
-                >
-                  وزارة التعليم
-                </div>
-                <div
-                  class="grow shrink basis-0 self-stretch flex-col justify-center items-center gap-[17.81px] inline-flex"
-                >
-                  <img
-                    class="w-[76.45px] h-[26.19px]"
-                    src="src/assets/images/edu-1.svg"
-                  />
+              <div class="flex items-center justify-center gap-[18px]">
+                <div class="font-['Ping AR'] text-center text-[13px] font-medium text-zinc-600">وزارة التعليم</div>
+                <div class="inline-flex shrink grow basis-0 flex-col items-center justify-center gap-[17.81px] self-stretch">
+                  <img class="h-[26.19px] w-[76.45px]" src="src/assets/images/edu-1.svg" />
                 </div>
               </div>
               <div
-                class="px-8 py-[18px] bg-[#6639c6] rounded-[32px] shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)] shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)] justify-center items-center gap-1 flex overflow-hidden"
+                class="flex items-center justify-center gap-1 overflow-hidden rounded-[32px] bg-[#6639c6] px-8 py-[18px] shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)] shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)]"
               >
-                <div
-                  class="shadow-[1px_5px_22px_4px_rgba(0,0,0,0.15)] justify-start items-end gap-1.5 flex"
-                >
-                  <div
-                    class="text-white text-base font-bold font-['Ping Ar'] leading-none"
-                  >
-                    تسجيل دخول
-                  </div>
+                <div class="flex items-end justify-start gap-1.5 shadow-[1px_5px_22px_4px_rgba(0,0,0,0.15)]">
+                  <div class="font-['Ping Ar'] text-base font-bold leading-none text-white">تسجيل دخول</div>
                 </div>
               </div>
             </div>
@@ -1962,47 +1131,70 @@
     <!-- Aanaab Projects Section End -->
 
     <!-- FOOTER START -->
-    <footer class="border-sep border-t bg-box py-6 text-center text-meta-light">
-      <div
-        class="md:container md:m-auto md:flex md:items-center md:justify-between md:align-middle md:gap-4"
-      >
-        <div
-          class="mb-4 md:mb-0 flex justify-center gap-4 text-sm font-medium text-meta-light"
-        >
+    <footer class="border-sep bg-box dark:bg-dark text-meta-light border-t py-6 text-center">
+      <!--  Keep flex row reverse because of the rtl and the order in the mobile screens -->
+      <div class="md:container md:m-auto md:flex md:flex-row-reverse md:items-center md:justify-between md:gap-4 md:align-middle">
+        <div class="text-meta-light mb-4 flex justify-center gap-4 text-sm font-medium md:mb-0">
           <a href="#" aria-label="X">
-            <img src="src/assets/images/x.svg" alt="twitter" />
+            <svg class="fill-meta-light dark:fill-meta-light-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_1490_26686)">
+                <path
+                  d="M14.2339 10.1609L22.9764 -0.00146484H20.9047L13.3137 8.82237L7.2507 -0.00146484H0.257812L9.42618 13.3417L0.257812 23.9985H2.3296L10.3459 14.6803L16.7489 23.9985H23.7418L14.2334 10.1609H14.2339ZM11.3963 13.4593L10.4674 12.1306L3.0761 1.55814H6.25825L12.2231 10.0905L13.1521 11.4191L20.9057 22.5098H17.7235L11.3963 13.4598V13.4593Z"
+                  fill="#A1A1AA"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1490_26686">
+                  <rect width="24" height="24" fill="white" transform="translate(0 -0.00146484)" />
+                </clipPath>
+              </defs>
+            </svg>
           </a>
           <a href="#" aria-label="LinkedIn">
-            <img src="src/assets/images/linkedin.svg" alt="linkedin" />
+            <svg class="fill:meta-light dark:fill:meta-light-2" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_1490_29295)">
+                <path
+                  d="M22.2234 0.975098H1.77187C0.792187 0.975098 0 1.74854 0 2.70479V23.2407C0 24.197 0.792187 24.9751 1.77187 24.9751H22.2234C23.2031 24.9751 24 24.197 24 23.2454V2.70479C24 1.74854 23.2031 0.975098 22.2234 0.975098ZM7.12031 21.4267H3.55781V9.97041H7.12031V21.4267ZM5.33906 8.40947C4.19531 8.40947 3.27188 7.48603 3.27188 6.34697C3.27188 5.20791 4.19531 4.28447 5.33906 4.28447C6.47813 4.28447 7.40156 5.20791 7.40156 6.34697C7.40156 7.48135 6.47813 8.40947 5.33906 8.40947ZM20.4516 21.4267H16.8937V15.8579C16.8937 14.5313 16.8703 12.8204 15.0422 12.8204C13.1906 12.8204 12.9094 14.2688 12.9094 15.7642V21.4267H9.35625V9.97041H12.7687V11.536H12.8156C13.2891 10.636 14.4516 9.68447 16.1813 9.68447C19.7859 9.68447 20.4516 12.0563 20.4516 15.1407V21.4267Z"
+                  fill="#A1A1AA"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1490_29295">
+                  <rect width="24" height="24" fill="white" transform="translate(0 0.975098)" />
+                </clipPath>
+              </defs>
+            </svg>
           </a>
           <a href="#" aria-label="Facebook">
-            <img src="src/assets/images/facebook.svg" alt="facebook" />
+            <svg class="fill-meta-light dark:fill-meta-light-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_1490_26692)">
+                <path
+                  d="M24 11.9985C24 5.37111 18.6274 -0.00146484 12 -0.00146484C5.37258 -0.00146484 0 5.37111 0 11.9985C0 17.988 4.3882 22.9525 10.125 23.8528V15.4673H7.07812V11.9985H10.125V9.35479C10.125 6.34729 11.9166 4.68604 14.6576 4.68604C15.9701 4.68604 17.3438 4.92041 17.3438 4.92041V7.87354H15.8306C14.34 7.87354 13.875 8.79861 13.875 9.74854V11.9985H17.2031L16.6711 15.4673H13.875V23.8528C19.6118 22.9525 24 17.988 24 11.9985Z"
+                  fill="#A1A1AA"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_1490_26692">
+                  <rect width="24" height="24" fill="white" transform="translate(0 -0.00146484)" />
+                </clipPath>
+              </defs>
+            </svg>
           </a>
         </div>
         <div>
-          <nav aria-label="Footer navigation">
-            <ul
-              class="mb-4 mt-16 md:mt-0 flex justify-center gap-4 font-medium text-meta"
-            >
+          <nav aria-label="navigation">
+            <ul class="text-meta dark:text-wheat mb-4 mt-16 flex justify-center gap-4 font-medium md:mt-0">
               <li><a href="#" class="text-sm">التواصل</a></li>
               <li><a href="#" class="text-sm">الخصوصية و الأحكام</a></li>
               <li><a href="#" class="text-sm">المدونة</a></li>
               <li><a href="#" class="text-sm">من نحن</a></li>
             </ul>
-            <p class="hidden text-sm font-normal md:block">
-              جميع الحقوق محفوظة © منصة أعناب
-            </p>
+            <p class="hidden text-sm font-normal dark:text-zinc-400 md:block">جميع الحقوق محفوظة © منصة أعناب</p>
           </nav>
         </div>
-        <div class="mt-16 md:mt-0 text-sm">
-          <img
-            src="src/assets/images/footer_logo.svg"
-            alt="platform"
-            class="m-auto mb-2.5"
-          />
-          <p class="text-sm font-normal xl:hidden">
-            جميع الحقوق محفوظة © منصة أعناب
-          </p>
+        <div class="mt-16 text-sm md:mt-0">
+          <img src="src/assets/images/footer_logo.svg" alt="platform" class="m-auto mb-2.5" />
+          <p class="text-sm font-normal dark:text-zinc-400 md:hidden">جميع الحقوق محفوظة © منصة أعناب</p>
         </div>
       </div>
     </footer>
