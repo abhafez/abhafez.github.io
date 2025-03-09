@@ -5,7 +5,7 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-const dropdownIds = ["user-menu", "currency-menu", "locale-switcher"]; // Add your dropdown menu IDs here
+const dropdownIds = ["user-menu", "currency-menu", "locale-switcher", "filter-menu"]; // Add your dropdown menu IDs here
 
 // Meny controller
 $(document).ready(function () {
