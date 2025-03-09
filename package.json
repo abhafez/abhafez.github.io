@@ -19,6 +19,8 @@
     "vite": "^6.2.0"
   },
   "dependencies": {
-    "@tailwindcss/cli": "^4.0.9"
+    "@parcel/watcher-darwin-arm64": "^2.5.1",
+    "@tailwindcss/cli": "^4.0.9",
+    "@tailwindcss/oxide-darwin-arm64": "^4.0.12"
   }
 }
