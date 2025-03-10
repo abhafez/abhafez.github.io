@@ -82,10 +82,13 @@
     --color-wheat: #d2d2d4;
     --color-meta-light: #818182;
     --color-meta: #52525b;
+    --color-twitter: #1da1f2;
     --color-primary-title: #6639c6;
+    --color-primary-300: #56369b;
     --color-primary-400: #38246d;
     --color-primary-200: #321f6b;
     --color-text: #311e6a;
+    --color-category-1: #441457;
     --color-text-invert: #fafafa;
     --color-meta-dark: #d2d2d5;
     --color-meta-light-2: #a1a1aa;
@@ -845,6 +848,9 @@
   .my-3 {
     margin-block: calc(var(--spacing) * 3);
   }
+  .my-16 {
+    margin-block: calc(var(--spacing) * 16);
+  }
   .ms-2 {
     margin-inline-start: calc(var(--spacing) * 2);
   }
@@ -853,6 +859,9 @@
   }
   .ms-4 {
     margin-inline-start: calc(var(--spacing) * 4);
+  }
+  .me-2 {
+    margin-inline-end: calc(var(--spacing) * 2);
   }
   .me-3 {
     margin-inline-end: calc(var(--spacing) * 3);
@@ -913,6 +922,9 @@
   }
   .mb-8 {
     margin-bottom: calc(var(--spacing) * 8);
+  }
+  .mb-10 {
+    margin-bottom: calc(var(--spacing) * 10);
   }
   .mb-12 {
     margin-bottom: calc(var(--spacing) * 12);
@@ -2089,6 +2101,9 @@
   }
   .font-\[\'Inter\'\] {
     font-family: 'Inter';
+  }
+  .font-\[\'Ping_AR\'\] {
+    font-family: 'Ping AR';
   }
   .text-2xl {
     font-size: var(--text-2xl);
