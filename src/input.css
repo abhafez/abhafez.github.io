@@ -88,9 +88,14 @@
     --color-dark: #131316;
 
     --color-red-100: #b50929;
+    --color-red-200: #923262;
+    --color-dark-red: #571737;
     --color-teal-box: #a3dee0;
     --color-green: #20b486;
     --color-green-2: #30e8af;
+    --color-green-3: #487D2C;
+    --color-green-4: #1C350E;
+    --color-teal-1: #a2dddf;
 }
 
 :root {
