@@ -57,3 +57,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+function toggleTheme() {
+  const html = document.getElementsByTagName("html")[0];
+  const currentTheme = html.classList.contains("dark") ? "dark" : "light";
+  const newTheme = currentTheme === "dark" ? "light" : "dark";
+  document.documentElement.classList.toggle("dark");
+  let icon = document.getElementById("theme-toggle");
+  console.log(icon);
+  if (currentTheme === "light") {
+    icon.src = "src/assets/images/header/sun.svg";
+  } else {
+    icon.src = "src/assets/images/header/moon.svg";
+  }
+  localStorage.setItem("theme", newTheme);
+}
