@@ -117,11 +117,16 @@ function toggleTheme() {
   const newTheme = currentTheme === "dark" ? "light" : "dark";
   document.documentElement.classList.toggle("dark");
   let icon = document.getElementById("theme-toggle");
+  const themeDirectory = themeUrl();
   console.log(icon);
   if (currentTheme === "light") {
-    icon.src = "src/assets/images/header/sun.svg";
+    icon.src = themeDirectory + "/assets/images/header/sun.svg";
   } else {
-    icon.src = "src/assets/images/header/moon.svg";
+    icon.src = themeDirectory + "/assets/images/header/moon.svg";
   }
   localStorage.setItem("theme", newTheme);
+}
+
+function themeUrl() {
+  return document.body.getAttribute("data-theme-url");
 }
