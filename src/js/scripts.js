@@ -1,34 +1,87 @@
-document.addEventListener("keydown", (event) => {
-  if (event.ctrlKey && event.key.toLowerCase() === "i") {
-    event.preventDefault();
-    document.documentElement.classList.toggle("dark");
-  }
-});
-
 const dropdownIds = ["user-menu", "currency-menu", "locale-switcher", "filter-menu"]; // Add your dropdown menu IDs here
 
-// Meny controller
 $(document).ready(function () {
-  // control dropdown menus
+  const mobileBreakpoint = 1024; // Tailwind's 'lg' breakpoint (adjust if needed)
+
+  function isMobile() {
+    return window.innerWidth < mobileBreakpoint;
+  }
+
   dropdownIds.forEach((menuId) => {
-    const $dropdown = $(`#${menuId}`).closest(".dropdown"); // Find parent dropdown container
-    const $menu = $(`#${menuId}`); // Dropdown menu
+    const $dropdown = $(`#${menuId}`).closest(".dropdown");
+    const $menu = $(`#${menuId}`);
 
-    // Toggle menu on button click
-    $dropdown.click(function (event) {
-      event.stopPropagation(); // Prevent triggering document click
-      $(".dropdown-menu").not($menu).addClass("hidden"); // Close other open menus
-      $menu.toggleClass("hidden");
-    });
+    if (!isMobile()) {
+      // Desktop: Hover behavior
+      $dropdown.off(); // Clear previous events
+      $menu.off();
 
-    // Hide menu when clicking outside
-    $(document).click(function () {
-      $menu.addClass("hidden");
-    });
+      $dropdown
+        .on("mouseenter", function () {
+          $(".dropdown-menu").not($menu).addClass("hidden"); // Close other menus
+          $menu.removeClass("hidden");
+        })
+        .on("mouseleave", function () {
+          $menu.addClass("hidden");
+        });
+    } else {
+      // Mobile: Click behavior
+      $dropdown.off(); // Clear previous events
+      $menu.off();
 
-    // Prevent menu from closing when clicking inside
-    $menu.click(function (event) {
-      event.stopPropagation();
+      // Toggle menu on click
+      $dropdown.on("click", function (event) {
+        event.stopPropagation();
+        $(".dropdown-menu").not($menu).addClass("hidden");
+        $menu.toggleClass("hidden");
+      });
+
+      // Close when clicking outside
+      $(document).on("click.mobile", function () {
+        $menu.addClass("hidden");
+      });
+
+      // Prevent menu from closing when clicking inside
+      $menu.on("click", function (event) {
+        event.stopPropagation();
+      });
+    }
+  });
+
+  // Handle resize: re-apply handlers if screen size changes
+  $(window).on("resize", function () {
+    dropdownIds.forEach((menuId) => {
+      const $dropdown = $(`#${menuId}`).closest(".dropdown");
+      const $menu = $(`#${menuId}`);
+
+      $dropdown.off();
+      $menu.off();
+      $(document).off("click.mobile");
+
+      if (!isMobile()) {
+        $dropdown
+          .on("mouseenter", function () {
+            $(".dropdown-menu").not($menu).addClass("hidden");
+            $menu.removeClass("hidden");
+          })
+          .on("mouseleave", function () {
+            $menu.addClass("hidden");
+          });
+      } else {
+        $dropdown.on("click", function (event) {
+          event.stopPropagation();
+          $(".dropdown-menu").not($menu).addClass("hidden");
+          $menu.toggleClass("hidden");
+        });
+
+        $(document).on("click.mobile", function () {
+          $menu.addClass("hidden");
+        });
+
+        $menu.on("click", function (event) {
+          event.stopPropagation();
+        });
+      }
     });
   });
 });
