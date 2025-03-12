@@ -67,6 +67,8 @@
 }
 
 @theme {
+  --breakpoint-xs: 30rem;
+
   --color-sep: #d4d4d8;
   --color-box: #f4f4f5;
   --color-wheat: #d2d2d4;
