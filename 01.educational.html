@@ -420,20 +420,12 @@
       <!--Services Cards Section End-->
 
       <!-- Aanaab For الجهات Section Start -->
-      <div class="container m-auto mt-6 px-5 pb-8 md:px-0 md:pb-12" dir="ltr">
+      <div class="container m-auto mt-6 px-5 pb-8 md:px-0 md:pb-12">
         <div class="bg-primary-title flex h-[149px] w-full flex-col items-center justify-center gap-[11px] rounded-[20px] px-[42px] py-10">
-          <div class="flex items-center justify-between self-stretch">
-            <button class="flex cursor-pointer items-center justify-center gap-1 rounded-[32px] bg-white px-8 py-[18px]">
-              <div class="flex items-end justify-start gap-1.5">
-                <div class="text-primary-title text-base font-bold leading-none">أعناب للجهات</div>
-              </div>
-            </button>
+          <div class="flex flex-col md:flex-row items-start md:items-center justify-between self-stretch">
+
             <div class="flex items-center justify-start gap-5">
-              <div class="flex items-baseline justify-start gap-[11px]">
-                <div class="text-md text-right font-medium text-[#27e7ca] md:text-[26px]">للوزارات، للمنظمات، للجامعات و المدارس</div>
-                <div class="text-right"><span class="text-[42px] font-bold text-white">أعناب </span><span class="text-[42px] font-bold text-white">للجهات</span></div>
-              </div>
-              <div data-svg-wrapper>
+              <div data-svg-wrapper class="hidden md:block">
                 <svg width="48" height="69" viewBox="0 0 48 69" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M6 42.6487V24.6487C6 23.5441 6.89543 22.6487 8 22.6487H14" stroke="#D2A8FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                   <path
@@ -456,7 +448,17 @@
                   <path d="M20 23.6487H26" stroke="#D2A8FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </div>
+              <div class="flex flex-col  lg:flex-row md:items-start justify-end gap-[11px]">
+                <div class="flex text-start items-start text-lg md:text-[42px]"><span class=" font-bold text-white">أعناب </span><span class="font-bold text-white">للجهات</span></div>
+                <div class="text-md text-right font-medium text-[#27e7ca] md:text-[26px]">للوزارات، للمنظمات، للجامعات و المدارس</div>
+              </div>
+
             </div>
+            <button class="flex cursor-pointer items-center justify-center gap-1 rounded-[32px] bg-white px-8 py-[18px]">
+              <div class="flex items-end justify-start gap-1.5">
+                <div class="text-primary-title text-base font-bold leading-none">أعناب للجهات</div>
+              </div>
+            </button>
           </div>
         </div>
       </div>
@@ -1612,21 +1614,21 @@
       <!-- #endregion Partners section end -->
     </div>
 
-    <aside dir="rtl" class="dark:bg-dark bg-box border-sep border-t border-b py-14">
+    <aside dir="rtl" class="dark:bg-dark bg-box border-sep border-t border-b py-14 px-5 md:px-0">
       <div class="container m-auto">
         <div class="flex w-full flex-col items-start justify-end overflow-hidden rounded-[20px] bg-[#73b0ed]">
           <div class="flex w-full items-start justify-start">
-            <div class="flex grow flex-col gap-[26px] pt-10">
-              <div class="ps-10 flex flex-col items-start justify-start self-stretch">
+            <div class="flex grow flex-col gap-[26px] pt-10 ">
+              <div class="ps-10 flex flex-col items-start justify-start self-stretch ">
                 <h2 class="h-16 self-stretch text-right text-5xl font-bold capitalize leading-loose text-white">دورات الطلاب</h2>
                 <h4 class="mt-4 justify-start text-right text-2xl font-bold capitalize leading-[49px] text-blue-800">للمرحلتين الثانوية و الجامعية</h4>
 
-                <div class="mt-6 flex flex-wrap items-center gap-4">
+                <div class="mt-6 flex flex-wrap items-center gap-5 md:gap-4">
                   <img alt="" class="flex-none" src="src/assets/images/qiyas.svg" />
                   <img alt="" class="flex-none" src="src/assets/images/mawhiba.svg" />
                   <img alt="" class="flex-none" src="src/assets/images/tahsili.svg" />
                   <button
-                    class="text-blue-1 h-16 flex-nowrap justify-center gap-1 rounded-full bg-white px-8 py-0 text-base font-bold shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)]"
+                    class="text-blue-1 h-16 mb-10 md:mb-0 flex-nowrap justify-center gap-1 rounded-full bg-white px-8 py-0 text-base font-bold shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)]"
                   >
                     استكشف الدورات
                   </button>

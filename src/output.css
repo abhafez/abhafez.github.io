@@ -78,19 +78,15 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
-    --breakpoint-xs: 30rem;
     --color-sep: #d4d4d8;
     --color-box: #f4f4f5;
     --color-wheat: #d2d2d4;
     --color-meta-light: #818182;
     --color-meta: #52525b;
-    --color-twitter: #1da1f2;
     --color-primary-title: #6639c6;
-    --color-primary-300: #56369b;
     --color-primary-400: #38246d;
     --color-primary-200: #321f6b;
     --color-text: #311e6a;
-    --color-category-1: #441457;
     --color-text-invert: #fafafa;
     --color-meta-dark: #d2d2d5;
     --color-meta-light-2: #a1a1aa;
@@ -290,9 +286,6 @@
   .-end-7 {
     inset-inline-end: calc(var(--spacing) * -7);
   }
-  .end-0 {
-    inset-inline-end: calc(var(--spacing) * 0);
-  }
   .end-3 {
     inset-inline-end: calc(var(--spacing) * 3);
   }
@@ -386,23 +379,8 @@
   .right-16 {
     right: calc(var(--spacing) * 16);
   }
-  .bottom-0 {
-    bottom: calc(var(--spacing) * 0);
-  }
-  .bottom-2 {
-    bottom: calc(var(--spacing) * 2);
-  }
-  .bottom-4 {
-    bottom: calc(var(--spacing) * 4);
-  }
-  .bottom-6 {
-    bottom: calc(var(--spacing) * 6);
-  }
   .bottom-7 {
     bottom: calc(var(--spacing) * 7);
-  }
-  .bottom-10 {
-    bottom: calc(var(--spacing) * 10);
   }
   .left-0 {
     left: calc(var(--spacing) * 0);
@@ -457,9 +435,6 @@
   }
   .left-\[150px\] {
     left: 150px;
-  }
-  .-z-10 {
-    z-index: calc(10 * -1);
   }
   .z-0 {
     z-index: 0;
@@ -761,9 +736,6 @@
   }
   .h-\[98px\] {
     height: 98px;
-  }
-  .h-\[115px\] {
-    height: 115px;
   }
   .h-\[123px\] {
     height: 123px;
@@ -1359,9 +1331,6 @@
   .bg-\[\#3d3da2\] {
     background-color: #3d3da2;
   }
-  .bg-\[\#6\1 �\14 H�639c6\] {
-    background-color: #6�H�639c6;
-  }
   .bg-\[\#8BD3DA\] {
     background-color: #8BD3DA;
   }
@@ -1725,6 +1694,9 @@
   .text-right {
     text-align: right;
   }
+  .text-start {
+    text-align: start;
+  }
   .font-\[\'Inter\'\] {
     font-family: 'Inter';
   }
@@ -1780,9 +1752,6 @@
   }
   .text-\[13px\] {
     font-size: 13px;
-  }
-  .text-\[15px\] {
-    font-size: 15px;
   }
   .text-\[25px\] {
     font-size: 25px;
@@ -2176,13 +2145,6 @@
       }
     }
   }
-  .hover\:bg-primary-400 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-primary-400);
-      }
-    }
-  }
   .hover\:bg-primary-title\/10 {
     &:hover {
       @media (hover: hover) {
@@ -2201,13 +2163,6 @@
     &:hover {
       @media (hover: hover) {
         color: var(--color-red-700);
-      }
-    }
-  }
-  .hover\:underline {
-    &:hover {
-      @media (hover: hover) {
-        text-decoration-line: underline;
       }
     }
   }
@@ -2243,19 +2198,9 @@
       gap: calc(var(--spacing) * 4);
     }
   }
-  .sm\:h-\[149px\] {
-    @media (width >= 40rem) {
-      height: 149px;
-    }
-  }
   .sm\:grid-cols-4 {
     @media (width >= 40rem) {
       grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-  }
-  .sm\:flex-row {
-    @media (width >= 40rem) {
-      flex-direction: row;
     }
   }
   .sm\:gap-2 {
@@ -2301,6 +2246,11 @@
       margin: auto;
     }
   }
+  .md\:mx-0 {
+    @media (width >= 48rem) {
+      margin-inline: calc(var(--spacing) * 0);
+    }
+  }
   .md\:mt-0 {
     @media (width >= 48rem) {
       margin-top: calc(var(--spacing) * 0);
@@ -2339,11 +2289,6 @@
   .md\:hidden {
     @media (width >= 48rem) {
       display: none;
-    }
-  }
-  .md\:h-\[149px\] {
-    @media (width >= 48rem) {
-      height: 149px;
     }
   }
   .md\:h-\[359px\] {
@@ -2391,6 +2336,11 @@
       align-items: center;
     }
   }
+  .md\:items-start {
+    @media (width >= 48rem) {
+      align-items: flex-start;
+    }
+  }
   .md\:justify-between {
     @media (width >= 48rem) {
       justify-content: space-between;
@@ -2409,6 +2359,11 @@
   .md\:px-0 {
     @media (width >= 48rem) {
       padding-inline: calc(var(--spacing) * 0);
+    }
+  }
+  .md\:px-8 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 8);
     }
   }
   .md\:pt-0 {
@@ -2446,6 +2401,11 @@
   .md\:text-\[32px\] {
     @media (width >= 48rem) {
       font-size: 32px;
+    }
+  }
+  .md\:text-\[42px\] {
+    @media (width >= 48rem) {
+      font-size: 42px;
     }
   }
   .md\:text-\[64px\] {
@@ -3250,9 +3210,6 @@
   }
   @media (width >= 64rem) {
     max-width: 64rem;
-  }
-  @media (width >= 80rem) {
-    max-width: 80rem;
   }
 }
 :root {
