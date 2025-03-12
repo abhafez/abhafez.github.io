@@ -4,140 +4,140 @@
 @custom-variant light (&:where(.light, .light *));
 
 @font-face {
-    font-family: "PingAR+LT";
-    src: url("./fonts/PingAR+LT-Hairline.otf") format("opentype");
-    font-weight: 100;
-    font-style: normal;
+  font-family: "PingAR+LT";
+  src: url("./fonts/PingAR+LT-Hairline.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "PingAR+LT";
-    src: url("./fonts/PingAR+LT-Thin.otf") format("opentype");
-    font-weight: 200;
-    font-style: normal;
+  font-family: "PingAR+LT";
+  src: url("./fonts/PingAR+LT-Thin.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "PingAR+LT";
-    src: url("./fonts/PingAR+LT-ExtraLight.otf") format("opentype");
-    font-weight: 300;
-    font-style: normal;
+  font-family: "PingAR+LT";
+  src: url("./fonts/PingAR+LT-ExtraLight.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "PingAR+LT";
-    src: url("./fonts/PingAR+LT-Light.otf") format("opentype");
-    font-weight: 400;
-    font-style: normal;
+  font-family: "PingAR+LT";
+  src: url("./fonts/PingAR+LT-Light.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "PingAR+LT";
-    src: url("./fonts/PingAR+LT-Regular.otf") format("opentype");
-    font-weight: 500;
-    font-style: normal;
+  font-family: "PingAR+LT";
+  src: url("./fonts/PingAR+LT-Regular.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "PingAR+LT";
-    src: url("./fonts/PingAR+LT-Medium.otf") format("opentype");
-    font-weight: 600;
-    font-style: normal;
+  font-family: "PingAR+LT";
+  src: url("./fonts/PingAR+LT-Medium.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "PingAR+LT";
-    src: url("./fonts/PingAR+LT-Bold.otf") format("opentype");
-    font-weight: 700;
-    font-style: normal;
+  font-family: "PingAR+LT";
+  src: url("./fonts/PingAR+LT-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "PingAR+LT";
-    src: url("./fonts/PingAR+LT-Heavy.otf") format("opentype");
-    font-weight: 800;
-    font-style: normal;
+  font-family: "PingAR+LT";
+  src: url("./fonts/PingAR+LT-Heavy.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: "PingAR+LT";
-    src: url("./fonts/PingAR+LT-Black.otf") format("opentype");
-    font-weight: 900;
-    font-style: normal;
+  font-family: "PingAR+LT";
+  src: url("./fonts/PingAR+LT-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
 }
 
 @theme {
-    --color-sep: #d4d4d8;
-    --color-box: #f4f4f5;
-    --color-wheat: #d2d2d4;
-    --color-meta-light: #818182;
-    --color-meta: #52525b;
-    --color-twitter: #1da1f2;
-    --color-ِِprimary-title-2: #a983fc;
-    --color-primary-title: #6639c6;
-    --color-primary-300: #56369b;
-    --color-primary-400: #38246d;
-    --color-primary-200: #321f6b;
-    --color-text: #311e6a;
-    --color-category-1: #441457;
-    /* Dark Mode */
-    --color-text-invert: #fafafa;
-    --color-meta-dark: #d2d2d5;
-    --color-meta-light-2: #a1a1aa;
-    --color-box-2: #242429;
-    --color-dark: #131316;
+  --color-sep: #d4d4d8;
+  --color-box: #f4f4f5;
+  --color-wheat: #d2d2d4;
+  --color-meta-light: #818182;
+  --color-meta: #52525b;
+  --color-twitter: #1da1f2;
+  --color-ِِprimary-title-2: #a983fc;
+  --color-primary-title: #6639c6;
+  --color-primary-300: #56369b;
+  --color-primary-400: #38246d;
+  --color-primary-200: #321f6b;
+  --color-text: #311e6a;
+  --color-category-1: #441457;
+  /* Dark Mode */
+  --color-text-invert: #fafafa;
+  --color-meta-dark: #d2d2d5;
+  --color-meta-light-2: #a1a1aa;
+  --color-box-2: #242429;
+  --color-dark: #131316;
 
-    --color-red-100: #b50929;
-    --color-red-200: #923262;
-    --color-dark-red: #571737;
-    --color-teal-box: #a3dee0;
-    --color-green: #20b486;
-    --color-green-2: #30e8af;
-    --color-green-3: #487D2C;
-    --color-green-4: #1C350E;
-    --color-teal-1: #a2dddf;
+  --color-red-100: #b50929;
+  --color-red-200: #923262;
+  --color-dark-red: #571737;
+  --color-teal-box: #a3dee0;
+  --color-green: #20b486;
+  --color-green-2: #30e8af;
+  --color-green-3: #487d2c;
+  --color-green-4: #1c350e;
+  --color-teal-1: #a2dddf;
 
-    --color-blue-1: #2F40AD;
+  --color-blue-1: #2f40ad;
 }
 
 .container {
-    width: 100%;
-    @media (width >= 40rem) {
-        max-width: 40rem;
-    }
-    @media (width >= 48rem) {
-        max-width: 48rem;
-    }
-    @media (width >= 64rem) {
-        max-width: 64rem;
-    }
-    @media (width >= 80rem) {
-        max-width: 80rem;
-    }
-    @media (width >= 96rem) {
-        /*max-width: 96rem;*/
-    }
+  width: 100%;
+  @media (width >= 40rem) {
+    max-width: 40rem;
+  }
+  @media (width >= 48rem) {
+    max-width: 48rem;
+  }
+  @media (width >= 64rem) {
+    max-width: 64rem;
+  }
+  @media (width >= 80rem) {
+    max-width: 80rem;
+  }
+  @media (width >= 96rem) {
+    /*max-width: 96rem;*/
+  }
 }
 
 :root {
-    font-family: "PingAR+LT", system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
+  font-family: "PingAR+LT", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
 
-    color-scheme: light;
+  color-scheme: light;
 
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 button {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 input:focus-visible {
-    outline: none;
+  outline: none;
 }
 
 /*@media (prefers-color-scheme: light) {*/
@@ -168,46 +168,60 @@ input:focus-visible {
 /*}*/
 
 .arrow-top:after {
-    content: " ";
-    position: absolute;
-    right: 30px;
-    top: -15px;
-    border-top: none;
-    border-right: 15px solid transparent;
-    border-left: 15px solid transparent;
-    border-bottom: 15px solid white;
+  content: " ";
+  position: absolute;
+  right: 30px;
+  top: -15px;
+  border-top: none;
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+  border-bottom: 15px solid white;
 }
 
 /*Motion */
 @keyframes float {
-    0% {
-        box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-        transform: translatey(0px);
-    }
-    50% {
-        box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
-        transform: translatey(-20px);
-    }
-    100% {
-        box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-        transform: translatey(0px);
-    }
+  0% {
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
 }
-
 
 .floating {
-    animation: float 6s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite;
 }
 
-
 .floating:nth-child(1) {
-    animation-delay: 0s;
+  animation-delay: 0s;
 }
 
 .floating:nth-child(2) {
-    animation-delay: 2s; /* start 2s later */
+  animation-delay: 2s; /* start 2s later */
 }
 
 .floating:nth-child(3) {
-    animation-delay: 4s; /* start 4s later */
+  animation-delay: 4s; /* start 4s later */
+}
+
+.text-clickable {
+  @apply cursor-pointer hover:underline;
+}
+
+.clickable {
+  @apply cursor-pointer;
+}
+
+.btn {
+  @apply bg-primary-title hover:bg-primary-400 cursor-pointer items-center justify-center gap-1 overflow-hidden rounded-3xl px-8 py-3 shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)];
+}
+
+.btn-active {
+    @apply bg-primary-title hover:bg-primary-400 cursor-pointer items-center justify-center gap-1 overflow-hidden rounded-3xl px-8 py-3 shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)];
 }
