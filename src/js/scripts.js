@@ -130,3 +130,17 @@ function toggleTheme() {
 function themeUrl() {
   return document.body.getAttribute("data-theme-url");
 }
+
+if ($(".anb-accordion").length) {
+  $(".anb-accordion .anb-accordion-title").on("click", function (e) {
+    // close siblings
+    $(this).parent().siblings(".anb-accordion").removeClass("active");
+    $(this).parent().siblings(".anb-accordion").find(".anb-accordion-content").slideUp(300);
+    $(this).parent().siblings(".anb-accordion").find(".icon img:first-child").removeClass("hidden");
+    $(this).parent().siblings(".anb-accordion").find(".icon img:last-child").addClass("hidden");
+
+    $(this).parent().toggleClass("active");
+    $(this).parent().find(".anb-accordion-content").slideToggle(300);
+    $(this).parent().find(".icon img").toggleClass("hidden");
+  });
+}

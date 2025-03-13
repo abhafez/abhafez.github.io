@@ -17,38 +17,38 @@
           <img src="src/assets/images/logo/logo.svg" alt="logo" class="h-9" />
 
           <nav class="hidden lg:block">
-            <ul class="flex flex-row items-center gap-5">
-              <li class="bg-Primary bg-primary-title h-12 items-center justify-center gap-1 overflow-hidden rounded-3xl px-8 py-3 shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)]">
+            <ul class="relative flex flex-row items-center gap-5">
+              <li class="btn-active">
                 <span class="text-base font-medium leading-none text-white">الدورات التعليمية</span>
               </li>
               <li>
-                <span class="text-text text-base font-medium leading-none dark:text-neutral-50"> الدورات الاستشارية</span>
+                <span class="text-text text-clickable text-base font-medium leading-none dark:text-neutral-50"> الاستشارية</span>
               </li>
               <li>
-                <span class="text-text text-base font-medium leading-none dark:text-neutral-50"> الدورات الرياضية</span>
+                <span class="text-text text-clickable text-base font-medium leading-none dark:text-neutral-50"> الرياضية</span>
               </li>
             </ul>
           </nav>
         </div>
 
         <section class="hidden xl:block">
-          <div class="bg-Field border-sep inline-flex h-10 w-52 items-center justify-start gap-2.5 rounded-lg border px-4 py-4">
-            <label>
-              <input type="text" class="text-meta h-8 w-36 text-right text-base font-normal" placeholder="البحث" />
+          <div class="border-sep flex h-10 w-52 items-center justify-start gap-2.5 rounded-lg border bg-[#f2f2f3] px-4 py-4">
+            <label class="relative">
+              <div data-svg-wrapper class="absolute top-2">
+                <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10.4167 9.87907H9.75834L9.525 9.65407C10.3699 8.67409 10.8343 7.42298 10.8333 6.12907C10.8333 5.05776 10.5157 4.0105 9.92046 3.11973C9.32527 2.22897 8.4793 1.5347 7.48954 1.12472C6.49977 0.714749 5.41066 0.607481 4.35993 0.816485C3.3092 1.02549 2.34404 1.54138 1.58651 2.29891C0.828973 3.05644 0.313085 4.0216 0.104082 5.07233C-0.104921 6.12306 0.00234696 7.21217 0.412322 8.20194C0.822296 9.19171 1.51656 10.0377 2.40733 10.6329C3.2981 11.2281 4.34535 11.5457 5.41667 11.5457C6.75834 11.5457 7.99167 11.0541 8.94167 10.2374L9.16667 10.4707V11.1291L13.3333 15.2874L14.575 14.0457L10.4167 9.87907ZM5.41667 9.87907C3.34167 9.87907 1.66667 8.20407 1.66667 6.12907C1.66667 4.05407 3.34167 2.37907 5.41667 2.37907C7.49167 2.37907 9.16667 4.05407 9.16667 6.12907C9.16667 8.20407 7.49167 9.87907 5.41667 9.87907Z"
+                    fill="#52525B"
+                  />
+                </svg>
+              </div>
+              <input type="text" class="ps-6 text-meta h-8 w-36 text-right text-base font-normal" placeholder="البحث" />
             </label>
-            <div data-svg-wrapper>
-              <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M10.4167 9.87907H9.75834L9.525 9.65407C10.3699 8.67409 10.8343 7.42298 10.8333 6.12907C10.8333 5.05776 10.5157 4.0105 9.92046 3.11973C9.32527 2.22897 8.4793 1.5347 7.48954 1.12472C6.49977 0.714749 5.41066 0.607481 4.35993 0.816485C3.3092 1.02549 2.34404 1.54138 1.58651 2.29891C0.828973 3.05644 0.313085 4.0216 0.104082 5.07233C-0.104921 6.12306 0.00234696 7.21217 0.412322 8.20194C0.822296 9.19171 1.51656 10.0377 2.40733 10.6329C3.2981 11.2281 4.34535 11.5457 5.41667 11.5457C6.75834 11.5457 7.99167 11.0541 8.94167 10.2374L9.16667 10.4707V11.1291L13.3333 15.2874L14.575 14.0457L10.4167 9.87907ZM5.41667 9.87907C3.34167 9.87907 1.66667 8.20407 1.66667 6.12907C1.66667 4.05407 3.34167 2.37907 5.41667 2.37907C7.49167 2.37907 9.16667 4.05407 9.16667 6.12907C9.16667 8.20407 7.49167 9.87907 5.41667 9.87907Z"
-                  fill="#52525B"
-                />
-              </svg>
-            </div>
           </div>
         </section>
 
         <div class="flex items-center justify-center">
-          <span class="text-text me-10 hidden text-base font-medium leading-none dark:text-neutral-50 lg:block"> المكتبة</span>
+          <span class="text-clickable text-text me-10 hidden text-base font-medium leading-none dark:text-neutral-50 lg:block"> المكتبة</span>
 
           <!-- TODO: Handle Currency Selection -->
           <!-- Currency Start -->
@@ -60,16 +60,16 @@
                 role="menu"
                 id="currency-menu"
                 aria-label="Currency menu"
-                class="dropdown-menu min-w-14 -start-7 absolute mx-4 mt-0 hidden w-14 max-w-fit rounded-xl border border-black/10 bg-white p-4 shadow-lg z-50"
+                class="dropdown-menu min-w-14 -start-7 absolute z-50 mx-4 mt-0 hidden w-14 max-w-fit rounded-xl border border-black/10 bg-white p-2 shadow-lg"
               >
                 <span
                   aria-hidden="true"
                   class="rotate-225 absolute left-[22px] -top-[17px] h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"
                 ></span>
-                <ul class="text-end">
-                  <li aria-label="USD">
+                <ul class="text-center">
+                  <li aria-label="USD" class="cursor-pointer">
                     <!-- USD -->
-                    <a class="text-text text-base font-medium leading-10" href="#"> $ </a>
+                    <a class="text-text ps-5 text-base font-medium leading-10" href="#"> $ </a>
                   </li>
                 </ul>
               </div>
@@ -104,20 +104,11 @@
           </div>
           <!-- Language Switch End -->
           <!-- Favorite Heart Start -->
-          <div id="favorite-button" data-svg-wrapper class="ms-2.5 relative hidden lg:block">
-            <svg class="stroke-primary-200 dark:stroke-neutral-50" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M9.29688 16.1371L9.2958 16.1361C7.13522 14.1769 5.40233 12.6016 4.20082 11.1316C3.00755 9.67172 2.41699 8.4076 2.41699 7.08333C2.41699 4.92344 4.09698 3.25 6.25033 3.25C7.4736 3.25 8.66009 3.82334 9.4312 4.7218L10.0003 5.38491L10.5695 4.7218C11.3406 3.82334 12.5271 3.25 13.7503 3.25C15.9037 3.25 17.5837 4.92344 17.5837 7.08333C17.5837 8.4076 16.9931 9.67172 15.7998 11.1316C14.5983 12.6016 12.8654 14.1769 10.7049 16.1361L10.7038 16.1371L10.0003 16.7774L9.29688 16.1371Z"
-                stroke=""
-                stroke-width="1.5"
-              />
-            </svg>
-          </div>
+          <img alt="theme" src="src/assets/images/header/heart.svg" class="ms-2.5 relative mx-3 hidden h-6 w-6 cursor-pointer dark:stroke-white lg:block" />
           <!--      Favorite Heart End -->
           <!--      Toggle theme -->
           <div>
-            <img alt="theme" src="src/assets/images/header/moon.svg" class="h-6 w-6 mx-3 cursor-pointer stroke-white"
-                 id="theme-toggle" onclick="toggleTheme()" />
+            <img alt="theme" src="src/assets/images/header/moon.svg" class="mx-3 h-6 w-6 cursor-pointer stroke-white" id="theme-toggle" onclick="toggleTheme()" />
           </div>
           <!--      Toggle theme -->
           <!-- Login Button -->
@@ -184,7 +175,7 @@
               role="menu"
               id="user-menu"
               aria-label="User menu"
-              class="max-w-72 dropdown-menu -end-7 absolute top-14 z-30 mx-4 hidden w-72 rounded-xl border border-black/10 bg-blue-100 p-4 shadow-lg"
+              class="max-w-72 dropdown-menu -end-7 absolute top-14 z-30 mx-4 hidden w-72 rounded-xl border border-black/10 bg-white p-4 shadow-lg"
             >
               <span
                 aria-hidden="true"
@@ -275,15 +266,15 @@
             </div>
             <!-- User Menu End -->
           </div>
-          <!--      user menu End -->
+          <!-- User menu End -->
         </div>
       </div>
     </header>
-
-    <div id="empty-space" class="dark:bg-dark hidden h-16 md:block"></div>
+    <!--Header End -->
+    <div id="empty-space" class="dark:bg-dark hidden h-10 md:block"></div>
     <main class="dark:bg-dark">
       <!--Banner Section start-->
-      <div class="container relative m-auto mb-12 flex flex-col-reverse items-center justify-between md:flex-row">
+      <div class="container relative m-auto mb-8 flex flex-col-reverse items-center justify-between md:mb-12 md:flex-row">
         <div class="absolute left-1/2 top-1/2 hidden h-[414px] w-[414px] -translate-x-1/2 -translate-y-1/2 transform opacity-50 md:block">
           <div class="absolute left-[126px] top-[126px] h-[162px] w-[162px] rounded-full border border-zinc-300"></div>
           <div class="absolute left-[75px] top-[75px] h-[265px] w-[265px] rounded-full border border-zinc-300"></div>
@@ -291,11 +282,11 @@
           <div class="absolute left-0 top-0 h-[414px] w-[414px] rounded-full border border-zinc-300"></div>
         </div>
         <div class="pe-20 z-10 flex w-full flex-col items-start justify-center px-5 text-right md:w-1/2 md:px-0">
-          <p class="text-3xl font-bold leading-[78px] md:text-[64px]">
+          <p class="mt-5 text-3xl font-bold leading-10 md:mt-0 md:text-[64px] md:leading-[78px]">
             <span class="text-primary-title"> دورات </span>
             <span class="text-green">تعليمية</span>
           </p>
-          <p class="text-primary-title mb-8 text-3xl font-bold leading-[78px] md:text-[64px]">لك ولمستقبلك</p>
+          <p class="text-primary-title mb-2 text-3xl font-bold leading-10 md:mb-8 md:text-[64px] md:leading-[78px]">لك ولمستقبلك</p>
           <p class="text-right">
             <span class="text-text dark:text-text-invert text-base font-normal">
               هو نص وهمي يستخدم في صناعة الطباعة وتصميم المواقع كحشو في التصميمات قبل إدخال النصوص النهائية. يُستخدم لتمثيل النصوص وكيفية تنظيمها داخل التصميمات. النص في الأصل
@@ -304,9 +295,9 @@
           </p>
           <div class="mt-8">
             <button
-              class="bg-primary-title inline-flex h-[52px] cursor-pointer items-center justify-center gap-1 overflow-hidden rounded-[32px] px-8 py-[18px] shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)]"
+              class="bg-primary-title btn flex h-[52px] cursor-pointer items-center justify-center gap-1 overflow-hidden rounded-[32px] px-8 py-[18px] shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)]"
             >
-              <span class="flex items-end justify-start gap-1.5 shadow-[1px_5px_22px_4px_rgba(0,0,0,0.15)]">
+              <span class="btn flex items-end justify-start gap-1.5 shadow-[1px_5px_22px_4px_rgba(0,0,0,0.15)]">
                 <span class="text-base font-bold leading-none text-white">تصفح الدورات التعليمية</span>
               </span>
             </button>
@@ -314,12 +305,12 @@
         </div>
         <div
           id="box-green-bg"
-          class="floating absolute top-0 left-6 z-0 hidden h-[87px] flex-row-reverse items-center justify-start gap-3 overflow-hidden rounded-[18.36px] bg-white px-4 py-3.5 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.20)] md:inline-flex xl:left-32"
+          class="floating absolute top-0 left-6 z-0 hidden h-[87px] flex-row-reverse items-center justify-start gap-3 overflow-hidden rounded-[18.36px] bg-white px-4 py-3.5 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.20)] md:flex xl:left-32"
         >
           <div data-svg-wrapper class="h-14 w-14 rounded-[30px] bg-[#20b486] p-3 pt-4">
             <img alt="" src="src/assets/images/online-education.svg" />
           </div>
-          <div class="inline-flex flex-col items-end justify-start gap-0.5">
+          <div class="flex flex-col items-end justify-start gap-0.5">
             <div class="text-text h-[31px] w-[46px] text-[25px] font-bold" dir="ltr">3K+</div>
             <div class="text-base font-normal text-zinc-600">دورات مجانية</div>
           </div>
@@ -330,12 +321,12 @@
         >
           <div
             id="box-purple-bg"
-            class="floating absolute top-60 -right-24 hidden h-[87px] flex-row-reverse items-center justify-start gap-3 overflow-hidden rounded-[18.36px] bg-white px-4 py-3.5 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.20)] md:inline-flex xl:right-0"
+            class="floating absolute top-60 -right-24 hidden h-[87px] flex-row-reverse items-center justify-start gap-3 overflow-hidden rounded-[18.36px] bg-white px-4 py-3.5 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.20)] md:flex xl:right-0"
           >
             <div data-svg-wrapper class="bg-violet-950 h-14 w-14 rounded-[30px] p-3 pt-4">
               <img alt="" src="src/assets/images/online-education.svg" />
             </div>
-            <div class="inline-flex flex-col items-end justify-start gap-0.5">
+            <div class="flex flex-col items-end justify-start gap-0.5">
               <div class="text-text h-[31px] w-[46px] text-[25px] font-bold" dir="ltr">3K+</div>
               <div class="text-base font-normal text-zinc-600">دورات مجانية</div>
             </div>
@@ -343,12 +334,12 @@
           <div
             id="box-light-blue-bg"
             role="note"
-            class="floating absolute -right-5 top-10 hidden h-[87px] flex-row-reverse items-center justify-start gap-3 overflow-hidden rounded-[18.36px] bg-white px-4 py-3.5 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.20)] md:inline-flex"
+            class="floating absolute -right-5 top-10 hidden h-[87px] flex-row-reverse items-center justify-start gap-3 overflow-hidden rounded-[18.36px] bg-white px-4 py-3.5 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.20)] md:flex"
           >
             <div data-svg-wrapper class="h-14 w-14 rounded-[30px] bg-[#8BD3DA] p-3 pt-4">
               <img alt="" src="src/assets/images/online-education.svg" />
             </div>
-            <div class="inline-flex flex-col items-end justify-start gap-0.5">
+            <div class="flex flex-col items-end justify-start gap-0.5">
               <div class="text-text h-[31px] w-[46px] text-[25px] font-bold" dir="ltr">3K+</div>
               <div class="text-base font-normal text-zinc-600">دورات مجانية</div>
             </div>
@@ -357,8 +348,8 @@
       </div>
       <!--Banner Section end-->
       <!--Services Cards Section Start-->
-      <div class="container m-auto mb-12 mt-16 grid grid-cols-1 gap-8 px-5 md:grid-cols-2 md:px-0">
-        <div class="relative inline-flex h-[149px] flex-row-reverse items-center justify-between overflow-hidden rounded-[20px] bg-[#e0ccff] px-10 py-7">
+      <div class="container m-auto mb-8 grid grid-cols-1 gap-8 px-5 md:mb-8 md:mt-16 md:grid-cols-2 md:px-0">
+        <a href="#" class="relative flex h-[149px] flex-row-reverse items-center justify-between overflow-hidden rounded-[20px] bg-[#e0ccff] px-10 py-7">
           <div data-svg-wrapper class="absolute left-0">
             <svg width="321" height="150" viewBox="0 0 321 150" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -401,48 +392,40 @@
               <path d="M22.4995 27.6497L13.4995 18.6497L22.4995 9.64966" stroke="#321F6B" stroke-width="2.16667" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </div>
-          <div class="inline-flex shrink grow basis-0 flex-col items-start justify-start">
-            <div class="text-primary-title text-right text-[32px] font-bold">أعناب الاستشارية</div>
-            <div class="inline-flex items-baseline justify-start self-stretch">
-              <div class="text-text text-right text-[26px] font-medium">التدريب الاحترافي عالي الكفاءة</div>
+          <div class="flex shrink grow basis-0 flex-col items-start justify-start">
+            <div class="text-primary-title text-right text-3xl md:text-[32px] font-bold">أعناب الاستشارية</div>
+            <div class="flex items-baseline justify-start self-stretch">
+              <div class="text-text text-right text-xl md:text-[26px] font-medium">التدريب الاحترافي عالي الكفاءة</div>
             </div>
           </div>
-        </div>
-        <div class="relative inline-flex h-[149px] flex-row-reverse items-center justify-end overflow-hidden rounded-[20px] bg-[#e0ccff] px-10 py-7">
+        </a>
+        <a href="#" class="relative flex h-[149px] flex-row-reverse items-center justify-end overflow-hidden rounded-[20px] bg-[#e0ccff] px-10 py-7">
           <div class="absolute left-0 h-[322.66px] w-[332.66px]">
             <div class="bg-primary-title/10 absolute left-[150px] top-[140px] h-[182.66px] w-[182.66px] rounded-full"></div>
-            <div class="absolute left-0 top-0 h-[182.66px] w-[182.66px] rounded-full bg-[#a3dee0]"></div>
+            <div class="bg-teal-box absolute left-0 top-0 h-[182.66px] w-[182.66px] rounded-full"></div>
           </div>
           <div data-svg-wrapper class="relative">
             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M22.499 27.6497L13.499 18.6497L22.499 9.64966" stroke="#321F6B" stroke-width="2.16667" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </div>
-          <div class="inline-flex shrink grow basis-0 flex-col items-start justify-start">
-            <div class="text-primary-title text-right text-[32px] font-bold">أعناب التعليمية</div>
-            <div class="inline-flex items-baseline justify-start self-stretch">
-              <div class="text-text text-right text-[26px] font-medium">التدريب الخاص بالمجال التعليمى</div>
+          <div class="z-50 flex shrink grow basis-0 flex-col items-start justify-start">
+            <div class="text-primary-title text-right text-3xl md:text-[32px] font-bold">أعناب الرياضية</div>
+            <div class="flex items-baseline justify-start self-stretch">
+              <div class="text-text text-right text-xl md:text-[26px] font-medium">التدريب الخاص بالمجال الرياضي</div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
       <!--Services Cards Section End-->
 
-      <!-- Aanaab For Sports Section Start -->
-      <div class="container m-auto pb-12 mt-16 px-5 md:px-0" dir="ltr">
-        <div class="bg-primary-title inline-flex h-[149px] w-full flex-col items-center justify-center gap-[11px] rounded-[20px] px-[42px] py-10">
-          <div class="inline-flex items-center justify-between self-stretch">
-            <button class="flex cursor-pointer items-center justify-center gap-1 rounded-[32px] bg-white px-8 py-[18px]">
-              <div class="flex items-end justify-start gap-1.5">
-                <div class="text-primary-title text-base font-bold leading-none">أعناب للجهات</div>
-              </div>
-            </button>
+      <!-- Aanaab For الجهات Section Start -->
+      <div class="container m-auto mt-6 px-5 pb-8 md:px-0 md:pb-12">
+        <div class="bg-primary-title flex h-[149px] w-full flex-col items-center justify-center gap-[11px] rounded-[20px] px-[42px] py-10">
+          <div class="flex flex-col md:flex-row items-start md:items-center justify-between self-stretch">
+
             <div class="flex items-center justify-start gap-5">
-              <div class="flex items-baseline justify-start gap-[11px]">
-                <div class="text-md text-right font-medium text-[#27e7ca] md:text-[26px]">للوزارات، للمنظمات، للجامعات و المدارس</div>
-                <div class="text-right"><span class="text-[42px] font-bold text-white">أعناب </span><span class="text-[42px] font-bold text-white">للجهات</span></div>
-              </div>
-              <div data-svg-wrapper>
+              <div data-svg-wrapper class="hidden md:block">
                 <svg width="48" height="69" viewBox="0 0 48 69" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M6 42.6487V24.6487C6 23.5441 6.89543 22.6487 8 22.6487H14" stroke="#D2A8FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                   <path
@@ -465,7 +448,17 @@
                   <path d="M20 23.6487H26" stroke="#D2A8FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </div>
+              <div class="flex flex-col lg:flex-row md:items-center justify-end gap-[11px]">
+                <div class="flex text-start items-start text-lg md:text-[42px]"><span class=" font-bold text-white">أعناب </span><span class="font-bold text-white">للجهات</span></div>
+                <div class="text-md text-right font-medium text-[#27e7ca] md:text-[26px]">للوزارات، للمنظمات، للجامعات و المدارس</div>
+              </div>
+
             </div>
+            <button class="flex cursor-pointer items-center justify-center gap-1 rounded-[32px] bg-white px-8 py-[18px]">
+              <div class="flex items-end justify-start gap-1.5">
+                <div class="text-primary-title text-base font-bold leading-none">أعناب للجهات</div>
+              </div>
+            </button>
           </div>
         </div>
       </div>
@@ -475,25 +468,23 @@
     <!--For Pillars Start-->
     <article class="border-sep bg-box dark:bg-dark border-t border-b py-10 px-10 md:px-0">
       <div class="container m-auto">
-        <div data-layer="" class="flex items-center justify-between self-stretch">
+        <div data-layer="" class="flex flex-col md:flex-row items-center justify-between self-stretch">
           <div data-layer="الرخص المهنية للمعلمين" class="relative justify-center text-right">
             <span class="text-violet-950 text-2xl font-bold leading-tight">الرخص المهنية </span><span class="text-2xl font-bold leading-tight text-emerald-500">للمعلمين</span>
           </div>
-          <div data-layer="Frame 1753" class="Frame1753 flex items-center justify-end gap-2">
-            <div data-layer="Group 1748" class="Group1748 relative h-20 w-20">
-              <div
-                class="absolute left-0 top-0 inline-flex h-20 w-20 flex-col items-center justify-center gap-5"
-              ></div>
+          <div class="flex items-center gap-2">
+            <div class="relative h-20 w-20">
+              <div class="absolute left-0 top-0 flex h-20 w-20 flex-col items-center justify-center gap-0  md:gap-5"></div>
             </div>
-            <div data-layer="بالتعاون مع" class="relative justify-center text-center text-base font-medium text-zinc-600">بالتعاون مع</div>
-            <div data-layer="معهد أبناء المستقبل" class="text-primary-title relative justify-center text-center text-xl font-bold">معهد أبناء المستقبل</div>
-            <img alt="" class="Image37 relative h-16 w-20" src="src/assets/images/edu-g-6.png" />
+            <div data-layer="بالتعاون مع" class="text-sm relative justify-center text-center md:text-base font-medium text-zinc-600">بالتعاون مع</div>
+            <div data-layer="معهد أبناء المستقبل" class="text-sm text-primary-title relative justify-center text-center md:text-xl font-bold">معهد أبناء المستقبل</div>
+            <img alt="" class="max-w-20 relative h-16 max-h-20 w-20" src="src/assets/images/asset-v1_FutureX+BS_CS+2021+type@asset+block@nelc.svg" />
           </div>
         </div>
-        <article class="flex justify-between flex-wrap [&_section]:w-full md:[&_section]:w-[calc(33%-1rem)] lg:[&_section]:w-auto gap-10">
+        <article class="[&_section]:w-full  lg:[&_section]:w-auto grid md:grid-cols-2 lg:grid-cols-4 gap-10  lg:flex-nowrap">
           <!--  Section التربوي العامStart -->
-          <section data-layer="general educational" class="flex flex-col items-center justify-between self-stretch rounded-[20px] bg-[#f3d3e3] px-0 pt-10">
-            <div class="flex flex-col items-center justify-start gap-8 self-stretch px-10 mb-10 lg:mb-0">
+          <section data-layer="general educational" class=" lg:w-[288px] flex flex-col items-center justify-between self-stretch rounded-[20px] bg-[#f3d3e3] px-0 pt-10">
+            <div class="mb-10 flex flex-col items-center justify-start gap-8 self-stretch px-10 lg:mb-0">
               <div class="flex items-center justify-start gap-5">
                 <h5 class="relative h-6 w-40 justify-center text-center text-2xl font-bold leading-normal text-red-200">التربوي العام</h5>
               </div>
@@ -516,12 +507,12 @@
               </div>
             </div>
             <!--    Decoration image -->
-            <img alt="" class="hidden lg:block" src="src/assets/images/groups/group1.svg" />
+            <img alt="" class="hidden lg:block w-full min-w-full" src="src/assets/images/groups/group1.svg" />
           </section>
           <!--  Section التربوي العام End -->
           <!--  Section القيادات Start -->
-          <section data-layer="leadership" class="flex flex-col items-center justify-between self-stretch rounded-[20px] bg-[#e3daf1] px-0 pt-10">
-            <div class="flex flex-col items-center justify-start gap-7 self-stretch px-10 mb-10 lg:mb-0">
+          <section data-layer="leadership" class=" lg:w-[288px] flex flex-col items-center justify-between self-stretch rounded-[20px] bg-[#e3daf1] px-0 pt-10">
+            <div class="mb-10 flex flex-col items-center justify-start gap-7 self-stretch px-10 lg:mb-0">
               <div class="flex items-center justify-start gap-5">
                 <h5 class="relative h-6 w-40 justify-center text-center text-2xl font-bold leading-normal text-violet-700">القيادات</h5>
               </div>
@@ -550,11 +541,11 @@
                 </a>
               </div>
             </div>
-            <img alt="" class="hidden lg:block" src="src/assets/images/groups/group2.svg" />
+            <img alt="" class="hidden lg:block w-full" src="src/assets/images/groups/group2.svg" />
           </section>
           <!--  Section القيادات End -->
           <!-- Section التخصصية start -->
-          <section class="flex h-[740px] flex-col items-center justify-start self-stretch rounded-[20px] bg-[#dfeed7] px-5 pt-10">
+          <section class="lg:max-w-[300px] lg:w-[300px] flex h-[740px] flex-col items-center justify-start self-stretch rounded-[20px] bg-[#dfeed7] px-5 pt-10">
             <div class="flex flex-col items-center justify-start gap-7 self-stretch">
               <div class="flex items-center justify-start gap-5">
                 <h5 class="relative h-6 w-72 justify-center text-center text-2xl font-bold leading-9 text-lime-700">التخصصية</h5>
@@ -652,7 +643,7 @@
           </section>
           <!--  Section التخصصية end -->
           <!--  Section كتب الرخص المهنيى Start -->
-          <section class="bg-teal-1 h-[600px] lg:h-auto lg:max-w-96 relative flex flex-col items-start justify-start overflow-hidden rounded-[20px] pt-12">
+          <section class="lg:max-w-[600px] lg:w-[600px] bg-teal-1 relative flex h-[600px] flex-col items-start justify-start overflow-hidden rounded-[20px] pt-12 lg:h-auto">
             <div class="flex flex-col items-start justify-center gap-6 overflow-hidden px-10">
               <div class="flex items-center justify-end gap-6 self-stretch">
                 <div class="flex flex-1 flex-col items-start justify-start gap-6">
@@ -675,7 +666,7 @@
                 </div>
               </div>
             </div>
-            <div style="background-image: url('./src/assets/images/groups/book.svg')" class="size-[560px] start-10 lg:-start-15 absolute top-32 lg:top-1/3 bg-no-repeat"></div>
+            <div style="background-image: url('./src/assets/images/groups/book.svg')" class="size-[560px] start-10 lg:-start-15 absolute top-32 bg-no-repeat lg:top-1/3"></div>
           </section>
         </article>
       </div>
@@ -684,11 +675,11 @@
 
     <div class="dark:bg-dark">
       <!--    Courses section start-->
-      <h2 data-layer="دورات المعلمين" class="flex justify-center text-center py-16">
-        <span class="text-violet-950 text-2xl font-bold leading-tight me-2">دورات </span><span class="text-2xl font-bold leading-tight text-emerald-500">المعلمين</span>
+      <h2 data-layer="دورات المعلمين" class="flex justify-center py-16 text-center">
+        <span class="text-violet-950 me-2 text-2xl font-bold leading-tight">دورات </span><span class="text-2xl font-bold leading-tight text-emerald-500">المعلمين</span>
       </h2>
 
-      <div id="smart-menu" class="[&_span]:dark:text-text-invert h-8 items-center justify-center mb-12 hidden md:flex">
+      <div id="smart-menu" class="[&_span]:dark:text-text-invert mb-12 hidden h-8 items-center justify-center md:flex">
         <button class="bg-primary-title flex items-center justify-start gap-2 rounded-3xl px-5 pt-3 pb-2">
           <span class="text-base font-medium leading-none text-white"> المختارة </span>
         </button>
@@ -722,9 +713,9 @@
         </button>
       </div>
 
-      <article class="xs:grid-cols-2 xs:gap-4 container m-auto grid grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-3 lg:gap-6 2xl:grid-cols-4 px-10 md:px-0">
+      <article class="xs:gap-6 container m-auto grid grid-cols-1 md:grid-cols-2 gap-6 px-10 sm:gap-8 md:px-0 lg:grid-cols-2 lg:gap-6 2xl:grid-cols-3">
         <!--      Course Card Start -->
-        <div class="course-card w-auto">
+        <a href="" class="course-card w-auto hover:[&_h3]:text-primary-title">
           <div class="dark:bg-box-2 flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-lg">
             <figure class="relative h-0 overflow-hidden pb-[56.25%]">
               <!-- Course Image -->
@@ -767,7 +758,7 @@
 
               <div class="flex h-12 flex-col items-start justify-start gap-4 self-stretch pt-2.5">
                 <div class="border-sep h-px w-full border"></div>
-                <div class="inline-flex h-6 w-full items-center justify-between">
+                <div class="flex h-6 w-full items-center justify-between">
                   <div class="flex h-5 shrink grow basis-0 items-center justify-start gap-1">
                     <!-- Lecturer image -->
                     <img
@@ -816,10 +807,10 @@
               </div>
             </div>
           </div>
-        </div>
+        </a>
         <!--      Course Card End -->
         <!--      Course Card Start -->
-        <div class="course-card w-auto">
+        <a class="course-card w-auto hover:[&_h3]:text-primary-title">
           <div class="dark:bg-box-2 flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-lg">
             <figure class="relative h-0 overflow-hidden pb-[56.25%]">
               <!-- Course Image -->
@@ -862,7 +853,7 @@
 
               <div class="flex h-12 flex-col items-start justify-start gap-4 self-stretch pt-2.5">
                 <div class="border-sep h-px w-full border"></div>
-                <div class="inline-flex h-6 w-full items-center justify-between">
+                <div class="flex h-6 w-full items-center justify-between">
                   <div class="flex h-5 shrink grow basis-0 items-center justify-start gap-1">
                     <!-- Lecturer image -->
                     <img
@@ -903,10 +894,10 @@
               </div>
             </div>
           </div>
-        </div>
+        </a>
         <!--      Course Card End -->
         <!--      Course Card Start -->
-        <div class="course-card w-auto">
+        <a class="course-card w-auto hover:[&_h3]:text-primary-title">
           <div class="dark:bg-box-2 flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-lg">
             <figure class="relative h-0 overflow-hidden pb-[56.25%]">
               <!-- Course Image -->
@@ -949,7 +940,7 @@
 
               <div class="flex h-12 flex-col items-start justify-start gap-4 self-stretch pt-2.5">
                 <div class="border-sep h-px w-full border"></div>
-                <div class="inline-flex h-6 w-full items-center justify-between">
+                <div class="flex h-6 w-full items-center justify-between">
                   <div class="flex h-5 shrink grow basis-0 items-center justify-start gap-1">
                     <!-- Lecturer image -->
                     <img
@@ -990,133 +981,655 @@
               </div>
             </div>
           </div>
-        </div>
+        </a>
         <!--      Course Card End -->
+        <!--      Course Card Start -->
+        <a class="course-card w-auto hover:[&_h3]:text-primary-title">
+          <div class="dark:bg-box-2 flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-lg">
+            <figure class="relative h-0 overflow-hidden pb-[56.25%]">
+              <!-- Course Image -->
+              <img
+                alt=""
+                class="size-full absolute inset-0 object-cover transition duration-700 ease-out hover:scale-105"
+                src="https://aanaab-uploads-v1.s3.amazonaws.com/courses/thumbnail/533/%D8%AB%D9%85%D9%86%D9%8A%D9%84-%D8%A8%D8%B1%D8%A7%D9%85%D8%AC-%D8%B9%D9%84%D8%A7%D8%AC%D9%8A%D8%A9.jpg"
+              />
+              <div class="absolute top-[18px] flex h-10 w-full items-center justify-between px-3">
+                <div class="relative h-10 items-center">
+                  <div class="backdrop-blur-blur w flex h-10 items-center justify-items-start gap-1 rounded-full bg-white px-3">
+                    <img alt="" class="h-6" src="https://d1yhje8j0hmqsr.cloudfront.net/2024/02/118616244_3158001587570928_9132823863992071769_n.png" />
+                    <span class="text-text text-right text-xs font-bold leading-normal"> شهادة كامبردج</span>
+                  </div>
+                </div>
+                <div class="relative flex h-10 w-10 items-center justify-center rounded-[100px] bg-black/30 backdrop-blur-[10px]">
+                  <div data-svg-wrapper class="relative">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9.50489 16.9999L9.50381 16.9989C7.34323 15.0397 5.61034 13.4644 4.40882 11.9944C3.21555 10.5345 2.625 9.27039 2.625 7.94613C2.625 5.78623 4.30499 4.11279 6.45833 4.11279C7.68161 4.11279 8.86809 4.68614 9.63921 5.58459L10.2083 6.2477L10.7775 5.58459C11.5486 4.68614 12.7351 4.11279 13.9583 4.11279C16.1117 4.11279 17.7917 5.78623 17.7917 7.94613C17.7917 9.27039 17.2011 10.5345 16.0078 11.9944C14.8063 13.4644 13.0734 15.0397 10.9129 16.9989L10.9118 16.9999L10.2083 17.6402L9.50489 16.9999Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </figure>
+            <div class="flex h-60 flex-col items-start justify-start gap-2.5 px-5 pt-5 pb-4">
+              <h3 class="text-text dark:text-text-invert h-14 self-stretch text-center text-xl font-bold leading-7">تنمية مهارات الإتيكيت الوظيفي في المؤسسات التعليمية</h3>
+              <div class="self-stretch text-center">
+                <span class="text-primary-title dark:text-ِِprimary-title-2 text-sm font-bold leading-normal">مستوى متقدم</span>
+                <span class="text-primary-title dark:text-ِِprimary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
+                <span class="text-green dark:text-green-2 text-sm font-bold leading-normal">بعد 4 أيام</span>
+              </div>
 
+              <div class="text-meta dark:text-text-invert h-12 w-full text-right text-sm font-normal leading-normal">
+                هو نص وهمي يستخدم في صناعة الطباعة وتصميم المواقع كحشو في التصميمات قبل إدخال النصوص
+              </div>
+
+              <div class="flex h-12 flex-col items-start justify-start gap-4 self-stretch pt-2.5">
+                <div class="border-sep h-px w-full border"></div>
+                <div class="flex h-6 w-full items-center justify-between">
+                  <div class="flex h-5 shrink grow basis-0 items-center justify-start gap-1">
+                    <!-- Lecturer image -->
+                    <img
+                      alt=""
+                      class="size-6 inline-block rounded-full bg-[#d9d9d9] ring-2 ring-white"
+                      src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+                    />
+                    <h6 class="text-meta mx-2 text-right text-xs font-medium leading-tight">
+                      <!-- Lecturer name -->
+                      عبد الرحمن حافظ
+                    </h6>
+                  </div>
+                  <div class="flex items-center justify-end">
+                    <div class="flex -space-x-2 overflow-hidden">
+                      <!-- Counts -->
+                      <span class="size-7 z-50 inline-block rounded-full border-4 border-[#cfcfcf] bg-[#d9d9d9] pt-1 text-[10px]"> 3K+ </span>
+                      <!-- Students images -->
+                      <img
+                        class="size-7 z-40 inline-block rounded-full border-2 border-white ring-0 ring-white"
+                        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+                        alt=""
+                      />
+                      <img
+                        class="size-7 inline-block rounded-full border-2 border-white ring-0 ring-white"
+                        src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <!-- Price -->
+                  <div class="flex h-6 shrink grow basis-0 items-end justify-end gap-0.5">
+                    <div class="text-primary-title dark:text-ِِprimary-title-2">
+                      <!-- Currency -->
+                      <span class="text-meta text-xs font-medium">ر.س</span>
+                      <span dir="ltr" class="text-primary-title text-xl font-bold">
+                        <!-- Riyals / Main Currency -->
+                        125
+                        <span class="text-sm font-medium">
+                          <!-- Halala / Change -->
+                          .65
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <!--      Course Card End -->
+        <!--      Course Card Start -->
+        <a class="course-card w-auto hover:[&_h3]:text-primary-title">
+          <div class="dark:bg-box-2 flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-lg">
+            <figure class="relative h-0 overflow-hidden pb-[56.25%]">
+              <!-- Course Image -->
+              <img
+                alt=""
+                class="size-full absolute inset-0 object-cover transition duration-700 ease-out hover:scale-105"
+                src="https://d1yhje8j0hmqsr.cloudfront.net/2025/02/course-cover-D8AAD8AFD8B1D98AD8B3-D8A7D984D8B1D98AD8A7D8B6D98AD8A7D8AA-D8A8D981D986-D988D8A5D8A8D8AFD8A7D8B9.jpg"
+              />
+              <div class="absolute top-[18px] flex h-10 w-full items-center justify-between px-3">
+                <div class="relative h-10 items-center">
+                  <div class="backdrop-blur-blur w flex h-10 items-center justify-items-start gap-1 rounded-full bg-white px-3">
+                    <img alt="" class="h-6" src="src/assets/images/edu-eg-4.png" />
+                    <span class="text-text text-right text-xs font-bold leading-normal"> شهادة كامبردج المعتدة</span>
+                  </div>
+                </div>
+                <div class="relative flex h-10 w-10 items-center justify-center rounded-[100px] bg-red-100/80 backdrop-blur-[10px]">
+                  <div data-svg-wrapper class="relative">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="white" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9.50489 16.9999L9.50381 16.9989C7.34323 15.0397 5.61034 13.4644 4.40882 11.9944C3.21555 10.5345 2.625 9.27039 2.625 7.94613C2.625 5.78623 4.30499 4.11279 6.45833 4.11279C7.68161 4.11279 8.86809 4.68614 9.63921 5.58459L10.2083 6.2477L10.7775 5.58459C11.5486 4.68614 12.7351 4.11279 13.9583 4.11279C16.1117 4.11279 17.7917 5.78623 17.7917 7.94613C17.7917 9.27039 17.2011 10.5345 16.0078 11.9944C14.8063 13.4644 13.0734 15.0397 10.9129 16.9989L10.9118 16.9999L10.2083 17.6402L9.50489 16.9999Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </figure>
+            <div class="flex h-60 flex-col items-start justify-start gap-2.5 px-5 pt-5 pb-4">
+              <h3 class="text-text dark:text-text-invert h-14 self-stretch text-center text-xl font-bold leading-7">تنمية ندوة: مهارات ما قبل اللغة</h3>
+              <div class="self-stretch text-center">
+                <span class="text-primary-title dark:text-ِِprimary-title-2 text-sm font-bold leading-normal">مستوى متقدم</span>
+                <span class="text-primary-title dark:text-ِِprimary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
+                <span class="text-green dark:text-green-2 text-sm font-bold leading-normal">بعد 4 أيام</span>
+              </div>
+
+              <div class="text-meta dark:text-text-invert h-12 w-full text-right text-sm font-normal leading-normal">
+                هو نص وهمي يستخدم في صناعة الطباعة وتصميم المواقع كحشو في التصميمات قبل إدخال النصوص
+              </div>
+
+              <div class="flex h-12 flex-col items-start justify-start gap-4 self-stretch pt-2.5">
+                <div class="border-sep h-px w-full border"></div>
+                <div class="flex h-6 w-full items-center justify-between">
+                  <div class="flex h-5 shrink grow basis-0 items-center justify-start gap-1">
+                    <!-- Lecturer image -->
+                    <img
+                      alt=""
+                      class="size-6 inline-block rounded-full bg-[#d9d9d9] ring-2 ring-white"
+                      src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+                    />
+                    <h6 class="text-meta mx-2 text-right text-xs font-medium leading-tight">
+                      <!-- Lecturer name -->
+                      عبد الرحمن حافظ
+                    </h6>
+                  </div>
+                  <div class="flex items-center justify-end">
+                    <div class="flex -space-x-2 overflow-hidden">
+                      <!-- Counts -->
+                      <span class="size-7 z-50 inline-block rounded-full border-4 border-[#cfcfcf] bg-[#d9d9d9] pt-1 text-[10px]"> 3K+ </span>
+                      <!-- Students images -->
+                      <img
+                        class="size-7 z-40 inline-block rounded-full border-2 border-white ring-0 ring-white"
+                        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+                        alt=""
+                      />
+                      <img
+                        class="size-7 inline-block rounded-full border-2 border-white ring-0 ring-white"
+                        src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <!-- Price -->
+                  <div class="flex h-6 shrink grow basis-0 items-end justify-end gap-0.5">
+                    <div class="text-text dark:text-ِِprimary-title-2">
+                      <!-- Currency -->
+                      <span dir="ltr" class="text-primary-title text-sm font-bold"> مجانية </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <!--      Course Card End -->
+        <!--      Course Card Start -->
+        <a class="course-card w-auto hover:[&_h3]:text-primary-title">
+          <div class="dark:bg-box-2 flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-lg">
+            <figure class="relative h-0 overflow-hidden pb-[56.25%]">
+              <!-- Course Image -->
+              <img
+                alt=""
+                class="size-full absolute inset-0 object-cover transition duration-700 ease-out hover:scale-105"
+                src="https://d1yhje8j0hmqsr.cloudfront.net/2024/12/D986D8B3D8AED8A9-D985D986-IMG_7540.jpg"
+              />
+              <div class="absolute top-[18px] flex h-10 w-full items-center justify-between px-3">
+                <div class="relative h-10 items-center">
+                  <div class="backdrop-blur-blur hidden h-10 items-center justify-items-start gap-1 rounded-full bg-white px-3">
+                    <img alt="" class="h-6" src="src/assets/images/edu-eg-4.png" />
+                    <span class="text-text text-right text-xs font-bold leading-normal"> شهادة كامبردج المعتدة</span>
+                  </div>
+                </div>
+                <div class="relative flex h-10 w-10 items-center justify-center rounded-[100px] bg-red-100/80 backdrop-blur-[10px]">
+                  <div data-svg-wrapper class="relative">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="white" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9.50489 16.9999L9.50381 16.9989C7.34323 15.0397 5.61034 13.4644 4.40882 11.9944C3.21555 10.5345 2.625 9.27039 2.625 7.94613C2.625 5.78623 4.30499 4.11279 6.45833 4.11279C7.68161 4.11279 8.86809 4.68614 9.63921 5.58459L10.2083 6.2477L10.7775 5.58459C11.5486 4.68614 12.7351 4.11279 13.9583 4.11279C16.1117 4.11279 17.7917 5.78623 17.7917 7.94613C17.7917 9.27039 17.2011 10.5345 16.0078 11.9944C14.8063 13.4644 13.0734 15.0397 10.9129 16.9989L10.9118 16.9999L10.2083 17.6402L9.50489 16.9999Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </figure>
+            <div class="flex h-60 flex-col items-start justify-start gap-2.5 px-5 pt-5 pb-4">
+              <h3 class="text-text dark:text-text-invert h-14 self-stretch text-center text-xl font-bold leading-7">تنمية ندوة: مهارات ما قبل اللغة</h3>
+              <div class="self-stretch text-center">
+                <span class="text-primary-title dark:text-ِِprimary-title-2 text-sm font-bold leading-normal">مستوى متقدم</span>
+                <span class="text-primary-title dark:text-ِِprimary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
+                <span class="text-green dark:text-green-2 text-sm font-bold leading-normal">بعد 4 أيام</span>
+              </div>
+
+              <div class="text-meta dark:text-text-invert h-12 w-full text-right text-sm font-normal leading-normal">
+                هو نص وهمي يستخدم في صناعة الطباعة وتصميم المواقع كحشو في التصميمات قبل إدخال النصوص
+              </div>
+
+              <div class="flex h-12 flex-col items-start justify-start gap-4 self-stretch pt-2.5">
+                <div class="border-sep h-px w-full border"></div>
+                <div class="flex h-6 w-full items-center justify-between">
+                  <div class="flex h-5 shrink grow basis-0 items-center justify-start gap-1">
+                    <!-- Lecturer image -->
+                    <img
+                      alt=""
+                      class="size-6 inline-block rounded-full bg-[#d9d9d9] ring-2 ring-white"
+                      src="https://d1yhje8j0hmqsr.cloudfront.net/2024/12/D986D8B3D8AED8A9-D985D986-IMG_7540.jpg"
+                    />
+                    <h6 class="text-meta mx-2 text-right text-xs font-medium leading-tight">
+                      <!-- Lecturer name -->
+                      عبد الرحمن حافظ
+                    </h6>
+                  </div>
+                  <div class="flex items-center justify-end">
+                    <div class="flex -space-x-2 overflow-hidden">
+                      <!-- Counts -->
+                      <span class="size-7 z-50 inline-block rounded-full border-4 border-[#cfcfcf] bg-[#d9d9d9] pt-1 text-[10px]"> 3K+ </span>
+                      <!-- Students images -->
+                      <img
+                        class="size-7 z-40 inline-block rounded-full border-2 border-white ring-0 ring-white"
+                        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+                        alt=""
+                      />
+                      <img
+                        class="size-7 inline-block rounded-full border-2 border-white ring-0 ring-white"
+                        src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <!-- Price -->
+                  <div class="flex h-6 shrink grow basis-0 items-end justify-end gap-0.5">
+                    <div class="text-text dark:text-ِِprimary-title-2 flex flex-col">
+                      <span dir="ltr" class="text-primary-title text-sm font-bold"> مجانية </span>
+                      <span class="text-primary-title text-[9px] font-bold">بشهادة مدفوعة</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <!--      Course Card End -->
+        <!--      Course Card Start -->
+        <a class="course-card w-auto hover:[&_h3]:text-primary-title">
+          <div class="dark:bg-box-2 flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-lg">
+            <figure class="relative h-0 overflow-hidden pb-[56.25%]">
+              <!-- Course Image -->
+              <img
+                alt=""
+                class="size-full absolute inset-0 object-cover transition duration-700 ease-out hover:scale-105"
+                src="https://aanaab-uploads-v1.s3.amazonaws.com/courses/thumbnail/533/%D8%AB%D9%85%D9%86%D9%8A%D9%84-%D8%A8%D8%B1%D8%A7%D9%85%D8%AC-%D8%B9%D9%84%D8%A7%D8%AC%D9%8A%D8%A9.jpg"
+              />
+              <div class="absolute top-[18px] flex h-10 w-full items-center justify-between px-3">
+                <div class="relative h-10 items-center">
+                  <div class="backdrop-blur-blur w flex h-10 items-center justify-items-start gap-1 rounded-full bg-white px-3">
+                    <img alt="" class="h-6" src="https://d1yhje8j0hmqsr.cloudfront.net/2024/02/118616244_3158001587570928_9132823863992071769_n.png" />
+                    <span class="text-text text-right text-xs font-bold leading-normal"> شهادة كامبردج</span>
+                  </div>
+                </div>
+                <div class="relative flex h-10 w-10 items-center justify-center rounded-[100px] bg-black/30 backdrop-blur-[10px]">
+                  <div data-svg-wrapper class="relative">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9.50489 16.9999L9.50381 16.9989C7.34323 15.0397 5.61034 13.4644 4.40882 11.9944C3.21555 10.5345 2.625 9.27039 2.625 7.94613C2.625 5.78623 4.30499 4.11279 6.45833 4.11279C7.68161 4.11279 8.86809 4.68614 9.63921 5.58459L10.2083 6.2477L10.7775 5.58459C11.5486 4.68614 12.7351 4.11279 13.9583 4.11279C16.1117 4.11279 17.7917 5.78623 17.7917 7.94613C17.7917 9.27039 17.2011 10.5345 16.0078 11.9944C14.8063 13.4644 13.0734 15.0397 10.9129 16.9989L10.9118 16.9999L10.2083 17.6402L9.50489 16.9999Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </figure>
+            <div class="flex h-60 flex-col items-start justify-start gap-2.5 px-5 pt-5 pb-4">
+              <h3 class="text-text dark:text-text-invert h-14 self-stretch text-center text-xl font-bold leading-7">تنمية مهارات الإتيكيت الوظيفي في المؤسسات التعليمية</h3>
+              <div class="self-stretch text-center">
+                <span class="text-primary-title dark:text-ِِprimary-title-2 text-sm font-bold leading-normal">مستوى متقدم</span>
+                <span class="text-primary-title dark:text-ِِprimary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
+                <span class="text-green dark:text-green-2 text-sm font-bold leading-normal">بعد 4 أيام</span>
+              </div>
+
+              <div class="text-meta dark:text-text-invert h-12 w-full text-right text-sm font-normal leading-normal">
+                هو نص وهمي يستخدم في صناعة الطباعة وتصميم المواقع كحشو في التصميمات قبل إدخال النصوص
+              </div>
+
+              <div class="flex h-12 flex-col items-start justify-start gap-4 self-stretch pt-2.5">
+                <div class="border-sep h-px w-full border"></div>
+                <div class="flex h-6 w-full items-center justify-between">
+                  <div class="flex h-5 shrink grow basis-0 items-center justify-start gap-1">
+                    <!-- Lecturer image -->
+                    <img
+                      alt=""
+                      class="size-6 inline-block rounded-full bg-[#d9d9d9] ring-2 ring-white"
+                      src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+                    />
+                    <h6 class="text-meta mx-2 text-right text-xs font-medium leading-tight">
+                      <!-- Lecturer name -->
+                      عبد الرحمن حافظ
+                    </h6>
+                  </div>
+                  <div class="flex items-center justify-end">
+                    <div class="flex -space-x-2 overflow-hidden">
+                      <!-- Counts -->
+                      <span class="size-7 z-50 inline-block rounded-full border-4 border-[#cfcfcf] bg-[#d9d9d9] pt-1 text-[10px]"> 3K+ </span>
+                      <!-- Students images -->
+                      <img
+                        class="size-7 z-40 inline-block rounded-full border-2 border-white ring-0 ring-white"
+                        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+                        alt=""
+                      />
+                      <img
+                        class="size-7 inline-block rounded-full border-2 border-white ring-0 ring-white"
+                        src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <!-- Price -->
+                  <div class="flex h-6 shrink grow basis-0 items-end justify-end gap-0.5">
+                    <div class="text-primary-title dark:text-ِِprimary-title-2">
+                      <!-- Currency -->
+                      <span class="text-meta text-xs font-medium">ر.س</span>
+                      <span dir="ltr" class="text-primary-title text-xl font-bold">
+                        <!-- Riyals / Main Currency -->
+                        125
+                        <span class="text-sm font-medium">
+                          <!-- Halala / Change -->
+                          .65
+                        </span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <!--      Course Card End -->
+        <!--      Course Card Start -->
+        <a class="course-card w-auto hover:[&_h3]:text-primary-title">
+          <div class="dark:bg-box-2 flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-lg">
+            <figure class="relative h-0 overflow-hidden pb-[56.25%]">
+              <!-- Course Image -->
+              <img
+                alt=""
+                class="size-full absolute inset-0 object-cover transition duration-700 ease-out hover:scale-105"
+                src="https://d1yhje8j0hmqsr.cloudfront.net/2025/02/course-cover-D8AAD8AFD8B1D98AD8B3-D8A7D984D8B1D98AD8A7D8B6D98AD8A7D8AA-D8A8D981D986-D988D8A5D8A8D8AFD8A7D8B9.jpg"
+              />
+              <div class="absolute top-[18px] flex h-10 w-full items-center justify-between px-3">
+                <div class="relative h-10 items-center">
+                  <div class="backdrop-blur-blur w flex h-10 items-center justify-items-start gap-1 rounded-full bg-white px-3">
+                    <img alt="" class="h-6" src="src/assets/images/edu-eg-4.png" />
+                    <span class="text-text text-right text-xs font-bold leading-normal"> شهادة كامبردج المعتدة</span>
+                  </div>
+                </div>
+                <div class="relative flex h-10 w-10 items-center justify-center rounded-[100px] bg-red-100/80 backdrop-blur-[10px]">
+                  <div data-svg-wrapper class="relative">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="white" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9.50489 16.9999L9.50381 16.9989C7.34323 15.0397 5.61034 13.4644 4.40882 11.9944C3.21555 10.5345 2.625 9.27039 2.625 7.94613C2.625 5.78623 4.30499 4.11279 6.45833 4.11279C7.68161 4.11279 8.86809 4.68614 9.63921 5.58459L10.2083 6.2477L10.7775 5.58459C11.5486 4.68614 12.7351 4.11279 13.9583 4.11279C16.1117 4.11279 17.7917 5.78623 17.7917 7.94613C17.7917 9.27039 17.2011 10.5345 16.0078 11.9944C14.8063 13.4644 13.0734 15.0397 10.9129 16.9989L10.9118 16.9999L10.2083 17.6402L9.50489 16.9999Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </figure>
+            <div class="flex h-60 flex-col items-start justify-start gap-2.5 px-5 pt-5 pb-4">
+              <h3 class="text-text dark:text-text-invert h-14 self-stretch text-center text-xl font-bold leading-7">تنمية ندوة: مهارات ما قبل اللغة</h3>
+              <div class="self-stretch text-center">
+                <span class="text-primary-title dark:text-ِِprimary-title-2 text-sm font-bold leading-normal">مستوى متقدم</span>
+                <span class="text-primary-title dark:text-ِِprimary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
+                <span class="text-green dark:text-green-2 text-sm font-bold leading-normal">بعد 4 أيام</span>
+              </div>
+
+              <div class="text-meta dark:text-text-invert h-12 w-full text-right text-sm font-normal leading-normal">
+                هو نص وهمي يستخدم في صناعة الطباعة وتصميم المواقع كحشو في التصميمات قبل إدخال النصوص
+              </div>
+
+              <div class="flex h-12 flex-col items-start justify-start gap-4 self-stretch pt-2.5">
+                <div class="border-sep h-px w-full border"></div>
+                <div class="flex h-6 w-full items-center justify-between">
+                  <div class="flex h-5 shrink grow basis-0 items-center justify-start gap-1">
+                    <!-- Lecturer image -->
+                    <img
+                      alt=""
+                      class="size-6 inline-block rounded-full bg-[#d9d9d9] ring-2 ring-white"
+                      src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+                    />
+                    <h6 class="text-meta mx-2 text-right text-xs font-medium leading-tight">
+                      <!-- Lecturer name -->
+                      عبد الرحمن حافظ
+                    </h6>
+                  </div>
+                  <div class="flex items-center justify-end">
+                    <div class="flex -space-x-2 overflow-hidden">
+                      <!-- Counts -->
+                      <span class="size-7 z-50 inline-block rounded-full border-4 border-[#cfcfcf] bg-[#d9d9d9] pt-1 text-[10px]"> 3K+ </span>
+                      <!-- Students images -->
+                      <img
+                        class="size-7 z-40 inline-block rounded-full border-2 border-white ring-0 ring-white"
+                        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+                        alt=""
+                      />
+                      <img
+                        class="size-7 inline-block rounded-full border-2 border-white ring-0 ring-white"
+                        src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <!-- Price -->
+                  <div class="flex h-6 shrink grow basis-0 items-end justify-end gap-0.5">
+                    <div class="text-text dark:text-ِِprimary-title-2">
+                      <!-- Currency -->
+                      <span dir="ltr" class="text-primary-title text-sm font-bold"> مجانية </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <!--      Course Card End -->
+        <!--      Course Card Start -->
+        <a class="course-card w-auto hover:[&_h3]:text-primary-title">
+          <div class="dark:bg-box-2 flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-lg">
+            <figure class="relative h-0 overflow-hidden pb-[56.25%]">
+              <!-- Course Image -->
+              <img
+                alt=""
+                class="size-full absolute inset-0 object-cover transition duration-700 ease-out hover:scale-105"
+                src="https://d1yhje8j0hmqsr.cloudfront.net/2024/12/D986D8B3D8AED8A9-D985D986-IMG_7540.jpg"
+              />
+              <div class="absolute top-[18px] flex h-10 w-full items-center justify-between px-3">
+                <div class="relative h-10 items-center">
+                  <div class="backdrop-blur-blur hidden h-10 items-center justify-items-start gap-1 rounded-full bg-white px-3">
+                    <img alt="" class="h-6" src="src/assets/images/edu-eg-4.png" />
+                    <span class="text-text text-right text-xs font-bold leading-normal"> شهادة كامبردج المعتدة</span>
+                  </div>
+                </div>
+                <div class="relative flex h-10 w-10 items-center justify-center rounded-[100px] bg-red-100/80 backdrop-blur-[10px]">
+                  <div data-svg-wrapper class="relative">
+                    <svg width="21" height="21" viewBox="0 0 21 21" fill="white" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M9.50489 16.9999L9.50381 16.9989C7.34323 15.0397 5.61034 13.4644 4.40882 11.9944C3.21555 10.5345 2.625 9.27039 2.625 7.94613C2.625 5.78623 4.30499 4.11279 6.45833 4.11279C7.68161 4.11279 8.86809 4.68614 9.63921 5.58459L10.2083 6.2477L10.7775 5.58459C11.5486 4.68614 12.7351 4.11279 13.9583 4.11279C16.1117 4.11279 17.7917 5.78623 17.7917 7.94613C17.7917 9.27039 17.2011 10.5345 16.0078 11.9944C14.8063 13.4644 13.0734 15.0397 10.9129 16.9989L10.9118 16.9999L10.2083 17.6402L9.50489 16.9999Z"
+                        stroke="white"
+                        stroke-width="1.5"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </figure>
+            <div class="flex h-60 flex-col items-start justify-start gap-2.5 px-5 pt-5 pb-4">
+              <h3 class="text-text dark:text-text-invert h-14 self-stretch text-center text-xl font-bold leading-7">تنمية ندوة: مهارات ما قبل اللغة</h3>
+              <div class="self-stretch text-center">
+                <span class="text-primary-title dark:text-ِِprimary-title-2 text-sm font-bold leading-normal">مستوى متقدم</span>
+                <span class="text-primary-title dark:text-ِِprimary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
+                <span class="text-green dark:text-green-2 text-sm font-bold leading-normal">بعد 4 أيام</span>
+              </div>
+
+              <div class="text-meta dark:text-text-invert h-12 w-full text-right text-sm font-normal leading-normal">
+                هو نص وهمي يستخدم في صناعة الطباعة وتصميم المواقع كحشو في التصميمات قبل إدخال النصوص
+              </div>
+
+              <div class="flex h-12 flex-col items-start justify-start gap-4 self-stretch pt-2.5">
+                <div class="border-sep h-px w-full border"></div>
+                <div class="flex h-6 w-full items-center justify-between">
+                  <div class="flex h-5 shrink grow basis-0 items-center justify-start gap-1">
+                    <!-- Lecturer image -->
+                    <img
+                      alt=""
+                      class="size-6 inline-block rounded-full bg-[#d9d9d9] ring-2 ring-white"
+                      src="https://d1yhje8j0hmqsr.cloudfront.net/2024/12/D986D8B3D8AED8A9-D985D986-IMG_7540.jpg"
+                    />
+                    <h6 class="text-meta mx-2 text-right text-xs font-medium leading-tight">
+                      <!-- Lecturer name -->
+                      عبد الرحمن حافظ
+                    </h6>
+                  </div>
+                  <div class="flex items-center justify-end">
+                    <div class="flex -space-x-2 overflow-hidden">
+                      <!-- Counts -->
+                      <span class="size-7 z-50 inline-block rounded-full border-4 border-[#cfcfcf] bg-[#d9d9d9] pt-1 text-[10px]"> 3K+ </span>
+                      <!-- Students images -->
+                      <img
+                        class="size-7 z-40 inline-block rounded-full border-2 border-white ring-0 ring-white"
+                        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+                        alt=""
+                      />
+                      <img
+                        class="size-7 inline-block rounded-full border-2 border-white ring-0 ring-white"
+                        src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <!-- Price -->
+                  <div class="flex h-6 shrink grow basis-0 items-end justify-end gap-0.5">
+                    <div class="text-text dark:text-ِِprimary-title-2 flex flex-col">
+                      <span dir="ltr" class="text-primary-title text-sm font-bold"> مجانية </span>
+                      <span class="text-primary-title text-[9px] font-bold">بشهادة مدفوعة</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+        <!--      Course Card End -->
         <!--      Course Card-->
         <!--      Course Card End -->
       </article>
 
       <!--        Pagination & Load More Start -->
       <div id="pages-count" class="relative mt-6 mb-14 flex h-12 items-center justify-center">
-        <button class="bg-primary-title inline-flex h-12 items-center justify-center gap-1 rounded-3xl px-8 py-4 shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)]">
+        <button class="bg-primary-title flex h-12 items-center justify-center gap-1 rounded-3xl px-8 py-4 shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)]">
           <span class="text-base font-bold leading-none text-white">عرض المزيد </span>
         </button>
       </div>
-    <!--    Courses section end-->
+      <!--    Courses section end-->
 
-    <!--  Partners header -->
-    <div class="container m-auto mb-6 flex h-8 items-baseline justify-center gap-3">
-      <div class="bg-sep dark:bg-sep/20 h-px shrink grow basis-0"></div>
-      <h3 class="text-text dark:text-text-invert text-xl font-bold leading-loose tracking-tight">بالتعاون مع</h3>
-      <div class="bg-sep dark:bg-sep/20 h-px shrink grow basis-0"></div>
+      <!--  Partners header -->
+      <div class="container m-auto mb-6 flex h-8 items-baseline justify-center gap-3">
+        <div class="bg-sep dark:bg-sep/20 h-px shrink grow basis-0"></div>
+        <h3 class="text-text dark:text-text-invert text-xl font-bold leading-loose tracking-tight">بالتعاون مع</h3>
+        <div class="bg-sep dark:bg-sep/20 h-px shrink grow basis-0"></div>
+      </div>
+
+      <!-- Partners -->
+      <section class="mb-30 container m-auto h-fit min-h-fit md:h-fit lg:mb-0 lg:h-48">
+        <ul
+          class="[&li]:flex [&li]:flex-col [&li]:items-center [&li]:justify-start [&li]:gap-2 grid h-fit min-h-fit grid-cols-3 place-items-center justify-between gap-10 self-stretch sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8"
+        >
+          <li>
+            <figure class="relative h-20 w-20">
+              <div class="left-0 top-0 flex h-20 w-20 flex-col items-center justify-center gap-5">
+                <img alt="" class="size-10" src="src/assets/images/edu-g-1.svg" />
+              </div>
+              <figcaption class="max-w-20 text-meta dark:text-wheat text-center text-xs font-medium">وزارة التعليم بالسعودية</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="relative h-20 w-20">
+              <div class="left-0 top-0 flex h-20 w-20 flex-col items-center justify-center gap-5">
+                <img alt="" class="size-10" src="src/assets/images/partners/cambridge-logo.svg" />
+              </div>
+              <figcaption class="max-w-20 text-meta dark:text-wheat text-center text-xs font-medium">جامعة كامبردج برنامج المعلمين</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="relative h-20 w-20">
+              <div class="left-0 top-0 flex h-20 w-20 flex-col items-center justify-center gap-5">
+                <img alt="" class="h-16 w-14" src="src/assets/images/edu-g-7.png" />
+              </div>
+              <figcaption class="max-w-20 text-meta dark:text-wheat text-center text-xs font-medium">المؤسسة العامة للتدريب المهني والتقني</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="relative h-20 w-20">
+              <div class="left-0 top-0 flex h-20 w-20 flex-col items-center justify-center gap-5">
+                <img alt="" class="h-16 w-20" src="src/assets/images/edu-g-6.png" />
+              </div>
+              <figcaption class="max-w-20 text-meta dark:text-wheat text-center text-xs font-medium">معهد أبناء المستقبل</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="relative h-20 w-20">
+              <div class="left-0 top-0 flex h-20 w-20 items-center justify-center gap-5 px-5">
+                <img alt="" class="h-16 w-9" src="src/assets/images/edu-g-5.png" />
+              </div>
+              <figcaption class="max-w-20 text-meta dark:text-wheat text-center text-xs font-medium">المركز الوطنى للتعليم الالكترونى</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="relative h-20 w-20">
+              <div class="left-0 top-0 flex h-20 w-20 flex-col items-center justify-center gap-5">
+                <img alt="" class="h-16 w-16" src="src/assets/images/edu-g-4.png" />
+              </div>
+              <figcaption class="max-w-20 text-meta dark:text-wheat text-center text-xs font-medium">هاي فلايرز للتدريب</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="relative h-20 w-20">
+              <div class="left-0 top-0 flex h-20 w-20 flex-col items-center justify-center gap-5">
+                <img alt="" class="h-16 w-16" src="src/assets/images/edu-g-3.png" />
+              </div>
+              <figcaption class="max-w-20 text-meta dark:text-wheat text-center text-xs font-medium">التزامن للتعليم الرقمي</figcaption>
+            </figure>
+          </li>
+          <li>
+            <figure class="relative h-20 w-20">
+              <div class="left-0 top-0 flex h-20 w-20 flex-col items-start justify-start gap-5 py-2.5">
+                <img alt="" class="" src="src/assets/images/edu-g-3.svg" />
+              </div>
+              <figcaption class="max-w-20 text-meta dark:text-wheat text-center text-xs font-medium">هيئة تقويم التعليم والتدريب</figcaption>
+            </figure>
+          </li>
+        </ul>
+      </section>
+      <!-- #endregion Partners section end -->
     </div>
 
-    <!-- Partners -->
-    <section class="container m-auto mb-30 h-fit min-h-fit md:h-fit lg:mb-0 lg:h-48">
-      <ul
-        class="[&li]:flex [&li]:flex-col [&li]:items-center [&li]:justify-start [&li]:gap-2 grid h-fit min-h-fit grid-cols-3 place-items-center justify-between gap-10 self-stretch sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8"
-      >
-        <li>
-          <figure class="relative h-20 w-20">
-            <div class="left-0 top-0 flex h-20 w-20 flex-col items-center justify-center gap-5">
-              <img alt="" class="size-10" src="src/assets/images/edu-g-1.svg" />
-            </div>
-            <figcaption class="max-w-20 text-meta dark:text-wheat text-center text-xs font-medium">وزارة التعليم
-              بالسعودية
-            </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure class="relative h-20 w-20">
-            <div class="left-0 top-0 flex h-20 w-20 flex-col items-center justify-center gap-5">
-              <img alt="" class="size-10" src="src/assets/images/partners/cambridge-logo.svg" />
-            </div>
-            <figcaption class="max-w-20 text-meta dark:text-wheat text-center text-xs font-medium">جامعة كامبردج برنامج
-              المعلمين
-            </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure class="relative h-20 w-20">
-            <div class="left-0 top-0 flex h-20 w-20 flex-col items-center justify-center gap-5">
-              <img alt="" class="h-16 w-14" src="src/assets/images/edu-g-7.png" />
-            </div>
-            <figcaption class="max-w-20 text-meta dark:text-wheat text-center text-xs font-medium">المؤسسة العامة
-              للتدريب المهني والتقني
-            </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure class="relative h-20 w-20">
-            <div class="left-0 top-0 flex h-20 w-20 flex-col items-center justify-center gap-5">
-              <img alt="" class="h-16 w-20" src="src/assets/images/edu-g-6.png" />
-            </div>
-            <figcaption class="max-w-20 text-meta dark:text-wheat text-center text-xs font-medium">معهد أبناء المستقبل
-            </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure class="relative h-20 w-20">
-            <div class="left-0 top-0 flex h-20 w-20 items-center justify-center gap-5 px-5">
-              <img alt="" class="h-16 w-9" src="src/assets/images/edu-g-5.png" />
-            </div>
-            <figcaption class="max-w-20 text-meta dark:text-wheat text-center text-xs font-medium">المركز الوطنى للتعليم
-              الالكترونى
-            </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure class="relative h-20 w-20">
-            <div class="left-0 top-0 flex h-20 w-20 flex-col items-center justify-center gap-5">
-              <img alt="" class="h-16 w-16" src="src/assets/images/edu-g-4.png" />
-            </div>
-            <figcaption class="max-w-20 text-meta dark:text-wheat text-center text-xs font-medium">هاي فلايرز للتدريب
-            </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure class="relative h-20 w-20">
-            <div class="left-0 top-0 flex h-20 w-20 flex-col items-center justify-center gap-5">
-              <img alt="" class="h-16 w-16" src="src/assets/images/edu-g-3.png" />
-            </div>
-            <figcaption class="max-w-20 text-meta dark:text-wheat text-center text-xs font-medium">التزامن للتعليم
-              الرقمي
-            </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure class="relative h-20 w-20">
-            <div class="left-0 top-0 flex h-20 w-20 flex-col items-start justify-start gap-5 py-2.5">
-              <img alt="" class="" src="src/assets/images/edu-g-3.svg" />
-            </div>
-            <figcaption class="max-w-20 text-meta dark:text-wheat text-center text-xs font-medium">هيئة تقويم التعليم
-              والتدريب
-            </figcaption>
-          </figure>
-        </li>
-      </ul>
-    </section>
-    <!-- #endregion Partners section end -->
-    </div>
-
-    <aside dir="rtl" class="dark:bg-dark bg-box border-sep border-t border-b py-14">
+    <aside dir="rtl" class="dark:bg-dark bg-box border-sep border-t border-b py-14 px-5 md:px-0">
       <div class="container m-auto">
         <div class="flex w-full flex-col items-start justify-end overflow-hidden rounded-[20px] bg-[#73b0ed]">
           <div class="flex w-full items-start justify-start">
-            <div class="flex grow flex-col gap-[26px] pt-10">
-              <div class="ps-10 flex flex-col items-start justify-start self-stretch">
-                <h2 class="h-16 self-stretch text-right text-5xl font-bold capitalize leading-loose text-white">دورات
-                  الطلاب</h2>
-                <h4 class="mt-4 justify-start text-right text-2xl font-bold capitalize leading-[49px] text-blue-800">
-                  للمرحلتين الثانوية و الجامعية</h4>
+            <div class="flex grow flex-col gap-[26px] pt-10 ">
+              <div class="ps-10 flex flex-col items-start justify-start self-stretch ">
+                <h2 class="h-16 self-stretch text-right text-5xl font-bold capitalize leading-loose text-white">دورات الطلاب</h2>
+                <h4 class="mt-4 justify-start text-right text-2xl font-bold capitalize leading-[49px] text-blue-800">للمرحلتين الثانوية و الجامعية</h4>
 
-                <div class="mt-5 flex flex-wrap">
+                <div class="mt-6 flex flex-wrap items-center gap-5 md:gap-4">
                   <img alt="" class="flex-none" src="src/assets/images/qiyas.svg" />
                   <img alt="" class="flex-none" src="src/assets/images/mawhiba.svg" />
                   <img alt="" class="flex-none" src="src/assets/images/tahsili.svg" />
                   <button
-                    class="text-blue-1 flex-nowrap justify-center gap-1 rounded-full bg-white px-8 py-0 text-base font-bold shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)]">
+                    class="text-blue-1 h-16 mb-10 md:mb-0 flex-nowrap justify-center gap-1 rounded-full bg-white px-8 py-0 text-base font-bold shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)]"
+                  >
                     استكشف الدورات
                   </button>
                 </div>
@@ -1128,277 +1641,208 @@
       </div>
     </aside>
 
-
     <div class="dark:bg-dark">
-    <!--Cards Section-->
-    <div class="container m-auto mb-12">
-      <h3 class="flex justify-center text-center mb-4 py-8 text-text text-2xl font-bold leading-tight">
-        <span class="text-text">المؤهلات الاحترافية</span>
-      </h3>
-      <div dir="ltr" class="mb-5 flex h-[359px] w-auto flex-col items-start justify-end gap-2.5 overflow-hidden rounded-[20px] bg-[#3d3da2]">
-        <div class="inline-flex h-[359px] items-end justify-start gap-4 self-stretch px-6">
-          <img alt="" class="h-[337.07px] w-[391px] hidden lg:block" src="src/assets/images/cards/two-persons.png" />
-          <div class="inline-flex shrink grow basis-0 flex-col items-end justify-center gap-[26px] self-stretch">
-            <div class="inline-flex h-10 items-center justify-center gap-2 rounded-[20px] bg-white px-3.5 pt-0.5">
-              <div class="text-text text-right text-xs font-bold leading-normal">شهادة كامبردج</div>
-              <img alt="" class="h-[22px] w-[19.03px]" src="https://placehold.co/19x22" />
-            </div>
-            <div class="flex h-[133px] flex-col items-start justify-start self-stretch">
-              <div class="h-16 self-stretch text-right text-[26px] font-bold capitalize leading-loose text-white">شهادة كامبردج في القيادة التربوية</div>
-              <div class="self-stretch text-right">
-                <span class="text-base font-medium capitalize leading-[23px] text-[#77ffd4]">4 أشهر - 150 ساعه </span>
-                <span class="text-sm font-normal capitalize leading-[23px] text-white">
-                  شهادة كامبريدج في القيادة التربوية مصممة لمساعدة القادة على تطوير تفكيرهم وممارساتهم المهنية، من خلال دراسة القيادة الناجحة والتركيز على الأفكار والتحديات
-                  الرئيسية ونظريات القيادة. تعتمد الشهادة على مفهوم أن تعلم القيادة عملية نشطة يبني فيها الممارسون المعرفة من تجربتهم. يساعد التدريب على تحفيز التفكير وتحدي
-                  الافتراضات وتشكيل الممارسات القيادية.
-                </span>
-              </div>
-            </div>
-            <div class="relative h-[52px] w-[214px]">
-              <button
-                class="bg-primary-title absolute left-0 top-0 inline-flex h-[52px] items-center justify-center gap-1 overflow-hidden rounded-[32px] px-8 py-[18px] shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)]"
-              >
-                <span class="flex items-end justify-start gap-3.5">
-                  <span data-svg-wrapper="true" class="relative">
-                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10.501 12.4966L6.50098 8.49658L10.501 4.49658" stroke="white" stroke-width="1.73333" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                  </span>
-                  <span class="text-base font-bold leading-none text-white">أنضم للدوره | 299</span>
-                </span>
-              </button>
-              <div data-svg-wrapper="true" class="absolute left-[48px] top-[15.50px]">
-                <svg width="12" height="14" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M7.83181 12.1564C7.65848 12.7276 7.5439 13.3475 7.5 13.9976L11.1682 12.8387C11.3415 12.2676 11.456 11.6476 11.5 10.9976L7.83181 12.1564Z"
-                    fill="white"
-                  ></path>
-                  <path
-                    d="M11.1242 10.0224C11.3205 9.52477 11.4503 8.98447 11.5 8.41799L8.26421 9.20505V7.69203L11.1241 6.99696C11.3204 6.49929 11.4502 5.95899 11.4999 5.39251L8.26411 6.1789V0.737618C7.76829 1.056 7.32796 1.4798 6.97001 1.9797V6.49359L5.67591 6.80817V-0.00244141C5.18009 0.31583 4.73976 0.739744 4.38181 1.23965V7.12263L1.48626 7.82632C1.28996 8.32398 1.16011 8.86428 1.11031 9.43077L4.38181 8.63565V10.541L0.875754 11.3931C0.679462 11.8908 0.549709 12.4311 0.5 12.9976L4.16986 12.1056C4.46861 12.0346 4.72537 11.8326 4.89231 11.5546L5.56534 10.4135V10.4132C5.63521 10.2952 5.67591 10.1528 5.67591 9.9995V8.32107L6.97001 8.00649V11.0325L11.1241 10.0222L11.1242 10.0224Z"
-                    fill="white"
-                  ></path>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="grid grid-cols-1 gap-5 lg:grid-cols-2">
-        <div dir="ltr" class="inline-flex h-[359px] flex-col items-start justify-end gap-2.5 overflow-hidden rounded-[20px] bg-[#311e6a]">
-          <div class="inline-flex h-[359px] items-end justify-start gap-4 self-stretch pr-6">
-            <div data-svg-wrapper="true" class="relative">
-              <svg width="260" height="293" viewBox="0 0 260 293" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <rect width="175" height="292" transform="translate(0.5 0.499023)" fill="url(#pattern0_1308_30213)"></rect>
-                <defs>
-                  <pattern id="pattern0_1308_30213" patternContentUnits="objectBoundingBox" width="1" height="1">
-                    <use xlink:href="#image0_1308_30213" transform="matrix(0.0050449 0 0 0.00285714 -0.851379 -0.00855771)"></use>
-                  </pattern>
-                  <img alt="" src="src/assets/images/cards/person1.png" />
-                </defs>
-              </svg>
-            </div>
-            <div class="inline-flex shrink grow basis-0 flex-col items-end justify-center gap-[26px] self-stretch">
-              <div class="inline-flex h-10 items-center justify-center gap-2 rounded-[20px] bg-white px-3.5 pt-0.5">
-                <div class="text-text text-right text-xs font-bold leading-normal">شهادة تايمز</div>
-                <img alt="" class="h-[22px] w-[19.03px]" src="https://placehold.co/19x22" />
-              </div>
-              <div class="flex h-[123px] flex-col items-start justify-start gap-2 self-stretch">
-                <div class="self-stretch text-right text-sm font-bold capitalize leading-[18px] text-white"><!-- -->تأهيل لاختبار اللغة الصينية HSK1 مستوى-1</div>
-                <div class="h-[43px] self-stretch text-right text-base font-normal capitalize leading-loose text-white">3 أشهر - 16 ساعه</div>
-              </div>
-              <div
-                class="bg-primary-title inline-flex items-center justify-center gap-1 overflow-hidden rounded-[32px] px-8 py-[18px] shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)]"
-              >
-                <div class="flex items-end justify-start gap-1.5">
-                  <div data-svg-wrapper="true" class="relative">
-                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10.501 12.498L6.50098 8.49805L10.501 4.49805" stroke="white" stroke-width="1.73333" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                  </div>
-                  <div>
-                    <span class="text-base font-bold leading-none text-white">أنضم للدوره | 190 </span><span class="text-[11px] font-bold leading-none text-white">ريال</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div dir="ltr" class="bg-primary-title inline-flex h-[359px] flex-col items-start justify-end gap-2.5 overflow-hidden rounded-[20px]">
-          <div class="inline-flex h-[359px] items-end justify-start gap-4 self-stretch pr-6">
-            <div data-svg-wrapper="true" class="relative">
-              <svg width="260" height="293" viewBox="0 0 260 293" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <rect width="259" height="292" transform="translate(0.5 0.499023)" fill="url(#pattern0_1306_29531)"></rect>
-                <defs>
-                  <pattern id="pattern0_1306_29531" patternContentUnits="objectBoundingBox" width="1" height="1">
-                    <use xlink:href="#image0_1306_29531" transform="matrix(0.0011243 0 0 0.000953289 -0.14078 0)"></use>
-                  </pattern>
-                  <img src="src/assets/images/cards/person2.png" />
-                </defs>
-              </svg>
-            </div>
-            <div class="inline-flex shrink grow basis-0 flex-col items-end justify-center gap-[26px] self-stretch">
-              <div class="inline-flex h-10 items-center justify-center gap-2 rounded-[20px] bg-white px-3.5 pt-0.5">
-                <div class="text-text text-right text-xs font-bold leading-normal">شهادة هاى فلايرز</div>
-                <img alt="" class="h-[22px] w-[19.03px]" src="https://placehold.co/19x22" />
-              </div>
-              <div class="flex h-[115px] flex-col items-start justify-start gap-2 self-stretch">
-                <div class="h-16 self-stretch text-right text-[15px] font-bold capitalize leading-[18px] text-white"><!-- -->شهادة كاش- مستوى2: رعاية الطفولة المبكرة</div>
-                <div class="h-[43px] self-stretch text-right text-base font-normal capitalize leading-loose text-white">3 أشهر - 16 ساعه</div>
-              </div>
-              <button
-                class="inline-flex items-center justify-center gap-1 overflow-hidden rounded-[32px] bg-[#D2A8FF] px-8 py-[18px] shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)]"
-              >
-                <span class="flex items-end justify-start gap-1.5">
-                  <span data-svg-wrapper="true" class="relative">
-                    <svg width="17" height="17" viewBox="0 0 17 17" fill="" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10.501 12.498L6.50098 8.49805L10.501 4.49805" stroke="white" stroke-width="1.73333" stroke-linecap="round" stroke-linejoin="round"></path>
-                      <path d="M10.001 12.4966L6.00098 8.49658L10.001 4.49658" stroke="#321F6B" stroke-width="1.73333" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                  </span>
-                  <span
-                    ><span class="text-text text-base font-bold leading-none">أنضم للدوره | 190 </span><span class="text-text text-[11px] font-bold leading-none">ريال</span>
-                  </span>
-                </span>
-              </button>
-            </div>
-          </div>
-        </div>
-        <div dir="ltr" class="inline-flex h-[359px] flex-col items-start justify-end gap-2.5 overflow-hidden rounded-[20px] bg-[#704fe6]">
-          <div class="inline-flex h-[359px] items-end justify-start gap-4 self-stretch pr-6">
-            <div data-svg-wrapper="true" class="relative">
-              <svg width="260" height="293" viewBox="0 0 260 293" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <rect width="259" height="292" transform="translate(0.5 0.499023)" fill="url(#pattern0_1308_24595)"></rect>
-                <defs>
-                  <pattern id="pattern0_1308_24595" patternContentUnits="objectBoundingBox" width="1" height="1">
-                    <use xlink:href="#image0_1308_24595" transform="matrix(0.00365136 0 0 0.00309598 -0.121557 0.00855771)"></use>
-                  </pattern>
-                  <img src="src/assets/images/cards/person3.png" />
-                </defs>
-              </svg>
-            </div>
-            <div class="inline-flex shrink grow basis-0 flex-col items-end justify-center gap-[26px] self-stretch">
-              <div class="inline-flex h-10 items-center justify-center gap-2 rounded-[20px] bg-white px-3.5 pt-0.5">
-                <div class="text-text text-right text-xs font-bold leading-normal">شهادة تايمز</div>
-                <img alt="" class="h-[22px] w-[19.03px]" src="https://placehold.co/19x22" />
-              </div>
-              <div class="flex h-[123px] flex-col items-start justify-start gap-2 self-stretch">
-                <div class="self-stretch text-right text-sm font-bold capitalize leading-[18px] text-white"><!-- -->تأهيل لاختبار اللغة الصينية HSK1 مستوى-1</div>
-                <div class="h-[43px] self-stretch text-right text-base font-normal capitalize leading-loose text-white">3 أشهر - 16 ساعه</div>
-              </div>
-              <div
-                class="bg-primary-title inline-flex items-center justify-center gap-1 overflow-hidden rounded-[32px] px-8 py-[18px] shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)]"
-              >
-                <div class="flex items-end justify-start gap-1.5">
-                  <div data-svg-wrapper="true" class="relative">
-                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10.501 12.498L6.50098 8.49805L10.501 4.49805" stroke="white" stroke-width="1.73333" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                  </div>
-                  <div>
-                    <span class="text-base font-bold leading-none text-white">أنضم للدوره | 190 </span><span class="text-[11px] font-bold leading-none text-white">ريال</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div dir="ltr" class="inline-flex h-[359px] flex-col items-start justify-end gap-2.5 overflow-hidden rounded-[20px] bg-[#574381]">
-          <div class="inline-flex h-[359px] items-end justify-start gap-4 self-stretch pr-6">
-            <div data-svg-wrapper="true" class="relative">
-              <svg width="260" height="293" viewBox="0 0 260 293" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <rect width="259" height="292" transform="translate(0.5 0.499023)" fill="url(#pattern0_1308_21389)"></rect>
-                <defs>
-                  <pattern id="pattern0_1308_21389" patternContentUnits="objectBoundingBox" width="1" height="1">
-                    <use xlink:href="#image0_1308_21389" transform="matrix(0.00269883 0 0 0.00228833 -0.139013 0.0128366)"></use>
-                  </pattern>
-                  <img alt="" src="src/assets/images/cards/person4.png" />
-                </defs>
-              </svg>
-            </div>
-            <div class="inline-flex shrink grow basis-0 flex-col items-end justify-center gap-[26px] self-stretch">
-              <div class="inline-flex h-10 items-center justify-center gap-2 rounded-[20px] bg-white px-3.5 pt-0.5">
+      <!--Cards Section-->
+      <div class="container m-auto mb-12">
+        <h3 class="text-text mb-4 flex justify-center py-8 text-center text-2xl font-bold leading-tight">
+          <span class="text-text">المؤهلات الاحترافية</span>
+        </h3>
+        <!--    شهادة كامبردج -->
+        <div dir="ltr" class="mx-5 mb-5 flex md:h-[359px] w-auto flex-col items-start justify-end gap-2.5 overflow-hidden rounded-[20px] bg-[#3d3da2] lg:mx-0">
+          <div class="flex flex-col-reverse justify-start md:gap-4 self-stretch px-6 md:h-[359px] md:flex-row pt-10 md:pt-0">
+            <img alt="" class="h-[337.07px] w-[391px] lg:block" src="src/assets/images/cards/two-persons.png" />
+            <div class="flex shrink grow basis-0 flex-col items-end justify-center gap-[50px] self-stretch">
+              <div class="flex h-10 items-center justify-center gap-2 rounded-[20px] bg-white px-3.5 pt-0.5">
                 <div class="text-text text-right text-xs font-bold leading-normal">شهادة كامبردج</div>
-                <img alt="" class="h-[22px] w-[19.03px]" src="https://placehold.co/19x22" />
+                <img alt="" class="h-[22px] w-[19.03px]" src="./src/assets/images/partners/cambridge-logo.svg" />
               </div>
-              <div class="flex flex-col items-start justify-start gap-2">
-                <div class="h-16 self-stretch text-right text-sm font-bold capitalize leading-[18px] text-white">شهادة كامبردج للتدريس بالتقنيات الرقمية</div>
-                <div class="h-[43px] self-stretch text-right text-base font-normal capitalize leading-loose text-white">3 أشهر - 16 ساعه</div>
-              </div>
-              <div
-                class="bg-primary-title inline-flex items-center justify-center gap-1 overflow-hidden rounded-[32px] px-8 py-[18px] shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)]"
-              >
-                <div class="flex items-end justify-start gap-1.5">
-                  <div data-svg-wrapper="true" class="relative">
-                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10.501 12.498L6.50098 8.49805L10.501 4.49805" stroke="white" stroke-width="1.73333" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                  </div>
-                  <div>
-                    <span class="text-base font-bold leading-none text-white">أنضم للدوره | 190 </span><span class="text-[11px] font-bold leading-none text-white">ريال</span>
-                  </div>
+              <div class="flex flex-col items-start justify-start self-stretch">
+                <div class="h-16 self-stretch text-right text-[26px] font-bold capitalize leading-loose text-white">شهادة كامبردج في القيادة التربوية</div>
+                <div class="self-stretch text-right">
+                  <span class="text-base font-medium capitalize leading-[23px] text-[#77ffd4]">4 أشهر - 150 ساعه </span>
+                  <span class="text-sm font-normal capitalize leading-[23px] text-white">
+                    شهادة كامبريدج في القيادة التربوية مصممة لمساعدة القادة على تطوير تفكيرهم وممارساتهم المهنية، من خلال دراسة القيادة الناجحة والتركيز على الأفكار والتحديات
+                    الرئيسية ونظريات القيادة. تعتمد الشهادة على مفهوم أن تعلم القيادة عملية نشطة يبني فيها الممارسون المعرفة من تجربتهم. يساعد التدريب على تحفيز التفكير وتحدي
+                    الافتراضات وتشكيل الممارسات القيادية.
+                  </span>
                 </div>
               </div>
+              <button class="flex items-center justify-center gap-1 overflow-hidden rounded-[32px] bg-[#D2A8FF] px-8 py-[18px] shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)]">
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.501 12.498L6.50098 8.49805L10.501 4.49805" stroke="black" stroke-width="1.73333" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+                <div>
+                  <span class="text-text text-base font-bold leading-none">أنضم للدوره | 190 </span>
+                  <span class="text-text text-[11px] font-bold leading-none">ريال</span>
+                </div>
+              </button>
             </div>
           </div>
         </div>
+        <!-- certificates -->
+        <div class="grid grid-cols-1 gap-5 px-5 lg:grid-cols-2 lg:px-0">
+          <div dir="ltr" class="relative flex h-[359px] flex-col items-start justify-end gap-2.5 overflow-hidden rounded-[20px] bg-[#311e6a]">
+            <img alt="" class="absolute" src="src/assets/images/cards/person1.png" />
+            <div class="flex h-[359px] items-end justify-start gap-4 self-stretch pr-6">
+              <div class="flex shrink grow basis-0 flex-col items-end justify-center gap-[26px] self-stretch">
+                <div class="flex h-10 items-center justify-center gap-2 rounded-[20px] bg-white px-3.5 pt-0.5">
+                  <div class="text-text text-right text-xs font-bold leading-normal">شهادة تايمز</div>
+                  <img alt="" class="h-[22px] w-[19.03px]" src="./src/assets/images/partners/cambridge-logo.svg" />
+                </div>
+                <div class="flex h-[123px] flex-col items-start justify-start gap-2 self-stretch">
+                  <div class="self-stretch text-right text-sm font-bold capitalize leading-[18px] text-white"><!-- -->تأهيل لاختبار اللغة الصينية HSK1 مستوى-1</div>
+                  <div class="h-[43px] self-stretch text-right text-base font-normal capitalize leading-loose text-white">3 أشهر - 16 ساعه</div>
+                </div>
+
+              </div>
+            </div>
+            <button
+              class="bg-primary-title flex end-10 bottom-7 absolute items-center justify-center gap-1 overflow-hidden rounded-[32px] px-8 py-[18px] shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)]"
+            >
+              <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.501 12.498L6.50098 8.49805L10.501 4.49805" stroke="white" stroke-width="1.73333" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <div>
+                <span class="text-base font-bold leading-none text-white">أنضم للدوره | 190 </span>
+                <span class="text-[11px] font-bold leading-none text-white">ريال</span>
+              </div>
+            </button>
+          </div>
+          <div dir="ltr" class="relative flex h-[359px] flex-col items-start justify-end gap-2.5 overflow-hidden rounded-[20px] bg-primary-title">
+            <img alt="" class="absolute -start-10 md:start-0" src="src/assets/images/cards/person2.png" />
+            <div class="flex h-[359px] items-end justify-start gap-4 self-stretch pr-6 z-10">
+              <div class="flex shrink grow basis-0 flex-col items-end justify-center gap-[26px] self-stretch">
+                <div class="flex h-10 items-center justify-center gap-2 rounded-[20px] bg-white px-3.5 pt-0.5">
+                  <div class="text-text text-right text-xs font-bold leading-normal">شهادة تايمز</div>
+                  <img alt="" class="h-[22px] w-[19.03px]" src="./src/assets/images/partners/cambridge-logo.svg" />
+                </div>
+                <div class="flex h-[123px] flex-col items-start justify-start gap-2 self-stretch">
+                  <div class="self-stretch text-right text-sm font-bold capitalize leading-[18px] text-white"><!-- -->تأهيل لاختبار اللغة الصينية HSK1 مستوى-1</div>
+                  <div class="h-[43px] self-stretch text-right text-base font-normal capitalize leading-loose text-white">3 أشهر - 16 ساعه</div>
+                </div>
+
+              </div>
+            </div>
+            <button
+              class="bg-[#D2A8FF] flex end-10 bottom-7 absolute items-center justify-center gap-1 overflow-hidden rounded-[32px] px-8 py-[18px] shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)]"
+            >
+              <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.501 12.498L6.50098 8.49805L10.501 4.49805" stroke="#311e6a" stroke-width="1.73333" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <div>
+                <span class="text-base font-bold leading-none text-text">أنضم للدوره | 190 </span>
+                <span class="text-[11px] font-bold leading-none text-text">ريال</span>
+              </div>
+            </button>
+          </div>
+          <div dir="ltr" class="relative flex h-[359px] flex-col items-start justify-end gap-2.5 overflow-hidden rounded-[20px] bg-[#704fe6]">
+            <img alt="" class="absolute" src="src/assets/images/cards/person3.png" />
+            <div class="flex h-[359px] items-end justify-start gap-4 self-stretch pr-6">
+              <div class="flex shrink grow basis-0 flex-col items-end justify-center gap-[26px] self-stretch">
+                <div class="flex h-10 items-center justify-center gap-2 rounded-[20px] bg-white px-3.5 pt-0.5">
+                  <div class="text-text text-right text-xs font-bold leading-normal">شهادة تايمز</div>
+                  <img alt="" class="h-[22px] w-[19.03px]" src="./src/assets/images/partners/cambridge-logo.svg" />
+                </div>
+                <div class="flex h-[123px] flex-col items-start justify-start gap-2 self-stretch">
+                  <div class="self-stretch text-right text-sm font-bold capitalize leading-[18px] text-white"><!-- -->تأهيل لاختبار اللغة الصينية HSK1 مستوى-1</div>
+                  <div class="h-[43px] self-stretch text-right text-base font-normal capitalize leading-loose text-white">3 أشهر - 16 ساعه</div>
+                </div>
+
+              </div>
+            </div>
+            <button
+              class="bg-primary-title flex end-10 bottom-7 absolute items-center justify-center gap-1 overflow-hidden rounded-[32px] px-8 py-[18px] shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)]"
+            >
+              <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.501 12.498L6.50098 8.49805L10.501 4.49805" stroke="white" stroke-width="1.73333" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <div>
+                <span class="text-base font-bold leading-none text-white">أنضم للدوره | 190 </span>
+                <span class="text-[11px] font-bold leading-none text-white">ريال</span>
+              </div>
+            </button>
+          </div>
+          <div dir="ltr" class="relative flex h-[359px] flex-col items-start justify-end gap-2.5 overflow-hidden rounded-[20px] bg-[#574381]">
+            <img alt="" class="absolute" src="src/assets/images/cards/person4.png" />
+            <div class="flex h-[359px] items-end justify-start gap-4 self-stretch pr-6">
+              <div class="flex shrink grow basis-0 flex-col items-end justify-center gap-[26px] self-stretch">
+                <div class="flex h-10 items-center justify-center gap-2 rounded-[20px] bg-white px-3.5 pt-0.5">
+                  <div class="text-text text-right text-xs font-bold leading-normal">شهادة تايمز</div>
+                  <img alt="" class="h-[22px] w-[19.03px]" src="./src/assets/images/partners/cambridge-logo.svg" />
+                </div>
+                <div class="flex h-[123px] flex-col items-start justify-start gap-2 self-stretch">
+                  <div class="self-stretch text-right text-sm font-bold capitalize leading-[18px] text-white"><!-- -->تأهيل لاختبار اللغة الصينية HSK1 مستوى-1</div>
+                  <div class="h-[43px] self-stretch text-right text-base font-normal capitalize leading-loose text-white">3 أشهر - 16 ساعه</div>
+                </div>
+
+              </div>
+            </div>
+            <button
+              class="bg-primary-title flex end-10 bottom-7 absolute items-center justify-center gap-1 overflow-hidden rounded-[32px] px-8 py-[18px] shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)]"
+            >
+              <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.501 12.498L6.50098 8.49805L10.501 4.49805" stroke="white" stroke-width="1.73333" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+              <div>
+                <span class="text-base font-bold leading-none text-white">أنضم للدوره | 190 </span>
+                <span class="text-[11px] font-bold leading-none text-white">ريال</span>
+              </div>
+            </button>
+          </div>
+        </div>
       </div>
+      <!--Cards Section End-->
+
+      <!--  Partners header -->
+      <div class="container m-auto mb-6 flex h-8 items-baseline justify-center gap-3">
+        <div class="bg-sep dark:bg-sep/20 h-px shrink grow basis-0"></div>
+        <h3 class="text-text dark:text-text-invert text-xl font-bold leading-loose tracking-tight">بالتعاون مع</h3>
+        <div class="bg-sep dark:bg-sep/20 h-px shrink grow basis-0"></div>
+      </div>
+
+      <section class="mb-30 container mx-auto flex h-fit min-h-fit items-center justify-center md:h-fit lg:mb-0 lg:h-48">
+        <ul
+          class="[&li]:flex [&li]:flex-col [&li]:items-center [&li]:justify-center [&li]:gap-5 [&_figcaption]:mt-4 m-auto mt-0 flex w-full flex-wrap items-center justify-center gap-10"
+        >
+          <li>
+            <figure class="relative h-20 w-20">
+              <div class="left-0 top-0 flex h-20 w-20 flex-col items-center justify-center gap-5">
+                <img alt="" class="size-10" src="src/assets/images/partners/cambridge-logo.svg" />
+              </div>
+              <figcaption class="max-w-20 text-meta dark:text-wheat text-center text-xs font-medium">جامعة كامبردج برنامج المعلمين</figcaption>
+            </figure>
+          </li>
+
+          <li>
+            <figure class="relative h-20 w-20">
+              <div class="left-0 top-0 flex h-20 w-20 flex-col items-center justify-center gap-5">
+                <img alt="" class="h-16 w-16" src="src/assets/images/edu-g-3.png" />
+              </div>
+              <figcaption class="max-w-20 text-meta dark:text-wheat text-center text-xs font-medium">التزامن للتعليم الرقمي</figcaption>
+            </figure>
+          </li>
+
+          <li>
+            <figure class="relative h-20 w-20">
+              <div class="left-0 top-0 flex h-20 w-20 flex-col items-center justify-center gap-5">
+                <img alt="" class="h-16 w-16" src="src/assets/images/edu-g-4.png" />
+              </div>
+              <figcaption class="max-w-20 text-meta dark:text-wheat text-center text-xs font-medium">هاي فلايرز للتدريب</figcaption>
+            </figure>
+          </li>
+
+          <li>
+            <figure class="relative h-20 w-20">
+              <div class="left-0 top-0 flex h-20 w-20 flex-col items-start justify-start gap-5 py-2.5">
+                <img alt="" class="h-20 w-20" src="src/assets/images/silongo.svg" />
+              </div>
+              <figcaption class="max-w-20 text-meta dark:text-wheat mt-4 text-center text-xs font-medium">سيلونجو تايمز</figcaption>
+            </figure>
+          </li>
+        </ul>
+      </section>
+      <!-- Partners -->
     </div>
-    <!--Cards Section End-->
-
-    <!--  Partners header -->
-    <div class="container m-auto mb-6 flex h-8 items-baseline justify-center gap-3">
-      <div class="bg-sep dark:bg-sep/20 h-px shrink grow basis-0"></div>
-      <h3 class="text-text dark:text-text-invert text-xl font-bold leading-loose tracking-tight">بالتعاون مع</h3>
-      <div class="bg-sep dark:bg-sep/20 h-px shrink grow basis-0"></div>
-    </div>
-
-    <section class="container mx-auto mb-30 h-fit min-h-fit md:h-fit lg:mb-0 lg:h-48 flex justify-center items-center">
-      <ul
-        class="w-full m-auto mt-0 [&li]:flex [&li]:flex-col [&li]:items-center [&li]:justify-center [&li]:gap-5 [&_figcaption]:mt-4 flex justify-center items-center gap-10 flex-wrap"
-      >
-        <li>
-          <figure class="relative h-20 w-20">
-            <div class="left-0 top-0 flex h-20 w-20 flex-col items-center justify-center gap-5">
-              <img alt="" class="size-10" src="src/assets/images/partners/cambridge-logo.svg" />
-            </div>
-            <figcaption class="max-w-20 text-meta dark:text-wheat text-center text-xs font-medium">جامعة كامبردج برنامج
-              المعلمين
-            </figcaption>
-          </figure>
-        </li>
-
-        <li>
-          <figure class="relative h-20 w-20">
-            <div class="left-0 top-0 flex h-20 w-20 flex-col items-center justify-center gap-5">
-              <img alt="" class="h-16 w-16" src="src/assets/images/edu-g-3.png" />
-            </div>
-            <figcaption class="max-w-20 text-meta dark:text-wheat text-center text-xs font-medium">التزامن للتعليم
-              الرقمي
-            </figcaption>
-          </figure>
-        </li>
-
-        <li>
-          <figure class="relative h-20 w-20">
-            <div class="left-0 top-0 flex h-20 w-20 flex-col items-center justify-center gap-5">
-              <img alt="" class="h-16 w-16" src="src/assets/images/edu-g-4.png" />
-            </div>
-            <figcaption class="max-w-20 text-meta dark:text-wheat text-center text-xs font-medium">هاي فلايرز للتدريب
-            </figcaption>
-          </figure>
-        </li>
-
-        <li>
-          <figure class="relative h-20 w-20">
-            <div class="left-0 top-0 flex h-20 w-20 flex-col items-start justify-start gap-5 py-2.5">
-              <img alt="" class="h-20 w-20" src="src/assets/images/silongo.svg" />
-            </div>
-            <figcaption class="max-w-20 text-meta dark:text-wheat text-center text-xs font-medium mt-4">سيلونجو تايمز</figcaption>
-          </figure>
-        </li>
-      </ul>
-    </section>
-      <!-- Partners --></div>
 
     <!-- #endregion Partners section end -->
 
@@ -1406,25 +1850,25 @@
     <section class="border-sep bg-box dark:bg-dark border-t py-6 pt-24" dir="rtl">
       <header class="mb-12 flex flex-col items-center justify-center">
         <div class="text-text text-center text-xl font-medium">بإمكانكم شراء كل دورة على حدة</div>
-        <div class="inline-flex h-8 w-[400px] items-baseline justify-center gap-[15px]">
+        <div class="flex h-8 w-[400px] items-baseline justify-center gap-[15px]">
           <div class="h-px shrink grow basis-0 bg-zinc-300"></div>
           <div class="text-meta-light text-center text-xl font-medium">أو</div>
           <div class="h-px shrink grow basis-0 bg-zinc-300"></div>
         </div>
-        <div class="inline-flex h-[51px] w-[400px] flex-col items-start justify-start gap-2">
+        <div class="flex h-[51px] w-[400px] flex-col items-start justify-start gap-2">
           <div class="text-primary-title self-stretch text-center text-[32px] font-bold">شراء باقات أعناب للأفراد</div>
         </div>
       </header>
       <article class="flex flex-col items-center justify-center gap-10 pb-20 sm:gap-2 lg:flex-row lg:gap-12">
         <section
-          class="shadow-[0px_4px_6px_-2px_rgba(16 24 40 0.03)] inline-flex h-[503px] w-[374px] flex-col items-center justify-start gap-[26px] rounded-[20px] border border-zinc-300 bg-white p-[26px]"
+          class="shadow-[0px_4px_6px_-2px_rgba(16 24 40 0.03)] flex h-[503px] w-[374px] flex-col items-center justify-start gap-[26px] rounded-[20px] border border-zinc-300 bg-white p-[26px]"
         >
           <div class="flex flex-col items-center justify-start gap-[9px] py-0.5">
             <div class="flex flex-col items-center justify-start">
               <div class="text-right text-lg font-bold tracking-tight text-[#20b486]">باقة 10 دورات</div>
               <div class="text-right text-xs font-bold tracking-tight text-[#ff2d55]">بسعر 7 دورات (تخفيض %75)</div>
             </div>
-            <div class="text-primary-title inline-flex items-baseline justify-center gap-1.5">
+            <div class="text-primary-title flex items-baseline justify-center gap-1.5">
               <div class="text-xs font-bold capitalize">ريال</div>
               <div class="text-[42px] font-bold capitalize">1000</div>
               <div class="text-sm font-bold capitalize"></div>
@@ -1433,7 +1877,7 @@
           <div class="h-px self-stretch bg-zinc-300"></div>
           <div class="flex h-[172px] flex-col items-start justify-start self-stretch py-1.5">
             <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
-              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
+              <div class="flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
                   <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
                     <div class="bg-primary-title absolute left-0 top-0 h-5 w-5 rounded-[624.38px]"></div>
@@ -1448,7 +1892,7 @@
               </div>
             </div>
             <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
-              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
+              <div class="flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
                   <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
                     <div class="bg-primary-title absolute left-0 top-0 h-5 w-5 rounded-[624.38px]"></div>
@@ -1463,7 +1907,7 @@
               </div>
             </div>
             <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
-              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
+              <div class="flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
                   <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
                     <div class="bg-primary-title absolute left-0 top-0 h-5 w-5 rounded-[624.38px]"></div>
@@ -1478,7 +1922,7 @@
               </div>
             </div>
             <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
-              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
+              <div class="flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
                   <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
                     <div class="bg-primary-title absolute left-0 top-0 h-5 w-5 rounded-[624.38px]"></div>
@@ -1495,7 +1939,7 @@
           </div>
           <div class="h-px self-stretch bg-zinc-300"></div>
           <button
-            class="bg-primary-title inline-flex items-center justify-center gap-1 overflow-hidden rounded-[32px] px-8 py-[16px] text-white shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)] transition-all duration-200"
+            class="bg-primary-title flex items-center justify-center gap-1 overflow-hidden rounded-[32px] px-8 py-[16px] text-white shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)] transition-all duration-200"
           >
             <span class="flex items-end justify-start gap-1.5">
               <span class="text-base font-bold leading-none">أنضم للدوره</span>
@@ -1503,14 +1947,14 @@
           </button>
         </section>
         <section
-          class="shadow-[0px_4px_6px_-2px_rgba(16 24 40 0.03)] bg-primary-title inline-flex h-[503px] w-[374px] flex-col items-center justify-start gap-[26px] rounded-[20px] border border-zinc-300 p-[26px]"
+          class="shadow-[0px_4px_6px_-2px_rgba(16 24 40 0.03)] bg-primary-title flex h-[503px] w-[374px] flex-col items-center justify-start gap-[26px] rounded-[20px] border border-zinc-300 p-[26px]"
         >
           <div class="flex flex-col items-center justify-start gap-[9px] py-0.5">
             <div class="flex flex-col items-center justify-start">
               <div class="text-right text-lg font-bold tracking-tight text-[#30e8ae]">باقة 10 دورات</div>
               <div class="text-right text-xs font-bold tracking-tight text-[#ff99ac]">بسعر 7 دورات (تخفيض %75)</div>
             </div>
-            <div class="inline-flex items-baseline justify-center gap-1.5 text-white">
+            <div class="flex items-baseline justify-center gap-1.5 text-white">
               <div class="text-xs font-bold capitalize">ريال</div>
               <div class="text-[42px] font-bold capitalize">1000</div>
               <div class="text-sm font-bold capitalize"></div>
@@ -1519,7 +1963,7 @@
           <div class="h-px self-stretch bg-zinc-300/20"></div>
           <div class="flex h-[172px] flex-col items-start justify-start self-stretch py-1.5">
             <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
-              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
+              <div class="flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
                   <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
                     <div class="absolute left-0 top-0 h-5 w-5 rounded-[624.38px] bg-white"></div>
@@ -1534,7 +1978,7 @@
               </div>
             </div>
             <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
-              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
+              <div class="flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
                   <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
                     <div class="absolute left-0 top-0 h-5 w-5 rounded-[624.38px] bg-white"></div>
@@ -1549,7 +1993,7 @@
               </div>
             </div>
             <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
-              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
+              <div class="flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
                   <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
                     <div class="absolute left-0 top-0 h-5 w-5 rounded-[624.38px] bg-white"></div>
@@ -1564,7 +2008,7 @@
               </div>
             </div>
             <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
-              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
+              <div class="flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
                   <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
                     <div class="absolute left-0 top-0 h-5 w-5 rounded-[624.38px] bg-white"></div>
@@ -1581,7 +2025,7 @@
           </div>
           <div class="h-px self-stretch bg-zinc-300/20"></div>
           <button
-            class="hover:bg-primary-title/10 inline-flex items-center justify-center gap-1 overflow-hidden rounded-[32px] border-2 border-white bg-transparent px-8 py-[16px] text-white transition-all duration-200"
+            class="hover:bg-primary-title/10 flex items-center justify-center gap-1 overflow-hidden rounded-[32px] border-2 border-white bg-transparent px-8 py-[16px] text-white transition-all duration-200"
           >
             <span class="flex items-end justify-start gap-1.5">
               <span class="text-base font-bold leading-none">أنضم للدوره</span>
@@ -1589,14 +2033,14 @@
           </button>
         </section>
         <section
-          class="inline-flex h-[503px] w-[374px] flex-col items-center justify-start gap-[26px] rounded-[20px] border border-zinc-300 bg-white p-[26px] shadow-[0px_4px_6px_-2px_rgba(16,24,40,0.03)]"
+          class="flex h-[503px] w-[374px] flex-col items-center justify-start gap-[26px] rounded-[20px] border border-zinc-300 bg-white p-[26px] shadow-[0px_4px_6px_-2px_rgba(16,24,40,0.03)]"
         >
           <div class="flex flex-col items-center justify-start gap-[9px] py-0.5">
             <div class="flex flex-col items-center justify-start">
               <div class="text-right text-lg font-bold tracking-tight text-[#20b486]">باقة 10 دورات</div>
               <div class="text-right text-xs font-bold tracking-tight text-[#ff2d55]">بسعر 7 دورات (تخفيض %75)</div>
             </div>
-            <div class="text-primary-title inline-flex items-baseline justify-center gap-1.5">
+            <div class="text-primary-title flex items-baseline justify-center gap-1.5">
               <div class="text-xs font-bold capitalize">ريال</div>
               <div class="text-[42px] font-bold capitalize">1000</div>
               <div class="text-sm font-bold capitalize"></div>
@@ -1605,7 +2049,7 @@
           <div class="h-px self-stretch bg-zinc-300"></div>
           <div class="flex h-[172px] flex-col items-start justify-start self-stretch py-1.5">
             <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
-              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
+              <div class="flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
                   <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
                     <div class="bg-primary-title absolute left-0 top-0 h-5 w-5 rounded-[624.38px]"></div>
@@ -1620,7 +2064,7 @@
               </div>
             </div>
             <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
-              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
+              <div class="flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
                   <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
                     <div class="bg-primary-title absolute left-0 top-0 h-5 w-5 rounded-[624.38px]"></div>
@@ -1635,7 +2079,7 @@
               </div>
             </div>
             <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
-              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
+              <div class="flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
                   <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
                     <div class="bg-primary-title absolute left-0 top-0 h-5 w-5 rounded-[624.38px]"></div>
@@ -1650,7 +2094,7 @@
               </div>
             </div>
             <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
-              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
+              <div class="flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
                   <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
                     <div class="bg-primary-title absolute left-0 top-0 h-5 w-5 rounded-[624.38px]"></div>
@@ -1667,7 +2111,7 @@
           </div>
           <div class="h-px self-stretch bg-zinc-300"></div>
           <button
-            class="bg-primary-title inline-flex items-center justify-center gap-1 overflow-hidden rounded-[32px] px-8 py-[16px] text-white shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)] transition-all duration-200"
+            class="bg-primary-title flex items-center justify-center gap-1 overflow-hidden rounded-[32px] px-8 py-[16px] text-white shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)] transition-all duration-200"
           >
             <span class="flex items-end justify-start gap-1.5">
               <span class="text-base font-bold leading-none">أنضم للدوره</span>
@@ -1685,16 +2129,16 @@
           <div class="flex h-[51px] flex-col items-start justify-start gap-2">
             <div class="self-stretch text-center text-[32px] font-bold text-[#6639c6]">قالوا عنا</div>
           </div>
-          <div class="flex flex-col items-center justify-start gap-6 self-stretch lg:h-[212px]">
-            <div class="[&_section]:min-w-fit [&_section]:max-w-fit inline-flex flex-col flex-wrap items-center justify-center gap-5 self-stretch lg:flex-row">
-              <section class="flex h-[212px] shrink grow basis-0 items-end justify-center rounded-3xl border border-zinc-300 bg-white pb-px">
+          <div class="flex flex-col items-center justify-start gap-6 self-stretch">
+            <div class="[&_section]:min-w-fit [&_section]:max-w-fit flex flex-col flex-wrap items-center justify-center gap-5 self-stretch lg:flex-row">
+              <section class="flex h-[212px] shrink grow basis-0 items-end justify-center rounded-3xl border border-zinc-300 bg-white pb-px shadow-[0px_2px_0px_0px_rgba(212,212,216,1.00)]">
                 <img alt="" class="h-[184px] w-[140px] rounded-bl-[27px]" src="src/assets/images/persons/p3.png" />
-                <div class="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-4 self-stretch pl-4 pr-6 pt-6 pb-[23px]">
-                  <p class="w-[220px] text-right text-sm font-normal leading-normal text-zinc-600">
+                <div class="flex shrink grow basis-0 flex-col items-start justify-start gap-4 self-stretch pl-4 pr-6 pt-6 pb-[23px]">
+                  <p class="w-[210px] text-right text-sm font-normal leading-normal text-zinc-600">
                     مع اطلاعي المعقول عن كل ما يستجد بالتعليم ألا أنه في ظني أكثر ما يطور العملية التعليمية لدى المعلم هي “الممارسة الواعية والموضوعية” للتعليم.
                   </p>
-                  <div class="inline-flex items-center justify-end gap-2.5 self-stretch">
-                    <div class="inline-flex flex-col items-end justify-start">
+                  <div class="flex items-center justify-end gap-2.5 self-stretch">
+                    <div class="flex flex-col items-end justify-start">
                       <h4 class="self-stretch text-right text-base font-bold leading-[17.60px] text-[#311e6a]">تهاني المليليح</h4>
                       <p class="w-[133px] text-right text-sm font-normal leading-tight text-zinc-600">معلمة كيمياء</p>
                       <div class="font-['Font Awesome 5 Pro'] h-3.5 w-[79.07px] text-sm font-black leading-[14px] text-[#ff9500]">
@@ -1717,12 +2161,12 @@
                 class="flex h-[212px] shrink grow basis-0 items-end justify-center rounded-3xl border border-zinc-300 bg-white pb-px shadow-[0px_2px_0px_0px_rgba(212,212,216,1.00)]"
               >
                 <img class="h-[184px] w-[140px] rounded-bl-[27px]" src="src/assets/images/persons/p2.png" alt="" />
-                <div class="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-4 self-stretch pl-4 pr-6 pt-6 pb-[23px]">
-                  <p class="w-[220px] text-right text-sm font-normal leading-normal text-zinc-600">
+                <div class="flex shrink grow basis-0 flex-col items-start justify-start gap-4 self-stretch pl-4 pr-6 pt-6 pb-[23px]">
+                  <p class="w-[210px] text-right text-sm font-normal leading-normal text-zinc-600">
                     مع اطلاعي المعقول عن كل ما يستجد بالتعليم ألا أنه في ظني أكثر ما يطور العملية التعليمية لدى المعلم هي “الممارسة الواعية والموضوعية” للتعليم.
                   </p>
-                  <div class="inline-flex items-center justify-end gap-2.5 self-stretch">
-                    <div class="inline-flex flex-col items-end justify-start">
+                  <div class="flex items-center justify-end gap-2.5 self-stretch">
+                    <div class="flex flex-col items-end justify-start">
                       <h4 class="self-stretch text-right text-base font-bold leading-[17.60px] text-[#311e6a]">سلمى أحمد</h4>
                       <p class="w-[133px] text-right text-sm font-normal leading-tight text-zinc-600">معلمة أنجليزى</p>
                       <div class="font-['Font Awesome 5 Pro'] h-3.5 w-[79.07px] text-sm font-black leading-[14px] text-[#ff9500]">
@@ -1745,12 +2189,12 @@
                 class="flex h-[212px] shrink grow basis-0 items-end justify-center rounded-3xl border border-zinc-300 bg-white pb-px shadow-[0px_2px_0px_0px_rgba(212,212,216,1.00)]"
               >
                 <img alt="" class="h-[184px] w-[140px] rounded-bl-[27px]" src="src/assets/images/persons/p1.png" />
-                <div class="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-4 self-stretch pl-4 pr-6 pt-6 pb-[23px]">
-                  <p class="w-[220px] text-right text-sm font-normal leading-normal text-zinc-600">
+                <div class="flex shrink grow basis-0 flex-col items-start justify-start gap-4 self-stretch pl-4 pr-6 pt-6 pb-[23px]">
+                  <p class="w-[210px] text-right text-sm font-normal leading-normal text-zinc-600">
                     مع اطلاعي المعقول عن كل ما يستجد بالتعليم ألا أنه في ظني أكثر ما يطور العملية التعليمية لدى المعلم هي “الممارسة الواعية والموضوعية” للتعليم.
                   </p>
-                  <div class="inline-flex items-center justify-end gap-2.5 self-stretch">
-                    <div class="inline-flex flex-col items-end justify-start">
+                  <div class="flex items-center justify-end gap-2.5 self-stretch">
+                    <div class="flex flex-col items-end justify-start">
                       <h4 class="self-stretch text-right text-base font-bold leading-[17.60px] text-[#311e6a]">أحمد مراد</h4>
                       <p class="w-[133px] text-right text-sm font-normal leading-tight text-zinc-600">معلم رياضيات</p>
                       <div class="font-['Font Awesome 5 Pro'] h-3.5 w-[79.07px] text-sm font-black leading-[14px] text-[#ff9500]">
@@ -1776,29 +2220,29 @@
       <!-- Testimonials Section End -->
 
       <!-- Aanaab Projects Section Start -->
-      <aside dir="ltr" class="container mx-auto px-2 pb-12">
-        <div class="container relative mx-auto inline-flex items-start justify-center overflow-hidden rounded-[30px] bg-[#a3dee0] lg:h-[382.25px]">
+      <aside dir="ltr" class="container mx-auto pb-12">
+        <div class="container relative flex items-start justify-center overflow-hidden rounded-[30px] bg-[#a3dee0] lg:h-[382.25px]">
           <div class="flex w-full flex-col-reverse items-center justify-between px-6 py-7 pb-0 lg:h-[382.25px] lg:flex-row lg:px-[50px] lg:py-[60px] lg:pb-[60px]">
             <img class="me-20 ml:me-0 -mt-10 lg:mt-8" src="src/assets/images/aanaab-project-s-person.png" alt="" />
-            <div class="mt-6 inline-flex flex-col items-end justify-start gap-4 lg:mt-0 lg:w-[699px]">
+            <div class="mt-6 flex flex-col items-end justify-start gap-4 lg:mt-0">
               <div class="text-right text-3xl font-bold leading-7 text-[#6639c6] lg:w-[542px] lg:text-[42px] lg:leading-[42px]">مشاريع أعناب</div>
-              <div class="self-stretch text-right text-2xl font-bold capitalize text-[#311e6a] lg:text-[32px] lg:leading-[49px]">
+              <div class="self-stretch text-right text-nowrap text-2xl font-bold capitalize text-[#311e6a] lg:text-[32px] lg:leading-[49px]">
                 لتطوير أداء معلمي ومعلمات المملكة العربية السعودية
               </div>
-              <div class="text-right text-sm font-normal text-[#311e6a] lg:w-[695px] lg:text-base">
+              <div class="text-right text-sm font-normal text-[#311e6a] lg:text-base">
                 هو نص وهمي يستخدم في صناعة الطباعة وتصميم المواقع كحشو في التصميمات قبل إدخال النصوص النهائية. يُستخدم لتمثيل النصوص وكيفية تنظيمها داخل التصميمات. النص.
               </div>
-              <div class="inline-flex flex-col items-end justify-end gap-8 lg:flex-row lg:items-center lg:gap-[50px]">
+              <div class="flex flex-col items-end justify-end gap-8 lg:flex-row lg:items-center lg:gap-[50px]">
                 <div class="flex items-center justify-center gap-[11px]">
                   <div class="flex items-center justify-center gap-[11px]">
                     <div class="text-center text-[13px] font-medium text-zinc-600">المركز الوطني للتطوير المهني التعليمي</div>
-                    <div class="inline-flex shrink grow basis-0 flex-col items-center justify-center gap-[14.56px] self-stretch">
+                    <div class="flex shrink grow basis-0 flex-col items-center justify-center gap-[14.56px] self-stretch">
                       <img alt="" class="h-[58.25px] w-[59.71px]" src="src/assets/images/edu-2.svg" />
                     </div>
                   </div>
                   <div class="flex items-center justify-center gap-[18px]">
                     <div class="text-center text-[13px] font-medium text-zinc-600">وزارة التعليم</div>
-                    <div class="inline-flex shrink grow basis-0 flex-col items-center justify-center gap-[17.81px] self-stretch">
+                    <div class="flex shrink grow basis-0 flex-col items-center justify-center gap-[17.81px] self-stretch">
                       <img alt="" class="h-[26.19px] w-[76.45px]" src="src/assets/images/edu-1.svg" />
                     </div>
                   </div>
@@ -1819,6 +2263,7 @@
     </div>
 
     <footer class="border-sep bg-box dark:bg-dark text-meta-light border-t py-6 text-center">
+      <div class="container m-auto"></div>
       <!--  Keep flex row reverse because of the rtl and the order in the mobile screens -->
       <div class="md:container md:m-auto md:flex md:flex-row-reverse md:items-center md:justify-between md:gap-4 md:align-middle">
         <div class="text-meta-light mb-4 flex justify-center gap-4 text-sm font-medium md:mb-0">
@@ -1870,7 +2315,7 @@
         </div>
         <div>
           <nav aria-label="navigation">
-            <ul class="text-meta dark:text-wheat mb-4 mt-16 flex justify-center gap-4 font-medium md:mt-0">
+            <ul class="text-meta dark:text-wheat mt-8 flex justify-center gap-4 font-medium md:mt-0">
               <li><a href="#" class="text-sm">التواصل</a></li>
               <li><a href="#" class="text-sm">الخصوصية و الأحكام</a></li>
               <li><a href="#" class="text-sm">المدونة</a></li>
@@ -1879,7 +2324,7 @@
             <p class="hidden text-sm font-normal dark:text-zinc-400 md:block">جميع الحقوق محفوظة © منصة أعناب</p>
           </nav>
         </div>
-        <div class="mt-16 text-sm md:mt-0">
+        <div class="mt-8 text-sm md:mt-0">
           <img src="src/assets/images/footer_logo.svg" alt="platform" class="m-auto mb-2.5" />
           <p class="text-sm font-normal dark:text-zinc-400 md:hidden">جميع الحقوق محفوظة © منصة أعناب</p>
         </div>
