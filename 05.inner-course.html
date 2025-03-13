@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en" class="light dark:bg-dark" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/output.css" />
+  <script src="src/js/jquery.js"></script>
+  <script src="src/js/scripts.js" defer></script>
+  <title>Aanaab</title>
+</head>
+<body dir="rtl" class="light"
+      data-theme-url="https://d2rboqy70y74sa.cloudfront.net/wp-content/themes/AanaabB2B-v2/src/">
+<!--Header Start-->
+<header class="border-sep dark:bg-dark flex h-20 items-center justify-between border-b px-5">
+  <div class="container flex flex-row items-center justify-between md:m-auto">
+    <div class="flex items-center gap-10">
+      <img src="src/assets/images/logo/logo.svg" alt="logo" class="h-9" />
+
+      <nav class="hidden lg:block">
+        <ul class="flex flex-row items-center gap-5">
+          <li
+            class="bg-Primary bg-primary-title h-12 items-center justify-center gap-1 overflow-hidden rounded-3xl px-8 py-3 shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)]">
+            <span class="text-base font-medium leading-none text-white">الدورات التعليمية</span>
+          </li>
+          <li>
+            <span class="text-text text-base font-medium leading-none dark:text-neutral-50"> الدورات الاستشارية</span>
+          </li>
+          <li>
+            <span class="text-text text-base font-medium leading-none dark:text-neutral-50"> الدورات الرياضية</span>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <section class="hidden xl:block">
+      <div
+        class="bg-Field border-sep flex h-10 w-52 items-center justify-start gap-2.5 rounded-lg border px-4 py-4">
+        <label>
+          <input type="text" class="text-meta h-8 w-36 text-right text-base font-normal" placeholder="البحث" />
+        </label>
+        <div data-svg-wrapper>
+          <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M10.4167 9.87907H9.75834L9.525 9.65407C10.3699 8.67409 10.8343 7.42298 10.8333 6.12907C10.8333 5.05776 10.5157 4.0105 9.92046 3.11973C9.32527 2.22897 8.4793 1.5347 7.48954 1.12472C6.49977 0.714749 5.41066 0.607481 4.35993 0.816485C3.3092 1.02549 2.34404 1.54138 1.58651 2.29891C0.828973 3.05644 0.313085 4.0216 0.104082 5.07233C-0.104921 6.12306 0.00234696 7.21217 0.412322 8.20194C0.822296 9.19171 1.51656 10.0377 2.40733 10.6329C3.2981 11.2281 4.34535 11.5457 5.41667 11.5457C6.75834 11.5457 7.99167 11.0541 8.94167 10.2374L9.16667 10.4707V11.1291L13.3333 15.2874L14.575 14.0457L10.4167 9.87907ZM5.41667 9.87907C3.34167 9.87907 1.66667 8.20407 1.66667 6.12907C1.66667 4.05407 3.34167 2.37907 5.41667 2.37907C7.49167 2.37907 9.16667 4.05407 9.16667 6.12907C9.16667 8.20407 7.49167 9.87907 5.41667 9.87907Z"
+              fill="#52525B"
+            />
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <div class="flex items-center justify-center">
+      <span
+        class="text-text me-10 hidden text-base font-medium leading-none dark:text-neutral-50 lg:block"> المكتبة</span>
+
+      <!-- TODO: Handle Currency Selection -->
+      <!-- Currency Start -->
+      <div class="dropdown me-4 relative hidden lg:block">
+        <div class="text-text text-base font-medium leading-10 dark:text-neutral-50">
+          SAR
+          <!--Currency Change Menu Start-->
+          <div
+            role="menu"
+            id="currency-menu"
+            aria-label="Currency menu"
+            class="dropdown-menu min-w-14 -start-7 absolute z-50 mx-4 mt-0 hidden w-14 max-w-fit rounded-xl border border-black/10 bg-white p-4 shadow-lg"
+          >
+                <span
+                  aria-hidden="true"
+                  class="rotate-225 absolute left-[22px] -top-[17px] h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"
+                ></span>
+            <ul class="text-end">
+              <li aria-label="USD">
+                <!-- USD -->
+                <a class="text-text text-base font-medium leading-10" href="#"> $ </a>
+              </li>
+            </ul>
+          </div>
+          <!--Currency Change Menu End-->
+        </div>
+      </div>
+      <!--      Currency End -->
+      <!--      Language Switch Start -->
+      <div id="locale-switcher-button" class="dropdown me-4 relative hidden lg:block">
+        <img class="inline-block" src="src/assets/images/header/ar.svg" alt="عربي" />
+        <!--Language Switch Menu Start-->
+        <div
+          role="menu"
+          id="locale-switcher"
+          aria-label="Change Language"
+          class="dropdown-menu -start-12 w-18 max-w-18 min-w-18 absolute mx-4 mt-2 hidden rounded-xl border border-black/10 bg-white p-4 shadow-lg"
+        >
+              <span
+                aria-hidden="true"
+                class="rotate-225 absolute left-[22px] -top-[17px] flex h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"
+              ></span>
+
+          <ul>
+            <li class="flex justify-center">
+              <a href="#">
+                <img aria-label="English" src="src/assets/images/header/en.svg" alt="home" />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!--Language Switch Menu End-->
+      </div>
+      <!-- Language Switch End -->
+      <!-- Favorite Heart Start -->
+      <div id="favorite-button" data-svg-wrapper class="ms-2.5 relative hidden lg:block">
+        <svg class="stroke-primary-200 dark:stroke-neutral-50" width="20" height="20" viewBox="0 0 20 20" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M9.29688 16.1371L9.2958 16.1361C7.13522 14.1769 5.40233 12.6016 4.20082 11.1316C3.00755 9.67172 2.41699 8.4076 2.41699 7.08333C2.41699 4.92344 4.09698 3.25 6.25033 3.25C7.4736 3.25 8.66009 3.82334 9.4312 4.7218L10.0003 5.38491L10.5695 4.7218C11.3406 3.82334 12.5271 3.25 13.7503 3.25C15.9037 3.25 17.5837 4.92344 17.5837 7.08333C17.5837 8.4076 16.9931 9.67172 15.7998 11.1316C14.5983 12.6016 12.8654 14.1769 10.7049 16.1361L10.7038 16.1371L10.0003 16.7774L9.29688 16.1371Z"
+            stroke=""
+            stroke-width="1.5"
+          />
+        </svg>
+      </div>
+      <!--      Favorite Heart End -->
+      <!--      Toggle theme -->
+      <div>
+        <img alt="theme" src="src/assets/images/header/moon.svg" class="mx-3 h-6 w-6 cursor-pointer stroke-white"
+             id="theme-toggle" onclick="toggleTheme()" />
+      </div>
+      <!--      Toggle theme -->
+      <!-- Login Button -->
+      <button
+        id="login-button"
+        class="bg-primary-title ms-4 hidden h-10 items-center justify-center gap-2.5 rounded-full px-6 pt-0.5 shadow-[0px_12px_53px_0px_rgba(0,0,0,0.04)] lg:inline"
+      >
+        <span class="text-center text-base font-medium text-white">دخول</span>
+      </button>
+      <!--      Login Button End -->
+
+      <!-- Search Button ICON -->
+      <div class="relative">
+        <!-- Search Icon Button -->
+        <div class="ms-2.5 cursor-pointer xl:hidden" id="search-icon" data-svg-wrapper>
+          <svg class="fill-meta dark:fill-white" width="30" height="30" viewBox="0 0 30 30" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M21.4408 18.8679H20.0858L19.6055 18.4048C21.3445 16.3877 22.3003 13.8125 22.2985 11.1492C22.2985 8.94412 21.6446 6.78853 20.4195 4.95505C19.1944 3.12157 17.4531 1.69255 15.4159 0.848689C13.3786 0.00483079 11.1369 -0.215961 8.97412 0.214234C6.81139 0.64443 4.82478 1.70629 3.26554 3.26554C1.70629 4.82478 0.64443 6.81139 0.214234 8.97412C-0.215961 11.1369 0.00483079 13.3786 0.848689 15.4159C1.69255 17.4531 3.12157 19.1944 4.95505 20.4195C6.78853 21.6446 8.94412 22.2985 11.1492 22.2985C13.9108 22.2985 16.4494 21.2865 18.4048 19.6055L18.8679 20.0858V21.4408L27.4443 30L30 27.4443L21.4408 18.8679ZM11.1492 18.8679C6.87822 18.8679 3.43054 15.4202 3.43054 11.1492C3.43054 6.87822 6.87822 3.43054 11.1492 3.43054C15.4202 3.43054 18.8679 6.87822 18.8679 11.1492C18.8679 15.4202 15.4202 18.8679 11.1492 18.8679Z"
+              fill=""
+            />
+          </svg>
+        </div>
+
+        <!-- Search Input (Initially Hidden) -->
+
+        <!-- Modal Wrapper -->
+        <div id="search-modal"
+             class="invisible fixed inset-0 z-50 flex items-center justify-center bg-black/50 opacity-0 backdrop-blur-sm transition-opacity duration-500">
+          <div class="relative w-full max-w-md rounded-lg bg-white p-4 shadow-lg">
+            <!-- Close Button -->
+            <button id="close-search" class="end-3 absolute top-3 text-gray-500 hover:text-gray-700">✖</button>
+            <!-- Search Input -->
+            <label>
+              هذا تجريبي إلى أن نستقر على طريقة
+
+              <input
+                type="text"
+                id="search-input"
+                placeholder="ابحث هنا..."
+                class="focus:ring-primary-title w-full rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2"
+              />
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- user menu -->
+      <div id="user-menu-button" role="menu" class="dropdown ms-2.5 relative flex items-center justify-center gap-3">
+        <div
+          class="bg-primary-title hidden h-12 w-12 items-center justify-center rounded-full pt-1 text-lg font-bold text-white lg:flex">
+          <!-- Name Initials -->
+          HN
+        </div>
+        <!-- Burger Menu -->
+        <div class="dropdown ms-2.5 lg:hidden" data-svg-wrapper>
+          <div data-svg-wrapper class="relative">
+            <svg class="fill-meta dark:fill-white" width="30" height="30" viewBox="0 0 30 30" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M7.5 24C7.5 24.8284 8.1716 25.5 9 25.5H28.5C29.3284 25.5 30 24.8284 30 24C30 23.1716 29.3284 22.5 28.5 22.5H9C8.1716 22.5 7.5 23.1717 7.5 24ZM28.5 16.5H1.5C0.671602 16.5 0 15.8283 0 15C0 14.1716 0.671602 13.5 1.5 13.5H28.5C29.3284 13.5 30 14.1716 30 15C30 15.8283 29.3284 16.5 28.5 16.5ZM28.5 7.5H15C14.1717 7.5 13.5 6.8284 13.5 6C13.5 5.17166 14.1717 4.5 15 4.5H28.5C29.3284 4.5 30 5.17166 30 6C30 6.8284 29.3284 7.5 28.5 7.5Z"
+              />
+            </svg>
+          </div>
+        </div>
+        <!-- User Menu Start -->
+        <div
+          role="menu"
+          id="user-menu"
+          aria-label="User menu"
+          class="max-w-72 dropdown-menu -end-7 absolute top-14 z-30 mx-4 hidden w-72 rounded-xl border border-black/10 bg-blue-100 p-4 shadow-lg"
+        >
+              <span
+                aria-hidden="true"
+                class="rotate-225 absolute left-[39px] -top-[17px] h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"
+              ></span>
+
+          <div class="flex items-center gap-3 pb-3">
+            <!--    Menu name and e-mail-->
+            <div
+              class="bg-primary-title flex h-12 w-12 items-center justify-center rounded-full pt-1 text-lg font-bold text-white">
+              <!-- Name Initials -->
+              HN
+            </div>
+            <div>
+              <!--      name -->
+              <p class="text-text text-sm font-bold">هبة نبيل</p>
+              <!--        email -->
+              <p class="text-sm text-gray-500">Heba@gmail.com</p>
+            </div>
+          </div>
+          <hr class="my-3 border-t border-t-black/10" />
+          <!-- Menu Items -->
+          <nav
+            class="[&_li]:text-base [&_li]:font-medium [&_li]:cursor-pointer [&_li]:text-meta-light [&_li]:hover:text-primary-title mt-3 space-y-3 text-gray-700">
+            <ul>
+              <!--    Item -->
+              <li aria-label="My Courses">
+                <a href="">دوراتي</a>
+              </li>
+              <!-- End Item -->
+              <!--    Item -->
+              <li aria-label="My Certificates">
+                <a href="">شهاداتي</a>
+              </li>
+              <!-- End Item -->
+              <!--    Item -->
+              <li aria-label="My Wishlist">
+                <a href="">مفضلتي</a>
+              </li>
+              <!-- End Item -->
+              <!--    Item -->
+              <li aria-label="My Cart">
+                <a href="">السلة</a>
+              </li>
+            </ul>
+            <hr class="my-3 border-t border-t-black/10" />
+            <ul>
+              <!-- End Item -->
+              <!--    Item -->
+              <li aria-label="Dashboard">
+                <a href=""> لوحة التحكم </a>
+              </li>
+              <!-- End Item -->
+              <!--    Item -->
+              <li aria-label="Community">
+                <a href="">المجتمع</a>
+              </li>
+            </ul>
+            <hr class="my-3 border-t border-t-black/10" />
+            <ul>
+              <!-- End Item -->
+              <!--    Item -->
+              <li aria-label="Profile">
+                <a href="">الملف الشخصي </a>
+              </li>
+              <!-- End Item -->
+              <!--    Item -->
+              <li aria-label="Notifications">
+                <a href="">الإشعارات</a>
+              </li>
+              <!-- End Item -->
+              <!--    Item -->
+              <li aria-label="Orders">
+                <a href="">سجل المشتريات</a>
+              </li>
+              <li aria-label="Help Center">
+                <a href="">مركز التعليمات</a>
+              </li>
+              <!-- End Item -->
+              <!--    Item -->
+            </ul>
+            <hr class="mt-4 border-t border-t-black/10" />
+            <!-- Logout Start -->
+            <div class="pe-2 mt-4 flex justify-between">
+              <a aria-label="Logout" href="#"
+                 class="flex cursor-pointer items-center font-bold text-red-600 hover:text-red-700"> خروج </a>
+              <img src="src/assets/images/header/logout.svg" alt="logout" />
+            </div>
+          </nav>
+          <!-- Logout END -->
+        </div>
+        <!-- User Menu End -->
+      </div>
+      <!--      user menu End -->
+    </div>
+  </div>
+</header>
+<!--من جامعة دار الحكمةن-->
+<div
+  data-layer="Instructor"
+  class="flex flex-col items-end justify-center gap-5 self-stretch rounded-[20px] bg-white p-8 shadow-[0px_2px_0px_0px_rgba(212,212,216,1.00)] outline-1 outline-offset-[-1px] outline-zinc-300"
+>
+  <div class="flex items-center justify-start gap-5 self-stretch">
+    <div data-layer="􀯶"
+         class="justify-start text-right font-['SF_Pro_Text'] text-xl font-medium leading-[49px] text-zinc-500">􀯶
+    </div>
+    <div data-layer="Frame 1000005803" class="flex flex-1 flex-col items-end justify-start">
+      <div data-layer="Learn user centered"
+           class="w-96 justify-center text-right font-['Ping_Ar'] text-lg font-bold text-violet-700">من جامعة دار الحكمة
+      </div>
+      <div data-layer="Create custom landin"
+           class="text-violet-950 justify-start self-stretch text-right font-['Ping_Ar'] text-sm font-medium leading-loose">
+        هي جامعة غير ربحية تسعى منذ تأسيسها في 1999م إلى أن تكون مؤسسة رائدة للتعليم العالي للمرأة في المملكة العربية
+        السعودية. عرفت كمجتمع تعليمي يعزز التميز والتفكير المستقل
+        والإبداعي، وتطمح بأن يكون خريجوها قادرون على إحداث تغيرات إيجابية لتحسين الأشخاص والأسرة والمجتمع. وهي معتمدة من
+        المركز الوطني للتقويم والاعتماد الأكاديمي من ...
+      </div>
+    </div>
+    <div
+      data-layer="asset-v1_FutureX+BS_CS+2021+type@asset+block@nelc"
+      data-property-1="Variant13"
+      class="AssetV1FuturexBsCs2021TypeAssetBlockNelc flex h-20 w-20 flex-col items-center justify-center gap-2.5"
+    ></div>
+  </div>
+  <div data-layer="Rectangle 39231" class="Rectangle39231 h-px self-stretch bg-zinc-300"></div>
+  <div data-layer="Frame 1000005830" class="Frame1000005830 flex items-center justify-start gap-5 self-stretch">
+    <img data-layer="Oval" class="Oval h-20 w-20 outline outline-4 outline-white" src="https://placehold.co/80x80" />
+    <div data-layer="􀯶"
+         class="justify-start text-right font-['SF_Pro_Text'] text-xl font-medium leading-[49px] text-zinc-500">􀯶
+    </div>
+    <div data-layer="Frame 1000005803" class="Frame1000005803 flex flex-1 flex-col items-end justify-start">
+      <div data-layer="Learn user centered"
+           class="LearnUserCentered w-96 justify-center text-right font-['Ping_Ar'] text-lg font-bold text-violet-700">
+        تقديم د.سعيد الشلوي
+      </div>
+      <div
+        data-layer="Create custom landin"
+        class="CreateCustomLandin text-violet-950 justify-start self-stretch text-right font-['Ping_Ar'] text-sm font-medium leading-loose"
+      >
+        مشرف تربوي حاصل على الماجستير في تقنيات التعليم، شارك في العديد من ورش العمل المهتمة بالتصميم التعليمي كما صمم
+        وقدم ما يتجاوز 800 درس في مادة الرياضيات. حصل الأستاذ
+        سعيد على المركز الأول في جائزة التميز للتعليم الإلكتروني بإدارة تعليم الرياض، كما يملك قناةً على اليوتيوب لشرح
+        دروس الرياضيات.
+      </div>
+    </div>
+  </div>
+</div>
+<!--نهاية من جامعة دار الحكمة-->
+<div class="flex flex-col gap-4">
+  <!-- Accordion Item  -->
+  <div
+    class="anb-accordion home border-[E9E8E8] flex cursor-pointer flex-col rounded-2xl border bg-white p-6 transition-all duration-300">
+    <div class="anb-accordion-title flex items-center justify-between gap-8">
+      <h3
+        class="flex-1 text-base font-bold leading-normal text-[#333745] transition-all duration-300 lg:text-xl lg:leading-normal">
+        هل هذه الدورة متاحة ضمن دورات المدارس؟</h3>
+      <span class="icon">
+            <img src="assets/images/chevronbottom.svg" width="18" height="11" alt="plus" />
+            <img src="assets/images/chevronbottom.svg" class="hidden rotate-180" width="18" height="11" alt="minus" />
+          </span>
+    </div>
+    <p class="anb-accordion-content hidden pt-3 text-sm leading-[180%] text-[#838795] lg:text-base lg:leading-[180%]">
+      تستطيع التعلّم في أي وقت تريده وفي أي مكان ومن أي جهاز إلكتروني
+    </p>
+  </div>
+
+  <!-- Accordion Item  -->
+  <div
+    class="anb-accordion home border-[E9E8E8] flex flex cursor-pointer flex-col flex-col items-start justify-start gap-2.5 self-stretch rounded-2xl rounded-[10px] border bg-white bg-white p-6 py-5 outline-1 outline-offset-[-1px] outline-zinc-300 transition-all duration-300"
+  >
+    <div class="anb-accordion-title flex items-center justify-between gap-8">
+      <h3
+        class="absolute left-0 top-0 w-[676px] flex-1 justify-start text-right font-['Ping_AR'] text-base font-bold leading-loose text-zinc-600 transition-all duration-300 lg:text-xl lg:leading-normal"
+      >
+        هل هذه الدورة متاحة ضمن دورات المدارس؟
+      </h3>
+      <span class="icon">
+            <img src="assets/images/chevronbottom.svg" width="18" height="11" alt="plus" />
+            <img src="assets/images/chevronbottom.svg" class="hidden rotate-180" width="18" height="11" alt="minus" />
+          </span>
+    </div>
+    <p class="anb-accordion-content hidden pt-3 text-sm leading-[180%] text-[#838795] lg:text-base lg:leading-[180%]">
+      إجابة السؤال</p>
+  </div>
+  <!-- Accordion Item END -->
+
+  <!-- Accordion Item START -->
+
+  <!-- Accordion Item END -->
+</div>
+
+<div class="dark:bg-dark">
+  <!--    Courses section start-->
+  <h2 data-layer="دورات ذات صلة" class="flex justify-center py-16">
+    <span class="text-violet-950 me-2 text-2xl font-bold leading-tight">دورات ذات صلة </span>
+  </h2>
+
+  <article
+    class="xs:grid-cols-2 xs:gap-4 container m-auto grid grid-cols-1 gap-6 px-10 sm:gap-8 md:px-0 lg:grid-cols-3 lg:gap-6 2xl:grid-cols-4">
+    <!--      Course Card Start -->
+    <div class="course-card w-auto">
+      <div class="dark:bg-box-2 flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-lg">
+        <figure class="relative h-0 overflow-hidden pb-[56.25%]">
+          <!-- Course Image -->
+          <img
+            alt=""
+            class="size-full absolute inset-0 object-cover transition duration-700 ease-out hover:scale-105"
+            src="https://aanaab-uploads-v1.s3.amazonaws.com/courses/thumbnail/533/%D8%AB%D9%85%D9%86%D9%8A%D9%84-%D8%A8%D8%B1%D8%A7%D9%85%D8%AC-%D8%B9%D9%84%D8%A7%D8%AC%D9%8A%D8%A9.jpg"
+          />
+          <div class="absolute top-[18px] flex h-10 w-full items-center justify-between px-3">
+            <div class="relative h-10 items-center">
+              <div
+                class="backdrop-blur-blur w flex h-10 items-center justify-items-start gap-1 rounded-full bg-white px-3">
+                <img alt="" class="h-6"
+                     src="https://d1yhje8j0hmqsr.cloudfront.net/2024/02/118616244_3158001587570928_9132823863992071769_n.png" />
+                <span class="text-text text-right text-xs font-bold leading-normal"> شهادة كامبردج</span>
+              </div>
+            </div>
+            <div
+              class="relative flex h-10 w-10 items-center justify-center rounded-[100px] bg-black/30 backdrop-blur-[10px]">
+              <div data-svg-wrapper class="relative">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.50489 16.9999L9.50381 16.9989C7.34323 15.0397 5.61034 13.4644 4.40882 11.9944C3.21555 10.5345 2.625 9.27039 2.625 7.94613C2.625 5.78623 4.30499 4.11279 6.45833 4.11279C7.68161 4.11279 8.86809 4.68614 9.63921 5.58459L10.2083 6.2477L10.7775 5.58459C11.5486 4.68614 12.7351 4.11279 13.9583 4.11279C16.1117 4.11279 17.7917 5.78623 17.7917 7.94613C17.7917 9.27039 17.2011 10.5345 16.0078 11.9944C14.8063 13.4644 13.0734 15.0397 10.9129 16.9989L10.9118 16.9999L10.2083 17.6402L9.50489 16.9999Z"
+                    stroke="white"
+                    stroke-width="1.5"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </figure>
+        <div class="flex h-60 flex-col items-start justify-start gap-2.5 px-5 pt-5 pb-4">
+          <h3 class="text-text dark:text-text-invert h-14 self-stretch text-center text-xl font-bold leading-7">تنمية
+            مهارات الإتيكيت الوظيفي في المؤسسات التعليمية</h3>
+          <div class="self-stretch text-center">
+            <span
+              class="text-primary-title dark:text-ِِprimary-title-2 text-sm font-bold leading-normal">مستوى متقدم</span>
+            <span
+              class="text-primary-title dark:text-ِِprimary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
+            <span class="text-green dark:text-green-2 text-sm font-bold leading-normal">بعد 4 أيام</span>
+          </div>
+
+          <div class="text-meta dark:text-text-invert h-12 w-full text-right text-sm font-normal leading-normal">
+            هو نص وهمي يستخدم في صناعة الطباعة وتصميم المواقع كحشو في التصميمات قبل إدخال النصوص
+          </div>
+
+          <div class="flex h-12 flex-col items-start justify-start gap-4 self-stretch pt-2.5">
+            <div class="border-sep h-px w-full border"></div>
+            <div class="flex h-6 w-full items-center justify-between">
+              <div class="flex h-5 shrink grow basis-0 items-center justify-start gap-1">
+                <!-- Lecturer image -->
+                <img
+                  alt=""
+                  class="size-6 inline-block rounded-full bg-[#d9d9d9] ring-2 ring-white"
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+                />
+                <h6 class="text-meta mx-2 text-right text-xs font-medium leading-tight">
+                  <!-- Lecturer name -->
+                  عبد الرحمن حافظ
+                </h6>
+              </div>
+              <div class="flex items-center justify-end">
+                <div class="flex -space-x-2 overflow-hidden">
+                  <!-- Counts -->
+                  <span
+                    class="size-7 z-50 inline-block rounded-full border-4 border-[#cfcfcf] bg-[#d9d9d9] pt-1 text-[10px]"> 3K+ </span>
+                  <!-- Students images -->
+                  <img
+                    class="size-7 z-40 inline-block rounded-full border-2 border-white ring-0 ring-white"
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+                    alt=""
+                  />
+                  <img
+                    class="size-7 inline-block rounded-full border-2 border-white ring-0 ring-white"
+                    src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <!-- Price -->
+              <div class="flex h-6 shrink grow basis-0 items-end justify-end gap-0.5">
+                <div class="text-primary-title dark:text-ِِprimary-title-2">
+                  <!-- Currency -->
+                  <span class="text-meta text-xs font-medium">ر.س</span>
+                  <span dir="ltr" class="text-primary-title text-xl font-bold">
+                        <!-- Riyals / Main Currency -->
+                        125
+                        <span class="text-sm font-medium">
+                          <!-- Halala / Change -->
+                          .65
+                        </span>
+                      </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--      Course Card End -->
+    <!--      Course Card Start -->
+    <div class="course-card w-auto">
+      <div class="dark:bg-box-2 flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-lg">
+        <figure class="relative h-0 overflow-hidden pb-[56.25%]">
+          <!-- Course Image -->
+          <img
+            alt=""
+            class="size-full absolute inset-0 object-cover transition duration-700 ease-out hover:scale-105"
+            src="https://d1yhje8j0hmqsr.cloudfront.net/2025/02/course-cover-D8AAD8AFD8B1D98AD8B3-D8A7D984D8B1D98AD8A7D8B6D98AD8A7D8AA-D8A8D981D986-D988D8A5D8A8D8AFD8A7D8B9.jpg"
+          />
+          <div class="absolute top-[18px] flex h-10 w-full items-center justify-between px-3">
+            <div class="relative h-10 items-center">
+              <div
+                class="backdrop-blur-blur w flex h-10 items-center justify-items-start gap-1 rounded-full bg-white px-3">
+                <img alt="" class="h-6" src="src/assets/images/edu-eg-4.png" />
+                <span class="text-text text-right text-xs font-bold leading-normal"> شهادة كامبردج المعتدة</span>
+              </div>
+            </div>
+            <div
+              class="relative flex h-10 w-10 items-center justify-center rounded-[100px] bg-red-100/80 backdrop-blur-[10px]">
+              <div data-svg-wrapper class="relative">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="white" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.50489 16.9999L9.50381 16.9989C7.34323 15.0397 5.61034 13.4644 4.40882 11.9944C3.21555 10.5345 2.625 9.27039 2.625 7.94613C2.625 5.78623 4.30499 4.11279 6.45833 4.11279C7.68161 4.11279 8.86809 4.68614 9.63921 5.58459L10.2083 6.2477L10.7775 5.58459C11.5486 4.68614 12.7351 4.11279 13.9583 4.11279C16.1117 4.11279 17.7917 5.78623 17.7917 7.94613C17.7917 9.27039 17.2011 10.5345 16.0078 11.9944C14.8063 13.4644 13.0734 15.0397 10.9129 16.9989L10.9118 16.9999L10.2083 17.6402L9.50489 16.9999Z"
+                    stroke="white"
+                    stroke-width="1.5"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </figure>
+        <div class="flex h-60 flex-col items-start justify-start gap-2.5 px-5 pt-5 pb-4">
+          <h3 class="text-text dark:text-text-invert h-14 self-stretch text-center text-xl font-bold leading-7">تنمية
+            ندوة: مهارات ما قبل اللغة</h3>
+          <div class="self-stretch text-center">
+            <span
+              class="text-primary-title dark:text-ِِprimary-title-2 text-sm font-bold leading-normal">مستوى متقدم</span>
+            <span
+              class="text-primary-title dark:text-ِِprimary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
+            <span class="text-green dark:text-green-2 text-sm font-bold leading-normal">بعد 4 أيام</span>
+          </div>
+
+          <div class="text-meta dark:text-text-invert h-12 w-full text-right text-sm font-normal leading-normal">
+            هو نص وهمي يستخدم في صناعة الطباعة وتصميم المواقع كحشو في التصميمات قبل إدخال النصوص
+          </div>
+
+          <div class="flex h-12 flex-col items-start justify-start gap-4 self-stretch pt-2.5">
+            <div class="border-sep h-px w-full border"></div>
+            <div class="flex h-6 w-full items-center justify-between">
+              <div class="flex h-5 shrink grow basis-0 items-center justify-start gap-1">
+                <!-- Lecturer image -->
+                <img
+                  alt=""
+                  class="size-6 inline-block rounded-full bg-[#d9d9d9] ring-2 ring-white"
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+                />
+                <h6 class="text-meta mx-2 text-right text-xs font-medium leading-tight">
+                  <!-- Lecturer name -->
+                  عبد الرحمن حافظ
+                </h6>
+              </div>
+              <div class="flex items-center justify-end">
+                <div class="flex -space-x-2 overflow-hidden">
+                  <!-- Counts -->
+                  <span
+                    class="size-7 z-50 inline-block rounded-full border-4 border-[#cfcfcf] bg-[#d9d9d9] pt-1 text-[10px]"> 3K+ </span>
+                  <!-- Students images -->
+                  <img
+                    class="size-7 z-40 inline-block rounded-full border-2 border-white ring-0 ring-white"
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+                    alt=""
+                  />
+                  <img
+                    class="size-7 inline-block rounded-full border-2 border-white ring-0 ring-white"
+                    src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <!-- Price -->
+              <div class="flex h-6 shrink grow basis-0 items-end justify-end gap-0.5">
+                <div class="text-text dark:text-ِِprimary-title-2">
+                  <!-- Currency -->
+                  <span dir="ltr" class="text-primary-title text-sm font-bold"> مجانية </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--      Course Card End -->
+    <!--      Course Card Start -->
+    <div class="course-card w-auto">
+      <div class="dark:bg-box-2 flex h-full flex-col overflow-hidden rounded-2xl bg-white shadow-lg">
+        <figure class="relative h-0 overflow-hidden pb-[56.25%]">
+          <!-- Course Image -->
+          <img
+            alt=""
+            class="size-full absolute inset-0 object-cover transition duration-700 ease-out hover:scale-105"
+            src="https://d1yhje8j0hmqsr.cloudfront.net/2024/12/D986D8B3D8AED8A9-D985D986-IMG_7540.jpg"
+          />
+          <div class="absolute top-[18px] flex h-10 w-full items-center justify-between px-3">
+            <div class="relative h-10 items-center">
+              <div
+                class="backdrop-blur-blur hidden h-10 items-center justify-items-start gap-1 rounded-full bg-white px-3">
+                <img alt="" class="h-6" src="src/assets/images/edu-eg-4.png" />
+                <span class="text-text text-right text-xs font-bold leading-normal"> شهادة كامبردج المعتدة</span>
+              </div>
+            </div>
+            <div
+              class="relative flex h-10 w-10 items-center justify-center rounded-[100px] bg-red-100/80 backdrop-blur-[10px]">
+              <div data-svg-wrapper class="relative">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="white" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.50489 16.9999L9.50381 16.9989C7.34323 15.0397 5.61034 13.4644 4.40882 11.9944C3.21555 10.5345 2.625 9.27039 2.625 7.94613C2.625 5.78623 4.30499 4.11279 6.45833 4.11279C7.68161 4.11279 8.86809 4.68614 9.63921 5.58459L10.2083 6.2477L10.7775 5.58459C11.5486 4.68614 12.7351 4.11279 13.9583 4.11279C16.1117 4.11279 17.7917 5.78623 17.7917 7.94613C17.7917 9.27039 17.2011 10.5345 16.0078 11.9944C14.8063 13.4644 13.0734 15.0397 10.9129 16.9989L10.9118 16.9999L10.2083 17.6402L9.50489 16.9999Z"
+                    stroke="white"
+                    stroke-width="1.5"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </figure>
+        <div class="flex h-60 flex-col items-start justify-start gap-2.5 px-5 pt-5 pb-4">
+          <h3 class="text-text dark:text-text-invert h-14 self-stretch text-center text-xl font-bold leading-7">تنمية
+            ندوة: مهارات ما قبل اللغة</h3>
+          <div class="self-stretch text-center">
+            <span
+              class="text-primary-title dark:text-ِِprimary-title-2 text-sm font-bold leading-normal">مستوى متقدم</span>
+            <span
+              class="text-primary-title dark:text-ِِprimary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
+            <span class="text-green dark:text-green-2 text-sm font-bold leading-normal">بعد 4 أيام</span>
+          </div>
+
+          <div class="text-meta dark:text-text-invert h-12 w-full text-right text-sm font-normal leading-normal">
+            هو نص وهمي يستخدم في صناعة الطباعة وتصميم المواقع كحشو في التصميمات قبل إدخال النصوص
+          </div>
+
+          <div class="flex h-12 flex-col items-start justify-start gap-4 self-stretch pt-2.5">
+            <div class="border-sep h-px w-full border"></div>
+            <div class="flex h-6 w-full items-center justify-between">
+              <div class="flex h-5 shrink grow basis-0 items-center justify-start gap-1">
+                <!-- Lecturer image -->
+                <img
+                  alt=""
+                  class="size-6 inline-block rounded-full bg-[#d9d9d9] ring-2 ring-white"
+                  src="https://d1yhje8j0hmqsr.cloudfront.net/2024/12/D986D8B3D8AED8A9-D985D986-IMG_7540.jpg"
+                />
+                <h6 class="text-meta mx-2 text-right text-xs font-medium leading-tight">
+                  <!-- Lecturer name -->
+                  عبد الرحمن حافظ
+                </h6>
+              </div>
+              <div class="flex items-center justify-end">
+                <div class="flex -space-x-2 overflow-hidden">
+                  <!-- Counts -->
+                  <span
+                    class="size-7 z-50 inline-block rounded-full border-4 border-[#cfcfcf] bg-[#d9d9d9] pt-1 text-[10px]"> 3K+ </span>
+                  <!-- Students images -->
+                  <img
+                    class="size-7 z-40 inline-block rounded-full border-2 border-white ring-0 ring-white"
+                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
+                    alt=""
+                  />
+                  <img
+                    class="size-7 inline-block rounded-full border-2 border-white ring-0 ring-white"
+                    src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <!-- Price -->
+              <div class="flex h-6 shrink grow basis-0 items-end justify-end gap-0.5">
+                <div class="text-text dark:text-ِِprimary-title-2 flex flex-col">
+                  <span dir="ltr" class="text-primary-title text-sm font-bold"> مجانية </span>
+                  <span class="text-primary-title text-[9px] font-bold">بشهادة مدفوعة</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--      Course Card End -->
+
+    <!--      Course Card-->
+    <!--      Course Card End -->
+  </article>
+</div>
+
+<footer class="border-sep bg-box dark:bg-dark text-meta-light border-t py-6 text-center">
+  <!--  Keep flex row reverse because of the rtl and the order in the mobile screens -->
+  <div
+    class="md:container md:m-auto md:flex md:flex-row-reverse md:items-center md:justify-between md:gap-4 md:align-middle">
+    <div class="text-meta-light mb-4 flex justify-center gap-4 text-sm font-medium md:mb-0">
+      <a href="#" aria-label="X">
+        <svg class="fill-meta-light dark:fill-meta-light-2" width="24" height="24" viewBox="0 0 24 24" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_1490_26686)">
+            <path
+              d="M14.2339 10.1609L22.9764 -0.00146484H20.9047L13.3137 8.82237L7.2507 -0.00146484H0.257812L9.42618 13.3417L0.257812 23.9985H2.3296L10.3459 14.6803L16.7489 23.9985H23.7418L14.2334 10.1609H14.2339ZM11.3963 13.4593L10.4674 12.1306L3.0761 1.55814H6.25825L12.2231 10.0905L13.1521 11.4191L20.9057 22.5098H17.7235L11.3963 13.4598V13.4593Z"
+              fill="#A1A1AA"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_1490_26686">
+              <rect width="24" height="24" fill="white" transform="translate(0 -0.00146484)" />
+            </clipPath>
+          </defs>
+        </svg>
+      </a>
+      <a href="#" aria-label="LinkedIn">
+        <svg class="fill:meta-light dark:fill:meta-light-2" width="24" height="25" viewBox="0 0 24 25" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_1490_29295)">
+            <path
+              d="M22.2234 0.975098H1.77187C0.792187 0.975098 0 1.74854 0 2.70479V23.2407C0 24.197 0.792187 24.9751 1.77187 24.9751H22.2234C23.2031 24.9751 24 24.197 24 23.2454V2.70479C24 1.74854 23.2031 0.975098 22.2234 0.975098ZM7.12031 21.4267H3.55781V9.97041H7.12031V21.4267ZM5.33906 8.40947C4.19531 8.40947 3.27188 7.48603 3.27188 6.34697C3.27188 5.20791 4.19531 4.28447 5.33906 4.28447C6.47813 4.28447 7.40156 5.20791 7.40156 6.34697C7.40156 7.48135 6.47813 8.40947 5.33906 8.40947ZM20.4516 21.4267H16.8937V15.8579C16.8937 14.5313 16.8703 12.8204 15.0422 12.8204C13.1906 12.8204 12.9094 14.2688 12.9094 15.7642V21.4267H9.35625V9.97041H12.7687V11.536H12.8156C13.2891 10.636 14.4516 9.68447 16.1813 9.68447C19.7859 9.68447 20.4516 12.0563 20.4516 15.1407V21.4267Z"
+              fill="#A1A1AA"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_1490_29295">
+              <rect width="24" height="24" fill="white" transform="translate(0 0.975098)" />
+            </clipPath>
+          </defs>
+        </svg>
+      </a>
+      <a href="#" aria-label="Facebook">
+        <svg class="fill-meta-light dark:fill-meta-light-2" width="24" height="24" viewBox="0 0 24 24" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_1490_26692)">
+            <path
+              d="M24 11.9985C24 5.37111 18.6274 -0.00146484 12 -0.00146484C5.37258 -0.00146484 0 5.37111 0 11.9985C0 17.988 4.3882 22.9525 10.125 23.8528V15.4673H7.07812V11.9985H10.125V9.35479C10.125 6.34729 11.9166 4.68604 14.6576 4.68604C15.9701 4.68604 17.3438 4.92041 17.3438 4.92041V7.87354H15.8306C14.34 7.87354 13.875 8.79861 13.875 9.74854V11.9985H17.2031L16.6711 15.4673H13.875V23.8528C19.6118 22.9525 24 17.988 24 11.9985Z"
+              fill="#A1A1AA"
+            />
+          </g>
+          <defs>
+            <clipPath id="clip0_1490_26692">
+              <rect width="24" height="24" fill="white" transform="translate(0 -0.00146484)" />
+            </clipPath>
+          </defs>
+        </svg>
+      </a>
+    </div>
+    <div>
+      <nav aria-label="navigation">
+        <ul class="text-meta dark:text-wheat mb-4 mt-16 flex justify-center gap-4 font-medium md:mt-0">
+          <li><a href="#" class="text-sm">التواصل</a></li>
+          <li><a href="#" class="text-sm">الخصوصية و الأحكام</a></li>
+          <li><a href="#" class="text-sm">المدونة</a></li>
+          <li><a href="#" class="text-sm">من نحن</a></li>
+        </ul>
+        <p class="hidden text-sm font-normal dark:text-zinc-400 md:block">جميع الحقوق محفوظة © منصة أعناب</p>
+      </nav>
+    </div>
+    <div class="mt-16 text-sm md:mt-0">
+      <img src="src/assets/images/footer_logo.svg" alt="platform" class="m-auto mb-2.5" />
+      <p class="text-sm font-normal dark:text-zinc-400 md:hidden">جميع الحقوق محفوظة © منصة أعناب</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
