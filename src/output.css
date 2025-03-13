@@ -918,6 +918,15 @@
   .w-\[182\.66px\] {
     width: 182.66px;
   }
+  .w-\[210px\] {
+    width: 210px;
+  }
+  .w-\[212px\] {
+    width: 212px;
+  }
+  .w-\[215px\] {
+    width: 215px;
+  }
   .w-\[220px\] {
     width: 220px;
   }
@@ -974,6 +983,9 @@
   }
   .max-w-72 {
     max-width: calc(var(--spacing) * 72);
+  }
+  .max-w-\[220px\] {
+    max-width: 220px;
   }
   .max-w-fit {
     max-width: fit-content;
@@ -1595,6 +1607,9 @@
   }
   .py-\[60px\] {
     padding-block: 60px;
+  }
+  .ps-4 {
+    padding-inline-start: calc(var(--spacing) * 4);
   }
   .ps-5 {
     padding-inline-start: calc(var(--spacing) * 5);
