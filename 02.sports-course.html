@@ -10,33 +10,31 @@
     <title>Aanaab</title>
   </head>
   <body>
-    <!--Header Start-->
-    <header class="border-sep dark:bg-dark flex h-20 items-center justify-between border-b px-5">
-      <div class="container flex flex-row items-center justify-between lg:m-auto">
-        <div class="flex items-center gap-10">
-          <img src="src/assets/images/logo/logo.svg" alt="logo" class="h-9" />
+  <!--Header Start-->
+  <header class="border-sep dark:bg-dark flex h-20 items-center justify-between border-b px-5">
+    <div class="container flex flex-row items-center justify-between md:m-auto">
+      <div class="flex items-center gap-10">
+        <img src="src/assets/images/logo/logo.svg" alt="logo" class="h-9" />
 
-          <nav class="hidden lg:block">
-            <ul class="flex flex-row items-center gap-5">
-              <li class="bg-Primary bg-primary-title h-12 items-center justify-center gap-1 overflow-hidden rounded-3xl px-8 py-3 shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)]">
-                <span class="text-base font-medium leading-none text-white">الدورات التعليمية</span>
-              </li>
-              <li>
-                <span class="text-text text-base font-medium leading-none dark:text-neutral-50"> الدورات الاستشارية</span>
-              </li>
-              <li>
-                <span class="text-text text-base font-medium leading-none dark:text-neutral-50"> الدورات الرياضية</span>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <nav class="hidden lg:block">
+          <ul class="relative flex flex-row items-center gap-5">
+            <li class="btn-active">
+              <span class="text-base font-medium leading-none text-white">الدورات التعليمية</span>
+            </li>
+            <li>
+              <span class="text-text text-clickable text-base font-medium leading-none dark:text-neutral-50"> الاستشارية</span>
+            </li>
+            <li>
+              <span class="text-text text-clickable text-base font-medium leading-none dark:text-neutral-50"> الرياضية</span>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-        <section class="hidden xl:block">
-          <div class="bg-Field border-sep inline-flex h-10 w-52 items-center justify-start gap-2.5 rounded-lg border px-4 py-4">
-            <label>
-              <input type="text" class="text-meta h-8 w-36 text-right text-base font-normal" placeholder="البحث" />
-            </label>
-            <div data-svg-wrapper>
+      <section class="hidden xl:block">
+        <div class="border-sep flex h-10 w-52 items-center justify-start gap-2.5 rounded-lg border bg-[#f2f2f3] px-4 py-4">
+          <label class="relative">
+            <div data-svg-wrapper class="absolute top-2">
               <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M10.4167 9.87907H9.75834L9.525 9.65407C10.3699 8.67409 10.8343 7.42298 10.8333 6.12907C10.8333 5.05776 10.5157 4.0105 9.92046 3.11973C9.32527 2.22897 8.4793 1.5347 7.48954 1.12472C6.49977 0.714749 5.41066 0.607481 4.35993 0.816485C3.3092 1.02549 2.34404 1.54138 1.58651 2.29891C0.828973 3.05644 0.313085 4.0216 0.104082 5.07233C-0.104921 6.12306 0.00234696 7.21217 0.412322 8.20194C0.822296 9.19171 1.51656 10.0377 2.40733 10.6329C3.2981 11.2281 4.34535 11.5457 5.41667 11.5457C6.75834 11.5457 7.99167 11.0541 8.94167 10.2374L9.16667 10.4707V11.1291L13.3333 15.2874L14.575 14.0457L10.4167 9.87907ZM5.41667 9.87907C3.34167 9.87907 1.66667 8.20407 1.66667 6.12907C1.66667 4.05407 3.34167 2.37907 5.41667 2.37907C7.49167 2.37907 9.16667 4.05407 9.16667 6.12907C9.16667 8.20407 7.49167 9.87907 5.41667 9.87907Z"
@@ -44,242 +42,235 @@
                 />
               </svg>
             </div>
-          </div>
-        </section>
+            <input type="text" class="ps-6 text-meta h-8 w-36 text-right text-base font-normal" placeholder="البحث" />
+          </label>
+        </div>
+      </section>
 
-        <div class="flex items-center justify-center">
-          <span class="text-text me-10 hidden text-base font-medium leading-none dark:text-neutral-50 lg:block"> المكتبة</span>
+      <div class="flex items-center justify-center">
+        <span class="text-clickable text-text me-10 hidden text-base font-medium leading-none dark:text-neutral-50 lg:block"> المكتبة</span>
 
-          <!-- TODO: Handle Currency Selection -->
-          <!-- Currency Start -->
-          <div class="dropdown me-4 relative hidden lg:block">
-            <div class="text-text text-base font-medium leading-10 dark:text-neutral-50">
-              SAR
-              <!--Currency Change Menu Start-->
-              <div
-                role="menu"
-                id="currency-menu"
-                aria-label="Currency menu"
-                class="dropdown-menu min-w-14 -start-7 absolute mx-4 mt-0 hidden w-14 max-w-fit rounded-xl border border-black/10 bg-white p-4 shadow-lg"
-              >
+        <!-- TODO: Handle Currency Selection -->
+        <!-- Currency Start -->
+        <div class="dropdown me-4 relative hidden lg:block">
+          <div class="text-text text-base font-medium leading-10 dark:text-neutral-50">
+            SAR
+            <!--Currency Change Menu Start-->
+            <div
+              role="menu"
+              id="currency-menu"
+              aria-label="Currency menu"
+              class="dropdown-menu min-w-14 -start-7 absolute z-50 mx-4 mt-0 hidden w-14 max-w-fit rounded-xl border border-black/10 bg-white p-2 shadow-lg"
+            >
                 <span
                   aria-hidden="true"
                   class="rotate-225 absolute left-[22px] -top-[17px] h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"
                 ></span>
-                <ul class="text-end">
-                  <li aria-label="USD">
-                    <!-- USD -->
-                    <a class="text-base font-medium leading-10 text-[#311e6a]" href="#"> $ </a>
-                  </li>
-                </ul>
-              </div>
-              <!--Currency Change Menu End-->
+              <ul class="text-center">
+                <li aria-label="USD" class="cursor-pointer">
+                  <!-- USD -->
+                  <a class="text-text ps-5 text-base font-medium leading-10" href="#"> $ </a>
+                </li>
+              </ul>
             </div>
+            <!--Currency Change Menu End-->
           </div>
-          <!--      Currency End -->
-          <!--      Language Switch Start -->
-          <div id="locale-switcher-button" class="dropdown me-4 relative hidden lg:block">
-            <img class="inline-block" src="src/assets/images/header/ar.svg" alt="عربي" />
-            <!--Language Switch Menu Start-->
-            <div
-              role="menu"
-              id="locale-switcher"
-              aria-label="Change Language"
-              class="dropdown-menu -start-12 w-18 max-w-18 min-w-18 absolute mx-4 mt-2 hidden rounded-xl border border-black/10 bg-white p-4 shadow-lg"
-            >
+        </div>
+        <!--      Currency End -->
+        <!--      Language Switch Start -->
+        <div id="locale-switcher-button" class="dropdown me-4 relative hidden lg:block">
+          <img class="inline-block" src="src/assets/images/header/ar.svg" alt="عربي" />
+          <!--Language Switch Menu Start-->
+          <div
+            role="menu"
+            id="locale-switcher"
+            aria-label="Change Language"
+            class="dropdown-menu -start-12 w-18 max-w-18 min-w-18 absolute mx-4 mt-2 hidden rounded-xl border border-black/10 bg-white p-4 shadow-lg"
+          >
               <span
                 aria-hidden="true"
                 class="rotate-225 absolute left-[22px] -top-[17px] flex h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"
               ></span>
 
-              <ul>
-                <li class="flex justify-center">
-                  <a href="#">
-                    <img aria-label="English" src="src/assets/images/header/en.svg" alt="home" />
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <!--Language Switch Menu End-->
+            <ul>
+              <li class="flex justify-center">
+                <a href="#">
+                  <img aria-label="English" src="src/assets/images/header/en.svg" alt="home" />
+                </a>
+              </li>
+            </ul>
           </div>
-          <!-- Language Switch End -->
-          <!-- Favorite Heart Start -->
-          <div id="favorite-button" data-svg-wrapper class="ms-2.5 relative hidden lg:block">
-            <svg class="stroke-primary-200 dark:stroke-neutral-50" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!--Language Switch Menu End-->
+        </div>
+        <!-- Language Switch End -->
+        <!-- Favorite Heart Start -->
+        <img alt="theme" src="src/assets/images/header/heart.svg" class="ms-2.5 relative mx-3 hidden h-6 w-6 cursor-pointer dark:stroke-white lg:block" />
+        <!--      Favorite Heart End -->
+        <!--      Toggle theme -->
+        <div>
+          <img alt="theme" src="src/assets/images/header/moon.svg" class="mx-3 h-6 w-6 cursor-pointer stroke-white" id="theme-toggle" onclick="toggleTheme()" />
+        </div>
+        <!--      Toggle theme -->
+        <!-- Login Button -->
+        <button
+          id="login-button"
+          class="bg-primary-title ms-4 hidden h-10 items-center justify-center gap-2.5 rounded-full px-6 pt-0.5 shadow-[0px_12px_53px_0px_rgba(0,0,0,0.04)] lg:inline"
+        >
+          <span class="text-center text-base font-medium text-white">دخول</span>
+        </button>
+        <!--      Login Button End -->
+
+        <!-- Search Button ICON -->
+        <div class="relative">
+          <!-- Search Icon Button -->
+          <div class="ms-2.5 cursor-pointer xl:hidden" id="search-icon" data-svg-wrapper>
+            <svg class="fill-meta dark:fill-white" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
-                d="M9.29688 16.1371L9.2958 16.1361C7.13522 14.1769 5.40233 12.6016 4.20082 11.1316C3.00755 9.67172 2.41699 8.4076 2.41699 7.08333C2.41699 4.92344 4.09698 3.25 6.25033 3.25C7.4736 3.25 8.66009 3.82334 9.4312 4.7218L10.0003 5.38491L10.5695 4.7218C11.3406 3.82334 12.5271 3.25 13.7503 3.25C15.9037 3.25 17.5837 4.92344 17.5837 7.08333C17.5837 8.4076 16.9931 9.67172 15.7998 11.1316C14.5983 12.6016 12.8654 14.1769 10.7049 16.1361L10.7038 16.1371L10.0003 16.7774L9.29688 16.1371Z"
-                stroke=""
-                stroke-width="1.5"
+                d="M21.4408 18.8679H20.0858L19.6055 18.4048C21.3445 16.3877 22.3003 13.8125 22.2985 11.1492C22.2985 8.94412 21.6446 6.78853 20.4195 4.95505C19.1944 3.12157 17.4531 1.69255 15.4159 0.848689C13.3786 0.00483079 11.1369 -0.215961 8.97412 0.214234C6.81139 0.64443 4.82478 1.70629 3.26554 3.26554C1.70629 4.82478 0.64443 6.81139 0.214234 8.97412C-0.215961 11.1369 0.00483079 13.3786 0.848689 15.4159C1.69255 17.4531 3.12157 19.1944 4.95505 20.4195C6.78853 21.6446 8.94412 22.2985 11.1492 22.2985C13.9108 22.2985 16.4494 21.2865 18.4048 19.6055L18.8679 20.0858V21.4408L27.4443 30L30 27.4443L21.4408 18.8679ZM11.1492 18.8679C6.87822 18.8679 3.43054 15.4202 3.43054 11.1492C3.43054 6.87822 6.87822 3.43054 11.1492 3.43054C15.4202 3.43054 18.8679 6.87822 18.8679 11.1492C18.8679 15.4202 15.4202 18.8679 11.1492 18.8679Z"
+                fill=""
               />
             </svg>
           </div>
-          <!--      Favorite Heart End -->
-          <!--      Toggle theme -->
-          <div>
-            <img alt="theme" src="src/assets/images/header/moon.svg" class="h-6 w-6 mx-3 cursor-pointer stroke-white"
-                 id="theme-toggle" onclick="toggleTheme()" />
-          </div>
-          <!--      Toggle theme -->
-          <!-- Login Button -->
-          <button
-            id="login-button"
-            class="bg-primary-title ms-4 hidden h-10 items-center justify-center gap-2.5 rounded-full px-6 pt-0.5 shadow-[0px_12px_53px_0px_rgba(0,0,0,0.04)] lg:inline"
-          >
-            <span class="text-center text-base font-medium text-white">دخول</span>
-          </button>
-          <!--      Login Button End -->
 
-          <!-- Search Button ICON -->
-          <div class="relative">
-            <!-- Search Icon Button -->
-            <div class="ms-2.5 cursor-pointer xl:hidden" id="search-icon" data-svg-wrapper>
+          <!-- Search Input (Initially Hidden) -->
+
+          <!-- Modal Wrapper -->
+          <div id="search-modal" class="invisible fixed inset-0 z-50 flex items-center justify-center bg-black/50 opacity-0 backdrop-blur-sm transition-opacity duration-500">
+            <div class="relative w-full max-w-md rounded-lg bg-white p-4 shadow-lg">
+              <!-- Close Button -->
+              <button id="close-search" class="end-3 absolute top-3 text-gray-500 hover:text-gray-700">✖</button>
+              <!-- Search Input -->
+              <label>
+                هذا تجريبي إلى أن نستقر على طريقة
+
+                <input
+                  type="text"
+                  id="search-input"
+                  placeholder="ابحث هنا..."
+                  class="focus:ring-primary-title w-full rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2"
+                />
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- user menu -->
+        <div id="user-menu-button" role="menu" class="dropdown ms-2.5 relative flex items-center justify-center gap-3">
+          <div class="bg-primary-title hidden h-12 w-12 items-center justify-center rounded-full pt-1 text-lg font-bold text-white lg:flex">
+            <!-- Name Initials -->
+            HN
+          </div>
+          <!-- Burger Menu -->
+          <div class="dropdown ms-2.5 lg:hidden" data-svg-wrapper>
+            <div data-svg-wrapper class="relative">
               <svg class="fill-meta dark:fill-white" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
-                  d="M21.4408 18.8679H20.0858L19.6055 18.4048C21.3445 16.3877 22.3003 13.8125 22.2985 11.1492C22.2985 8.94412 21.6446 6.78853 20.4195 4.95505C19.1944 3.12157 17.4531 1.69255 15.4159 0.848689C13.3786 0.00483079 11.1369 -0.215961 8.97412 0.214234C6.81139 0.64443 4.82478 1.70629 3.26554 3.26554C1.70629 4.82478 0.64443 6.81139 0.214234 8.97412C-0.215961 11.1369 0.00483079 13.3786 0.848689 15.4159C1.69255 17.4531 3.12157 19.1944 4.95505 20.4195C6.78853 21.6446 8.94412 22.2985 11.1492 22.2985C13.9108 22.2985 16.4494 21.2865 18.4048 19.6055L18.8679 20.0858V21.4408L27.4443 30L30 27.4443L21.4408 18.8679ZM11.1492 18.8679C6.87822 18.8679 3.43054 15.4202 3.43054 11.1492C3.43054 6.87822 6.87822 3.43054 11.1492 3.43054C15.4202 3.43054 18.8679 6.87822 18.8679 11.1492C18.8679 15.4202 15.4202 18.8679 11.1492 18.8679Z"
-                  fill=""
+                  d="M7.5 24C7.5 24.8284 8.1716 25.5 9 25.5H28.5C29.3284 25.5 30 24.8284 30 24C30 23.1716 29.3284 22.5 28.5 22.5H9C8.1716 22.5 7.5 23.1717 7.5 24ZM28.5 16.5H1.5C0.671602 16.5 0 15.8283 0 15C0 14.1716 0.671602 13.5 1.5 13.5H28.5C29.3284 13.5 30 14.1716 30 15C30 15.8283 29.3284 16.5 28.5 16.5ZM28.5 7.5H15C14.1717 7.5 13.5 6.8284 13.5 6C13.5 5.17166 14.1717 4.5 15 4.5H28.5C29.3284 4.5 30 5.17166 30 6C30 6.8284 29.3284 7.5 28.5 7.5Z"
                 />
               </svg>
             </div>
-
-            <!-- Search Input (Initially Hidden) -->
-
-            <!-- Modal Wrapper -->
-            <div id="search-modal" class="invisible fixed inset-0 z-50 flex items-center justify-center bg-black/50 opacity-0 backdrop-blur-sm transition-opacity duration-500">
-              <div class="relative w-full max-w-md rounded-lg bg-white p-4 shadow-lg">
-                <!-- Close Button -->
-                <button id="close-search" class="end-3 absolute top-3 text-gray-500 hover:text-gray-700">✖</button>
-                <!-- Search Input -->
-                <label>
-                  هذا تجريبي إلى أن نستقر على طريقة
-
-                  <input
-                    type="text"
-                    id="search-input"
-                    placeholder="ابحث هنا..."
-                    class="focus:ring-primary-title w-full rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2"
-                  />
-                </label>
-              </div>
-            </div>
           </div>
-
-          <!-- user menu -->
-          <div id="user-menu-button" role="menu" class="dropdown ms-2.5 relative flex items-center justify-center gap-3">
-            <div class="bg-primary-title hidden h-12 w-12 items-center justify-center rounded-full pt-1 text-lg font-bold text-white lg:flex">
-              <!-- Name Initials -->
-              HN
-            </div>
-            <!-- Burger Menu -->
-            <div class="dropdown ms-2.5 lg:hidden" data-svg-wrapper>
-              <div data-svg-wrapper class="relative">
-                <svg class="fill-meta dark:fill-white" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M7.5 24C7.5 24.8284 8.1716 25.5 9 25.5H28.5C29.3284 25.5 30 24.8284 30 24C30 23.1716 29.3284 22.5 28.5 22.5H9C8.1716 22.5 7.5 23.1717 7.5 24ZM28.5 16.5H1.5C0.671602 16.5 0 15.8283 0 15C0 14.1716 0.671602 13.5 1.5 13.5H28.5C29.3284 13.5 30 14.1716 30 15C30 15.8283 29.3284 16.5 28.5 16.5ZM28.5 7.5H15C14.1717 7.5 13.5 6.8284 13.5 6C13.5 5.17166 14.1717 4.5 15 4.5H28.5C29.3284 4.5 30 5.17166 30 6C30 6.8284 29.3284 7.5 28.5 7.5Z"
-                  />
-                </svg>
-              </div>
-            </div>
-            <!-- User Menu Start -->
-            <div
-              role="menu"
-              id="user-menu"
-              aria-label="User menu"
-              class="max-w-72 dropdown-menu -end-7 absolute top-14 z-30 mx-4 hidden w-72 rounded-xl border border-black/10 bg-white bg-blue-100 p-4 shadow-lg"
-            >
+          <!-- User Menu Start -->
+          <div
+            role="menu"
+            id="user-menu"
+            aria-label="User menu"
+            class="max-w-72 dropdown-menu -end-7 absolute top-14 z-30 mx-4 hidden w-72 rounded-xl border border-black/10 bg-white p-4 shadow-lg"
+          >
               <span
                 aria-hidden="true"
                 class="rotate-225 absolute left-[39px] -top-[17px] h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"
               ></span>
 
-              <div class="flex items-center gap-3 pb-3">
-                <!--    Menu name and e-mail-->
-                <div class="bg-primary-title flex h-12 w-12 items-center justify-center rounded-full pt-1 text-lg font-bold text-white">
-                  <!-- Name Initials -->
-                  HN
-                </div>
-                <div>
-                  <!--      name -->
-                  <p class="text-sm font-bold text-[#311e6a]">هبة نبيل</p>
-                  <!--        email -->
-                  <p class="text-sm text-gray-500">Heba@gmail.com</p>
-                </div>
+            <div class="flex items-center gap-3 pb-3">
+              <!--    Menu name and e-mail-->
+              <div class="bg-primary-title flex h-12 w-12 items-center justify-center rounded-full pt-1 text-lg font-bold text-white">
+                <!-- Name Initials -->
+                HN
               </div>
-              <hr class="my-3 border-t border-t-black/10" />
-              <!-- Menu Items -->
-              <nav class="[&_li]:text-base [&_li]:font-medium [&_li]:cursor-pointer [&_li]:text-meta-light [&_li]:hover:text-primary-title mt-3 space-y-3 text-gray-700">
-                <ul>
-                  <!--    Item -->
-                  <li aria-label="My Courses">
-                    <a href="">دوراتي</a>
-                  </li>
-                  <!-- End Item -->
-                  <!--    Item -->
-                  <li aria-label="My Certificates">
-                    <a href="">شهاداتي</a>
-                  </li>
-                  <!-- End Item -->
-                  <!--    Item -->
-                  <li aria-label="My Wishlist">
-                    <a href="">مفضلتي</a>
-                  </li>
-                  <!-- End Item -->
-                  <!--    Item -->
-                  <li aria-label="My Cart">
-                    <a href="">السلة</a>
-                  </li>
-                </ul>
-                <hr class="my-3 border-t border-t-black/10" />
-                <ul>
-                  <!-- End Item -->
-                  <!--    Item -->
-                  <li aria-label="Dashboard">
-                    <a href=""> لوحة التحكم </a>
-                  </li>
-                  <!-- End Item -->
-                  <!--    Item -->
-                  <li aria-label="Community">
-                    <a href="">المجتمع</a>
-                  </li>
-                </ul>
-                <hr class="my-3 border-t border-t-black/10" />
-                <ul>
-                  <!-- End Item -->
-                  <!--    Item -->
-                  <li aria-label="Profile">
-                    <a href="">الملف الشخصي </a>
-                  </li>
-                  <!-- End Item -->
-                  <!--    Item -->
-                  <li aria-label="Notifications">
-                    <a href="">الإشعارات</a>
-                  </li>
-                  <!-- End Item -->
-                  <!--    Item -->
-                  <li aria-label="Orders">
-                    <a href="">سجل المشتريات</a>
-                  </li>
-                  <li aria-label="Help Center">
-                    <a href="">مركز التعليمات</a>
-                  </li>
-                  <!-- End Item -->
-                  <!--    Item -->
-                </ul>
-                <hr class="mt-4 border-t border-t-black/10" />
-                <!-- Logout Start -->
-                <div class="pe-2 mt-4 flex justify-between">
-                  <a aria-label="Logout" href="#" class="flex cursor-pointer items-center font-bold text-red-600 hover:text-red-700"> خروج </a>
-                  <img src="src/assets/images/header/logout.svg" alt="logout" />
-                </div>
-              </nav>
-              <!-- Logout END -->
+              <div>
+                <!--      name -->
+                <p class="text-text text-sm font-bold">هبة نبيل</p>
+                <!--        email -->
+                <p class="text-sm text-gray-500">Heba@gmail.com</p>
+              </div>
             </div>
-            <!-- User Menu End -->
+            <hr class="my-3 border-t border-t-black/10" />
+            <!-- Menu Items -->
+            <nav class="[&_li]:text-base [&_li]:font-medium [&_li]:cursor-pointer [&_li]:text-meta-light [&_li]:hover:text-primary-title mt-3 space-y-3 text-gray-700">
+              <ul>
+                <!--    Item -->
+                <li aria-label="My Courses">
+                  <a href="">دوراتي</a>
+                </li>
+                <!-- End Item -->
+                <!--    Item -->
+                <li aria-label="My Certificates">
+                  <a href="">شهاداتي</a>
+                </li>
+                <!-- End Item -->
+                <!--    Item -->
+                <li aria-label="My Wishlist">
+                  <a href="">مفضلتي</a>
+                </li>
+                <!-- End Item -->
+                <!--    Item -->
+                <li aria-label="My Cart">
+                  <a href="">السلة</a>
+                </li>
+              </ul>
+              <hr class="my-3 border-t border-t-black/10" />
+              <ul>
+                <!-- End Item -->
+                <!--    Item -->
+                <li aria-label="Dashboard">
+                  <a href=""> لوحة التحكم </a>
+                </li>
+                <!-- End Item -->
+                <!--    Item -->
+                <li aria-label="Community">
+                  <a href="">المجتمع</a>
+                </li>
+              </ul>
+              <hr class="my-3 border-t border-t-black/10" />
+              <ul>
+                <!-- End Item -->
+                <!--    Item -->
+                <li aria-label="Profile">
+                  <a href="">الملف الشخصي </a>
+                </li>
+                <!-- End Item -->
+                <!--    Item -->
+                <li aria-label="Notifications">
+                  <a href="">الإشعارات</a>
+                </li>
+                <!-- End Item -->
+                <!--    Item -->
+                <li aria-label="Orders">
+                  <a href="">سجل المشتريات</a>
+                </li>
+                <li aria-label="Help Center">
+                  <a href="">مركز التعليمات</a>
+                </li>
+                <!-- End Item -->
+                <!--    Item -->
+              </ul>
+              <hr class="mt-4 border-t border-t-black/10" />
+              <!-- Logout Start -->
+              <div class="pe-2 mt-4 flex justify-between">
+                <a aria-label="Logout" href="#" class="flex cursor-pointer items-center font-bold text-red-600 hover:text-red-700"> خروج </a>
+                <img src="src/assets/images/header/logout.svg" alt="logout" />
+              </div>
+            </nav>
+            <!-- Logout END -->
           </div>
-          <!--      user menu End -->
+          <!-- User Menu End -->
         </div>
+        <!-- User menu End -->
       </div>
-    </header>
-    <!--Header End-->
+    </div>
+  </header>
+  <!--Header End -->
 
     <!--Banner Section start-->
     <div class="dark:bg-dark container relative m-auto mb-12 mt-6 flex flex-col-reverse items-center justify-between px-4 lg:mt-16 lg:flex-row">
@@ -362,8 +353,8 @@
 
     <aside class="container m-auto">
       <!--Services Cards Section Start-->
-      <div class="mb-12 mt-16 grid grid-cols-1 gap-8 px-2 lg:grid-cols-2 lg:px-0">
-        <div class="relative inline-flex h-24 flex-row-reverse items-center justify-between overflow-hidden rounded-[20px] bg-[#e0ccff] px-10 py-7 lg:h-[149px]">
+      <div class="container m-auto mb-8 grid grid-cols-1 gap-8 px-5 md:mb-8 md:mt-16 md:grid-cols-2 md:px-0">
+        <a href="#" class="relative flex h-[149px] flex-row-reverse items-center justify-between overflow-hidden rounded-[20px] bg-[#e0ccff] px-10 py-7">
           <div data-svg-wrapper class="absolute left-0">
             <svg width="321" height="150" viewBox="0 0 321 150" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -406,50 +397,40 @@
               <path d="M22.4995 27.6497L13.4995 18.6497L22.4995 9.64966" stroke="#321F6B" stroke-width="2.16667" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </div>
-          <div class="inline-flex shrink grow basis-0 flex-col items-start justify-start">
-            <div class="font-['Ping Ar'] text-right text-2xl font-bold text-[#6639c6] lg:text-[32px]">أعناب الاستشارية</div>
-            <div class="inline-flex items-baseline justify-start self-stretch">
-              <div class="font-['Ping Ar'] text-right text-lg font-medium text-[#311e6a] lg:text-[26px]">التدريب الاحترافي عالي الكفاءة</div>
+          <div class="flex shrink grow basis-0 flex-col items-start justify-start">
+            <div class="text-primary-title text-right text-3xl md:text-[32px] font-bold">أعناب الاستشارية</div>
+            <div class="flex items-baseline justify-start self-stretch">
+              <div class="text-text text-right text-xl md:text-[26px] font-medium">التدريب الاحترافي عالي الكفاءة</div>
             </div>
           </div>
-        </div>
-        <div class="relative inline-flex h-24 flex-row-reverse items-center justify-end overflow-hidden rounded-[20px] bg-[#e0ccff] px-10 py-7 lg:h-[149px]">
+        </a>
+        <a href="#" class="relative flex h-[149px] flex-row-reverse items-center justify-end overflow-hidden rounded-[20px] bg-[#e0ccff] px-10 py-7">
           <div class="absolute left-0 h-[322.66px] w-[332.66px]">
-            <div class="absolute left-[150px] top-[140px] h-[182.66px] w-[182.66px] rounded-full bg-[#6639c6]/10"></div>
-            <div class="absolute left-0 top-0 h-[182.66px] w-[182.66px] rounded-full bg-[#a3dee0]"></div>
+            <div class="bg-primary-title/10 absolute left-[150px] top-[140px] h-[182.66px] w-[182.66px] rounded-full"></div>
+            <div class="bg-teal-box absolute left-0 top-0 h-[182.66px] w-[182.66px] rounded-full"></div>
           </div>
           <div data-svg-wrapper class="relative">
             <svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M22.499 27.6497L13.499 18.6497L22.499 9.64966" stroke="#321F6B" stroke-width="2.16667" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </div>
-          <div class="inline-flex shrink grow basis-0 flex-col items-start justify-start">
-            <div class="font-['Ping Ar'] text-right text-2xl font-bold text-[#6639c6] lg:text-[32px]">أعناب التعليمية</div>
-            <div class="inline-flex items-baseline justify-start self-stretch">
-              <div class="font-['Ping Ar'] text-right text-lg font-medium text-[#311e6a] lg:text-[26px]">التدريب الخاص بالمجال التعليمى</div>
+          <div class="z-50 flex shrink grow basis-0 flex-col items-start justify-start">
+            <div class="text-primary-title text-right text-3xl md:text-[32px] font-bold">أعناب الرياضية</div>
+            <div class="flex items-baseline justify-start self-stretch">
+              <div class="text-text text-right text-xl md:text-[26px] font-medium">التدريب الخاص بالمجال الرياضي</div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
       <!--Services Cards Section End-->
 
-      <!-- Aanaab For Sports Section Start -->
-      <div class="mb-12 mt-16 px-2 lg:px-0" dir="ltr">
-        <div class="inline-flex w-full flex-col items-center justify-center gap-[11px] rounded-[20px] bg-[#6639c6] px-[42px] py-10 lg:h-[149px]">
-          <div class="inline-flex flex-col-reverse items-end justify-between self-stretch lg:flex-row lg:items-center">
-            <button class="flex cursor-pointer items-center justify-center gap-1 self-center rounded-[32px] bg-white px-8 py-[18px] lg:self-start">
-              <span class="flex items-end justify-start gap-1.5">
-                <span class="text-base font-bold leading-none text-[#6639c6]">أعناب للجهات</span>
-              </span>
-            </button>
-            <div class="mb-2 flex items-center justify-start gap-5 lg:mb-0 lg:items-center">
-              <div class="flex items-baseline justify-start gap-[11px]">
-                <div class="font-['Ping Ar'] text-right text-lg font-medium text-[#27e7ca] lg:text-[26px]">الجهات الرياضيه</div>
-                <div class="flex text-right">
-                  <span class="font-['Ping Ar'] text-nowrap text-2xl font-bold text-white lg:text-[42px]">أعناب للجهات</span>
-                </div>
-              </div>
-              <div data-svg-wrapper>
+      <!-- Aanaab For الجهات Section Start -->
+      <div class="container m-auto mt-6 px-5 pb-8 md:px-0 md:pb-12">
+        <div class="bg-primary-title flex h-[149px] w-full flex-col items-center justify-center gap-[11px] rounded-[20px] px-[42px] py-10">
+          <div class="flex flex-col md:flex-row items-start md:items-center justify-between self-stretch">
+
+            <div class="flex items-center justify-start gap-5">
+              <div data-svg-wrapper class="hidden md:block">
                 <svg width="48" height="69" viewBox="0 0 48 69" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M6 42.6487V24.6487C6 23.5441 6.89543 22.6487 8 22.6487H14" stroke="#D2A8FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                   <path
@@ -472,12 +453,24 @@
                   <path d="M20 23.6487H26" stroke="#D2A8FF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
               </div>
+              <div class="flex flex-col lg:flex-row md:items-center justify-end gap-[11px]">
+                <div class="flex text-start items-start text-lg md:text-[42px]"><span class=" font-bold text-white">أعناب </span><span class="font-bold text-white">للجهات</span></div>
+                <div class="text-md text-right font-medium text-[#27e7ca] md:text-[26px]">للوزارات، للمنظمات، للجامعات و المدارس</div>
+              </div>
+
             </div>
+            <button class="flex cursor-pointer items-center justify-center gap-1 rounded-[32px] bg-white px-8 py-[18px]">
+              <div class="flex items-end justify-start gap-1.5">
+                <div class="text-primary-title text-base font-bold leading-none">أعناب للجهات</div>
+              </div>
+            </button>
           </div>
         </div>
       </div>
       <!-- Aanaab For Sports Section End -->
     </aside>
+
+
     <!-- Video Section Start -->
     <div class="relative mb-24 w-full bg-cover bg-center bg-no-repeat px-8 py-16 lg:min-h-[640px] lg:px-24 lg:py-48">
       <div class="absolute inset-0 h-full w-full bg-black bg-opacity-50 backdrop-blur-sm">
@@ -543,8 +536,8 @@
     <aside class="dark:bg-dark container m-auto mb-12 px-2 lg:px-0">
       <h3 class="text-text mb-5 h-6 text-center text-[26px] font-bold leading-[21px]">الدورة الرياضية</h3>
       <div dir="ltr" class="inline-flex w-auto flex-col items-start justify-end gap-2.5 overflow-hidden rounded-[20px] bg-[#3d3da2] lg:h-[359px]">
-        <div class="inline-flex flex-col items-end justify-start gap-4 self-stretch px-6 lg:h-[359px] lg:flex-row">
-          <img alt="" class="h-[337.07px] w-[391px]" src="src/assets/images/cards/sport-courses.svg" />
+        <div class="inline-flex flex-col-reverse pt-10 md:pt-0 items-end justify-start gap-4 self-stretch px-6 lg:h-[359px] lg:flex-row">
+          <img alt="" class="h-[337.07px] w-[391px] " src="src/assets/images/cards/sport-courses.svg" />
           <div class="inline-flex shrink grow basis-0 flex-col items-end justify-center gap-[26px] self-stretch">
             <div class="inline-flex h-10 items-center justify-center gap-2 rounded-[20px] bg-white px-3.5 pt-0.5">
               <div class="text-right text-xs font-bold leading-normal text-[#311e6a]">شهادة كامبردج</div>
@@ -617,38 +610,39 @@
     <!-- Partners section end -->
 
     <!--Cards Section End-->
+
     <!--Price Comparison Start-->
-    <main class="border-sep bg-box border-t py-6 pt-24" dir="rtl">
+    <section class="border-sep bg-box dark:bg-dark border-t py-6 pt-24" dir="rtl">
       <header class="mb-12 flex flex-col items-center justify-center">
         <div class="text-text text-center text-xl font-medium">بإمكانكم شراء كل دورة على حدة</div>
-        <div class="inline-flex h-8 w-[400px] items-baseline justify-center gap-[15px]">
+        <div class="flex h-8 w-[400px] items-baseline justify-center gap-[15px]">
           <div class="h-px shrink grow basis-0 bg-zinc-300"></div>
           <div class="text-meta-light text-center text-xl font-medium">أو</div>
           <div class="h-px shrink grow basis-0 bg-zinc-300"></div>
         </div>
-        <div class="inline-flex h-[51px] w-[400px] flex-col items-start justify-start gap-2">
+        <div class="flex h-[51px] w-[400px] flex-col items-start justify-start gap-2">
           <div class="text-primary-title self-stretch text-center text-[32px] font-bold">شراء باقات أعناب للأفراد</div>
         </div>
       </header>
-      <article class="container mx-auto flex flex-col items-center justify-center gap-10 pb-20 sm:gap-2 lg:flex-row">
+      <article class="flex flex-col items-center justify-center gap-10 pb-20 sm:gap-2 lg:flex-row lg:gap-12">
         <section
-          class="shadow-[0px_4px_6px_-2px_rgba(16 24 40 0.03)] inline-flex h-[503px] w-[374px] flex-col items-center justify-start gap-[26px] rounded-[20px] border border-zinc-300 bg-white p-[26px]"
+          class="shadow-[0px_4px_6px_-2px_rgba(16 24 40 0.03)] flex h-[503px] w-[374px] flex-col items-center justify-start gap-[26px] rounded-[20px] border border-zinc-300 bg-white p-[26px]"
         >
           <div class="flex flex-col items-center justify-start gap-[9px] py-0.5">
             <div class="flex flex-col items-center justify-start">
               <div class="text-right text-lg font-bold tracking-tight text-[#20b486]">باقة 10 دورات</div>
               <div class="text-right text-xs font-bold tracking-tight text-[#ff2d55]">بسعر 7 دورات (تخفيض %75)</div>
             </div>
-            <div class="text-primary-title inline-flex items-baseline justify-center gap-1.5">
+            <div class="text-primary-title flex items-baseline justify-center gap-1.5">
               <div class="text-xs font-bold capitalize">ريال</div>
-              <div class="font-['Inter'] text-[42px] font-bold capitalize">1000</div>
+              <div class="text-[42px] font-bold capitalize">1000</div>
               <div class="text-sm font-bold capitalize"></div>
             </div>
           </div>
           <div class="h-px self-stretch bg-zinc-300"></div>
           <div class="flex h-[172px] flex-col items-start justify-start self-stretch py-1.5">
             <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
-              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
+              <div class="flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
                   <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
                     <div class="bg-primary-title absolute left-0 top-0 h-5 w-5 rounded-[624.38px]"></div>
@@ -663,7 +657,7 @@
               </div>
             </div>
             <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
-              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
+              <div class="flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
                   <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
                     <div class="bg-primary-title absolute left-0 top-0 h-5 w-5 rounded-[624.38px]"></div>
@@ -678,7 +672,7 @@
               </div>
             </div>
             <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
-              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
+              <div class="flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
                   <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
                     <div class="bg-primary-title absolute left-0 top-0 h-5 w-5 rounded-[624.38px]"></div>
@@ -693,7 +687,7 @@
               </div>
             </div>
             <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
-              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
+              <div class="flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
                   <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
                     <div class="bg-primary-title absolute left-0 top-0 h-5 w-5 rounded-[624.38px]"></div>
@@ -710,7 +704,7 @@
           </div>
           <div class="h-px self-stretch bg-zinc-300"></div>
           <button
-            class="bg-primary-title inline-flex items-center justify-center gap-1 overflow-hidden rounded-[32px] px-8 py-[16px] text-white shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)] transition-all duration-200"
+            class="bg-primary-title flex items-center justify-center gap-1 overflow-hidden rounded-[32px] px-8 py-[16px] text-white shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)] transition-all duration-200"
           >
             <span class="flex items-end justify-start gap-1.5">
               <span class="text-base font-bold leading-none">أنضم للدوره</span>
@@ -718,23 +712,23 @@
           </button>
         </section>
         <section
-          class="shadow-[0px_4px_6px_-2px_rgba(16 24 40 0.03)] bg-primary-title inline-flex h-[503px] w-[374px] flex-col items-center justify-start gap-[26px] rounded-[20px] border border-zinc-300 p-[26px] lg:mx-16"
+          class="shadow-[0px_4px_6px_-2px_rgba(16 24 40 0.03)] bg-primary-title flex h-[503px] w-[374px] flex-col items-center justify-start gap-[26px] rounded-[20px] border border-zinc-300 p-[26px]"
         >
           <div class="flex flex-col items-center justify-start gap-[9px] py-0.5">
             <div class="flex flex-col items-center justify-start">
               <div class="text-right text-lg font-bold tracking-tight text-[#30e8ae]">باقة 10 دورات</div>
               <div class="text-right text-xs font-bold tracking-tight text-[#ff99ac]">بسعر 7 دورات (تخفيض %75)</div>
             </div>
-            <div class="inline-flex items-baseline justify-center gap-1.5 text-white">
+            <div class="flex items-baseline justify-center gap-1.5 text-white">
               <div class="text-xs font-bold capitalize">ريال</div>
-              <div class="font-['Inter'] text-[42px] font-bold capitalize">1000</div>
+              <div class="text-[42px] font-bold capitalize">1000</div>
               <div class="text-sm font-bold capitalize"></div>
             </div>
           </div>
           <div class="h-px self-stretch bg-zinc-300/20"></div>
           <div class="flex h-[172px] flex-col items-start justify-start self-stretch py-1.5">
             <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
-              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
+              <div class="flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
                   <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
                     <div class="absolute left-0 top-0 h-5 w-5 rounded-[624.38px] bg-white"></div>
@@ -749,7 +743,7 @@
               </div>
             </div>
             <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
-              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
+              <div class="flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
                   <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
                     <div class="absolute left-0 top-0 h-5 w-5 rounded-[624.38px] bg-white"></div>
@@ -764,7 +758,7 @@
               </div>
             </div>
             <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
-              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
+              <div class="flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
                   <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
                     <div class="absolute left-0 top-0 h-5 w-5 rounded-[624.38px] bg-white"></div>
@@ -779,7 +773,7 @@
               </div>
             </div>
             <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
-              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
+              <div class="flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
                   <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
                     <div class="absolute left-0 top-0 h-5 w-5 rounded-[624.38px] bg-white"></div>
@@ -796,7 +790,7 @@
           </div>
           <div class="h-px self-stretch bg-zinc-300/20"></div>
           <button
-            class="hover:bg-primary-title/10 inline-flex items-center justify-center gap-1 overflow-hidden rounded-[32px] border-2 border-white bg-transparent px-8 py-[16px] text-white transition-all duration-200"
+            class="hover:bg-primary-title/10 flex items-center justify-center gap-1 overflow-hidden rounded-[32px] border-2 border-white bg-transparent px-8 py-[16px] text-white transition-all duration-200"
           >
             <span class="flex items-end justify-start gap-1.5">
               <span class="text-base font-bold leading-none">أنضم للدوره</span>
@@ -804,23 +798,23 @@
           </button>
         </section>
         <section
-          class="inline-flex h-[503px] w-[374px] flex-col items-center justify-start gap-[26px] rounded-[20px] border border-zinc-300 bg-white p-[26px] shadow-[0px_4px_6px_-2px_rgba(16,24,40,0.03)]"
+          class="flex h-[503px] w-[374px] flex-col items-center justify-start gap-[26px] rounded-[20px] border border-zinc-300 bg-white p-[26px] shadow-[0px_4px_6px_-2px_rgba(16,24,40,0.03)]"
         >
           <div class="flex flex-col items-center justify-start gap-[9px] py-0.5">
             <div class="flex flex-col items-center justify-start">
               <div class="text-right text-lg font-bold tracking-tight text-[#20b486]">باقة 10 دورات</div>
               <div class="text-right text-xs font-bold tracking-tight text-[#ff2d55]">بسعر 7 دورات (تخفيض %75)</div>
             </div>
-            <div class="text-primary-title inline-flex items-baseline justify-center gap-1.5">
+            <div class="text-primary-title flex items-baseline justify-center gap-1.5">
               <div class="text-xs font-bold capitalize">ريال</div>
-              <div class="font-['Inter'] text-[42px] font-bold capitalize">1000</div>
+              <div class="text-[42px] font-bold capitalize">1000</div>
               <div class="text-sm font-bold capitalize"></div>
             </div>
           </div>
           <div class="h-px self-stretch bg-zinc-300"></div>
           <div class="flex h-[172px] flex-col items-start justify-start self-stretch py-1.5">
             <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
-              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
+              <div class="flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
                   <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
                     <div class="bg-primary-title absolute left-0 top-0 h-5 w-5 rounded-[624.38px]"></div>
@@ -835,7 +829,7 @@
               </div>
             </div>
             <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
-              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
+              <div class="flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
                   <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
                     <div class="bg-primary-title absolute left-0 top-0 h-5 w-5 rounded-[624.38px]"></div>
@@ -850,7 +844,7 @@
               </div>
             </div>
             <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
-              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
+              <div class="flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
                   <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
                     <div class="bg-primary-title absolute left-0 top-0 h-5 w-5 rounded-[624.38px]"></div>
@@ -865,7 +859,7 @@
               </div>
             </div>
             <div class="flex h-10 flex-col items-end justify-center gap-5 self-stretch">
-              <div class="inline-flex w-[301.50px] items-start justify-end gap-[11px]">
+              <div class="flex w-[301.50px] items-start justify-end gap-[11px]">
                 <div class="relative h-5 w-5">
                   <div class="absolute left-0 top-0 h-5 w-5 backdrop-blur-[30px]">
                     <div class="bg-primary-title absolute left-0 top-0 h-5 w-5 rounded-[624.38px]"></div>
@@ -882,7 +876,7 @@
           </div>
           <div class="h-px self-stretch bg-zinc-300"></div>
           <button
-            class="bg-primary-title inline-flex items-center justify-center gap-1 overflow-hidden rounded-[32px] px-8 py-[16px] text-white shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)] transition-all duration-200"
+            class="bg-primary-title flex items-center justify-center gap-1 overflow-hidden rounded-[32px] px-8 py-[16px] text-white shadow-[0px_8px_16px_0px_rgba(96,97,112,0.16)] transition-all duration-200"
           >
             <span class="flex items-end justify-start gap-1.5">
               <span class="text-base font-bold leading-none">أنضم للدوره</span>
@@ -890,28 +884,26 @@
           </button>
         </section>
       </article>
-    </main>
+    </section>
     <!--Price Comparison END-->
 
     <div class="dark:bg-dark">
       <!-- Testimonials Section Start -->
-      <article class="container mx-auto flex justify-center">
-        <div dir="ltr" class="inline-flex flex-col items-center justify-start gap-6 py-[60px] lg:h-[407px]">
+      <article class="mx-auto flex justify-center xl:container">
+        <div dir="ltr" class="flex flex-col items-center justify-start gap-6 py-[60px]">
           <div class="flex h-[51px] flex-col items-start justify-start gap-2">
             <div class="self-stretch text-center text-[32px] font-bold text-[#6639c6]">قالوا عنا</div>
           </div>
-          <div class="flex flex-col items-center justify-start gap-6 self-stretch lg:h-[212px] lg:px-[114px]">
-            <div class="inline-flex flex-col items-center justify-center gap-5 self-stretch lg:flex-row">
-              <section
-                class="flex h-[212px] shrink grow basis-0 items-end justify-center rounded-3xl border border-zinc-300 bg-white pb-px shadow-[0px_2px_0px_0px_rgba(212,212,216,1.00)]"
-              >
+          <div class="flex flex-col items-center justify-start gap-6 self-stretch">
+            <div class="[&_section]:min-w-fit [&_section]:max-w-fit flex flex-col flex-wrap items-center justify-center gap-5 self-stretch lg:flex-row">
+              <section class="flex h-[212px] shrink grow basis-0 items-end justify-center rounded-3xl border border-zinc-300 bg-white pb-px shadow-[0px_2px_0px_0px_rgba(212,212,216,1.00)]">
                 <img alt="" class="h-[184px] w-[140px] rounded-bl-[27px]" src="src/assets/images/persons/p3.png" />
-                <div class="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-4 self-stretch pl-4 pr-6 pt-6 pb-[23px]">
+                <div class="flex shrink grow basis-0 flex-col items-start justify-start gap-4 self-stretch pl-4 pr-6 pt-6 pb-[23px]">
                   <p class="w-[220px] text-right text-sm font-normal leading-normal text-zinc-600">
                     مع اطلاعي المعقول عن كل ما يستجد بالتعليم ألا أنه في ظني أكثر ما يطور العملية التعليمية لدى المعلم هي “الممارسة الواعية والموضوعية” للتعليم.
                   </p>
-                  <div class="inline-flex items-center justify-end gap-2.5 self-stretch">
-                    <div class="inline-flex flex-col items-end justify-start">
+                  <div class="flex items-center justify-end gap-2.5 self-stretch">
+                    <div class="flex flex-col items-end justify-start">
                       <h4 class="self-stretch text-right text-base font-bold leading-[17.60px] text-[#311e6a]">تهاني المليليح</h4>
                       <p class="w-[133px] text-right text-sm font-normal leading-tight text-zinc-600">معلمة كيمياء</p>
                       <div class="font-['Font Awesome 5 Pro'] h-3.5 w-[79.07px] text-sm font-black leading-[14px] text-[#ff9500]">
@@ -931,15 +923,15 @@
                 </div>
               </section>
               <section
-                class="flex h-[212px] shrink grow basis-0 items-end justify-center rounded-3xl border border-zinc-300 bg-white pb-px shadow-[0px_4px_6px_-2px_rgba(16,24,40,0.03)] shadow-[0px_20px_40px_-15px_rgba(16,24,40,0.07)] shadow-[0px_2px_0px_0px_rgba(212,212,216,1.00)]"
+                class="flex h-[212px] shrink grow basis-0 items-end justify-center rounded-3xl border border-zinc-300 bg-white pb-px shadow-[0px_2px_0px_0px_rgba(212,212,216,1.00)]"
               >
                 <img class="h-[184px] w-[140px] rounded-bl-[27px]" src="src/assets/images/persons/p2.png" alt="" />
-                <div class="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-4 self-stretch pl-4 pr-6 pt-6 pb-[23px]">
+                <div class="flex shrink grow basis-0 flex-col items-start justify-start gap-4 self-stretch pl-4 pr-6 pt-6 pb-[23px]">
                   <p class="w-[220px] text-right text-sm font-normal leading-normal text-zinc-600">
                     مع اطلاعي المعقول عن كل ما يستجد بالتعليم ألا أنه في ظني أكثر ما يطور العملية التعليمية لدى المعلم هي “الممارسة الواعية والموضوعية” للتعليم.
                   </p>
-                  <div class="inline-flex items-center justify-end gap-2.5 self-stretch">
-                    <div class="inline-flex flex-col items-end justify-start">
+                  <div class="flex items-center justify-end gap-2.5 self-stretch">
+                    <div class="flex flex-col items-end justify-start">
                       <h4 class="self-stretch text-right text-base font-bold leading-[17.60px] text-[#311e6a]">سلمى أحمد</h4>
                       <p class="w-[133px] text-right text-sm font-normal leading-tight text-zinc-600">معلمة أنجليزى</p>
                       <div class="font-['Font Awesome 5 Pro'] h-3.5 w-[79.07px] text-sm font-black leading-[14px] text-[#ff9500]">
@@ -959,15 +951,15 @@
                 </div>
               </section>
               <section
-                class="flex h-[212px] shrink grow basis-0 items-end justify-center rounded-3xl border border-zinc-300 bg-white pb-px shadow-[0px_4px_6px_-2px_rgba(16,24,40,0.03)] shadow-[0px_20px_40px_-15px_rgba(16,24,40,0.07)] shadow-[0px_2px_0px_0px_rgba(212,212,216,1.00)]"
+                class="flex h-[212px] shrink grow basis-0 items-end justify-center rounded-3xl border border-zinc-300 bg-white pb-px shadow-[0px_2px_0px_0px_rgba(212,212,216,1.00)]"
               >
                 <img alt="" class="h-[184px] w-[140px] rounded-bl-[27px]" src="src/assets/images/persons/p1.png" />
-                <div class="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-4 self-stretch pl-4 pr-6 pt-6 pb-[23px]">
+                <div class="flex shrink grow basis-0 flex-col items-start justify-start gap-4 self-stretch pl-4 pr-6 pt-6 pb-[23px]">
                   <p class="w-[220px] text-right text-sm font-normal leading-normal text-zinc-600">
                     مع اطلاعي المعقول عن كل ما يستجد بالتعليم ألا أنه في ظني أكثر ما يطور العملية التعليمية لدى المعلم هي “الممارسة الواعية والموضوعية” للتعليم.
                   </p>
-                  <div class="inline-flex items-center justify-end gap-2.5 self-stretch">
-                    <div class="inline-flex flex-col items-end justify-start">
+                  <div class="flex items-center justify-end gap-2.5 self-stretch">
+                    <div class="flex flex-col items-end justify-start">
                       <h4 class="self-stretch text-right text-base font-bold leading-[17.60px] text-[#311e6a]">أحمد مراد</h4>
                       <p class="w-[133px] text-right text-sm font-normal leading-tight text-zinc-600">معلم رياضيات</p>
                       <div class="font-['Font Awesome 5 Pro'] h-3.5 w-[79.07px] text-sm font-black leading-[14px] text-[#ff9500]">
@@ -993,29 +985,29 @@
       <!-- Testimonials Section End -->
 
       <!-- Aanaab Projects Section Start -->
-      <aside dir="ltr" class="container mx-auto px-2 pb-12">
-        <div class="container relative mx-auto inline-flex items-start justify-center overflow-hidden rounded-[30px] bg-[#a3dee0] lg:h-[382.25px]">
+      <aside dir="ltr" class="container mx-auto pb-12">
+        <div class="container relative flex items-start justify-center overflow-hidden rounded-[30px] bg-[#a3dee0] lg:h-[382.25px]">
           <div class="flex w-full flex-col-reverse items-center justify-between px-6 py-7 pb-0 lg:h-[382.25px] lg:flex-row lg:px-[50px] lg:py-[60px] lg:pb-[60px]">
             <img class="me-20 ml:me-0 -mt-10 lg:mt-8" src="src/assets/images/aanaab-project-s-person.png" alt="" />
-            <div class="mt-6 inline-flex flex-col items-end justify-start gap-4 lg:mt-0 lg:w-[699px]">
+            <div class="mt-6 flex flex-col items-end justify-start gap-4 lg:mt-0">
               <div class="text-right text-3xl font-bold leading-7 text-[#6639c6] lg:w-[542px] lg:text-[42px] lg:leading-[42px]">مشاريع أعناب</div>
-              <div class="self-stretch text-right text-2xl font-bold capitalize text-[#311e6a] lg:text-[32px] lg:leading-[49px]">
+              <div class="self-stretch text-right text-nowrap text-2xl font-bold capitalize text-[#311e6a] lg:text-[32px] lg:leading-[49px]">
                 لتطوير أداء معلمي ومعلمات المملكة العربية السعودية
               </div>
-              <div class="text-right text-sm font-normal text-[#311e6a] lg:w-[695px] lg:text-base">
+              <div class="text-right text-sm font-normal text-[#311e6a] lg:text-base">
                 هو نص وهمي يستخدم في صناعة الطباعة وتصميم المواقع كحشو في التصميمات قبل إدخال النصوص النهائية. يُستخدم لتمثيل النصوص وكيفية تنظيمها داخل التصميمات. النص.
               </div>
-              <div class="inline-flex flex-col items-end justify-end gap-8 lg:flex-row lg:items-center lg:gap-[50px]">
+              <div class="flex flex-col items-end justify-end gap-8 lg:flex-row lg:items-center lg:gap-[50px]">
                 <div class="flex items-center justify-center gap-[11px]">
                   <div class="flex items-center justify-center gap-[11px]">
                     <div class="text-center text-[13px] font-medium text-zinc-600">المركز الوطني للتطوير المهني التعليمي</div>
-                    <div class="inline-flex shrink grow basis-0 flex-col items-center justify-center gap-[14.56px] self-stretch">
+                    <div class="flex shrink grow basis-0 flex-col items-center justify-center gap-[14.56px] self-stretch">
                       <img alt="" class="h-[58.25px] w-[59.71px]" src="src/assets/images/edu-2.svg" />
                     </div>
                   </div>
                   <div class="flex items-center justify-center gap-[18px]">
                     <div class="text-center text-[13px] font-medium text-zinc-600">وزارة التعليم</div>
-                    <div class="inline-flex shrink grow basis-0 flex-col items-center justify-center gap-[17.81px] self-stretch">
+                    <div class="flex shrink grow basis-0 flex-col items-center justify-center gap-[17.81px] self-stretch">
                       <img alt="" class="h-[26.19px] w-[76.45px]" src="src/assets/images/edu-1.svg" />
                     </div>
                   </div>
@@ -1024,7 +1016,7 @@
                   class="flex cursor-pointer items-center justify-center gap-1 overflow-hidden rounded-[32px] bg-[#6639c6] px-8 py-[18px] shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)]"
                 >
                   <span class="flex items-end justify-start gap-1.5 shadow-[1px_5px_22px_4px_rgba(0,0,0,0.15)]">
-                    <span class="font-['Ping Ar'] text-base font-bold leading-none text-white">تسجيل دخول</span>
+                    <span class="text-base font-bold leading-none text-white">تسجيل دخول</span>
                   </span>
                 </button>
               </div>
@@ -1034,11 +1026,12 @@
       </aside>
       <!-- Aanaab Projects Section End -->
     </div>
-    <!-- FOOTER START -->
+
     <footer class="border-sep bg-box dark:bg-dark text-meta-light border-t py-6 text-center">
+      <div class="container m-auto"></div>
       <!--  Keep flex row reverse because of the rtl and the order in the mobile screens -->
-      <div class="lg:container lg:m-auto lg:flex lg:flex-row-reverse lg:items-center lg:justify-between lg:gap-4 lg:align-middle">
-        <div class="text-meta-light mb-4 flex justify-center gap-4 text-sm font-medium lg:mb-0">
+      <div class="md:container md:m-auto md:flex md:flex-row-reverse md:items-center md:justify-between md:gap-4 md:align-middle">
+        <div class="text-meta-light mb-4 flex justify-center gap-4 text-sm font-medium md:mb-0">
           <a href="#" aria-label="X">
             <svg class="fill-meta-light dark:fill-meta-light-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g clip-path="url(#clip0_1490_26686)">
@@ -1087,21 +1080,20 @@
         </div>
         <div>
           <nav aria-label="navigation">
-            <ul class="text-meta dark:text-wheat mb-4 mt-16 flex justify-center gap-4 font-medium lg:mt-0">
+            <ul class="text-meta dark:text-wheat mb-4 mt-16 flex justify-center gap-4 font-medium md:mt-0">
               <li><a href="#" class="text-sm">التواصل</a></li>
               <li><a href="#" class="text-sm">الخصوصية و الأحكام</a></li>
               <li><a href="#" class="text-sm">المدونة</a></li>
               <li><a href="#" class="text-sm">من نحن</a></li>
             </ul>
-            <p class="hidden text-sm font-normal dark:text-zinc-400 lg:block">جميع الحقوق محفوظة © منصة أعناب</p>
+            <p class="hidden text-sm font-normal dark:text-zinc-400 md:block">جميع الحقوق محفوظة © منصة أعناب</p>
           </nav>
         </div>
-        <div class="mt-16 text-sm lg:mt-0">
+        <div class="mt-16 text-sm md:mt-0">
           <img src="src/assets/images/footer_logo.svg" alt="platform" class="m-auto mb-2.5" />
-          <p class="text-sm font-normal dark:text-zinc-400 lg:hidden">جميع الحقوق محفوظة © منصة أعناب</p>
+          <p class="text-sm font-normal dark:text-zinc-400 md:hidden">جميع الحقوق محفوظة © منصة أعناب</p>
         </div>
       </div>
     </footer>
-    <!--Footer End-->
   </body>
 </html>
