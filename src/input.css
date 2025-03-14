@@ -226,7 +226,7 @@ input:focus-visible {
 }
 
 .header-item {
-  @apply mx-2 sm:mx-3;
+  @apply mx-2 sm:mx-2.5;
 }
 
 .header-item:last-child {

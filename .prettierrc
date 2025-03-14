@@ -2,5 +2,5 @@
   "plugins": [
     "prettier-plugin-tailwindcss"
   ],
-  "printWidth": 180
+  "printWidth": 200
 }

@@ -83,7 +83,7 @@
       </div>
       <!--      Currency End -->
       <!--      Language Switch Start -->
-      <div id="locale-switcher-button" class="dropdown header-item me-4 relative hidden lg:block">
+      <div id="locale-switcher-button" class="dropdown me-0 relative hidden lg:block">
         <img class="inline-block" src="src/assets/images/header/ar.svg" alt="عربي" />
         <!--Language Switch Menu Start-->
         <div
@@ -109,9 +109,9 @@
       </div>
       <!-- Language Switch End -->
       <!-- Favorite Heart Start -->
-      <a href="#">
+      <a href="#" class="header-item">
         <svg
-          class="header-item relative mx-3 hidden h-6 w-6 cursor-pointer dark:stroke-white lg:block"
+          class="header-item relative mx-3 h-6 w-6 cursor-pointer dark:stroke-white block"
           width="20"
           height="20"
           viewBox="0 0 20 20"
@@ -134,14 +134,6 @@
       <img alt="غامق" src="src/assets/images/header/moon.svg" class="header-item h-6 w-6 cursor-pointer stroke-white"
            id="theme-toggle" onclick="toggleTheme()" />
       <!--      Toggle theme -->
-      <!-- Login Button -->
-      <button
-        id="login-button"
-        class="btn-primary header-item hidden h-10 items-center justify-center gap-2.5 rounded-full px-6 pt-0.5 shadow-[0px_12px_53px_0px_rgba(0,0,0,0.04)] lg:inline"
-      >
-        <span class="text-center text-base font-medium text-white">دخول</span>
-      </button>
-      <!--      Login Button End -->
 
       <!-- Search Button ICON -->
       <div class="header-item relative xl:hidden">
@@ -179,6 +171,17 @@
           </div>
         </div>
       </div>
+      <!-- Search Button ICON -->
+
+      <!-- Login Button -->
+      <button
+        id="login-button"
+        class="btn-primary header-item hidden h-10 items-center justify-center gap-2.5 rounded-full px-6 pt-0.5 shadow-[0px_12px_53px_0px_rgba(0,0,0,0.04)] lg:inline"
+      >
+        <span class="text-center text-base font-medium text-white">دخول</span>
+      </button>
+      <!--      Login Button End -->
+
 
       <!-- user menu -->
       <div id="user-menu-button" role="menu" class="dropdown header-item relative flex items-center justify-center">
@@ -213,7 +216,7 @@
           <hr class="my-3 border-t border-t-black/10" />
           <!-- Menu Items -->
           <nav
-            class="[&_li]:text-base [&_li]:font-medium [&_li]:cursor-pointer [&_li]:text-meta-light [&_li]:hover:text-primary-title mt-3 space-y-3 text-gray-700">
+            class="[&_li]:text-base [&_li]:pb-2 [&_li]:font-medium [&_li]:cursor-pointer [&_li]:text-meta-light [&_li]:hover:text-primary-title mt-3 space-y-3 text-gray-700">
             <ul>
               <!--    Item -->
               <li aria-label="My Courses">
@@ -304,23 +307,86 @@
             <span aria-hidden="true" class="dropdown-triangle left-[28px] -top-[17px]"></span>
             <!-- Menu Items -->
             <nav
-              class="[&_li]:text-base [&_li]:font-medium [&_li]:cursor-pointer [&_li]:text-meta-light [&_li]:hover:text-primary-title mt-1 space-y-3 text-gray-700">
+              class="[&_li]:text-base [&_li]:pb-2 [&_li]:font-medium [&_li]:cursor-pointer [&_li]:text-meta-light [&_li]:hover:text-primary-title mt-3 space-y-3 text-gray-700">
               <ul>
                 <!--    Item -->
-                <li aria-label="الدورات التعليمية">
-                  <a href="">الدورات التعليمية</a>
+                <li aria-label="My Courses">
+                  <a href="">دورات تعليمية</a>
                 </li>
                 <!-- End Item -->
                 <!--    Item -->
-                <li aria-label="الدورات الاستشارية">
-                  <a href="">الدورات الاستشارية</a>
+                <li aria-label="My Certificates">
+                  <a href="">دورات استشارية</a>
                 </li>
                 <!-- End Item -->
                 <!--    Item -->
-                <li aria-label="الدورات الرياضية">
-                  <a href="">الدورات الرياضية</a>
+                <li aria-label="My Wishlist">
+                  <a href="">دورات رياضية</a>
                 </li>
                 <!-- End Item -->
+              </ul>
+              <hr class="my-3 border-t border-t-black/10" />
+              <ul>
+                <!--    Item -->
+                <li aria-label="Dashboard">
+                  <a href="">المكتبة</a>
+                </li>
+                <!-- End Item -->
+              </ul>
+              <hr class="my-3 border-t border-t-black/10" />
+              <ul class="flex items-center">
+                <!-- Currency Start -->
+                <div class="dropdown header-item me-4 relative block">
+                  <div class="text-text text-base font-medium leading-10 dark:text-neutral-50">
+                    SAR
+                    <!--Currency Change Menu Start-->
+                    <div
+                      role="menu"
+                      id="currency-menu"
+                      aria-label="Currency menu"
+                      class="dropdown-menu min-w-14 -start-7 absolute z-50 mx-4 mt-0 hidden w-14 max-w-fit rounded-xl border border-black/10 bg-white p-2 shadow-lg"
+                    >
+                <span
+                  aria-hidden="true"
+                  class="rotate-225 absolute left-[22px] -top-[17px] h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"
+                ></span>
+                      <ul class="text-center">
+                        <li aria-label="USD" class="cursor-pointer">
+                          <!-- USD -->
+                          <a class="text-text ps-5 text-base font-medium leading-10" href="#"> $ </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <!--Currency Change Menu End-->
+                  </div>
+                </div>
+                <!--      Currency End -->
+                <!--      Language Switch Start -->
+                <div id="locale-switcher-button-2" class="dropdown me-0 relative block">
+                  <img class="inline-block" src="src/assets/images/header/ar.svg" alt="عربي" />
+                  <!--Language Switch Menu Start-->
+                  <div
+                    role="menu"
+                    id="locale-switcher-2"
+                    aria-label="Change Language"
+                    class="dropdown-menu -start-12 w-18 max-w-18 min-w-18 absolute mx-4 mt-2 hidden rounded-xl border border-black/10 bg-white p-4 shadow-lg"
+                  >
+              <span
+                aria-hidden="true"
+                class="rotate-225 absolute left-[22px] -top-[17px] flex h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"
+              ></span>
+
+                    <ul>
+                      <li class="flex justify-center">
+                        <a href="#">
+                          <img aria-label="English" src="src/assets/images/header/en.svg" alt="home" />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!--Language Switch Menu End-->
+                </div>
+                <!-- Language Switch End -->
               </ul>
               <!-- Logout Start -->
             </nav>

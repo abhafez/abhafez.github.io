@@ -84,20 +84,15 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
-    --breakpoint-xs: 30rem;
-    --breakpoint-largest: 1900px;
     --color-sep: #d4d4d8;
     --color-box: #f4f4f5;
     --color-wheat: #d2d2d4;
     --color-meta-light: #818182;
     --color-meta: #52525b;
-    --color-twitter: #1da1f2;
     --color-primary-title: #6639c6;
-    --color-primary-300: #56369b;
     --color-primary-400: #38246d;
     --color-primary-200: #321f6b;
     --color-text: #311e6a;
-    --color-category-1: #441457;
     --color-text-invert: #fafafa;
     --color-meta-dark: #d2d2d5;
     --color-meta-light-2: #a1a1aa;
@@ -527,9 +522,6 @@
   }
   .my-8 {
     margin-block: calc(var(--spacing) * 8);
-  }
-  .my-16 {
-    margin-block: calc(var(--spacing) * 16);
   }
   .ms-2 {
     margin-inline-start: calc(var(--spacing) * 2);
@@ -2388,13 +2380,6 @@
       }
     }
   }
-  .hover\:bg-primary-400 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-primary-400);
-      }
-    }
-  }
   .hover\:bg-primary-title\/10 {
     &:hover {
       @media (hover: hover) {
@@ -2413,13 +2398,6 @@
     &:hover {
       @media (hover: hover) {
         color: var(--color-red-700);
-      }
-    }
-  }
-  .hover\:underline {
-    &:hover {
-      @media (hover: hover) {
-        text-decoration-line: underline;
       }
     }
   }
@@ -2458,11 +2436,6 @@
   .xs\:gap-6 {
     @media (width >= 30rem) {
       gap: calc(var(--spacing) * 6);
-    }
-  }
-  .sm\:mx-3 {
-    @media (width >= 40rem) {
-      margin-inline: calc(var(--spacing) * 3);
     }
   }
   .sm\:grid-cols-4 {
@@ -3452,14 +3425,14 @@
       margin-block: calc(var(--spacing) * 10);
     }
   }
-  .\[\&_li\]\:my-20 {
-    & li {
-      margin-block: calc(var(--spacing) * 20);
-    }
-  }
   .\[\&_li\]\:cursor-pointer {
     & li {
       cursor: pointer;
+    }
+  }
+  .\[\&_li\]\:pb-2 {
+    & li {
+      padding-bottom: calc(var(--spacing) * 2);
     }
   }
   .\[\&_li\]\:text-base {
@@ -3709,7 +3682,7 @@ input:focus-visible {
 .header-item {
   margin-inline: calc(var(--spacing) * 2);
   @media (width >= 40rem) {
-    margin-inline: calc(var(--spacing) * 3);
+    margin-inline: calc(var(--spacing) * 2.5);
   }
 }
 .header-item:last-child {
