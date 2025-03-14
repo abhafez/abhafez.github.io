@@ -13,7 +13,7 @@
       data-theme-url="https://d2rboqy70y74sa.cloudfront.net/wp-content/themes/AanaabB2B-v2/src/">
 <!--Header Start-->
 <header class="border-sep dark:bg-dark flex h-20 items-center justify-between border-b px-5">
-  <div class="container flex flex-row items-center justify-between md:m-auto">
+  <div class="container flex flex-row items-center justify-between m-auto">
     <div class="flex items-center gap-10">
       <img src="src/assets/images/logo/logo.svg" alt="logo" class="h-9" />
 
@@ -109,8 +109,12 @@
       </div>
       <!-- Language Switch End -->
       <!-- Favorite Heart Start -->
-      <img alt="فاتح" src="src/assets/images/header/heart.svg"
-           class="header-item relative mx-3 hidden h-6 w-6 cursor-pointer dark:stroke-white lg:block" />
+      <svg class="header-item relative mx-3 hidden h-6 w-6 cursor-pointer dark:stroke-white lg:block" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="mdi:favourite">
+          <path class="stroke-primary-200 dark:stroke-white" id="Vector" d="M9.29688 16.1371L9.2958 16.1361C7.13522 14.1769 5.40233 12.6016 4.20082 11.1316C3.00755 9.67172 2.41699 8.4076 2.41699 7.08333C2.41699 4.92344 4.09698 3.25 6.25033 3.25C7.4736 3.25 8.66009 3.82334 9.4312 4.7218L10.0003 5.38491L10.5695 4.7218C11.3406 3.82334 12.5271 3.25 13.7503 3.25C15.9037 3.25 17.5837 4.92344 17.5837 7.08333C17.5837 8.4076 16.9931 9.67172 15.7998 11.1316C14.5983 12.6016 12.8654 14.1769 10.7049 16.1361L10.7038 16.1371L10.0003 16.7774L9.29688 16.1371Z" stroke="#321F6B" stroke-width="1.5"/>
+        </g>
+      </svg>
+
       <!--      Favorite Heart End -->
       <!--      Toggle theme -->
       <img alt="غامق" src="src/assets/images/header/moon.svg" class="header-item h-6 w-6 cursor-pointer stroke-white"
@@ -128,14 +132,37 @@
       <!-- Search Button ICON -->
       <div class="header-item relative xl:hidden">
         <!-- Search Icon Button -->
-        <div class="cursor-pointer" id="search-icon" data-svg-wrapper>
+        <div class="dropdown cursor-pointer" id="search-icon" data-svg-wrapper>
           <svg class="fill-meta dark:fill-white" width="24" height="24" viewBox="0 0 30 30" fill="none"
                xmlns="http://www.w3.org/2000/svg">
             <path
+              class="fill-primary-200 dark:fill-white"
               d="M21.4408 18.8679H20.0858L19.6055 18.4048C21.3445 16.3877 22.3003 13.8125 22.2985 11.1492C22.2985 8.94412 21.6446 6.78853 20.4195 4.95505C19.1944 3.12157 17.4531 1.69255 15.4159 0.848689C13.3786 0.00483079 11.1369 -0.215961 8.97412 0.214234C6.81139 0.64443 4.82478 1.70629 3.26554 3.26554C1.70629 4.82478 0.64443 6.81139 0.214234 8.97412C-0.215961 11.1369 0.00483079 13.3786 0.848689 15.4159C1.69255 17.4531 3.12157 19.1944 4.95505 20.4195C6.78853 21.6446 8.94412 22.2985 11.1492 22.2985C13.9108 22.2985 16.4494 21.2865 18.4048 19.6055L18.8679 20.0858V21.4408L27.4443 30L30 27.4443L21.4408 18.8679ZM11.1492 18.8679C6.87822 18.8679 3.43054 15.4202 3.43054 11.1492C3.43054 6.87822 6.87822 3.43054 11.1492 3.43054C15.4202 3.43054 18.8679 6.87822 18.8679 11.1492C18.8679 15.4202 15.4202 18.8679 11.1492 18.8679Z"
-              fill="#321F6B"
             />
           </svg>
+          <div
+            role="menu"
+            id="search-menu"
+            aria-label="Search dropdown for mobile devices and small screen sizes"
+            class="max-w-72 dropdown-menu -end-7 absolute top-14 z-30 mx-4 hidden w-72 rounded-xl border border-black/10 bg-white p-4 shadow-lg"
+          >
+            <span aria-hidden="true" class="dropdown-triangle left-[28px] -top-[17px]"></span>
+            <div
+              class="border-sep flex h-10 items-center justify-start gap-2.5 rounded-lg border bg-[#f2f2f3] px-4 py-4">
+              <label class="relative">
+                <div data-svg-wrapper class="absolute top-2">
+                  <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M10.4167 9.87907H9.75834L9.525 9.65407C10.3699 8.67409 10.8343 7.42298 10.8333 6.12907C10.8333 5.05776 10.5157 4.0105 9.92046 3.11973C9.32527 2.22897 8.4793 1.5347 7.48954 1.12472C6.49977 0.714749 5.41066 0.607481 4.35993 0.816485C3.3092 1.02549 2.34404 1.54138 1.58651 2.29891C0.828973 3.05644 0.313085 4.0216 0.104082 5.07233C-0.104921 6.12306 0.00234696 7.21217 0.412322 8.20194C0.822296 9.19171 1.51656 10.0377 2.40733 10.6329C3.2981 11.2281 4.34535 11.5457 5.41667 11.5457C6.75834 11.5457 7.99167 11.0541 8.94167 10.2374L9.16667 10.4707V11.1291L13.3333 15.2874L14.575 14.0457L10.4167 9.87907ZM5.41667 9.87907C3.34167 9.87907 1.66667 8.20407 1.66667 6.12907C1.66667 4.05407 3.34167 2.37907 5.41667 2.37907C7.49167 2.37907 9.16667 4.05407 9.16667 6.12907C9.16667 8.20407 7.49167 9.87907 5.41667 9.87907Z"
+                      fill="#52525B"
+                    />
+                  </svg>
+                </div>
+                <input type="text" class="ps-6 text-meta h-8 w-36 text-right text-base font-normal"
+                       placeholder="البحث" />
+              </label>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -153,10 +180,7 @@
           aria-label="User menu"
           class="max-w-72 dropdown-menu -end-7 absolute top-14 z-30 mx-4 hidden w-72 rounded-xl border border-black/10 bg-white p-4 shadow-lg"
         >
-              <span
-                aria-hidden="true"
-                class="rotate-225 absolute left-[39px] -top-[17px] h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"
-              ></span>
+          <span aria-hidden="true" class="dropdown-triangle left-[39px] -top-[17px]"></span>
 
           <div class="flex items-center gap-3 pb-3">
             <!--    Menu name and e-mail-->
@@ -254,7 +278,7 @@
                xmlns="http://www.w3.org/2000/svg">
             <path
               d="M7.5 24C7.5 24.8284 8.1716 25.5 9 25.5H28.5C29.3284 25.5 30 24.8284 30 24C30 23.1716 29.3284 22.5 28.5 22.5H9C8.1716 22.5 7.5 23.1717 7.5 24ZM28.5 16.5H1.5C0.671602 16.5 0 15.8283 0 15C0 14.1716 0.671602 13.5 1.5 13.5H28.5C29.3284 13.5 30 14.1716 30 15C30 15.8283 29.3284 16.5 28.5 16.5ZM28.5 7.5H15C14.1717 7.5 13.5 6.8284 13.5 6C13.5 5.17166 14.1717 4.5 15 4.5H28.5C29.3284 4.5 30 5.17166 30 6C30 6.8284 29.3284 7.5 28.5 7.5Z"
-              fill="#321F6B"
+              class="fill-primary-200 dark:fill-white"
             />
           </svg>
           <div
@@ -263,10 +287,7 @@
             aria-label="User menu"
             class="max-w-72 dropdown-menu -end-7 absolute top-14 z-30 mx-4 hidden w-72 rounded-xl border border-black/10 bg-white p-4 shadow-lg"
           >
-                <span
-                  aria-hidden="true"
-                  class="rotate-225 absolute left-[39px] -top-[17px] h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"
-                ></span>
+            <span aria-hidden="true" class="dropdown-triangle left-[28px] -top-[17px]"></span>
             <!-- Menu Items -->
             <nav
               class="[&_li]:text-base [&_li]:font-medium [&_li]:cursor-pointer [&_li]:text-meta-light [&_li]:hover:text-primary-title mt-1 space-y-3 text-gray-700">

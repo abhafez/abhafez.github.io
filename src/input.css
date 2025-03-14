@@ -232,3 +232,7 @@ input:focus-visible {
 .header-item:last-child {
   @apply me-0;
 }
+
+.dropdown-triangle {
+  @apply rotate-225 absolute h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white;
+}
