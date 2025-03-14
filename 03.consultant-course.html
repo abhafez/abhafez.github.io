@@ -9,35 +9,33 @@
     <script src="src/js/scripts.js" defer></script>
     <title>Aanaab</title>
   </head>
-  <body dir="rtl" class="light">
-    <section class="dark:bg-dark">
-      <!--Header Start-->
-      <header class="border-sep dark:bg-dark flex h-20 items-center justify-between border-b px-5">
-        <div class="container flex flex-row items-center justify-between lg:m-auto">
-          <div class="flex items-center gap-10">
-            <img src="src/assets/images/logo/logo.svg" alt="logo" class="h-9" />
+  <body dir="rtl" class="light"
+        data-theme-url="https://d2rboqy70y74sa.cloudfront.net/wp-content/themes/AanaabB2B-v2/src/">
+    <!--Header Start-->
+    <header class="border-sep dark:bg-dark flex h-20 items-center justify-between border-b px-5">
+      <div class="container m-auto flex flex-row items-center justify-between">
+        <div class="flex items-center gap-10">
+          <img src="src/assets/images/logo/logo.svg" alt="logo" class="h-9" />
 
-            <nav class="hidden lg:block">
-              <ul class="flex flex-row items-center gap-5">
-                <li class="bg-Primary bg-primary-title h-12 items-center justify-center gap-1 overflow-hidden rounded-3xl px-8 py-3 shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)]">
-                  <span class="text-base font-medium leading-none text-white">الدورات التعليمية</span>
-                </li>
-                <li>
-                  <span class="text-text text-base font-medium leading-none dark:text-neutral-50"> الدورات الاستشارية</span>
-                </li>
-                <li>
-                  <span class="text-text text-base font-medium leading-none dark:text-neutral-50"> الدورات الرياضية</span>
-                </li>
-              </ul>
-            </nav>
-          </div>
+          <nav class="hidden lg:block">
+            <ul class="relative flex flex-row items-center gap-5">
+              <li class="btn-active">
+                <span class="text-base font-medium leading-none text-white">الدورات التعليمية</span>
+              </li>
+              <li>
+                <span class="text-text text-clickable text-base font-medium leading-none dark:text-neutral-50"> الاستشارية</span>
+              </li>
+              <li>
+                <span class="text-text text-clickable text-base font-medium leading-none dark:text-neutral-50"> الرياضية</span>
+              </li>
+            </ul>
+          </nav>
+        </div>
 
-          <section class="hidden xl:block">
-            <div class="bg-Field border-sep inline-flex h-10 w-52 items-center justify-start gap-2.5 rounded-lg border px-4 py-4">
-              <label>
-                <input type="text" class="text-meta h-8 w-36 text-right text-base font-normal" placeholder="البحث" />
-              </label>
-              <div data-svg-wrapper>
+        <section class="hidden xl:block">
+          <div class="border-sep flex h-10 w-52 items-center justify-start gap-2.5 rounded-lg border bg-[#f2f2f3] px-4 py-4">
+            <label class="relative">
+              <div data-svg-wrapper class="absolute top-2">
                 <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M10.4167 9.87907H9.75834L9.525 9.65407C10.3699 8.67409 10.8343 7.42298 10.8333 6.12907C10.8333 5.05776 10.5157 4.0105 9.92046 3.11973C9.32527 2.22897 8.4793 1.5347 7.48954 1.12472C6.49977 0.714749 5.41066 0.607481 4.35993 0.816485C3.3092 1.02549 2.34404 1.54138 1.58651 2.29891C0.828973 3.05644 0.313085 4.0216 0.104082 5.07233C-0.104921 6.12306 0.00234696 7.21217 0.412322 8.20194C0.822296 9.19171 1.51656 10.0377 2.40733 10.6329C3.2981 11.2281 4.34535 11.5457 5.41667 11.5457C6.75834 11.5457 7.99167 11.0541 8.94167 10.2374L9.16667 10.4707V11.1291L13.3333 15.2874L14.575 14.0457L10.4167 9.87907ZM5.41667 9.87907C3.34167 9.87907 1.66667 8.20407 1.66667 6.12907C1.66667 4.05407 3.34167 2.37907 5.41667 2.37907C7.49167 2.37907 9.16667 4.05407 9.16667 6.12907C9.16667 8.20407 7.49167 9.87907 5.41667 9.87907Z"
@@ -45,240 +43,348 @@
                   />
                 </svg>
               </div>
-            </div>
-          </section>
+              <input type="text" class="ps-6 text-meta h-8 w-36 text-right text-base font-normal" placeholder="البحث" />
+            </label>
+          </div>
+        </section>
 
-          <div class="flex items-center justify-center">
-            <span class="text-text me-10 hidden text-base font-medium leading-none dark:text-neutral-50 lg:block"> المكتبة</span>
-
-            <!-- TODO: Handle Currency Selection -->
-            <!-- Currency Start -->
-            <div class="dropdown me-4 relative hidden lg:block">
-              <div class="text-text text-base font-medium leading-10 dark:text-neutral-50">
-                SAR
-                <!--Currency Change Menu Start-->
-                <div
-                  role="menu"
-                  id="currency-menu"
-                  aria-label="Currency menu"
-                  class="dropdown-menu min-w-14 -start-7 absolute mx-4 mt-0 hidden w-14 max-w-fit rounded-xl border border-black/10 bg-white p-4 shadow-lg"
-                >
-                  <span
-                    aria-hidden="true"
-                    class="rotate-225 absolute left-[22px] -top-[17px] h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"
-                  ></span>
-                  <ul class="text-end">
-                    <li aria-label="USD">
-                      <!-- USD -->
-                      <a class="text-base font-medium leading-10 text-[#311e6a]" href="#"> $ </a>
-                    </li>
-                  </ul>
-                </div>
-                <!--Currency Change Menu End-->
-              </div>
-            </div>
-            <!--      Currency End -->
-            <!--      Language Switch Start -->
-            <div id="locale-switcher-button" class="dropdown me-4 relative hidden lg:block">
-              <img class="inline-block" src="src/assets/images/header/ar.svg" alt="عربي" />
-              <!--Language Switch Menu Start-->
+        <div class="flex items-center justify-center">
+          <!-- Library -->
+          <span class="header-item text-clickable text-text me-10 header-item hidden text-base font-medium leading-none dark:text-neutral-50 lg:block"> المكتبة</span>
+          <!-- Library -->
+          <!-- Currency Start -->
+          <div class="dropdown header-item me-4 relative hidden lg:block">
+            <div class="text-text text-base font-medium leading-10 dark:text-neutral-50">
+              SAR
+              <!--Currency Change Menu Start-->
               <div
                 role="menu"
-                id="locale-switcher"
-                aria-label="Change Language"
-                class="dropdown-menu -start-12 w-18 max-w-18 min-w-18 absolute mx-4 mt-2 hidden rounded-xl border border-black/10 bg-white p-4 shadow-lg"
+                id="currency-menu"
+                aria-label="Currency menu"
+                class="dropdown-menu min-w-14 -start-7 absolute z-50 mx-4 mt-0 hidden w-14 max-w-fit rounded-xl border border-black/10 bg-white p-2 shadow-lg"
               >
-                <span
-                  aria-hidden="true"
-                  class="rotate-225 absolute left-[22px] -top-[17px] flex h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"
-                ></span>
-
-                <ul>
-                  <li class="flex justify-center">
-                    <a href="#">
-                      <img aria-label="English" src="src/assets/images/header/en.svg" alt="home" />
-                    </a>
+                <span aria-hidden="true" class="rotate-225 absolute left-[22px] -top-[17px] h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"></span>
+                <ul class="text-center">
+                  <li aria-label="USD" class="cursor-pointer">
+                    <!-- USD -->
+                    <a class="text-text ps-5 text-base font-medium leading-10" href="#"> $ </a>
                   </li>
                 </ul>
               </div>
-              <!--Language Switch Menu End-->
+              <!--Currency Change Menu End-->
             </div>
-            <!-- Language Switch End -->
-            <!-- Favorite Heart Start -->
-            <div id="favorite-button" data-svg-wrapper class="ms-2.5 relative hidden lg:block">
-              <svg class="stroke-primary-200 dark:stroke-neutral-50" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          </div>
+          <!--      Currency End -->
+          <!--      Language Switch Start -->
+          <div id="locale-switcher-button" class="dropdown me-0 relative hidden lg:block">
+            <img class="inline-block" src="src/assets/images/header/ar.svg" alt="عربي" />
+            <!--Language Switch Menu Start-->
+            <div
+              role="menu"
+              id="locale-switcher"
+              aria-label="Change Language"
+              class="dropdown-menu -start-12 w-18 max-w-18 min-w-18 absolute mx-4 mt-2 hidden rounded-xl border border-black/10 bg-white p-4 shadow-lg"
+            >
+              <span aria-hidden="true" class="rotate-225 absolute left-[22px] -top-[17px] flex h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"></span>
+
+              <ul>
+                <li class="flex justify-center">
+                  <a href="#">
+                    <img aria-label="English" src="src/assets/images/header/en.svg" alt="home" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!--Language Switch Menu End-->
+          </div>
+          <!-- Language Switch End -->
+          <!-- Favorite Heart Start -->
+          <a href="#" class="header-item">
+            <svg class="header-item relative mx-3 block h-6 w-6 cursor-pointer dark:stroke-white" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="mdi:favourite">
                 <path
+                  class="stroke-primary-200 dark:stroke-white"
+                  id="Vector"
                   d="M9.29688 16.1371L9.2958 16.1361C7.13522 14.1769 5.40233 12.6016 4.20082 11.1316C3.00755 9.67172 2.41699 8.4076 2.41699 7.08333C2.41699 4.92344 4.09698 3.25 6.25033 3.25C7.4736 3.25 8.66009 3.82334 9.4312 4.7218L10.0003 5.38491L10.5695 4.7218C11.3406 3.82334 12.5271 3.25 13.7503 3.25C15.9037 3.25 17.5837 4.92344 17.5837 7.08333C17.5837 8.4076 16.9931 9.67172 15.7998 11.1316C14.5983 12.6016 12.8654 14.1769 10.7049 16.1361L10.7038 16.1371L10.0003 16.7774L9.29688 16.1371Z"
-                  stroke=""
+                  stroke="#321F6B"
                   stroke-width="1.5"
                 />
+              </g>
+            </svg>
+          </a>
+          <!--      Favorite Heart End -->
+          <!--      Toggle theme -->
+          <img alt="غامق" src="src/assets/images/header/moon.svg" class="header-item h-6 w-6 cursor-pointer stroke-white" id="theme-toggle" onclick="toggleTheme()" />
+          <!--      Toggle theme -->
+
+          <!-- Search Button ICON -->
+          <div class="header-item relative xl:hidden">
+            <!-- Search Icon Button -->
+            <div class="dropdown cursor-pointer" id="search-icon" data-svg-wrapper>
+              <svg class="fill-meta dark:fill-white" width="24" height="24" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  class="fill-primary-200 dark:fill-white"
+                  d="M21.4408 18.8679H20.0858L19.6055 18.4048C21.3445 16.3877 22.3003 13.8125 22.2985 11.1492C22.2985 8.94412 21.6446 6.78853 20.4195 4.95505C19.1944 3.12157 17.4531 1.69255 15.4159 0.848689C13.3786 0.00483079 11.1369 -0.215961 8.97412 0.214234C6.81139 0.64443 4.82478 1.70629 3.26554 3.26554C1.70629 4.82478 0.64443 6.81139 0.214234 8.97412C-0.215961 11.1369 0.00483079 13.3786 0.848689 15.4159C1.69255 17.4531 3.12157 19.1944 4.95505 20.4195C6.78853 21.6446 8.94412 22.2985 11.1492 22.2985C13.9108 22.2985 16.4494 21.2865 18.4048 19.6055L18.8679 20.0858V21.4408L27.4443 30L30 27.4443L21.4408 18.8679ZM11.1492 18.8679C6.87822 18.8679 3.43054 15.4202 3.43054 11.1492C3.43054 6.87822 6.87822 3.43054 11.1492 3.43054C15.4202 3.43054 18.8679 6.87822 18.8679 11.1492C18.8679 15.4202 15.4202 18.8679 11.1492 18.8679Z"
+                />
               </svg>
-            </div>
-            <!--      Favorite Heart End -->
-            <!--      Toggle theme -->
-            <div>
-              <img alt="theme" src="src/assets/images/header/moon.svg" class="mx-3 h-6 w-6 cursor-pointer stroke-white" id="theme-toggle" onclick="toggleTheme()" />
-            </div>
-            <!--      Toggle theme -->
-            <!-- Login Button -->
-            <button
-              id="login-button"
-              class="bg-primary-title ms-4 hidden h-10 items-center justify-center gap-2.5 rounded-full px-6 pt-0.5 shadow-[0px_12px_53px_0px_rgba(0,0,0,0.04)] lg:inline"
-            >
-              <span class="text-center text-base font-medium text-white">دخول</span>
-            </button>
-            <!--      Login Button End -->
-
-            <!-- Search Button ICON -->
-            <div class="relative">
-              <!-- Search Icon Button -->
-              <div class="ms-2.5 cursor-pointer xl:hidden" id="search-icon" data-svg-wrapper>
-                <svg class="fill-meta dark:fill-white" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M21.4408 18.8679H20.0858L19.6055 18.4048C21.3445 16.3877 22.3003 13.8125 22.2985 11.1492C22.2985 8.94412 21.6446 6.78853 20.4195 4.95505C19.1944 3.12157 17.4531 1.69255 15.4159 0.848689C13.3786 0.00483079 11.1369 -0.215961 8.97412 0.214234C6.81139 0.64443 4.82478 1.70629 3.26554 3.26554C1.70629 4.82478 0.64443 6.81139 0.214234 8.97412C-0.215961 11.1369 0.00483079 13.3786 0.848689 15.4159C1.69255 17.4531 3.12157 19.1944 4.95505 20.4195C6.78853 21.6446 8.94412 22.2985 11.1492 22.2985C13.9108 22.2985 16.4494 21.2865 18.4048 19.6055L18.8679 20.0858V21.4408L27.4443 30L30 27.4443L21.4408 18.8679ZM11.1492 18.8679C6.87822 18.8679 3.43054 15.4202 3.43054 11.1492C3.43054 6.87822 6.87822 3.43054 11.1492 3.43054C15.4202 3.43054 18.8679 6.87822 18.8679 11.1492C18.8679 15.4202 15.4202 18.8679 11.1492 18.8679Z"
-                    fill=""
-                  />
-                </svg>
-              </div>
-
-              <!-- Search Input (Initially Hidden) -->
-
-              <!-- Modal Wrapper -->
-              <div id="search-modal" class="invisible fixed inset-0 z-50 flex items-center justify-center bg-black/50 opacity-0 backdrop-blur-sm transition-opacity duration-500">
-                <div class="relative w-full max-w-md rounded-lg bg-white p-4 shadow-lg">
-                  <!-- Close Button -->
-                  <button id="close-search" class="end-3 absolute top-3 text-gray-500 hover:text-gray-700">✖</button>
-                  <!-- Search Input -->
-                  <label>
-                    هذا تجريبي إلى أن نستقر على طريقة
-
-                    <input
-                      type="text"
-                      id="search-input"
-                      placeholder="ابحث هنا..."
-                      class="focus:ring-primary-title w-full rounded-md border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2"
-                    />
+              <div
+                role="menu"
+                id="search-menu"
+                aria-label="Search dropdown for mobile devices and small screen sizes"
+                class="max-w-72 dropdown-menu -end-28 md:-end-7 absolute top-14 z-30 mx-4 hidden w-72 rounded-xl border border-black/10 bg-white p-4 shadow-lg"
+              >
+                <span aria-hidden="true" class="dropdown-triangle left-[115px] -top-[17px] md:left-[28px]"></span>
+                <div class="border-sep flex h-10 items-center justify-start gap-2.5 rounded-lg border bg-[#f2f2f3] px-4 py-4">
+                  <label class="relative">
+                    <div data-svg-wrapper class="absolute top-2">
+                      <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M10.4167 9.87907H9.75834L9.525 9.65407C10.3699 8.67409 10.8343 7.42298 10.8333 6.12907C10.8333 5.05776 10.5157 4.0105 9.92046 3.11973C9.32527 2.22897 8.4793 1.5347 7.48954 1.12472C6.49977 0.714749 5.41066 0.607481 4.35993 0.816485C3.3092 1.02549 2.34404 1.54138 1.58651 2.29891C0.828973 3.05644 0.313085 4.0216 0.104082 5.07233C-0.104921 6.12306 0.00234696 7.21217 0.412322 8.20194C0.822296 9.19171 1.51656 10.0377 2.40733 10.6329C3.2981 11.2281 4.34535 11.5457 5.41667 11.5457C6.75834 11.5457 7.99167 11.0541 8.94167 10.2374L9.16667 10.4707V11.1291L13.3333 15.2874L14.575 14.0457L10.4167 9.87907ZM5.41667 9.87907C3.34167 9.87907 1.66667 8.20407 1.66667 6.12907C1.66667 4.05407 3.34167 2.37907 5.41667 2.37907C7.49167 2.37907 9.16667 4.05407 9.16667 6.12907C9.16667 8.20407 7.49167 9.87907 5.41667 9.87907Z"
+                          fill="#52525B"
+                        />
+                      </svg>
+                    </div>
+                    <input type="text" class="ps-6 text-meta h-8 w-36 text-right text-base font-normal" placeholder="البحث" />
                   </label>
                 </div>
               </div>
             </div>
+          </div>
+          <!-- Search Button ICON -->
 
-            <!-- user menu -->
-            <div id="user-menu-button" role="menu" class="dropdown ms-2.5 relative flex items-center justify-center gap-3">
-              <div class="bg-primary-title hidden h-12 w-12 items-center justify-center rounded-full pt-1 text-lg font-bold text-white lg:flex">
-                <!-- Name Initials -->
-                HN
-              </div>
-              <!-- Burger Menu -->
-              <div class="dropdown ms-2.5 lg:hidden" data-svg-wrapper>
-                <div data-svg-wrapper class="relative">
-                  <svg class="fill-meta dark:fill-white" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M7.5 24C7.5 24.8284 8.1716 25.5 9 25.5H28.5C29.3284 25.5 30 24.8284 30 24C30 23.1716 29.3284 22.5 28.5 22.5H9C8.1716 22.5 7.5 23.1717 7.5 24ZM28.5 16.5H1.5C0.671602 16.5 0 15.8283 0 15C0 14.1716 0.671602 13.5 1.5 13.5H28.5C29.3284 13.5 30 14.1716 30 15C30 15.8283 29.3284 16.5 28.5 16.5ZM28.5 7.5H15C14.1717 7.5 13.5 6.8284 13.5 6C13.5 5.17166 14.1717 4.5 15 4.5H28.5C29.3284 4.5 30 5.17166 30 6C30 6.8284 29.3284 7.5 28.5 7.5Z"
-                    />
-                  </svg>
+          <!-- Login Button -->
+          <button id="login-button" class="btn-primary header-item hidden h-10 items-center justify-center gap-2.5 rounded-full px-6 pt-0.5 shadow-[0px_12px_53px_0px_rgba(0,0,0,0.04)] lg:inline">
+            <span class="text-center text-base font-medium text-white">دخول</span>
+          </button>
+          <!--      Login Button End -->
+
+          <!-- user menu -->
+          <div id="user-menu-button" role="menu" class="dropdown header-item relative flex items-center justify-center">
+            <div class="bg-primary-title flex h-12 w-12 items-center justify-center rounded-full pt-1 text-lg font-bold text-white">
+              <!-- Name Initials -->
+              HN
+            </div>
+            <!-- User Menu Start -->
+            <div role="menu" id="user-menu" aria-label="User menu" class="max-w-72 dropdown-menu -end-7 absolute top-14 z-30 mx-4 hidden w-72 rounded-xl border border-black/10 bg-white p-4 shadow-lg">
+              <span aria-hidden="true" class="dropdown-triangle left-[39px] -top-[17px]"></span>
+
+              <div class="flex items-center gap-3 pb-3">
+                <!--    Menu name and e-mail-->
+                <div class="bg-primary-title flex h-12 w-12 items-center justify-center rounded-full pt-1 text-lg font-bold text-white">
+                  <!-- Name Initials -->
+                  HN
+                </div>
+                <div>
+                  <!--      name -->
+                  <p class="text-text text-sm font-bold">هبة نبيل</p>
+                  <!--        email -->
+                  <p class="text-sm text-gray-500">Heba@gmail.com</p>
                 </div>
               </div>
-              <!-- User Menu Start -->
+              <hr class="my-3 border-t border-t-black/10" />
+              <!-- Menu Items -->
+              <nav
+                class="[&_li]:text-base [&_li]:pb-2 [&_li]:last-of-type:pb-0 [&_li]:font-medium [&_li]:cursor-pointer [&_li]:text-meta-light [&_li]:hover:text-primary-title mt-3 space-y-3 text-gray-700"
+              >
+                <ul>
+                  <!--    Item -->
+                  <li aria-label="My Courses">
+                    <a href="">دوراتي</a>
+                  </li>
+                  <!-- End Item -->
+                  <!--    Item -->
+                  <li aria-label="My Certificates">
+                    <a href="">شهاداتي</a>
+                  </li>
+                  <!-- End Item -->
+                  <!--    Item -->
+                  <li aria-label="My Wishlist">
+                    <a href="">مفضلتي</a>
+                  </li>
+                  <!-- End Item -->
+                  <!--    Item -->
+                  <li aria-label="My Cart">
+                    <a href="">السلة</a>
+                  </li>
+                </ul>
+                <hr class="my-3 border-t border-t-black/10" />
+                <ul>
+                  <!-- End Item -->
+                  <!--    Item -->
+                  <li aria-label="Dashboard">
+                    <a href=""> لوحة التحكم </a>
+                  </li>
+                  <!-- End Item -->
+                  <!--    Item -->
+                  <li aria-label="Community">
+                    <a href="">المجتمع</a>
+                  </li>
+                </ul>
+                <hr class="my-3 border-t border-t-black/10" />
+                <ul>
+                  <!-- End Item -->
+                  <!--    Item -->
+                  <li aria-label="Profile">
+                    <a href="">الملف الشخصي </a>
+                  </li>
+                  <!-- End Item -->
+                  <!--    Item -->
+                  <li aria-label="Notifications">
+                    <a href="">الإشعارات</a>
+                  </li>
+                  <!-- End Item -->
+                  <!--    Item -->
+                  <li aria-label="Orders">
+                    <a href="">سجل المشتريات</a>
+                  </li>
+                  <li aria-label="Help Center">
+                    <a href="">مركز التعليمات</a>
+                  </li>
+                  <!-- End Item -->
+                  <!--    Item -->
+                </ul>
+                <hr class="mt-4 border-t border-t-black/10" />
+                <!-- Logout Start -->
+                <div class="pe-2 mt-4 flex justify-between">
+                  <a aria-label="Logout" href="#" class="flex cursor-pointer items-center font-bold text-red-600 hover:text-red-700"> خروج </a>
+                  <img src="src/assets/images/header/logout.svg" alt="logout" />
+                </div>
+              </nav>
+              <!-- Logout END -->
+            </div>
+            <!-- User Menu End -->
+          </div>
+          <!-- User menu End -->
+
+          <!-- Burger Menu -->
+          <div id="burger-menu-button" role="menu" class="dropdown header-item lg:hidden" data-svg-wrapper>
+            <div data-svg-wrapper class="relative">
+              <svg class="fill-meta dark:fill-white" width="24" height="24" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M7.5 24C7.5 24.8284 8.1716 25.5 9 25.5H28.5C29.3284 25.5 30 24.8284 30 24C30 23.1716 29.3284 22.5 28.5 22.5H9C8.1716 22.5 7.5 23.1717 7.5 24ZM28.5 16.5H1.5C0.671602 16.5 0 15.8283 0 15C0 14.1716 0.671602 13.5 1.5 13.5H28.5C29.3284 13.5 30 14.1716 30 15C30 15.8283 29.3284 16.5 28.5 16.5ZM28.5 7.5H15C14.1717 7.5 13.5 6.8284 13.5 6C13.5 5.17166 14.1717 4.5 15 4.5H28.5C29.3284 4.5 30 5.17166 30 6C30 6.8284 29.3284 7.5 28.5 7.5Z"
+                  class="fill-primary-200 dark:fill-white"
+                />
+              </svg>
               <div
                 role="menu"
-                id="user-menu"
+                id="burger-menu"
                 aria-label="User menu"
-                class="max-w-72 dropdown-menu -end-7 absolute top-14 z-30 mx-4 hidden w-72 rounded-xl border border-black/10 bg-white bg-blue-100 p-4 shadow-lg"
+                class="max-w-60 dropdown-menu -end-7 absolute top-14 z-30 mx-4 hidden w-72 rounded-[20px] border border-black/10 bg-white p-4 shadow-lg"
               >
-                <span
-                  aria-hidden="true"
-                  class="rotate-225 absolute left-[39px] -top-[17px] h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"
-                ></span>
-
-                <div class="flex items-center gap-3 pb-3">
-                  <!--    Menu name and e-mail-->
-                  <div class="bg-primary-title flex h-12 w-12 items-center justify-center rounded-full pt-1 text-lg font-bold text-white">
-                    <!-- Name Initials -->
-                    HN
-                  </div>
-                  <div>
-                    <!--      name -->
-                    <p class="text-sm font-bold text-[#311e6a]">هبة نبيل</p>
-                    <!--        email -->
-                    <p class="text-sm text-gray-500">Heba@gmail.com</p>
-                  </div>
-                </div>
-                <hr class="my-3 border-t border-t-black/10" />
+                <span aria-hidden="true" class="dropdown-triangle left-[28px] -top-[17px]"></span>
                 <!-- Menu Items -->
-                <nav class="[&_li]:text-base [&_li]:font-medium [&_li]:cursor-pointer [&_li]:text-meta-light [&_li]:hover:text-primary-title mt-3 space-y-3 text-gray-700">
+                <a href="#" class="items center flex justify-center gap-2">
+                  <div class="flex items-center gap-3 pb-3">
+                    <!--    Menu name and e-mail-->
+                    <div class="bg-primary-title flex h-12 w-12 items-center justify-center rounded-full pt-1 text-lg font-bold text-white">
+                      <!-- Name Initials -->
+                      HN
+                    </div>
+                    <div>
+                      <!--      name -->
+                      <p class="text-text text-sm font-bold">هبة نبيل</p>
+                      <!--        email -->
+                      <p class="text-sm text-gray-500">Heba@gmail.com</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-center">
+                    <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8 1L1 8L8 15" stroke="#818182" stroke-linecap="round" />
+                    </svg>
+                  </div>
+                </a>
+                <hr class="my-3 border-t border-t-black/10" />
+                <nav
+                  class="[&_li]:text-base [&_li]:pb-2 [&_li]:last-of-type:pb-0 [&_li]:font-medium [&_li]:cursor-pointer [&_li]:text-meta-light [&_li]:hover:text-primary-title mt-3 space-y-3 text-gray-700"
+                >
                   <ul>
                     <!--    Item -->
                     <li aria-label="My Courses">
-                      <a href="">دوراتي</a>
+                      <a href="">دورات تعليمية</a>
                     </li>
                     <!-- End Item -->
                     <!--    Item -->
                     <li aria-label="My Certificates">
-                      <a href="">شهاداتي</a>
+                      <a href="">دورات استشارية</a>
                     </li>
                     <!-- End Item -->
                     <!--    Item -->
                     <li aria-label="My Wishlist">
-                      <a href="">مفضلتي</a>
+                      <a href="">دورات رياضية</a>
                     </li>
                     <!-- End Item -->
-                    <!--    Item -->
-                    <li aria-label="My Cart">
-                      <a href="">السلة</a>
-                    </li>
                   </ul>
                   <hr class="my-3 border-t border-t-black/10" />
                   <ul>
-                    <!-- End Item -->
                     <!--    Item -->
-                    <li aria-label="Dashboard">
-                      <a href=""> لوحة التحكم </a>
+                    <li aria-label="Dashboard" class="mb-0">
+                      <a href="">المكتبة</a>
                     </li>
-                    <!-- End Item -->
-                    <!--    Item -->
-                    <li aria-label="Community">
-                      <a href="">المجتمع</a>
+                    <li class="flex items-center">
+                      <!-- Currency Start -->
+                      <div class="dropdown header-item me-4 relative block">
+                        <div class="text-text text-base font-medium dark:text-neutral-50">
+                          SAR
+                          <!--Currency Change Menu Start-->
+                          <div
+                            role="menu"
+                            id="currency-menu-2"
+                            aria-label="Currency menu"
+                            class="dropdown-menu min-w-14 -start-7 absolute z-50 mx-4 mt-0 hidden w-14 max-w-fit rounded-xl border border-black/10 bg-white p-2 shadow-lg"
+                          >
+                            <span aria-hidden="true" class="rotate-225 absolute left-[22px] -top-[17px] h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"></span>
+                            <ul class="text-center">
+                              <li aria-label="USD" class="cursor-pointer">
+                                <!-- USD -->
+                                <a class="text-text ps-5 text-base font-medium leading-10" href="#"> $ </a>
+                              </li>
+                            </ul>
+                          </div>
+                          <!--Currency Change Menu End-->
+                        </div>
+                      </div>
+                      <!--      Currency End -->
+                      <!--      Language Switch Start -->
+                      <div id="locale-switcher-button-2" class="dropdown me-0 relative block">
+                        <img class="inline-block" src="src/assets/images/header/ar.svg" alt="عربي" />
+                        <!--Language Switch Menu Start-->
+                        <div
+                          role="menu"
+                          id="locale-switcher-2"
+                          aria-label="Change Language"
+                          class="dropdown-menu -start-12 w-18 max-w-18 min-w-18 absolute mx-4 hidden rounded-xl border border-black/10 bg-white p-4 shadow-lg"
+                        >
+                          <span aria-hidden="true" class="rotate-225 absolute left-[22px] -top-[17px] flex h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"></span>
+
+                          <ul>
+                            <li class="flex justify-center">
+                              <a href="#">
+                                <img aria-label="English" src="src/assets/images/header/en.svg" alt="home" />
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <!--Language Switch Menu End-->
+                      </div>
+                      <!-- Language Switch End -->
+                      <!-- End Item -->
                     </li>
                   </ul>
-                  <hr class="my-3 border-t border-t-black/10" />
-                  <ul>
-                    <!-- End Item -->
-                    <!--    Item -->
-                    <li aria-label="Profile">
-                      <a href="">الملف الشخصي </a>
-                    </li>
-                    <!-- End Item -->
-                    <!--    Item -->
-                    <li aria-label="Notifications">
-                      <a href="">الإشعارات</a>
-                    </li>
-                    <!-- End Item -->
-                    <!--    Item -->
-                    <li aria-label="Orders">
-                      <a href="">سجل المشتريات</a>
-                    </li>
-                    <li aria-label="Help Center">
-                      <a href="">مركز التعليمات</a>
-                    </li>
-                    <!-- End Item -->
-                    <!--    Item -->
-                  </ul>
-                  <hr class="mt-4 border-t border-t-black/10" />
                   <!-- Logout Start -->
-                  <div class="pe-2 mt-4 flex justify-between">
-                    <a aria-label="Logout" href="#" class="flex cursor-pointer items-center font-bold text-red-600 hover:text-red-700"> خروج </a>
-                    <img src="src/assets/images/header/logout.svg" alt="logout" />
-                  </div>
                 </nav>
                 <!-- Logout END -->
               </div>
-              <!-- User Menu End -->
             </div>
-            <!--      user menu End -->
           </div>
+          <!-- User Menu Start -->
+          <!-- User Menu End -->
         </div>
-      </header>
+      </div>
+    </header>
+    <!--Header End -->
+
+    <section class="dark:bg-dark">
+      <!--Header Start-->
       <!--Header End-->
       <div id="empty-space" class="dark:bg-dark hidden h-16 md:block"></div>
       <main class="dark:bg-dark">
@@ -298,10 +404,9 @@
             <p style="color: #6639c6" class="mb-4 text-3xl font-bold lg:mb-8 lg:text-[64px] lg:leading-[78px]">للتأسيس الاستشاري</p>
             <div class="relative justify-start self-stretch text-right">
               <span class="text-base font-normal text-[#311e6a]"
-                >برنامج أساسيات الاستشارات (CFP) هو برنامج تنمية المواهب الممتع للغاية، والذي تم تصميمه لتزويد المتعلمين بمهارات الاستشارات التجارية الأساسية اللازمة لخلق أقصى قيمة
-                في مؤسساتهم. تم تطوير البرنامج من قبل مستشاري الأعمال المخضرمين من أفضل الشركات المرموقة في العالم.<br /><br /></span
-              ><span class="text-base font-bold text-[#311e6a]">تقديم: سامي دبور<br /></span
-              ><span class="text-base font-bold text-[#20b486]">3 مسارات مقابل 2999.89 ريال سعودي</span>
+                >برنامج أساسيات الاستشارات (CFP) هو برنامج تنمية المواهب الممتع للغاية، والذي تم تصميمه لتزويد المتعلمين بمهارات الاستشارات التجارية الأساسية اللازمة لخلق أقصى قيمة في مؤسساتهم. تم
+                تطوير البرنامج من قبل مستشاري الأعمال المخضرمين من أفضل الشركات المرموقة في العالم.<br /><br /></span
+              ><span class="text-base font-bold text-[#311e6a]">تقديم: سامي دبور<br /></span><span class="text-base font-bold text-[#20b486]">3 مسارات مقابل 2999.89 ريال سعودي</span>
             </div>
             <div class="mx-auto mt-8 flex w-full justify-between lg:mx-0 lg:w-fit lg:justify-start">
               <button
@@ -316,9 +421,7 @@
                   <span class="text-base font-bold leading-none text-white">أنضم للبرنامج | 299 </span><span class="text-[11px] font-normal leading-none text-white">ريال</span>
                 </div>
               </button>
-              <button
-                class="inline-flex cursor-pointer items-center justify-center gap-1 rounded-[32px] border-2 border-[#6639c6] px-8 py-[18px] shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)]"
-              >
+              <button class="inline-flex cursor-pointer items-center justify-center gap-1 rounded-[32px] border-2 border-[#6639c6] px-8 py-[18px] shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)]">
                 <span class="flex items-end justify-start gap-1.5">
                   <span class="text-base font-bold leading-none text-[#6639c6]">أستكشف الباقات</span>
                 </span>
@@ -530,8 +633,8 @@
                 </div>
               </div>
               <div class="font-['Ping AR'] border-b border-zinc-300 px-2 pb-6 text-right text-base font-normal leading-relaxed text-[#311e6a] lg:w-[758px]">
-                هو نص وهمي يستخدم في صناعة الطباعة وتصميم المواقع كحشو في التصميمات قبل إدخال النصوص النهائية. يُستخدم لتمثيل النصوص وكيفية تنظيمها داخل التصميمات. النص في الأصل
-                مأخوذ من كتابات قديمة باللغة اللاتينية.هو نص وهمي يستخدم في صناعة الطباعة وتصميم المواقع كحشو في التصميمات قبل إدخال النصوص النهائية.
+                هو نص وهمي يستخدم في صناعة الطباعة وتصميم المواقع كحشو في التصميمات قبل إدخال النصوص النهائية. يُستخدم لتمثيل النصوص وكيفية تنظيمها داخل التصميمات. النص في الأصل مأخوذ من كتابات قديمة
+                باللغة اللاتينية.هو نص وهمي يستخدم في صناعة الطباعة وتصميم المواقع كحشو في التصميمات قبل إدخال النصوص النهائية.
               </div>
               <div class="inline-flex items-center justify-between self-stretch">
                 <div class="flex items-start justify-start gap-2">
@@ -1218,9 +1321,7 @@
               </div>
               <div class="flex flex-col items-center justify-start gap-6 self-stretch lg:h-[212px] lg:px-[114px]">
                 <div class="inline-flex flex-col items-center justify-center gap-5 self-stretch lg:flex-row">
-                  <section
-                    class="flex h-[212px] shrink grow basis-0 items-end justify-center rounded-3xl border border-zinc-300 bg-white pb-px shadow-[0px_2px_0px_0px_rgba(212,212,216,1.00)]"
-                  >
+                  <section class="flex h-[212px] shrink grow basis-0 items-end justify-center rounded-3xl border border-zinc-300 bg-white pb-px shadow-[0px_2px_0px_0px_rgba(212,212,216,1.00)]">
                     <img alt="" class="h-[184px] w-[140px] rounded-bl-[27px]" src="src/assets/images/persons/p3.png" />
                     <div class="inline-flex shrink grow basis-0 flex-col items-start justify-start gap-4 self-stretch pl-4 pr-6 pt-6 pb-[23px]">
                       <p class="w-[220px] text-right text-sm font-normal leading-normal text-zinc-600">
@@ -1315,9 +1416,7 @@
                 <img class="me-20 ml:me-0 -mt-10 lg:mt-8" src="src/assets/images/aanaab-project-s-person.png" alt="" />
                 <div class="mt-6 inline-flex flex-col items-end justify-start gap-4 lg:mt-0 lg:w-[699px]">
                   <div class="text-right text-3xl font-bold leading-7 text-[#6639c6] lg:w-[542px] lg:text-[42px] lg:leading-[42px]">مشاريع أعناب</div>
-                  <div class="self-stretch text-right text-2xl font-bold capitalize text-[#311e6a] lg:text-[32px] lg:leading-[49px]">
-                    لتطوير أداء معلمي ومعلمات المملكة العربية السعودية
-                  </div>
+                  <div class="self-stretch text-right text-2xl font-bold capitalize text-[#311e6a] lg:text-[32px] lg:leading-[49px]">لتطوير أداء معلمي ومعلمات المملكة العربية السعودية</div>
                   <div class="text-right text-sm font-normal text-[#311e6a] lg:w-[695px] lg:text-base">
                     هو نص وهمي يستخدم في صناعة الطباعة وتصميم المواقع كحشو في التصميمات قبل إدخال النصوص النهائية. يُستخدم لتمثيل النصوص وكيفية تنظيمها داخل التصميمات. النص.
                   </div>
@@ -1336,9 +1435,7 @@
                         </div>
                       </div>
                     </div>
-                    <button
-                      class="flex cursor-pointer items-center justify-center gap-1 overflow-hidden rounded-[32px] bg-[#6639c6] px-8 py-[18px] shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)]"
-                    >
+                    <button class="flex cursor-pointer items-center justify-center gap-1 overflow-hidden rounded-[32px] bg-[#6639c6] px-8 py-[18px] shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)]">
                       <span class="flex items-end justify-start gap-1.5 shadow-[1px_5px_22px_4px_rgba(0,0,0,0.15)]">
                         <span class="font-['Ping Ar'] text-base font-bold leading-none text-white">تسجيل دخول</span>
                       </span>
