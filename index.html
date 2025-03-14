@@ -1,20 +1,32 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
-  <body>
-    <div id="app">
+<!DOCTYPE html>
+<html lang="en" class="light dark:bg-dark">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/output.css" />
+  <script src="src/js/jquery.js"></script>
+  <script src="src/js/scripts.js" defer></script>
+  <title>Aanaab</title>
+</head>
+<body>
+<div id="app" class="container mx-auto px-4 py-8">
+  <nav>
+    <h2 class="font-medium text-lg underline">Educational Page</h2>
+    <ul class="[&_li]:my-10">
+      <li>
+        <a href="01.educational-guest.html">Educational Page -> Header for GUEST</a>
+      </li>
+      <li>
+        <a href="./01.educational-user.html">Educational Page -> Header for USER</a>
+      </li>
+      <li>
+        <a href="./01.educational.html">Educational Page -> Header for DEVELOPER (GUEST AND USER)</a>
+      </li>
+    </ul>
 
-      test
-
-      <a href="./01.educational.html">Educational Page</a>
-      <a href="./04.list-courses.html">List Courses</a>
-      <a href="./04.list-courses-student.html">List Courses Student</a>
-    </div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+  </nav>
+</div>
+<script type="module" src="/src/main.ts"></script>
+</body>
 </html>

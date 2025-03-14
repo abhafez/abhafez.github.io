@@ -217,10 +217,22 @@ input:focus-visible {
   @apply cursor-pointer;
 }
 
-.btn {
-  @apply bg-primary-title hover:bg-primary-400 cursor-pointer items-center justify-center gap-1 overflow-hidden rounded-3xl px-8 py-3 shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)];
+.btn-primary {
+  @apply bg-primary-title hover:bg-primary-400 cursor-pointer;
 }
 
 .btn-active {
     @apply bg-primary-title hover:bg-primary-400 cursor-pointer items-center justify-center gap-1 overflow-hidden rounded-3xl px-8 py-3 shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)];
+}
+
+.header-item {
+  @apply mx-2 sm:mx-3;
+}
+
+.header-item:last-child {
+  @apply me-0;
+}
+
+.dropdown-triangle {
+  @apply rotate-225 absolute h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white;
 }
