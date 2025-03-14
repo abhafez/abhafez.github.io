@@ -11,6 +11,7 @@
     --color-red-600: oklch(0.577 0.245 27.325);
     --color-red-700: oklch(0.505 0.213 27.518);
     --color-lime-700: oklch(0.532 0.157 131.589);
+    --color-green-200: oklch(0.925 0.084 155.995);
     --color-emerald-500: oklch(0.696 0.17 162.48);
     --color-blue-100: oklch(0.932 0.032 255.585);
     --color-blue-800: oklch(0.424 0.199 265.638);
@@ -292,6 +293,21 @@
   .-end-7 {
     inset-inline-end: calc(var(--spacing) * -7);
   }
+  .-end-10 {
+    inset-inline-end: calc(var(--spacing) * -10);
+  }
+  .-end-14 {
+    inset-inline-end: calc(var(--spacing) * -14);
+  }
+  .-end-18 {
+    inset-inline-end: calc(var(--spacing) * -18);
+  }
+  .-end-28 {
+    inset-inline-end: calc(var(--spacing) * -28);
+  }
+  .end-1 {
+    inset-inline-end: calc(var(--spacing) * 1);
+  }
   .end-3 {
     inset-inline-end: calc(var(--spacing) * 3);
   }
@@ -448,6 +464,12 @@
   .left-\[75px\] {
     left: 75px;
   }
+  .left-\[100px\] {
+    left: 100px;
+  }
+  .left-\[115px\] {
+    left: 115px;
+  }
   .left-\[126px\] {
     left: 126px;
   }
@@ -582,6 +604,12 @@
   }
   .mt-16 {
     margin-top: calc(var(--spacing) * 16);
+  }
+  .mb-0 {
+    margin-bottom: calc(var(--spacing) * 0);
+  }
+  .mb-1 {
+    margin-bottom: calc(var(--spacing) * 1);
   }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
@@ -1118,8 +1146,23 @@
   .max-w-20 {
     max-width: calc(var(--spacing) * 20);
   }
+  .max-w-40 {
+    max-width: calc(var(--spacing) * 40);
+  }
+  .max-w-52 {
+    max-width: calc(var(--spacing) * 52);
+  }
+  .max-w-60 {
+    max-width: calc(var(--spacing) * 60);
+  }
   .max-w-72 {
     max-width: calc(var(--spacing) * 72);
+  }
+  .max-w-\[70px\] {
+    max-width: 70px;
+  }
+  .max-w-\[260px\] {
+    max-width: 260px;
   }
   .max-w-fit {
     max-width: fit-content;
@@ -1577,6 +1620,12 @@
   .bg-box {
     background-color: var(--color-box);
   }
+  .bg-dark-red {
+    background-color: var(--color-dark-red);
+  }
+  .bg-green-200 {
+    background-color: var(--color-green-200);
+  }
   .bg-neutral-500 {
     background-color: var(--color-neutral-500);
   }
@@ -1978,6 +2027,10 @@
   }
   .text-\[42px\] {
     font-size: 42px;
+  }
+  .leading-0 {
+    --tw-leading: calc(var(--spacing) * 0);
+    line-height: calc(var(--spacing) * 0);
   }
   .leading-7 {
     --tw-leading: calc(var(--spacing) * 7);
@@ -2456,6 +2509,16 @@
   .md\:start-0 {
     @media (width >= 48rem) {
       inset-inline-start: calc(var(--spacing) * 0);
+    }
+  }
+  .md\:-end-7 {
+    @media (width >= 48rem) {
+      inset-inline-end: calc(var(--spacing) * -7);
+    }
+  }
+  .md\:left-\[28px\] {
+    @media (width >= 48rem) {
+      left: 28px;
     }
   }
   .md\:container {
@@ -3450,6 +3513,20 @@
   .\[\&_li\]\:text-meta-light {
     & li {
       color: var(--color-meta-light);
+    }
+  }
+  .\[\&_li\]\:last-of-type\:bg-red-100 {
+    & li {
+      &:last-of-type {
+        background-color: var(--color-red-100);
+      }
+    }
+  }
+  .\[\&_li\]\:last-of-type\:pb-0 {
+    & li {
+      &:last-of-type {
+        padding-bottom: calc(var(--spacing) * 0);
+      }
     }
   }
   .\[\&_li\]\:hover\:text-primary-title {
