@@ -2273,6 +2273,13 @@
       }
     }
   }
+  .hover\:text-primary-100 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-primary-100);
+      }
+    }
+  }
   .hover\:text-red-700 {
     &:hover {
       @media (hover: hover) {
@@ -3184,6 +3191,11 @@
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
+  .dark\:border-sep\/20 {
+    &:where(.dark, .dark *) {
+      border-color: color-mix(in oklab, var(--color-sep) 20%, transparent);
+    }
+  }
   .dark\:bg-box-2 {
     &:where(.dark, .dark *) {
       background-color: var(--color-box-2);
@@ -3272,6 +3284,15 @@
   .dark\:text-zinc-400 {
     &:where(.dark, .dark *) {
       color: var(--color-zinc-400);
+    }
+  }
+  .dark\:hover\:text-sep {
+    &:where(.dark, .dark *) {
+      &:hover {
+        @media (hover: hover) {
+          color: var(--color-sep);
+        }
+      }
     }
   }
   .\[\&_figcaption\]\:mt-4 {
@@ -3622,6 +3643,14 @@ input:focus-visible {
     &:where(.dark, .dark *) {
       color: var(--color-wheat);
     }
+  }
+}
+.course-card {
+  img.currency {
+    width: calc(var(--spacing) * 4);
+    height: calc(var(--spacing) * 4);
+    max-height: 20px;
+    max-width: 20px;
   }
 }
 @property --tw-translate-x {

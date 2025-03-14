@@ -266,3 +266,11 @@ input:focus-visible {
         @apply max-w-20 text-meta dark:text-wheat text-center text-xs font-medium;
     }
 }
+
+.course-card {
+    img.currency {
+        @apply size-4;
+        max-height: 20px;
+        max-width: 20px;
+    }
+}
