@@ -221,9 +221,6 @@ input:focus-visible {
 
 .course-card-users-image {
     @apply size-10 dark:border-box-2 inline-block rounded-full border-white  object-cover ring-0 ring-white  border-4;
-    -webkit-box-shadow: inset 0 0 0 2px #f00;
-    -moz-box-shadow: inset 0 0 0 2px #f00;
-    box-shadow: inset 0 0 0 2px #f00;
 }
 
 .clickable {
