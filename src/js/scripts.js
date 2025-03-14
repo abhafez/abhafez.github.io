@@ -1,4 +1,4 @@
-const dropdownIds = ["user-menu", "currency-menu", "locale-switcher", "filter-menu", "burger-menu", "search-menu"]; // Add your dropdown menu IDs here
+const dropdownIds = ["user-menu", "currency-menu", "locale-switcher", "filter-menu", "burger-menu", "search-menu", "locale-switcher-2"]; // Add your dropdown menu IDs here
 
 $(document).ready(function () {
   const mobileBreakpoint = 1024; // Tailwind's 'lg' breakpoint (adjust if needed)
