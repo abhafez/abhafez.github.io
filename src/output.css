@@ -84,16 +84,22 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
+    --breakpoint-xs: 30rem;
+    --breakpoint-1300: 1300px;
+    --breakpoint-largest: 1900px;
     --color-sep: #d4d4d8;
     --color-box: #f4f4f5;
     --color-wheat: #d2d2d4;
     --color-meta-light: #818182;
     --color-meta: #52525b;
+    --color-twitter: #1da1f2;
     --color-primary-100: #a78bfa;
     --color-primary-title: #6639c6;
+    --color-primary-300: #56369b;
     --color-primary-400: #38246d;
     --color-primary-200: #321f6b;
     --color-text: #311e6a;
+    --color-category-1: #441457;
     --color-text-invert: #fafafa;
     --color-meta-100: #d4d4d4;
     --color-meta-dark: #d2d2d5;
@@ -1792,6 +1798,9 @@
   .ps-10 {
     padding-inline-start: calc(var(--spacing) * 10);
   }
+  .pe-0 {
+    padding-inline-end: calc(var(--spacing) * 0);
+  }
   .pe-2 {
     padding-inline-end: calc(var(--spacing) * 2);
   }
@@ -2337,6 +2346,13 @@
       }
     }
   }
+  .hover\:bg-primary-400 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-primary-400);
+      }
+    }
+  }
   .hover\:bg-primary-title\/10 {
     &:hover {
       @media (hover: hover) {
@@ -2355,6 +2371,13 @@
     &:hover {
       @media (hover: hover) {
         color: var(--color-red-700);
+      }
+    }
+  }
+  .hover\:underline {
+    &:hover {
+      @media (hover: hover) {
+        text-decoration-line: underline;
       }
     }
   }
@@ -2388,6 +2411,11 @@
   .xs\:gap-4 {
     @media (width >= 30rem) {
       gap: calc(var(--spacing) * 4);
+    }
+  }
+  .sm\:mx-2\.5 {
+    @media (width >= 40rem) {
+      margin-inline: calc(var(--spacing) * 2.5);
     }
   }
   .sm\:grid-cols-4 {
