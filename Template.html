@@ -67,10 +67,8 @@
             aria-label="Currency menu"
             class="dropdown-menu min-w-14 -start-7 absolute z-50 mx-4 mt-0 hidden w-14 max-w-fit rounded-xl border border-black/10 bg-white p-2 shadow-lg"
           >
-                <span
-                  aria-hidden="true"
-                  class="rotate-225 absolute left-[22px] -top-[17px] h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"
-                ></span>
+            <span aria-hidden="true"
+                  class="rotate-225 absolute left-[22px] -top-[17px] h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"></span>
             <ul class="text-center">
               <li aria-label="USD" class="cursor-pointer">
                 <!-- USD -->
@@ -92,10 +90,8 @@
           aria-label="Change Language"
           class="dropdown-menu -start-12 w-18 max-w-18 min-w-18 absolute mx-4 mt-2 hidden rounded-xl border border-black/10 bg-white p-4 shadow-lg"
         >
-              <span
-                aria-hidden="true"
-                class="rotate-225 absolute left-[22px] -top-[17px] flex h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"
-              ></span>
+          <span aria-hidden="true"
+                class="rotate-225 absolute left-[22px] -top-[17px] flex h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"></span>
 
           <ul>
             <li class="flex justify-center">
@@ -110,14 +106,8 @@
       <!-- Language Switch End -->
       <!-- Favorite Heart Start -->
       <a href="#" class="header-item">
-        <svg
-          class="header-item relative mx-3 h-6 w-6 cursor-pointer dark:stroke-white block"
-          width="20"
-          height="20"
-          viewBox="0 0 20 20"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg class="header-item relative mx-3 block h-6 w-6 cursor-pointer dark:stroke-white" width="20" height="20"
+             viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g id="mdi:favourite">
             <path
               class="stroke-primary-200 dark:stroke-white"
@@ -150,9 +140,9 @@
             role="menu"
             id="search-menu"
             aria-label="Search dropdown for mobile devices and small screen sizes"
-            class="max-w-72 dropdown-menu -end-7 absolute top-14 z-30 mx-4 hidden w-72 rounded-xl border border-black/10 bg-white p-4 shadow-lg"
+            class="max-w-72 dropdown-menu -end-28 md:-end-7 absolute top-14 z-30 mx-4 hidden w-72 rounded-xl border border-black/10 bg-white p-4 shadow-lg"
           >
-            <span aria-hidden="true" class="dropdown-triangle left-[28px] -top-[17px]"></span>
+            <span aria-hidden="true" class="dropdown-triangle left-[115px] -top-[17px] md:left-[28px]"></span>
             <div
               class="border-sep flex h-10 items-center justify-start gap-2.5 rounded-lg border bg-[#f2f2f3] px-4 py-4">
               <label class="relative">
@@ -174,14 +164,11 @@
       <!-- Search Button ICON -->
 
       <!-- Login Button -->
-      <button
-        id="login-button"
-        class="btn-primary header-item hidden h-10 items-center justify-center gap-2.5 rounded-full px-6 pt-0.5 shadow-[0px_12px_53px_0px_rgba(0,0,0,0.04)] lg:inline"
-      >
+      <button id="login-button"
+              class="btn-primary header-item hidden h-10 items-center justify-center gap-2.5 rounded-full px-6 pt-0.5 shadow-[0px_12px_53px_0px_rgba(0,0,0,0.04)] lg:inline">
         <span class="text-center text-base font-medium text-white">دخول</span>
       </button>
       <!--      Login Button End -->
-
 
       <!-- user menu -->
       <div id="user-menu-button" role="menu" class="dropdown header-item relative flex items-center justify-center">
@@ -191,12 +178,8 @@
           HN
         </div>
         <!-- User Menu Start -->
-        <div
-          role="menu"
-          id="user-menu"
-          aria-label="User menu"
-          class="max-w-72 dropdown-menu -end-7 absolute top-14 z-30 mx-4 hidden w-72 rounded-xl border border-black/10 bg-white p-4 shadow-lg"
-        >
+        <div role="menu" id="user-menu" aria-label="User menu"
+             class="max-w-72 dropdown-menu -end-7 absolute top-14 z-30 mx-4 hidden w-72 rounded-xl border border-black/10 bg-white p-4 shadow-lg">
           <span aria-hidden="true" class="dropdown-triangle left-[39px] -top-[17px]"></span>
 
           <div class="flex items-center gap-3 pb-3">
@@ -216,7 +199,8 @@
           <hr class="my-3 border-t border-t-black/10" />
           <!-- Menu Items -->
           <nav
-            class="[&_li]:text-base [&_li]:pb-2 [&_li]:font-medium [&_li]:cursor-pointer [&_li]:text-meta-light [&_li]:hover:text-primary-title mt-3 space-y-3 text-gray-700">
+            class="[&_li]:text-base [&_li]:pb-2 [&_li]:last-of-type:pb-0 [&_li]:font-medium [&_li]:cursor-pointer [&_li]:text-meta-light [&_li]:hover:text-primary-title mt-3 space-y-3 text-gray-700"
+          >
             <ul>
               <!--    Item -->
               <li aria-label="My Courses">
@@ -302,12 +286,35 @@
             role="menu"
             id="burger-menu"
             aria-label="User menu"
-            class="max-w-72 dropdown-menu -end-7 absolute top-14 z-30 mx-4 hidden w-72 rounded-xl border border-black/10 bg-white p-4 shadow-lg"
+            class="max-w-60 dropdown-menu -end-7 absolute top-14 z-30 mx-4 hidden w-72 rounded-[20px] border border-black/10 bg-white p-4 shadow-lg"
           >
             <span aria-hidden="true" class="dropdown-triangle left-[28px] -top-[17px]"></span>
             <!-- Menu Items -->
+            <a href="#" class="items center flex justify-center gap-2">
+              <div class="flex items-center gap-3 pb-3">
+                <!--    Menu name and e-mail-->
+                <div
+                  class="bg-primary-title flex h-12 w-12 items-center justify-center rounded-full pt-1 text-lg font-bold text-white">
+                  <!-- Name Initials -->
+                  HN
+                </div>
+                <div>
+                  <!--      name -->
+                  <p class="text-text text-sm font-bold">هبة نبيل</p>
+                  <!--        email -->
+                  <p class="text-sm text-gray-500">Heba@gmail.com</p>
+                </div>
+              </div>
+              <div class="flex justify-center items-center">
+                <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 1L1 8L8 15" stroke="#818182" stroke-linecap="round" />
+                </svg>
+              </div>
+            </a>
+            <hr class="my-3 border-t border-t-black/10" />
             <nav
-              class="[&_li]:text-base [&_li]:pb-2 [&_li]:font-medium [&_li]:cursor-pointer [&_li]:text-meta-light [&_li]:hover:text-primary-title mt-3 space-y-3 text-gray-700">
+              class="[&_li]:text-base [&_li]:pb-2 [&_li]:last-of-type:pb-0 [&_li]:font-medium [&_li]:cursor-pointer [&_li]:text-meta-light [&_li]:hover:text-primary-title mt-3 space-y-3 text-gray-700"
+            >
               <ul>
                 <!--    Item -->
                 <li aria-label="My Courses">
@@ -328,28 +335,23 @@
               <hr class="my-3 border-t border-t-black/10" />
               <ul>
                 <!--    Item -->
-                <li aria-label="Dashboard">
+                <li aria-label="Dashboard" class="mb-0">
                   <a href="">المكتبة</a>
                 </li>
-                <!-- End Item -->
-              </ul>
-              <hr class="my-3 border-t border-t-black/10" />
-              <ul class="flex items-center">
+                <li class="flex items-center">
                 <!-- Currency Start -->
                 <div class="dropdown header-item me-4 relative block">
-                  <div class="text-text text-base font-medium leading-10 dark:text-neutral-50">
+                  <div class="text-text text-base font-medium  dark:text-neutral-50">
                     SAR
                     <!--Currency Change Menu Start-->
                     <div
                       role="menu"
-                      id="currency-menu"
+                      id="currency-menu-2"
                       aria-label="Currency menu"
                       class="dropdown-menu min-w-14 -start-7 absolute z-50 mx-4 mt-0 hidden w-14 max-w-fit rounded-xl border border-black/10 bg-white p-2 shadow-lg"
                     >
-                <span
-                  aria-hidden="true"
-                  class="rotate-225 absolute left-[22px] -top-[17px] h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"
-                ></span>
+                      <span aria-hidden="true"
+                            class="rotate-225 absolute left-[22px] -top-[17px] h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"></span>
                       <ul class="text-center">
                         <li aria-label="USD" class="cursor-pointer">
                           <!-- USD -->
@@ -369,12 +371,10 @@
                     role="menu"
                     id="locale-switcher-2"
                     aria-label="Change Language"
-                    class="dropdown-menu -start-12 w-18 max-w-18 min-w-18 absolute mx-4 mt-2 hidden rounded-xl border border-black/10 bg-white p-4 shadow-lg"
+                    class="dropdown-menu -start-12 w-18 max-w-18 min-w-18 absolute mx-4 hidden rounded-xl border border-black/10 bg-white p-4 shadow-lg"
                   >
-              <span
-                aria-hidden="true"
-                class="rotate-225 absolute left-[22px] -top-[17px] flex h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"
-              ></span>
+                    <span aria-hidden="true"
+                          class="rotate-225 absolute left-[22px] -top-[17px] flex h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"></span>
 
                     <ul>
                       <li class="flex justify-center">
@@ -387,6 +387,8 @@
                   <!--Language Switch Menu End-->
                 </div>
                 <!-- Language Switch End -->
+                <!-- End Item -->
+                </li>
               </ul>
               <!-- Logout Start -->
             </nav>
