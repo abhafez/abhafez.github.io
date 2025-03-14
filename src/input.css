@@ -77,6 +77,7 @@
   --color-meta-light: #818182;
   --color-meta: #52525b;
   --color-twitter: #1da1f2;
+  --color-primary-100: #a78bfa;
   --color-ِِprimary-title-2: #a983fc;
   --color-primary-title: #6639c6;
   --color-primary-300: #56369b;
@@ -86,6 +87,7 @@
   --color-category-1: #441457;
   /* Dark Mode */
   --color-text-invert: #fafafa;
+  --color-meta-100: #d4d4d4;
   --color-meta-dark: #d2d2d5;
   --color-meta-light-2: #a1a1aa;
   --color-box-2: #242429;
@@ -93,6 +95,7 @@
 
   --color-red-100: #b50929;
   --color-red-200: #923262;
+  --color-red-300: #DF164C;
   --color-dark-red: #571737;
   --color-teal-box: #a3dee0;
   --color-green: #20b486;
@@ -212,6 +215,10 @@ input:focus-visible {
 
 .text-clickable {
   @apply cursor-pointer hover:underline;
+}
+
+.course-card {
+  @apply rounded-[20px];
 }
 
 .clickable {
