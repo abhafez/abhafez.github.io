@@ -220,7 +220,7 @@ input:focus-visible {
 }
 
 .course-card-users-image {
-    @apply size-10 dark:border-box-2 inline-block rounded-full border-4  border-white object-cover ring-0  ring-white;
+    @apply size-7 dark:border-box-2 inline-block rounded-full border-2  border-white object-cover ring-0  ring-white;
 }
 
 .clickable {
