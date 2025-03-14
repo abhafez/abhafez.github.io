@@ -68,6 +68,7 @@
 
 @theme {
   --breakpoint-xs: 30rem;
+  --breakpoint-1300: 1300px;
   --breakpoint-largest: 1900px;
 
   --color-sep: #d4d4d8;
