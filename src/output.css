@@ -528,6 +528,9 @@
   .mt-0 {
     margin-top: calc(var(--spacing) * 0);
   }
+  .mt-1 {
+    margin-top: calc(var(--spacing) * 1);
+  }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
@@ -2132,6 +2135,9 @@
   .uppercase {
     text-transform: uppercase;
   }
+  .underline {
+    text-decoration-line: underline;
+  }
   .accent-primary-title {
     accent-color: var(--color-primary-title);
   }
@@ -2143,9 +2149,6 @@
   }
   .opacity-85 {
     opacity: 85%;
-  }
-  .opacity-100 {
-    opacity: 100%;
   }
   .shadow-\[0px_0px_0px_1px_rgba\(0\,0\,0\,0\.20\)\] {
     --tw-shadow: 0px 0px 0px 1px var(--tw-shadow-color, rgba(0,0,0,0.20));
@@ -3544,18 +3547,9 @@ input:focus-visible {
 .clickable {
   cursor: pointer;
 }
-.btn {
+.btn-primary {
   cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  gap: calc(var(--spacing) * 1);
-  overflow: hidden;
-  border-radius: var(--radius-3xl);
   background-color: var(--color-primary-title);
-  padding-inline: calc(var(--spacing) * 8);
-  padding-block: calc(var(--spacing) * 3);
-  --tw-shadow: 0px 2px 4px 0px var(--tw-shadow-color, rgba(40,41,61,0.04));
-  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   &:hover {
     @media (hover: hover) {
       background-color: var(--color-primary-400);
@@ -3579,6 +3573,12 @@ input:focus-visible {
       background-color: var(--color-primary-400);
     }
   }
+}
+.header-item {
+  margin-inline: calc(var(--spacing) * 3);
+}
+.header-item:last-child {
+  margin-inline-end: calc(var(--spacing) * 0);
 }
 @property --tw-translate-x {
   syntax: "*";
