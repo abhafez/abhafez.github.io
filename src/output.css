@@ -92,6 +92,7 @@
     --color-meta: #52525b;
     --color-primary-100: #a78bfa;
     --color-primary-title: #6639c6;
+    --color-primary-50: #8764d3;
     --color-primary-400: #38246d;
     --color-primary-200: #321f6b;
     --color-primary-500: #3b2172;
@@ -545,15 +546,6 @@
   .ms-4 {
     margin-inline-start: calc(var(--spacing) * 4);
   }
-  .-me-10 {
-    margin-inline-end: calc(var(--spacing) * -10);
-  }
-  .-me-20 {
-    margin-inline-end: calc(var(--spacing) * -20);
-  }
-  .-me-32 {
-    margin-inline-end: calc(var(--spacing) * -32);
-  }
   .-me-40 {
     margin-inline-end: calc(var(--spacing) * -40);
   }
@@ -575,17 +567,11 @@
   .me-20 {
     margin-inline-end: calc(var(--spacing) * 20);
   }
-  .me-52 {
-    margin-inline-end: calc(var(--spacing) * 52);
-  }
   .-mt-10 {
     margin-top: calc(var(--spacing) * -10);
   }
   .-mt-14 {
     margin-top: calc(var(--spacing) * -14);
-  }
-  .-mt-20 {
-    margin-top: calc(var(--spacing) * -20);
   }
   .mt-0 {
     margin-top: calc(var(--spacing) * 0);
@@ -3375,6 +3361,11 @@
       color: var(--color-neutral-50);
     }
   }
+  .dark\:text-primary-50 {
+    &:where(.dark, .dark *) {
+      color: var(--color-primary-50);
+    }
+  }
   .dark\:text-primary-100 {
     &:where(.dark, .dark *) {
       color: var(--color-primary-100);
@@ -3398,6 +3389,12 @@
   .dark\:text-zinc-400 {
     &:where(.dark, .dark *) {
       color: var(--color-zinc-400);
+    }
+  }
+  .dark\:shadow-none {
+    &:where(.dark, .dark *) {
+      --tw-shadow: 0 0 #0000;
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     }
   }
   .dark\:hover\:text-sep {
@@ -3481,6 +3478,13 @@
     @media (width >= 64rem) {
       & section {
         width: auto;
+      }
+    }
+  }
+  .\[\&_section\]\:dark\:bg-box-2 {
+    & section {
+      &:where(.dark, .dark *) {
+        background-color: var(--color-box-2);
       }
     }
   }
