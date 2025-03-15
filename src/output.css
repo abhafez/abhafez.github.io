@@ -103,6 +103,7 @@
     --color-meta-100: #d4d4d4;
     --color-meta-dark: #d2d2d5;
     --color-meta-light-2: #a1a1aa;
+    --color-box-1: #242428;
     --color-box-2: #242429;
     --color-dark: #131316;
     --color-dark-2: #09090b;
@@ -435,6 +436,9 @@
   }
   .left-8\/12 {
     left: calc(8/12 * 100%);
+  }
+  .left-10 {
+    left: calc(var(--spacing) * 10);
   }
   .left-\[3px\] {
     left: 3px;
@@ -2450,6 +2454,11 @@
       color: var(--color-zinc-600);
     }
   }
+  .largest\:left-36 {
+    @media (width >= 1900px) {
+      left: calc(var(--spacing) * 36);
+    }
+  }
   .xs\:grid-cols-2 {
     @media (width >= 30rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2483,6 +2492,26 @@
   .md\:-end-7 {
     @media (width >= 48rem) {
       inset-inline-end: calc(var(--spacing) * -7);
+    }
+  }
+  .md\:left-1\/12 {
+    @media (width >= 48rem) {
+      left: calc(1/12 * 100%);
+    }
+  }
+  .md\:left-10 {
+    @media (width >= 48rem) {
+      left: calc(var(--spacing) * 10);
+    }
+  }
+  .md\:left-18 {
+    @media (width >= 48rem) {
+      left: calc(var(--spacing) * 18);
+    }
+  }
+  .md\:left-24 {
+    @media (width >= 48rem) {
+      left: calc(var(--spacing) * 24);
     }
   }
   .md\:left-\[28px\] {
@@ -2732,14 +2761,59 @@
       bottom: calc(var(--spacing) * 16);
     }
   }
+  .lg\:-left-4\/12 {
+    @media (width >= 64rem) {
+      left: calc(calc(4/12 * 100%) * -1);
+    }
+  }
   .lg\:-left-10 {
     @media (width >= 64rem) {
       left: calc(var(--spacing) * -10);
     }
   }
+  .lg\:-left-20 {
+    @media (width >= 64rem) {
+      left: calc(var(--spacing) * -20);
+    }
+  }
+  .lg\:left-0 {
+    @media (width >= 64rem) {
+      left: calc(var(--spacing) * 0);
+    }
+  }
+  .lg\:left-1 {
+    @media (width >= 64rem) {
+      left: calc(var(--spacing) * 1);
+    }
+  }
+  .lg\:left-2 {
+    @media (width >= 64rem) {
+      left: calc(var(--spacing) * 2);
+    }
+  }
+  .lg\:left-5 {
+    @media (width >= 64rem) {
+      left: calc(var(--spacing) * 5);
+    }
+  }
+  .lg\:left-6 {
+    @media (width >= 64rem) {
+      left: calc(var(--spacing) * 6);
+    }
+  }
   .lg\:left-7\/12 {
     @media (width >= 64rem) {
       left: calc(7/12 * 100%);
+    }
+  }
+  .lg\:left-10 {
+    @media (width >= 64rem) {
+      left: calc(var(--spacing) * 10);
+    }
+  }
+  .lg\:left-20 {
+    @media (width >= 64rem) {
+      left: calc(var(--spacing) * 20);
     }
   }
   .lg\:left-24 {
@@ -2755,6 +2829,11 @@
   .lg\:left-36 {
     @media (width >= 64rem) {
       left: calc(var(--spacing) * 36);
+    }
+  }
+  .lg\:left-52 {
+    @media (width >= 64rem) {
+      left: calc(var(--spacing) * 52);
     }
   }
   .lg\:left-\[229\.84px\] {
@@ -3283,9 +3362,39 @@
       right: calc(var(--spacing) * 0);
     }
   }
+  .xl\:left-6 {
+    @media (width >= 80rem) {
+      left: calc(var(--spacing) * 6);
+    }
+  }
+  .xl\:left-10 {
+    @media (width >= 80rem) {
+      left: calc(var(--spacing) * 10);
+    }
+  }
+  .xl\:left-12 {
+    @media (width >= 80rem) {
+      left: calc(var(--spacing) * 12);
+    }
+  }
+  .xl\:left-20 {
+    @media (width >= 80rem) {
+      left: calc(var(--spacing) * 20);
+    }
+  }
+  .xl\:left-28 {
+    @media (width >= 80rem) {
+      left: calc(var(--spacing) * 28);
+    }
+  }
   .xl\:left-32 {
     @media (width >= 80rem) {
       left: calc(var(--spacing) * 32);
+    }
+  }
+  .xl\:left-36 {
+    @media (width >= 80rem) {
+      left: calc(var(--spacing) * 36);
     }
   }
   .xl\:container {
@@ -3363,6 +3472,16 @@
       background-color: #793fdf;
     }
   }
+  .dark\:bg-\[\#d2a8ff\] {
+    &:where(.dark, .dark *) {
+      background-color: #d2a8ff;
+    }
+  }
+  .dark\:bg-box-1 {
+    &:where(.dark, .dark *) {
+      background-color: var(--color-box-1);
+    }
+  }
   .dark\:bg-box-2 {
     &:where(.dark, .dark *) {
       background-color: var(--color-box-2);
@@ -3378,6 +3497,11 @@
       background-color: var(--color-dark-2);
     }
   }
+  .dark\:bg-primary-50 {
+    &:where(.dark, .dark *) {
+      background-color: var(--color-primary-50);
+    }
+  }
   .dark\:bg-primary-400 {
     &:where(.dark, .dark *) {
       background-color: var(--color-primary-400);
@@ -3391,6 +3515,11 @@
   .dark\:bg-sep\/20 {
     &:where(.dark, .dark *) {
       background-color: color-mix(in oklab, var(--color-sep) 20%, transparent);
+    }
+  }
+  .dark\:bg-white {
+    &:where(.dark, .dark *) {
+      background-color: var(--color-white);
     }
   }
   .dark\:fill-\[\#793fdf\] {
@@ -3447,11 +3576,6 @@
   .dark\:text-green-2 {
     &:where(.dark, .dark *) {
       color: var(--color-green-2);
-    }
-  }
-  .dark\:text-green\/70 {
-    &:where(.dark, .dark *) {
-      color: color-mix(in oklab, var(--color-green) 70%, transparent);
     }
   }
   .dark\:text-meta-100 {
