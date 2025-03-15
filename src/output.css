@@ -85,20 +85,26 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
+    --breakpoint-xs: 30rem;
+    --breakpoint-1300: 1300px;
+    --breakpoint-largest: 1900px;
     --color-sep: #d4d4d8;
     --color-box: #f4f4f5;
     --color-wheat: #d2d2d4;
     --color-meta-light: #818182;
     --color-meta: #52525b;
+    --color-twitter: #1da1f2;
     --color-primary-title-2: #a983fc;
     --color-primary-title: #6639c6;
     --color-primary-50: #8764d3;
     --color-primary-100: #a78bfa;
     --color-primary-200: #321f6b;
+    --color-primary-300: #56369b;
     --color-primary-400: #38246d;
     --color-primary-500: #3b2172;
     --color-primary-600: #8b5cf6;
     --color-text: #311e6a;
+    --color-category-1: #441457;
     --color-text-invert: #fafafa;
     --color-meta-100: #d4d4d4;
     --color-meta-dark: #d2d2d5;
@@ -960,6 +966,9 @@
   .max-h-20 {
     max-height: calc(var(--spacing) * 20);
   }
+  .min-h-20 {
+    min-height: calc(var(--spacing) * 20);
+  }
   .min-h-fit {
     min-height: fit-content;
   }
@@ -1621,6 +1630,9 @@
   .bg-primary-title\/10 {
     background-color: color-mix(in oklab, var(--color-primary-title) 10%, transparent);
   }
+  .bg-primary-title\/14 {
+    background-color: color-mix(in oklab, var(--color-primary-title) 14%, transparent);
+  }
   .bg-red-100 {
     background-color: var(--color-red-100);
   }
@@ -1684,6 +1696,12 @@
   .bg-no-repeat {
     background-repeat: no-repeat;
   }
+  .fill-\[\#6639c6\] {
+    fill: #6639c6;
+  }
+  .fill-\[\#6639c6\]\/14 {
+    fill: color-mix(in oklab, #6639c6 14%, transparent);
+  }
   .fill-meta {
     fill: var(--color-meta);
   }
@@ -1698,6 +1716,9 @@
   }
   .fill-white {
     fill: var(--color-white);
+  }
+  .stroke-\[\#321F6B\] {
+    stroke: #321F6B;
   }
   .stroke-black {
     stroke: var(--color-black);
@@ -2402,6 +2423,13 @@
       }
     }
   }
+  .hover\:bg-primary-400 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-primary-400);
+      }
+    }
+  }
   .hover\:bg-primary-title\/10 {
     &:hover {
       @media (hover: hover) {
@@ -2427,6 +2455,13 @@
     &:hover {
       @media (hover: hover) {
         color: var(--color-red-700);
+      }
+    }
+  }
+  .hover\:underline {
+    &:hover {
+      @media (hover: hover) {
+        text-decoration-line: underline;
       }
     }
   }
@@ -2460,6 +2495,11 @@
   .xs\:gap-4 {
     @media (width >= 30rem) {
       gap: calc(var(--spacing) * 4);
+    }
+  }
+  .sm\:mx-2\.5 {
+    @media (width >= 40rem) {
+      margin-inline: calc(var(--spacing) * 2.5);
     }
   }
   .sm\:grid-cols-4 {
@@ -3170,6 +3210,11 @@
       padding-inline: calc(var(--spacing) * 4);
     }
   }
+  .lg\:px-5 {
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 5);
+    }
+  }
   .lg\:px-10 {
     @media (width >= 64rem) {
       padding-inline: calc(var(--spacing) * 10);
@@ -3345,9 +3390,24 @@
       border-style: none;
     }
   }
+  .dark\:border-box-2 {
+    &:where(.dark, .dark *) {
+      border-color: var(--color-box-2);
+    }
+  }
   .dark\:border-sep\/20 {
     &:where(.dark, .dark *) {
       border-color: color-mix(in oklab, var(--color-sep) 20%, transparent);
+    }
+  }
+  .dark\:bg-\[\#8c44f8\] {
+    &:where(.dark, .dark *) {
+      background-color: #8c44f8;
+    }
+  }
+  .dark\:bg-\[\#793fdf\] {
+    &:where(.dark, .dark *) {
+      background-color: #793fdf;
     }
   }
   .dark\:bg-box-2 {
@@ -3380,6 +3440,16 @@
       background-color: color-mix(in oklab, var(--color-sep) 20%, transparent);
     }
   }
+  .dark\:fill-\[\#793fdf\] {
+    &:where(.dark, .dark *) {
+      fill: #793fdf;
+    }
+  }
+  .dark\:fill-\[\#a3dee0\] {
+    &:where(.dark, .dark *) {
+      fill: #a3dee0;
+    }
+  }
   .dark\:fill-meta-light-2 {
     &:where(.dark, .dark *) {
       fill: var(--color-meta-light-2);
@@ -3388,6 +3458,16 @@
   .dark\:fill-primary-title-2 {
     &:where(.dark, .dark *) {
       fill: var(--color-primary-title-2);
+    }
+  }
+  .dark\:fill-primary-title\/50 {
+    &:where(.dark, .dark *) {
+      fill: color-mix(in oklab, var(--color-primary-title) 50%, transparent);
+    }
+  }
+  .dark\:fill-red-100 {
+    &:where(.dark, .dark *) {
+      fill: var(--color-red-100);
     }
   }
   .dark\:fill-white {
@@ -3551,6 +3631,11 @@
           color: var(--color-primary-title);
         }
       }
+    }
+  }
+  .\[\&_path\]\:fill-primary-title {
+    & path {
+      fill: var(--color-primary-title);
     }
   }
   .\[\&_section\]\:w-full {
