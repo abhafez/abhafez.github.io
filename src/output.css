@@ -103,6 +103,7 @@
     --color-meta-light-2: #a1a1aa;
     --color-box-2: #242429;
     --color-dark: #131316;
+    --color-dark-2: #09090b;
     --color-dark-red: #571737;
     --color-teal-box: #a3dee0;
     --color-green: #20b486;
@@ -3286,6 +3287,11 @@
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
+  .dark\:border-sep {
+    &:where(.dark, .dark *) {
+      border-color: var(--color-sep);
+    }
+  }
   .dark\:border-sep\/20 {
     &:where(.dark, .dark *) {
       border-color: color-mix(in oklab, var(--color-sep) 20%, transparent);
@@ -3299,6 +3305,11 @@
   .dark\:bg-dark {
     &:where(.dark, .dark *) {
       background-color: var(--color-dark);
+    }
+  }
+  .dark\:bg-dark-2 {
+    &:where(.dark, .dark *) {
+      background-color: var(--color-dark-2);
     }
   }
   .dark\:bg-primary-400 {
@@ -3395,6 +3406,33 @@
     &:where(.dark, .dark *) {
       --tw-shadow: 0 0 #0000;
       box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+    }
+  }
+  .dark\:hover\:bg-primary-200 {
+    &:where(.dark, .dark *) {
+      &:hover {
+        @media (hover: hover) {
+          background-color: var(--color-primary-200);
+        }
+      }
+    }
+  }
+  .dark\:hover\:bg-primary-400 {
+    &:where(.dark, .dark *) {
+      &:hover {
+        @media (hover: hover) {
+          background-color: var(--color-primary-400);
+        }
+      }
+    }
+  }
+  .hover\:dark\:bg-primary-400 {
+    &:hover {
+      @media (hover: hover) {
+        &:where(.dark, .dark *) {
+          background-color: var(--color-primary-400);
+        }
+      }
     }
   }
   .dark\:hover\:text-sep {
