@@ -272,6 +272,8 @@ input:focus-visible {
 }
 
 footer {
+    @apply px-5;
+
     li {
         @apply lg:px-5
     }

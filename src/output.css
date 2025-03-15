@@ -85,26 +85,20 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
-    --breakpoint-xs: 30rem;
-    --breakpoint-1300: 1300px;
-    --breakpoint-largest: 1900px;
     --color-sep: #d4d4d8;
     --color-box: #f4f4f5;
     --color-wheat: #d2d2d4;
     --color-meta-light: #818182;
     --color-meta: #52525b;
-    --color-twitter: #1da1f2;
     --color-primary-title-2: #a983fc;
     --color-primary-title: #6639c6;
     --color-primary-50: #8764d3;
     --color-primary-100: #a78bfa;
     --color-primary-200: #321f6b;
-    --color-primary-300: #56369b;
     --color-primary-400: #38246d;
     --color-primary-500: #3b2172;
     --color-primary-600: #8b5cf6;
     --color-text: #311e6a;
-    --color-category-1: #441457;
     --color-text-invert: #fafafa;
     --color-meta-100: #d4d4d4;
     --color-meta-dark: #d2d2d5;
@@ -609,6 +603,12 @@
   .mt-16 {
     margin-top: calc(var(--spacing) * 16);
   }
+  .mt-20 {
+    margin-top: calc(var(--spacing) * 20);
+  }
+  .mr-5 {
+    margin-right: calc(var(--spacing) * 5);
+  }
   .mb-0 {
     margin-bottom: calc(var(--spacing) * 0);
   }
@@ -683,6 +683,10 @@
   }
   .table {
     display: table;
+  }
+  .size-3 {
+    width: calc(var(--spacing) * 3);
+    height: calc(var(--spacing) * 3);
   }
   .size-4 {
     width: calc(var(--spacing) * 4);
@@ -955,9 +959,6 @@
   }
   .max-h-20 {
     max-height: calc(var(--spacing) * 20);
-  }
-  .min-h-20 {
-    min-height: calc(var(--spacing) * 20);
   }
   .min-h-fit {
     min-height: fit-content;
@@ -1869,6 +1870,12 @@
   .pt-12 {
     padding-top: calc(var(--spacing) * 12);
   }
+  .pt-15 {
+    padding-top: calc(var(--spacing) * 15);
+  }
+  .pt-20 {
+    padding-top: calc(var(--spacing) * 20);
+  }
   .pt-24 {
     padding-top: calc(var(--spacing) * 24);
   }
@@ -1910,6 +1917,9 @@
   }
   .pb-20 {
     padding-bottom: calc(var(--spacing) * 20);
+  }
+  .pb-24 {
+    padding-bottom: calc(var(--spacing) * 24);
   }
   .pb-\[23px\] {
     padding-bottom: 23px;
@@ -2122,6 +2132,9 @@
   .text-wrap {
     text-wrap: wrap;
   }
+  .text-\[\#2e1065\] {
+    color: #2e1065;
+  }
   .text-\[\#20b486\] {
     color: #20b486;
   }
@@ -2199,9 +2212,6 @@
   }
   .text-primary-200 {
     color: var(--color-primary-200);
-  }
-  .text-primary-600 {
-    color: var(--color-primary-600);
   }
   .text-primary-title {
     color: var(--color-primary-title);
@@ -2314,11 +2324,6 @@
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
-  .backdrop-blur {
-    --tw-backdrop-blur: blur(8px);
-    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
-  }
   .backdrop-blur-\[10px\] {
     --tw-backdrop-blur: blur(10px);
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
@@ -2390,10 +2395,10 @@
       }
     }
   }
-  .hover\:bg-primary-400 {
+  .hover\:bg-primary-200 {
     &:hover {
       @media (hover: hover) {
-        background-color: var(--color-primary-400);
+        background-color: var(--color-primary-200);
       }
     }
   }
@@ -2422,13 +2427,6 @@
     &:hover {
       @media (hover: hover) {
         color: var(--color-red-700);
-      }
-    }
-  }
-  .hover\:underline {
-    &:hover {
-      @media (hover: hover) {
-        text-decoration-line: underline;
       }
     }
   }
@@ -2462,11 +2460,6 @@
   .xs\:gap-4 {
     @media (width >= 30rem) {
       gap: calc(var(--spacing) * 4);
-    }
-  }
-  .sm\:mx-2\.5 {
-    @media (width >= 40rem) {
-      margin-inline: calc(var(--spacing) * 2.5);
     }
   }
   .sm\:grid-cols-4 {
@@ -2531,16 +2524,6 @@
   .md\:m-auto {
     @media (width >= 48rem) {
       margin: auto;
-    }
-  }
-  .md\:-me-10 {
-    @media (width >= 48rem) {
-      margin-inline-end: calc(var(--spacing) * -10);
-    }
-  }
-  .md\:-me-20 {
-    @media (width >= 48rem) {
-      margin-inline-end: calc(var(--spacing) * -20);
     }
   }
   .md\:me-0 {
@@ -2656,6 +2639,11 @@
   .md\:pt-0 {
     @media (width >= 48rem) {
       padding-top: calc(var(--spacing) * 0);
+    }
+  }
+  .md\:pt-16 {
+    @media (width >= 48rem) {
+      padding-top: calc(var(--spacing) * 16);
     }
   }
   .md\:pb-12 {
@@ -2887,11 +2875,6 @@
       height: 126px;
     }
   }
-  .lg\:h-\[133px\] {
-    @media (width >= 64rem) {
-      height: 133px;
-    }
-  }
   .lg\:h-\[136\.83px\] {
     @media (width >= 64rem) {
       height: 136.83px;
@@ -2920,11 +2903,6 @@
   .lg\:h-\[347\.59px\] {
     @media (width >= 64rem) {
       height: 347.59px;
-    }
-  }
-  .lg\:h-\[359px\] {
-    @media (width >= 64rem) {
-      height: 359px;
     }
   }
   .lg\:h-\[382\.25px\] {
@@ -3192,11 +3170,6 @@
       padding-inline: calc(var(--spacing) * 4);
     }
   }
-  .lg\:px-5 {
-    @media (width >= 64rem) {
-      padding-inline: calc(var(--spacing) * 5);
-    }
-  }
   .lg\:px-10 {
     @media (width >= 64rem) {
       padding-inline: calc(var(--spacing) * 10);
@@ -3245,6 +3218,11 @@
   .lg\:pe-20 {
     @media (width >= 64rem) {
       padding-inline-end: calc(var(--spacing) * 20);
+    }
+  }
+  .lg\:pt-16 {
+    @media (width >= 64rem) {
+      padding-top: calc(var(--spacing) * 16);
     }
   }
   .lg\:pb-\[60px\] {
@@ -3365,11 +3343,6 @@
     &:where(.dark, .dark *) {
       --tw-border-style: none;
       border-style: none;
-    }
-  }
-  .dark\:border-box-2 {
-    &:where(.dark, .dark *) {
-      border-color: var(--color-box-2);
     }
   }
   .dark\:border-sep\/20 {
@@ -3578,11 +3551,6 @@
           color: var(--color-primary-title);
         }
       }
-    }
-  }
-  .\[\&_path\]\:fill-primary-title {
-    & path {
-      fill: var(--color-primary-title);
     }
   }
   .\[\&_section\]\:w-full {
@@ -3890,6 +3858,7 @@ input:focus-visible {
   }
 }
 footer {
+  padding-inline: calc(var(--spacing) * 5);
   li {
     @media (width >= 64rem) {
       padding-inline: calc(var(--spacing) * 5);
