@@ -271,6 +271,7 @@ footer {
     li {
         @apply lg:px-5
     }
+
     a {
         @apply hover:text-primary-title hover:underline;
     }
@@ -278,5 +279,4 @@ footer {
     svg:hover {
         @apply [&_path]:fill-primary-title;
     }
-
 }
