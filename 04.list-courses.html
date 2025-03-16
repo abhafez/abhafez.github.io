@@ -472,39 +472,56 @@
     </aside>
 
     <!--        TODO: Smart Menu -->
-    <div id="smart-menu" class="[&_span]:dark:text-text-invert mb-8 flex hidden h-8 items-center justify-start">
-      <button class="bg-primary-title flex items-center justify-start gap-2 rounded-3xl px-5 pt-3 pb-2">
-        <span class="text-base font-medium leading-none text-white"> المختارة </span>
-      </button>
+    <div id="smart-menu" class="[&_span]:dark:text-text-invert mb-8 flex h-8 items-center justify-start">
+      <div class="[&_span]:dark:text-text-invert mb-8 flex h-8 items-center justify-start">
+        <button class="bg-primary-title flex items-center justify-start gap-2 rounded-3xl px-5 pt-3 pb-2">
+          <span class="text-base font-medium leading-none text-white"> المختارة </span>
+        </button>
 
-      <button class="flex items-center justify-start gap-2 rounded-3xl px-4 pt-2.5 pb-2">
-        <span class="text-text text-base font-medium leading-none">التدريس الفعّال </span>
-      </button>
+        <button class="flex items-center justify-start gap-2 rounded-3xl px-4 pt-2.5 pb-2">
+          <span class="text-text text-base font-medium leading-none">التدريس الفعّال </span>
+        </button>
 
-      <button class="flex items-center justify-start gap-2 rounded-3xl px-4 pt-2.5 pb-2">
-        <span class="text-text text-base font-medium leading-none"> القيادة التربوية </span>
-      </button>
+        <button class="flex items-center justify-start gap-2 rounded-3xl px-4 pt-2.5 pb-2">
+          <span class="text-text text-base font-medium leading-none"> القيادة التربوية </span>
+        </button>
 
-      <button class="flex items-center justify-start gap-2 rounded-3xl px-4 pt-2.5 pb-2">
-        <span class="text-text text-base font-medium leading-none">الصحة المدرسية </span>
-      </button>
+        <button class="flex items-center justify-start gap-2 rounded-3xl px-4 pt-2.5 pb-2">
+          <span class="text-text text-base font-medium leading-none">الصحة المدرسية </span>
+        </button>
 
-      <button class="flex items-center justify-start gap-2 rounded-3xl px-4 pt-2.5 pb-2">
-        <span class="text-text text-base font-medium leading-none">الطفولة المبكرة </span>
-      </button>
+        <button class="flex items-center justify-start gap-2 rounded-3xl px-4 pt-2.5 pb-2">
+          <span class="text-text text-base font-medium leading-none">الطفولة المبكرة </span>
+        </button>
 
-      <button class="flex items-center justify-start gap-2 rounded-3xl px-4 pt-2.5 pb-2">
-        <span class="text-text text-base font-medium leading-none">التربية الخاصة </span>
-      </button>
+        <button class="flex items-center justify-start gap-2 rounded-3xl px-4 pt-2.5 pb-2">
+          <span class="text-text text-base font-medium leading-none">التربية الخاصة </span>
+        </button>
 
-      <button class="flex items-center justify-start gap-2 rounded-3xl px-4 pt-2.5 pb-2">
-        <span class="text-text text-base font-medium leading-none">التعليم الرقمي </span>
-      </button>
+        <button class="flex items-center justify-start gap-2 rounded-3xl px-4 pt-2.5 pb-2">
+          <span class="text-text text-base font-medium leading-none">التعليم الرقمي </span>
+        </button>
 
-      <button class="flex items-center justify-start gap-2 rounded-3xl px-4 pt-2.5 pb-2">
-        <span class="text-text text-base font-medium leading-none">المواد التخصصية</span>
-      </button>
+        <button class="flex items-center justify-start gap-2 rounded-3xl px-4 pt-2.5 pb-2">
+          <span class="text-text text-base font-medium leading-none">المواد التخصصية</span>
+        </button>
 
+        <div
+          class="dropdown dark:text-text-invert relative left-0 top-0 flex flex-row-reverse gap-3 text-xl font-normal text-black">
+          <span class="text-text text-base font-medium leading-none">المزيد</span>
+          <div class="transparent p4">
+            <div
+              role="menu"
+              id="filter-more-menu"
+              aria-label="Filter menu"
+              class="dropdown-menu max-w-72 absolute left-0 z-50 mx-4 mt-10 hidden w-72 rounded-xl border border-black/10 bg-white p-4 shadow-lg"
+            >
+              <span aria-hidden="true"
+                    class="rotate-225 absolute left-[39px] -top-[17px] h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"></span>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="relative h-8 w-24 flex-1">
         <div class="absolute left-0 top-0 h-8 w-24">
           <div
@@ -604,9 +621,9 @@
               مدخل لدورة : لتهيئة المعلمين والمعلمات لاختبار الرخص المهنية التربوية العامة
             </h3>
             <div class="self-stretch text-center">
+              <span class="text-primary-title dark:text-primary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
               <span
-                class="text-primary-title dark:text-primary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
-              <span class="text-primary-title dark:text-primary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
+                class="text-primary-title dark:text-primary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
               <span class="text-green dark:text-green-2 text-sm font-bold leading-normal">بعد 4 أيام</span>
             </div>
 
@@ -714,9 +731,9 @@
               مدخل لدورة : لتهيئة المعلمين والمعلمات لاختبار الرخص المهنية التربوية العامة
             </h3>
             <div class="self-stretch text-center">
+              <span class="text-primary-title dark:text-primary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
               <span
-                class="text-primary-title dark:text-primary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
-              <span class="text-primary-title dark:text-primary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
+                class="text-primary-title dark:text-primary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
               <span class="text-green dark:text-green-2 text-sm font-bold leading-normal">بعد 4 أيام</span>
             </div>
 
@@ -825,9 +842,9 @@
               مدخل لدورة : لتهيئة المعلمين والمعلمات لاختبار الرخص المهنية التربوية العامة
             </h3>
             <div class="self-stretch text-center">
+              <span class="text-primary-title dark:text-primary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
               <span
-                class="text-primary-title dark:text-primary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
-              <span class="text-primary-title dark:text-primary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
+                class="text-primary-title dark:text-primary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
               <span class="text-green dark:text-green-2 text-sm font-bold leading-normal">بعد 4 أيام</span>
             </div>
 
@@ -935,9 +952,9 @@
               مدخل لدورة : لتهيئة المعلمين والمعلمات لاختبار الرخص المهنية التربوية العامة
             </h3>
             <div class="self-stretch text-center">
+              <span class="text-primary-title dark:text-primary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
               <span
-                class="text-primary-title dark:text-primary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
-              <span class="text-primary-title dark:text-primary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
+                class="text-primary-title dark:text-primary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
               <span class="text-green dark:text-green-2 text-sm font-bold leading-normal">بعد 4 أيام</span>
             </div>
 
@@ -1046,9 +1063,9 @@
               مدخل لدورة : لتهيئة المعلمين والمعلمات لاختبار الرخص المهنية التربوية العامة
             </h3>
             <div class="self-stretch text-center">
+              <span class="text-primary-title dark:text-primary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
               <span
-                class="text-primary-title dark:text-primary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
-              <span class="text-primary-title dark:text-primary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
+                class="text-primary-title dark:text-primary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
               <span class="text-green dark:text-green-2 text-sm font-bold leading-normal">بعد 4 أيام</span>
             </div>
 
@@ -1156,9 +1173,9 @@
               مدخل لدورة : لتهيئة المعلمين والمعلمات لاختبار الرخص المهنية التربوية العامة
             </h3>
             <div class="self-stretch text-center">
+              <span class="text-primary-title dark:text-primary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
               <span
-                class="text-primary-title dark:text-primary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
-              <span class="text-primary-title dark:text-primary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
+                class="text-primary-title dark:text-primary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
               <span class="text-green dark:text-green-2 text-sm font-bold leading-normal">بعد 4 أيام</span>
             </div>
 
@@ -1267,9 +1284,9 @@
               مدخل لدورة : لتهيئة المعلمين والمعلمات لاختبار الرخص المهنية التربوية العامة
             </h3>
             <div class="self-stretch text-center">
+              <span class="text-primary-title dark:text-primary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
               <span
-                class="text-primary-title dark:text-primary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
-              <span class="text-primary-title dark:text-primary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
+                class="text-primary-title dark:text-primary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
               <span class="text-green dark:text-green-2 text-sm font-bold leading-normal">بعد 4 أيام</span>
             </div>
 
@@ -1377,9 +1394,9 @@
               مدخل لدورة : لتهيئة المعلمين والمعلمات لاختبار الرخص المهنية التربوية العامة
             </h3>
             <div class="self-stretch text-center">
+              <span class="text-primary-title dark:text-primary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
               <span
-                class="text-primary-title dark:text-primary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
-              <span class="text-primary-title dark:text-primary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
+                class="text-primary-title dark:text-primary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
               <span class="text-green dark:text-green-2 text-sm font-bold leading-normal">بعد 4 أيام</span>
             </div>
 
@@ -1488,9 +1505,9 @@
               مدخل لدورة : لتهيئة المعلمين والمعلمات لاختبار الرخص المهنية التربوية العامة
             </h3>
             <div class="self-stretch text-center">
+              <span class="text-primary-title dark:text-primary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
               <span
-                class="text-primary-title dark:text-primary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
-              <span class="text-primary-title dark:text-primary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
+                class="text-primary-title dark:text-primary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
               <span class="text-green dark:text-green-2 text-sm font-bold leading-normal">بعد 4 أيام</span>
             </div>
 
@@ -1592,36 +1609,30 @@
     <!-- Partners -->
     <section id="partners-grid" class="mb-30 h-fit min-h-fit md:h-fit lg:mb-0 lg:h-48">
       <ul
-        class="[&li]:flex [&li]:flex-col [&li]:items-center [&li]:justify-start [&li]:gap-2 grid h-fit min-h-fit grid-cols-3 place-items-center justify-between gap-10 self-stretch sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 items-start"
+        class="[&li]:flex [&li]:flex-col [&li]:items-center [&li]:justify-start [&li]:gap-2 grid h-fit min-h-fit grid-cols-3 place-items-center items-start justify-between gap-10 self-stretch sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8"
       >
         <li>
           <figure class="partner-logo-container">
             <div class="partner-logo">
               <img alt="" src="src/assets/images/partners/ministry.svg" />
             </div>
-            <figcaption class="partner-grid-name">وزارة التعليم
-              بالسعودية
-            </figcaption>
+            <figcaption class="partner-grid-name">وزارة التعليم بالسعودية</figcaption>
           </figure>
         </li>
         <li>
           <figure class="partner-logo-container">
             <div class="partner-logo">
-              <img alt=""  src="src/assets/images/partners/cambridge-logo.svg" />
+              <img alt="" src="src/assets/images/partners/cambridge-logo.svg" />
             </div>
-            <figcaption class="partner-grid-name">جامعة كامبردج برنامج
-              المعلمين
-            </figcaption>
+            <figcaption class="partner-grid-name">جامعة كامبردج برنامج المعلمين</figcaption>
           </figure>
         </li>
         <li>
           <figure class="partner-logo-container">
             <div class="partner-logo">
-              <img alt=""  src="src/assets/images/partners/mo2ssa-tadreeb.svg" />
+              <img alt="" src="src/assets/images/partners/mo2ssa-tadreeb.svg" />
             </div>
-            <figcaption class="partner-grid-name">المؤسسة العامة
-              للتدريب المهني والتقني
-            </figcaption>
+            <figcaption class="partner-grid-name">المؤسسة العامة للتدريب المهني والتقني</figcaption>
           </figure>
         </li>
         <li>
@@ -1629,18 +1640,15 @@
             <div class="partner-logo">
               <img alt="" src="src/assets/images/partners/ma3had-abnaa-mostqbal.svg" />
             </div>
-            <figcaption class="partner-grid-name">معهد أبناء المستقبل
-            </figcaption>
+            <figcaption class="partner-grid-name">معهد أبناء المستقبل</figcaption>
           </figure>
         </li>
         <li>
           <figure class="partner-logo-container">
             <div class="partner-logo">
-              <img alt=""  src="src/assets/images/partners/national-center-ta3leem.svg" />
+              <img alt="" src="src/assets/images/partners/national-center-ta3leem.svg" />
             </div>
-            <figcaption class="partner-grid-name">المركز الوطنى للتعليم
-              الالكترونى
-            </figcaption>
+            <figcaption class="partner-grid-name">المركز الوطنى للتعليم الالكترونى</figcaption>
           </figure>
         </li>
         <li>
@@ -1648,8 +1656,7 @@
             <div class="partner-logo">
               <img alt="" src="src/assets/images/partners/high-fliers.svg" />
             </div>
-            <figcaption class="partner-grid-name">هاي فلايرز للتدريب
-            </figcaption>
+            <figcaption class="partner-grid-name">هاي فلايرز للتدريب</figcaption>
           </figure>
         </li>
         <li>
@@ -1657,9 +1664,7 @@
             <div class="partner-logo">
               <img alt="" src="src/assets/images/partners/tazamon.svg" />
             </div>
-            <figcaption class="partner-grid-name">التزامن للتعليم
-              الرقمي
-            </figcaption>
+            <figcaption class="partner-grid-name">التزامن للتعليم الرقمي</figcaption>
           </figure>
         </li>
         <li>
@@ -1667,9 +1672,7 @@
             <div class="partner-logo">
               <img alt="" src="src/assets/images/partners/hay2a.svg" />
             </div>
-            <figcaption class="partner-grid-name">التزامن للتعليم
-              الرقمي
-            </figcaption>
+            <figcaption class="partner-grid-name">التزامن للتعليم الرقمي</figcaption>
           </figure>
         </li>
       </ul>
