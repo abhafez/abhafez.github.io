@@ -2798,6 +2798,11 @@
       padding-top: calc(var(--spacing) * 24);
     }
   }
+  .sm\:text-nowrap {
+    @media (width >= 40rem) {
+      text-wrap: nowrap;
+    }
+  }
   .md\:start-0 {
     @media (width >= 48rem) {
       inset-inline-start: calc(var(--spacing) * 0);
