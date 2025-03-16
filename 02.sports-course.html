@@ -637,8 +637,35 @@
   </aside>
 </div>
 
+<div id="video-modal" class="hidden">
+  <div class="fixed inset-0 z-50 px-5 flex items-center justify-center bg-black/50 bg-opacity-40">
+    <div class="relative w-full max-w-2xl p-10 bg-white rounded-lg shadow-lg">
+      <div class="absolute top-0 right-0 p-4">
+        <button id="close-modal" class="text-black text-2xl mb-3">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          </button>
+      </div>
+      <video id="modal-video" class="w-full h-auto" controls>
+        <source src="vv.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</div>
+
 <!-- Video Section Start -->
 <div class="relative w-full bg-cover bg-center bg-no-repeat px-8 py-16 pb-24 lg:min-h-[640px] lg:px-24 lg:py-48">
+    <svg id="toggle-mute" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-15 h-15 rounded-full flex items-center justify-center z-40" width="110" height="110" viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <foreignObject x="-20.8115" y="-20.6628" width="151.623" height="151.623"><div xmlns="http://www.w3.org/1999/xhtml" style="backdrop-filter:blur(10.5px);clip-path:url(#bgblur_0_1251_34638_clip_path);height:100%;width:100%"></div></foreignObject><path data-figma-bg-blur-radius="21" d="M1.18848 55.1485C1.18848 84.8678 25.2811 108.96 54.9999 108.96C84.7188 108.96 108.811 84.8678 108.811 55.1485C108.811 25.4293 84.7188 1.33707 54.9999 1.33707C25.2811 1.33707 1.18848 25.4293 1.18848 55.1485Z" fill="black" fill-opacity="0.44" stroke="white" stroke-width="2"/>
+      <path d="M46.8018 74.987C43.2887 77.1683 40.4404 75.3813 40.4404 70.999V38.659C40.4404 34.2722 43.2887 32.4876 46.8018 34.6669L72.9163 50.8776C76.4306 53.0597 76.4306 56.5949 72.9163 58.7765L46.8018 74.987Z" fill="white"/>
+      <defs>
+        <clipPath id="bgblur_0_1251_34638_clip_path" transform="translate(20.8115 20.6628)"><path d="M1.18848 55.1485C1.18848 84.8678 25.2811 108.96 54.9999 108.96C84.7188 108.96 108.811 84.8678 108.811 55.1485C108.811 25.4293 84.7188 1.33707 54.9999 1.33707C25.2811 1.33707 1.18848 25.4293 1.18848 55.1485Z"/>
+        </clipPath></defs>
+    </svg>
+
   <div class="absolute inset-0 w-full bg-black bg-opacity-50 backdrop-blur-sm">
     <div class="bg-overlay"></div>
     <video class="h-full w-full opacity-40" id="myVideo" autoplay="autoplay" muted loop>

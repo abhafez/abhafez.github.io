@@ -130,3 +130,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
+
+// if item with id toggle-mute let it open a modal with the video with controls
+
+if (document.getElementById("toggle-mute")) {
+  document.getElementById("toggle-mute").addEventListener("click", function () {
+    // open modal with the id video-modal
+    const modal = document.getElementById("video-modal");
+    const video = document.getElementById("myVideo");
+    const closeModal = document.getElementById("close-modal");
+    modal.classList.remove("hidden");
+
+    // close modal when clicking close-modal
+    closeModal.addEventListener("click", function () {
+      const video = document.getElementById("modal-video");
+      video.pause();
+      modal.classList.add("hidden");
+    });
+  });
+}
