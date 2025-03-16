@@ -95,7 +95,9 @@ $(document).ready(function () {
 });
 // End Menus
 
-//
+// ###################################
+// TOGGLE THEME START
+// ###################################
 function toggleTheme() {
   const html = document.getElementsByTagName("html")[0];
   const currentTheme = html.classList.contains("dark") ? "dark" : "light";
@@ -115,7 +117,13 @@ function toggleTheme() {
 function themeUrl() {
   return document.body.getAttribute("data-theme-url");
 }
+// ###################################
+// TOGGLE THEME END
+// ###################################
 
+// ###################################
+// ACCORDION START
+// ###################################
 if ($(".anb-accordion").length) {
   $(".anb-accordion .anb-accordion-title").on("click", function (e) {
     // close siblings
@@ -129,7 +137,13 @@ if ($(".anb-accordion").length) {
     $(this).parent().find(".icon img").toggleClass("hidden");
   });
 }
+// ###################################
+// ACCORDION END
+// ###################################
 
+// ###################################
+// Video START
+// ###################################
 document.addEventListener("DOMContentLoaded", function () {
   document.body.addEventListener("touchstart", playVideo);
   function playVideo() {
@@ -154,93 +168,24 @@ if (document.getElementById("toggle-mute")) {
     // close modal when clicking close-modal
     closeModal.addEventListener("click", function () {
       const video = document.getElementById("modal-video");
-      video.play();
+      video.pause();
       modal.classList.add("hidden");
     });
 
-    // on click esc while modal is open close the modal
+    // on click esc while modal is open close the modal and stop video
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        const video = document.getElementById("modal-video");
+        video.pause();
+        modal.classList.add("hidden");
+      }
+    });
   });
 }
 
-// // Smart Menu
-// const container = document.getElementById("button-container");
-// const moreContainer = document.getElementById("more-container");
-// const moreButton = document.getElementById("more-button");
-// const moreMenu = document.getElementById("more-menu");
-//
-// // Exclude 'more' button from the buttons array
-// let buttons = Array.from(container.querySelectorAll(".nav-button")).filter((btn) => btn !== moreButton);
-//
-// function updateMenu() {
-//   // Reset: move all buttons back into container (except moreContainer)
-//   buttons.forEach((btn) => container.insertBefore(btn, moreContainer));
-//
-//   const containerWidth = container.clientWidth;
-//   const moreButtonWidth = moreContainer.offsetWidth;
-//   let availableWidth = containerWidth - moreButtonWidth - 16; // 16px margin
-//
-//   let totalWidth = 0;
-//   let movedToMore = [];
-//
-//   buttons.forEach((btn) => {
-//     const btnWidth = btn.offsetWidth;
-//     if (totalWidth + btnWidth <= availableWidth) {
-//       totalWidth += btnWidth;
-//       btn.style.display = "flex";
-//     } else {
-//       movedToMore.push(btn);
-//       btn.style.display = "none";
-//     }
-//   });
-//
-//   // Clear previous dropdown items
-//   moreMenu.innerHTML = "";
-//
-//   if (movedToMore.length > 0) {
-//     movedToMore.forEach((btn) => {
-//       const clone = btn.cloneNode(true);
-//       clone.style.display = "flex";
-//       moreMenu.appendChild(clone);
-//     });
-//     moreContainer.style.display = "flex";
-//   } else {
-//     moreContainer.style.display = "none";
-//   }
-// }
-//
-// // Debounce utility
-// function debounce(func, wait = 100) {
-//   let timeout;
-//   return (...args) => {
-//     clearTimeout(timeout);
-//     timeout = setTimeout(() => func.apply(this, args), wait);
-//   };
-// }
-//
-// const debouncedUpdateMenu = debounce(updateMenu, 150); // 150ms delay feels smooth
-//
-// // Toggle dropdown on click
-// moreButton.addEventListener("click", () => {
-//   moreMenu.classList.toggle("hidden");
-// });
-//
-// // Handle clicks outside to close menu
-// document.addEventListener("click", (e) => {
-//   if (!moreContainer.contains(e.target)) {
-//     moreMenu.classList.add("hidden");
-//   }
-// });
-//
-// // Resize observer using debounced version
-// // const resizeObserver = new ResizeObserver(debouncedUpdateMenu);
-// // resizeObserver.observe(container);
-//
-// // Initial load
-// window.addEventListener("load", updateMenu);
-// window.addEventListener("resize", debouncedUpdateMenu);
-
-// INITIAL
-// Smart Menu
+// ###################################
+// Smart Menu START
+// ###################################
 const container = document.getElementById("button-container");
 const moreContainer = document.getElementById("more-container");
 const moreButton = document.getElementById("more-button");
@@ -318,3 +263,6 @@ resizeObserver.observe(container);
 // Initial load and resize handling
 window.addEventListener("load", updateMenu);
 window.addEventListener("resize", updateMenu);
+// ###################################
+// Smart Menu END
+// ###################################
