@@ -255,7 +255,8 @@ input:focus-visible {
     @apply rotate-225 absolute h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white;
 }
 
-#partners-grid, .partners-grid {
+#partners-grid,
+.partners-grid {
     img {
         max-height: 60px;
         max-width: 60px;
@@ -279,7 +280,7 @@ footer {
     @apply px-5;
 
     li {
-        @apply lg:px-5
+        @apply lg:px-5;
     }
 
     a {
@@ -311,7 +312,7 @@ button:hover {
 }
 
 .nav-button {
-    @apply flex items-center justify-start gap-2 rounded-3xl px-4 pt-2.5 pb-2 text-base font-medium leading-none text-text whitespace-nowrap;
+    @apply text-text flex items-center justify-start gap-2 whitespace-nowrap rounded-3xl px-4 pt-2.5 pb-2 text-base font-medium leading-none;
 }
 
 .bg-primary-title {
@@ -321,3 +322,22 @@ button:hover {
 .dropdown-menu {
     @apply text-text dark:text-text-invert;
 }
+
+/* tabs */
+.tab-button {
+    background-color: transparent;
+    color: #311e6a;
+}
+
+
+.active-tab {
+    @apply bg-primary-title flex items-center justify-start gap-1 rounded-[40px] px-3.5 py-4 lg:px-[26px];
+
+    .path {
+        @apply text-[#d2a8ff];
+    }
+    .path-name {
+        @apply text-white;
+    }
+}
+/*tabs end*/

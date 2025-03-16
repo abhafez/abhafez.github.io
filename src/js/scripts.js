@@ -266,3 +266,18 @@ window.addEventListener("resize", updateMenu);
 // ###################################
 // Smart Menu END
 // ###################################
+
+// ###################################
+// TABS
+// ###################################
+
+function openTab(evt, tabId) {
+  const contents = document.querySelectorAll(".tab-content");
+  const buttons = document.querySelectorAll(".tab-button");
+
+  contents.forEach((content) => content.classList.add("hidden"));
+  buttons.forEach((button) => button.classList.remove("active-tab", "bg-primary-title"));
+
+  document.getElementById(tabId).classList.remove("hidden");
+  evt.currentTarget.classList.add("active-tab", "bg-primary-title");
+}
