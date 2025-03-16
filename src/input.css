@@ -308,3 +308,15 @@ button:hover {
 .container {
     @apply px-5;
 }
+
+.nav-button {
+    @apply flex items-center justify-start gap-2 rounded-3xl px-4 pt-2.5 pb-2 text-base font-medium leading-none text-text whitespace-nowrap;
+}
+
+.bg-primary-title {
+    @apply bg-primary-title text-white;
+}
+
+.dropdown-menu {
+    @apply text-text dark:text-text-invert;
+}

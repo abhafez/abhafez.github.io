@@ -473,59 +473,44 @@
 
     <!--        TODO: Smart Menu -->
     <div id="smart-menu" class="[&_span]:dark:text-text-invert mb-8 flex h-8 items-center justify-start">
-      <div class="[&_span]:dark:text-text-invert mb-8 flex h-8 items-center justify-start">
-        <button class="bg-primary-title flex items-center justify-start gap-2 rounded-3xl px-5 pt-3 pb-2">
-          <span class="text-base font-medium leading-none text-white"> المختارة </span>
-        </button>
+      <div class="relative max-w-[80%] overflow-visible">
+        <div id="button-container"
+             class="flex h-8 flex-row items-center justify-start overflow-visible whitespace-nowrap">
+          <!-- Buttons here -->
+          <button class="nav-button bg-primary-title">
+            <span class="text-white">المختارة</span>
+          </button>
+          <button class="nav-button"><span>التدريس الفعّال</span></button>
+          <button class="nav-button"><span>القيادة التربوية</span></button>
+          <button class="nav-button"><span>الصحة المدرسية</span></button>
+          <button class="nav-button"><span>الطفولة المبكرة</span></button>
+          <button class="nav-button"><span>التربية الخاصة</span></button>
+          <button class="nav-button"><span>التعليم الرقمي</span></button>
+          <button class="nav-button"><span>المواد التخصصية</span></button>
 
-        <button class="flex items-center justify-start gap-2 rounded-3xl px-4 pt-2.5 pb-2">
-          <span class="text-text text-base font-medium leading-none">التدريس الفعّال </span>
-        </button>
+          <!-- More dropdown -->
+          <div id="more-container">
+            <button id="more-button" class="nav-button p-4">
+              <span> المزيد</span>
+              <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.25 9.875L12.5 16.125L18.75 9.875" stroke="#321F6B" stroke-width="1.69271"
+                      stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
 
-        <button class="flex items-center justify-start gap-2 rounded-3xl px-4 pt-2.5 pb-2">
-          <span class="text-text text-base font-medium leading-none"> القيادة التربوية </span>
-        </button>
-
-        <button class="flex items-center justify-start gap-2 rounded-3xl px-4 pt-2.5 pb-2">
-          <span class="text-text text-base font-medium leading-none">الصحة المدرسية </span>
-        </button>
-
-        <button class="flex items-center justify-start gap-2 rounded-3xl px-4 pt-2.5 pb-2">
-          <span class="text-text text-base font-medium leading-none">الطفولة المبكرة </span>
-        </button>
-
-        <button class="flex items-center justify-start gap-2 rounded-3xl px-4 pt-2.5 pb-2">
-          <span class="text-text text-base font-medium leading-none">التربية الخاصة </span>
-        </button>
-
-        <button class="flex items-center justify-start gap-2 rounded-3xl px-4 pt-2.5 pb-2">
-          <span class="text-text text-base font-medium leading-none">التعليم الرقمي </span>
-        </button>
-
-        <button class="flex items-center justify-start gap-2 rounded-3xl px-4 pt-2.5 pb-2">
-          <span class="text-text text-base font-medium leading-none">المواد التخصصية</span>
-        </button>
-
-        <div
-          class="dropdown dark:text-text-invert relative left-0 top-0 flex flex-row-reverse gap-3 text-xl font-normal text-black">
-          <span class="text-text text-base font-medium leading-none">المزيد</span>
-          <div class="transparent p4">
-            <div
-              role="menu"
-              id="filter-more-menu"
-              aria-label="Filter menu"
-              class="dropdown-menu max-w-72 absolute left-0 z-50 mx-4 mt-10 hidden w-72 rounded-xl border border-black/10 bg-white p-4 shadow-lg"
-            >
+            <div id="more-menu"
+                 class="dropdown-menu absolute -left-10 z-50 mt-10 hidden w-72 rounded-xl border border-black/10 bg-white p-4 shadow-lg">
+              <!-- Overflow items go here -->
               <span aria-hidden="true"
-                    class="rotate-225 absolute left-[39px] -top-[17px] h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-white"></span>
+                    class="rotate-225 absolute left-[39px] -top-[17px] h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-red-100"></span>
             </div>
           </div>
         </div>
       </div>
-      <div class="relative h-8 w-24 flex-1">
+      <div id="filter-btn" class="dropdown relative h-8 w-24 flex-1">
         <div class="absolute left-0 top-0 h-8 w-24">
           <div
-            class="dropdown dark:text-text-invert relative left-0 top-0 flex flex-row-reverse gap-3 text-xl font-normal text-black">
+            class="dark:text-text-invert relative left-0 top-0 flex flex-row-reverse gap-3 text-xl font-normal text-black">
             <span class="block">تصفية</span>
             <svg class="dark:stroke-text-invert stroke-black" width="27" height="25" viewBox="0 0 27 25" fill="none"
                  xmlns="http://www.w3.org/2000/svg">
@@ -929,7 +914,7 @@
               <div class="relative h-10 items-center">
                 <div
                   class="backdrop-blur-blur w flex h-10 items-center justify-items-start gap-1 rounded-full bg-white px-3">
-                  <img alt="" class="h-6" src="src/assets/images/edu-eg-4.png" />
+                  <img alt="" class="h-6" src="src/assets/images/partners/cambridge-logo.svg" />
                   <span class="text-text text-right text-xs font-bold leading-normal"> شهادة كامبردج المعتدة</span>
                 </div>
               </div>
@@ -1150,7 +1135,7 @@
               <div class="relative h-10 items-center">
                 <div
                   class="backdrop-blur-blur w flex h-10 items-center justify-items-start gap-1 rounded-full bg-white px-3">
-                  <img alt="" class="h-6" src="src/assets/images/edu-eg-4.png" />
+                  <img alt="" class="h-6" src="src/assets/images/partners/cambridge-logo.svg" />
                   <span class="text-text text-right text-xs font-bold leading-normal"> شهادة كامبردج المعتدة</span>
                 </div>
               </div>
@@ -1371,7 +1356,7 @@
               <div class="relative h-10 items-center">
                 <div
                   class="backdrop-blur-blur w flex h-10 items-center justify-items-start gap-1 rounded-full bg-white px-3">
-                  <img alt="" class="h-6" src="src/assets/images/edu-eg-4.png" />
+                  <img alt="" class="h-6" src="src/assets/images/partners/cambridge-logo.svg" />
                   <span class="text-text text-right text-xs font-bold leading-normal"> شهادة كامبردج المعتدة</span>
                 </div>
               </div>
