@@ -119,3 +119,14 @@ if ($(".anb-accordion").length) {
     $(this).parent().find(".icon img").toggleClass("hidden");
   });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.body.addEventListener("touchstart", playVideo);
+  function playVideo() {
+    const video = document.getElementById("myVideo");
+    if (video.playing) {
+    } else {
+      video.play();
+    }
+  }
+});
