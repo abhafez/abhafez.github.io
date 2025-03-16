@@ -1032,6 +1032,9 @@
   .w-15 {
     width: calc(var(--spacing) * 15);
   }
+  .w-16 {
+    width: calc(var(--spacing) * 16);
+  }
   .w-18 {
     width: calc(var(--spacing) * 18);
   }
@@ -1055,6 +1058,9 @@
   }
   .w-72 {
     width: calc(var(--spacing) * 72);
+  }
+  .w-96 {
+    width: calc(var(--spacing) * 96);
   }
   .w-\[17px\] {
     width: 17px;
@@ -1085,6 +1091,9 @@
   }
   .w-\[46px\] {
     width: 46px;
+  }
+  .w-\[50px\] {
+    width: 50px;
   }
   .w-\[59\.71px\] {
     width: 59.71px;
@@ -3674,6 +3683,11 @@
   .dark\:bg-primary-500 {
     &:where(.dark, .dark *) {
       background-color: var(--color-primary-500);
+    }
+  }
+  .dark\:bg-red-100 {
+    &:where(.dark, .dark *) {
+      background-color: var(--color-red-100);
     }
   }
   .dark\:bg-sep\/20 {
