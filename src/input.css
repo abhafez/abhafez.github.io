@@ -69,6 +69,7 @@
 @theme {
     --breakpoint-xs: 30rem;
     --breakpoint-1300: 1300px;
+    --beadkpoint-main: 1536px;
     --breakpoint-largest: 1900px;
 
     --color-sep: #d4d4d8;
@@ -270,7 +271,7 @@ input:focus-visible {
     }
 
     .partner-grid-name {
-        @apply max-w-20 text-meta dark:text-wheat text-center text-xs font-medium;
+        @apply max-w-32 text-meta dark:text-wheat text-center text-xs font-medium;
     }
 }
 
