@@ -220,7 +220,7 @@ input:focus-visible {
 }
 
 .text-clickable {
-    @apply cursor-pointer  hover:text-primary-title/10;
+    @apply cursor-pointer hover:text-primary-title/90;
 }
 
 .course-card {

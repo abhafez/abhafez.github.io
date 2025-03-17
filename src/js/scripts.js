@@ -155,49 +155,52 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// if item with id toggle-mute let it open a modal with the video with controls
+// if item with id toggle-mute or watch-video-btn let it open a modal with the video with controls
 
-if (document.getElementById("toggle-mute")) {
-  document.getElementById("toggle-mute").addEventListener("click", function () {
-    // open modal with the id video-modal
-    const modal = document.getElementById("video-modal");
-    const video = document.getElementById("myVideo");
-    const closeModal = document.getElementById("close-modal");
-    modal.classList.remove("hidden");
+["toggle-mute", "watch-video-btn"].forEach((id) => {
+  const button = document.getElementById(id);
+  if (button) {
+    button.addEventListener("click", function () {
+      // open modal with the id video-modal
+      const modal = document.getElementById("video-modal");
+      const video = document.getElementById("myVideo");
+      const closeModal = document.getElementById("close-modal");
+      modal.classList.remove("hidden");
 
-    // make page non scrollable
-    document.body.style.overflow = "hidden";
+      // make page non scrollable
+      document.body.style.overflow = "hidden";
 
-    // close modal when clicking close-modal
-    closeModal.addEventListener("click", function () {
-      const video = document.getElementById("modal-video");
-      video.pause();
-      modal.classList.add("hidden");
-    });
-
-    // make click outside the modal close the modal
-    modal.addEventListener("click", function (e) {
-      if (e.target !== modal) {
+      // close modal when clicking close-modal
+      closeModal.addEventListener("click", function () {
         const video = document.getElementById("modal-video");
         video.pause();
         modal.classList.add("hidden");
+      });
+
+      // make click outside the modal close the modal
+      modal.addEventListener("click", function (e) {
+        if (e.target !== modal) {
+          const video = document.getElementById("modal-video");
+          video.pause();
+          modal.classList.add("hidden");
+          document.body.style.overflow = "auto";
+        }
+      });
+
+      // on click esc while modal is open close the modal and stop video
+      document.addEventListener("keydown", function (e) {
+        // make page scrollable again
         document.body.style.overflow = "auto";
-      }
-    });
 
-    // on click esc while modal is open close the modal and stop video
-    document.addEventListener("keydown", function (e) {
-      // make page scrollable again
-      document.body.style.overflow = "auto";
-
-      if (e.key === "Escape") {
-        const video = document.getElementById("modal-video");
-        video.pause();
-        modal.classList.add("hidden");
-      }
+        if (e.key === "Escape") {
+          const video = document.getElementById("modal-video");
+          video.pause();
+          modal.classList.add("hidden");
+        }
+      });
     });
-  });
-}
+  }
+});
 
 // ###################################
 // Smart Menu START

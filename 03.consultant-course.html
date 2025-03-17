@@ -836,7 +836,7 @@
   <div class="relative w-full bg-cover bg-center bg-no-repeat px-8 py-16 pb-24 lg:min-h-[640px] lg:px-24 lg:py-48">
     <svg
       id="toggle-mute"
-      class="w-15 h-15 absolute top-1/2 left-1/2 z-40 flex -translate-x-1/2 -translate-y-1/2 transform cursor-pointer items-center justify-center rounded-full"
+      class="hidden sm:flex w-15 h-15 absolute top-1/2 left-1/2 z-40 -translate-x-1/2 -translate-y-1/2 transform cursor-pointer items-center justify-center rounded-full"
       width="110"
       height="110"
       viewBox="0 0 110 110"
@@ -867,7 +867,9 @@
         </clipPath>
       </defs>
     </svg>
-
+    <button id="watch-video-btn" class="block sm:hidden bg-primary-title bottom w-11/12 h-15 absolute bottom-0 left-1/2 z-40 -translate-x-1/2 -translate-y-1/2 transform cursor-pointer items-center justify-center rounded-md">
+      شاهد الفيديو
+    </button>
     <div class="absolute inset-0 w-full bg-black bg-opacity-50 backdrop-blur-sm">
       <div class="bg-overlay"></div>
       <video class="h-full w-full opacity-40" id="myVideo" autoplay="autoplay" muted loop>
@@ -945,6 +947,8 @@
         <p class="h-[27px] shrink grow basis-0 text-right text-xl font-bold capitalize text-white">الارتقاء</p>
       </div>
     </div>
+
+
   </div>
   <!-- Video Section End -->
 
