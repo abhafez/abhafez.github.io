@@ -225,6 +225,10 @@ input:focus-visible {
 
 .course-card {
     @apply rounded-[20px];
+
+    h3 {
+        @apply leading-5 md:leading-7;
+    }
 }
 
 .course-card-users-image {
@@ -329,15 +333,22 @@ button:hover {
     color: #311e6a;
 }
 
-
 .active-tab {
-    @apply bg-primary-title flex items-center justify-start gap-1 rounded-[40px] px-3.5 py-4 lg:px-[26px];
+    @apply sm:bg-primary-title flex items-center justify-start gap-1 rounded-[40px] px-3.5 py-4 lg:px-[26px];
 
     .path {
-        @apply text-[#d2a8ff];
+        @apply text-[#d2a8ff]
     }
     .path-name {
-        @apply text-white;
+        @apply text-white bg-primary-title rounded-[40px] px-3 py-4 sm:px-0 sm:py-0;
+
     }
+}
+.path {
+    @apply text-nowrap px-1.5 py-4;
+}
+.path-name {
+    @apply text-nowrap px-1.5 py-4;
+
 }
 /*tabs end*/
