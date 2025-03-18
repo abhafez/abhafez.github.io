@@ -319,10 +319,6 @@ button:hover {
     @apply text-text flex items-center justify-start gap-2 whitespace-nowrap rounded-3xl px-4 pt-2.5 pb-2 text-base font-medium leading-none;
 }
 
-.bg-primary-title {
-    @apply bg-primary-title text-white;
-}
-
 .dropdown-menu {
     @apply text-text dark:text-text-invert;
 }
