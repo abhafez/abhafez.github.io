@@ -1628,6 +1628,9 @@
   .bg-box {
     background-color: var(--color-box);
   }
+  .bg-dark-red {
+    background-color: var(--color-dark-red);
+  }
   .bg-green {
     background-color: var(--color-green);
   }
@@ -1714,6 +1717,9 @@
   }
   .fill-meta {
     fill: var(--color-meta);
+  }
+  .fill-meta-100 {
+    fill: var(--color-meta-100);
   }
   .fill-meta-light {
     fill: var(--color-meta-light);
@@ -2241,6 +2247,9 @@
   .text-red-600 {
     color: var(--color-red-600);
   }
+  .text-sep {
+    color: var(--color-sep);
+  }
   .text-text {
     color: var(--color-text);
   }
@@ -2393,6 +2402,36 @@
     --tw-ease: var(--ease-out);
     transition-timing-function: var(--ease-out);
   }
+  .placeholder\:text-meta {
+    &::placeholder {
+      color: var(--color-meta);
+    }
+  }
+  .placeholder\:text-meta-100 {
+    &::placeholder {
+      color: var(--color-meta-100);
+    }
+  }
+  .placeholder\:text-red-100 {
+    &::placeholder {
+      color: var(--color-red-100);
+    }
+  }
+  .placeholder\:text-sep\/50 {
+    &::placeholder {
+      color: color-mix(in oklab, var(--color-sep) 50%, transparent);
+    }
+  }
+  .placeholder\:text-sep\/90 {
+    &::placeholder {
+      color: color-mix(in oklab, var(--color-sep) 90%, transparent);
+    }
+  }
+  .placeholder\:text-wheat {
+    &::placeholder {
+      color: var(--color-wheat);
+    }
+  }
   .hover\:scale-105 {
     &:hover {
       @media (hover: hover) {
@@ -2449,6 +2488,13 @@
     &:hover {
       @media (hover: hover) {
         color: var(--color-red-700);
+      }
+    }
+  }
+  .hover\:text-white\/40 {
+    &:hover {
+      @media (hover: hover) {
+        color: color-mix(in oklab, var(--color-white) 40%, transparent);
       }
     }
   }
@@ -3566,6 +3612,11 @@
   .dark\:bg-dark-2 {
     &:where(.dark, .dark *) {
       background-color: var(--color-dark-2);
+    }
+  }
+  .dark\:bg-dark-red {
+    &:where(.dark, .dark *) {
+      background-color: var(--color-dark-red);
     }
   }
   .dark\:bg-primary-50 {

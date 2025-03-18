@@ -98,7 +98,7 @@ $(document).ready(function () {
 // ###################################
 // TOGGLE THEME START
 // ###################################
-function toggleTheme() {
+function toggleTheme(color) {
   const html = document.getElementsByTagName("html")[0];
   const currentTheme = html.classList.contains("dark") ? "dark" : "light";
   const newTheme = currentTheme === "dark" ? "light" : "dark";
@@ -106,10 +106,11 @@ function toggleTheme() {
   let icon = document.getElementById("theme-toggle");
   const themeDirectory = themeUrl();
   console.log(icon);
+
   if (currentTheme === "light") {
-    icon.src = themeDirectory + "/assets/images/header/sun.svg";
+    icon.src = `${themeDirectory}/assets/images/header/sun.svg`;
   } else {
-    icon.src = themeDirectory + "/assets/images/header/moon.svg";
+    icon.src = `${themeDirectory}/assets/images/header/moon${color ? `-white` : ""}.svg`;
   }
   localStorage.setItem("theme", newTheme);
 }
@@ -117,6 +118,7 @@ function toggleTheme() {
 function themeUrl() {
   return document.body.getAttribute("data-theme-url");
 }
+
 // ###################################
 // TOGGLE THEME END
 // ###################################
@@ -146,6 +148,7 @@ if ($(".anb-accordion").length) {
 // ###################################
 document.addEventListener("DOMContentLoaded", function () {
   document.body.addEventListener("touchstart", playVideo);
+
   function playVideo() {
     const video = document.getElementById("myVideo");
     if (video.playing) {
