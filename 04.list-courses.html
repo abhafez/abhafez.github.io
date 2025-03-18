@@ -471,44 +471,45 @@
       </div>
     </aside>
 
-    <!--        TODO: Smart Menu -->
-    <div id="smart-menu" class="[&_span]:dark:text-text-invert mb-8 flex hidden h-8 items-center justify-start">
-      <button class="bg-primary-title flex items-center justify-start gap-2 rounded-3xl px-5 pt-3 pb-2">
-        <span class="text-base font-medium leading-none text-white"> المختارة </span>
-      </button>
+    <div id="smart-menu" class="[&_span]:dark:text-text-invert mb-8 flex h-8 items-center justify-start">
+      <div class="relative max-w-[80%] overflow-visible">
+        <div id="button-container"
+             class="flex h-8 flex-row items-center justify-start overflow-visible whitespace-nowrap">
+          <!-- Buttons here -->
+          <button class="nav-button bg-primary-title">
+            <span class="text-white">المختارة</span>
+          </button>
+          <button class="nav-button"><span>التدريس الفعّال</span></button>
+          <button class="nav-button"><span>القيادة التربوية</span></button>
+          <button class="nav-button"><span>الصحة المدرسية</span></button>
+          <button class="nav-button"><span>الطفولة المبكرة</span></button>
+          <button class="nav-button"><span>التربية الخاصة</span></button>
+          <button class="nav-button"><span>التعليم الرقمي</span></button>
+          <button class="nav-button"><span>المواد التخصصية</span></button>
 
-      <button class="flex items-center justify-start gap-2 rounded-3xl px-4 pt-2.5 pb-2">
-        <span class="text-text text-base font-medium leading-none">التدريس الفعّال </span>
-      </button>
+          <!-- More dropdown -->
+          <div id="more-container">
+            <button id="more-button" class="nav-button p-4">
+              <span> المزيد</span>
+              <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.25 9.875L12.5 16.125L18.75 9.875" stroke="#321F6B" stroke-width="1.69271"
+                      stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
 
-      <button class="flex items-center justify-start gap-2 rounded-3xl px-4 pt-2.5 pb-2">
-        <span class="text-text text-base font-medium leading-none"> القيادة التربوية </span>
-      </button>
-
-      <button class="flex items-center justify-start gap-2 rounded-3xl px-4 pt-2.5 pb-2">
-        <span class="text-text text-base font-medium leading-none">الصحة المدرسية </span>
-      </button>
-
-      <button class="flex items-center justify-start gap-2 rounded-3xl px-4 pt-2.5 pb-2">
-        <span class="text-text text-base font-medium leading-none">الطفولة المبكرة </span>
-      </button>
-
-      <button class="flex items-center justify-start gap-2 rounded-3xl px-4 pt-2.5 pb-2">
-        <span class="text-text text-base font-medium leading-none">التربية الخاصة </span>
-      </button>
-
-      <button class="flex items-center justify-start gap-2 rounded-3xl px-4 pt-2.5 pb-2">
-        <span class="text-text text-base font-medium leading-none">التعليم الرقمي </span>
-      </button>
-
-      <button class="flex items-center justify-start gap-2 rounded-3xl px-4 pt-2.5 pb-2">
-        <span class="text-text text-base font-medium leading-none">المواد التخصصية</span>
-      </button>
-
-      <div class="relative h-8 w-24 flex-1">
+            <div id="more-menu"
+                 class="dropdown-menu absolute -left-10 z-50 mt-10 hidden w-72 rounded-xl border border-black/10 bg-white p-4 shadow-lg">
+              <!-- Overflow items go here -->
+              <span aria-hidden="true"
+                    class="rotate-225 absolute left-[39px] -top-[17px] h-4 w-4 -translate-x-1/2 translate-y-1/2 border-r border-b border-black/10 bg-red-100"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="filter-btn" class="dropdown relative h-8 w-24 flex-1">
         <div class="absolute left-0 top-0 h-8 w-24">
           <div
-            class="dropdown dark:text-text-invert relative left-0 top-0 flex flex-row-reverse gap-3 text-xl font-normal text-black">
+            class="dark:text-text-invert relative left-0 top-0 flex flex-row-reverse gap-3 text-xl font-normal text-black">
             <span class="block">تصفية</span>
             <svg class="dark:stroke-text-invert stroke-black" width="27" height="25" viewBox="0 0 27 25" fill="none"
                  xmlns="http://www.w3.org/2000/svg">
@@ -604,9 +605,9 @@
               مدخل لدورة : لتهيئة المعلمين والمعلمات لاختبار الرخص المهنية التربوية العامة
             </h3>
             <div class="self-stretch text-center">
+              <span class="text-primary-title dark:text-primary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
               <span
-                class="text-primary-title dark:text-ِِprimary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
-              <span class="text-primary-title dark:text-ِِprimary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
+                class="text-primary-title dark:text-primary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
               <span class="text-green dark:text-green-2 text-sm font-bold leading-normal">بعد 4 أيام</span>
             </div>
 
@@ -658,7 +659,7 @@
                 </div>
                 <!-- Price -->
                 <div class="flex h-6 shrink grow basis-0 items-end justify-end gap-0.5">
-                  <div class="text-primary-title dark:text-ِِprimary-title-2">
+                  <div class="text-primary-title dark:text-primary-title-2">
                     <!-- Currency -->
                     <span class="text-meta text-xs font-medium">ر.س</span>
                     <span dir="ltr" class="text-primary-title text-xl font-bold">
@@ -714,9 +715,9 @@
               مدخل لدورة : لتهيئة المعلمين والمعلمات لاختبار الرخص المهنية التربوية العامة
             </h3>
             <div class="self-stretch text-center">
+              <span class="text-primary-title dark:text-primary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
               <span
-                class="text-primary-title dark:text-ِِprimary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
-              <span class="text-primary-title dark:text-ِِprimary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
+                class="text-primary-title dark:text-primary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
               <span class="text-green dark:text-green-2 text-sm font-bold leading-normal">بعد 4 أيام</span>
             </div>
 
@@ -768,7 +769,7 @@
                 </div>
                 <!-- Price -->
                 <div class="flex h-6 shrink grow basis-0 items-end justify-end gap-0.5">
-                  <div class="text-primary-title dark:text-ِِprimary-title-2">
+                  <div class="text-primary-title dark:text-primary-title-2">
                     <!-- Currency -->
                     <span class="text-meta text-xs font-medium">ر.س</span>
                     <span dir="ltr" class="text-primary-title text-xl font-bold">
@@ -825,9 +826,9 @@
               مدخل لدورة : لتهيئة المعلمين والمعلمات لاختبار الرخص المهنية التربوية العامة
             </h3>
             <div class="self-stretch text-center">
+              <span class="text-primary-title dark:text-primary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
               <span
-                class="text-primary-title dark:text-ِِprimary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
-              <span class="text-primary-title dark:text-ِِprimary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
+                class="text-primary-title dark:text-primary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
               <span class="text-green dark:text-green-2 text-sm font-bold leading-normal">بعد 4 أيام</span>
             </div>
 
@@ -879,7 +880,7 @@
                 </div>
                 <!-- Price -->
                 <div class="flex h-6 shrink grow basis-0 items-end justify-end gap-0.5">
-                  <div class="text-primary-title dark:text-ِِprimary-title-2">
+                  <div class="text-primary-title dark:text-primary-title-2">
                     <!-- Currency -->
                     <span class="text-meta text-xs font-medium">ر.س</span>
                     <span dir="ltr" class="text-primary-title text-xl font-bold">
@@ -912,7 +913,7 @@
               <div class="relative h-10 items-center">
                 <div
                   class="backdrop-blur-blur w flex h-10 items-center justify-items-start gap-1 rounded-full bg-white px-3">
-                  <img alt="" class="h-6" src="src/assets/images/edu-eg-4.png" />
+                  <img alt="" class="h-6" src="src/assets/images/partners/cambridge-logo.svg" />
                   <span class="text-text text-right text-xs font-bold leading-normal"> شهادة كامبردج المعتدة</span>
                 </div>
               </div>
@@ -935,9 +936,9 @@
               مدخل لدورة : لتهيئة المعلمين والمعلمات لاختبار الرخص المهنية التربوية العامة
             </h3>
             <div class="self-stretch text-center">
+              <span class="text-primary-title dark:text-primary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
               <span
-                class="text-primary-title dark:text-ِِprimary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
-              <span class="text-primary-title dark:text-ِِprimary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
+                class="text-primary-title dark:text-primary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
               <span class="text-green dark:text-green-2 text-sm font-bold leading-normal">بعد 4 أيام</span>
             </div>
 
@@ -989,7 +990,7 @@
                 </div>
                 <!-- Price -->
                 <div class="flex h-6 shrink grow basis-0 items-end justify-end gap-0.5">
-                  <div class="text-primary-title dark:text-ِِprimary-title-2">
+                  <div class="text-primary-title dark:text-primary-title-2">
                     <!-- Currency -->
                     <span class="text-meta text-xs font-medium">ر.س</span>
                     <span dir="ltr" class="text-primary-title text-xl font-bold">
@@ -1046,9 +1047,9 @@
               مدخل لدورة : لتهيئة المعلمين والمعلمات لاختبار الرخص المهنية التربوية العامة
             </h3>
             <div class="self-stretch text-center">
+              <span class="text-primary-title dark:text-primary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
               <span
-                class="text-primary-title dark:text-ِِprimary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
-              <span class="text-primary-title dark:text-ِِprimary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
+                class="text-primary-title dark:text-primary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
               <span class="text-green dark:text-green-2 text-sm font-bold leading-normal">بعد 4 أيام</span>
             </div>
 
@@ -1100,7 +1101,7 @@
                 </div>
                 <!-- Price -->
                 <div class="flex h-6 shrink grow basis-0 items-end justify-end gap-0.5">
-                  <div class="text-primary-title dark:text-ِِprimary-title-2">
+                  <div class="text-primary-title dark:text-primary-title-2">
                     <!-- Currency -->
                     <span class="text-meta text-xs font-medium">ر.س</span>
                     <span dir="ltr" class="text-primary-title text-xl font-bold">
@@ -1133,7 +1134,7 @@
               <div class="relative h-10 items-center">
                 <div
                   class="backdrop-blur-blur w flex h-10 items-center justify-items-start gap-1 rounded-full bg-white px-3">
-                  <img alt="" class="h-6" src="src/assets/images/edu-eg-4.png" />
+                  <img alt="" class="h-6" src="src/assets/images/partners/cambridge-logo.svg" />
                   <span class="text-text text-right text-xs font-bold leading-normal"> شهادة كامبردج المعتدة</span>
                 </div>
               </div>
@@ -1156,9 +1157,9 @@
               مدخل لدورة : لتهيئة المعلمين والمعلمات لاختبار الرخص المهنية التربوية العامة
             </h3>
             <div class="self-stretch text-center">
+              <span class="text-primary-title dark:text-primary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
               <span
-                class="text-primary-title dark:text-ِِprimary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
-              <span class="text-primary-title dark:text-ِِprimary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
+                class="text-primary-title dark:text-primary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
               <span class="text-green dark:text-green-2 text-sm font-bold leading-normal">بعد 4 أيام</span>
             </div>
 
@@ -1210,7 +1211,7 @@
                 </div>
                 <!-- Price -->
                 <div class="flex h-6 shrink grow basis-0 items-end justify-end gap-0.5">
-                  <div class="text-primary-title dark:text-ِِprimary-title-2">
+                  <div class="text-primary-title dark:text-primary-title-2">
                     <!-- Currency -->
                     <span class="text-meta text-xs font-medium">ر.س</span>
                     <span dir="ltr" class="text-primary-title text-xl font-bold">
@@ -1267,9 +1268,9 @@
               مدخل لدورة : لتهيئة المعلمين والمعلمات لاختبار الرخص المهنية التربوية العامة
             </h3>
             <div class="self-stretch text-center">
+              <span class="text-primary-title dark:text-primary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
               <span
-                class="text-primary-title dark:text-ِِprimary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
-              <span class="text-primary-title dark:text-ِِprimary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
+                class="text-primary-title dark:text-primary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
               <span class="text-green dark:text-green-2 text-sm font-bold leading-normal">بعد 4 أيام</span>
             </div>
 
@@ -1321,7 +1322,7 @@
                 </div>
                 <!-- Price -->
                 <div class="flex h-6 shrink grow basis-0 items-end justify-end gap-0.5">
-                  <div class="text-primary-title dark:text-ِِprimary-title-2">
+                  <div class="text-primary-title dark:text-primary-title-2">
                     <!-- Currency -->
                     <span class="text-meta text-xs font-medium">ر.س</span>
                     <span dir="ltr" class="text-primary-title text-xl font-bold">
@@ -1354,7 +1355,7 @@
               <div class="relative h-10 items-center">
                 <div
                   class="backdrop-blur-blur w flex h-10 items-center justify-items-start gap-1 rounded-full bg-white px-3">
-                  <img alt="" class="h-6" src="src/assets/images/edu-eg-4.png" />
+                  <img alt="" class="h-6" src="src/assets/images/partners/cambridge-logo.svg" />
                   <span class="text-text text-right text-xs font-bold leading-normal"> شهادة كامبردج المعتدة</span>
                 </div>
               </div>
@@ -1377,9 +1378,9 @@
               مدخل لدورة : لتهيئة المعلمين والمعلمات لاختبار الرخص المهنية التربوية العامة
             </h3>
             <div class="self-stretch text-center">
+              <span class="text-primary-title dark:text-primary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
               <span
-                class="text-primary-title dark:text-ِِprimary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
-              <span class="text-primary-title dark:text-ِِprimary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
+                class="text-primary-title dark:text-primary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
               <span class="text-green dark:text-green-2 text-sm font-bold leading-normal">بعد 4 أيام</span>
             </div>
 
@@ -1431,7 +1432,7 @@
                 </div>
                 <!-- Price -->
                 <div class="flex h-6 shrink grow basis-0 items-end justify-end gap-0.5">
-                  <div class="text-primary-title dark:text-ِِprimary-title-2">
+                  <div class="text-primary-title dark:text-primary-title-2">
                     <!-- Currency -->
                     <span class="text-meta text-xs font-medium">ر.س</span>
                     <span dir="ltr" class="text-primary-title text-xl font-bold">
@@ -1488,9 +1489,9 @@
               مدخل لدورة : لتهيئة المعلمين والمعلمات لاختبار الرخص المهنية التربوية العامة
             </h3>
             <div class="self-stretch text-center">
+              <span class="text-primary-title dark:text-primary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
               <span
-                class="text-primary-title dark:text-ِِprimary-100 text-sm font-bold leading-normal">مستوى متقدم</span>
-              <span class="text-primary-title dark:text-ِِprimary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
+                class="text-primary-title dark:text-primary-title-2 mx-3 text-sm font-bold leading-normal">10 ساعات</span>
               <span class="text-green dark:text-green-2 text-sm font-bold leading-normal">بعد 4 أيام</span>
             </div>
 
@@ -1542,7 +1543,7 @@
                 </div>
                 <!-- Price -->
                 <div class="flex h-6 shrink grow basis-0 items-end justify-end gap-0.5">
-                  <div class="text-primary-title dark:text-ِِprimary-title-2">
+                  <div class="text-primary-title dark:text-primary-title-2">
                     <!-- Currency -->
                     <span class="text-meta text-xs font-medium">ر.س</span>
                     <span dir="ltr" class="text-primary-title text-xl font-bold">
@@ -1592,36 +1593,30 @@
     <!-- Partners -->
     <section id="partners-grid" class="mb-30 h-fit min-h-fit md:h-fit lg:mb-0 lg:h-48">
       <ul
-        class="[&li]:flex [&li]:flex-col [&li]:items-center [&li]:justify-start [&li]:gap-2 grid h-fit min-h-fit grid-cols-3 place-items-center justify-between gap-10 self-stretch sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8"
+        class="[&li]:flex [&li]:flex-col [&li]:items-center [&li]:justify-start [&li]:gap-2 grid h-fit min-h-fit grid-cols-3 place-items-center items-start justify-between gap-10 self-stretch sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8"
       >
         <li>
           <figure class="partner-logo-container">
             <div class="partner-logo">
               <img alt="" src="src/assets/images/partners/ministry.svg" />
             </div>
-            <figcaption class="partner-grid-name">وزارة التعليم
-              بالسعودية
-            </figcaption>
+            <figcaption class="partner-grid-name">وزارة التعليم بالسعودية</figcaption>
           </figure>
         </li>
         <li>
           <figure class="partner-logo-container">
             <div class="partner-logo">
-              <img alt=""  src="src/assets/images/partners/cambridge-logo.svg" />
+              <img alt="" src="src/assets/images/partners/cambridge-logo.svg" />
             </div>
-            <figcaption class="partner-grid-name">جامعة كامبردج برنامج
-              المعلمين
-            </figcaption>
+            <figcaption class="partner-grid-name">جامعة كامبردج برنامج المعلمين</figcaption>
           </figure>
         </li>
         <li>
           <figure class="partner-logo-container">
             <div class="partner-logo">
-              <img alt=""  src="src/assets/images/partners/mo2ssa-tadreeb.svg" />
+              <img alt="" src="src/assets/images/partners/mo2ssa-tadreeb.svg" />
             </div>
-            <figcaption class="partner-grid-name">المؤسسة العامة
-              للتدريب المهني والتقني
-            </figcaption>
+            <figcaption class="partner-grid-name">المؤسسة العامة للتدريب المهني والتقني</figcaption>
           </figure>
         </li>
         <li>
@@ -1629,18 +1624,15 @@
             <div class="partner-logo">
               <img alt="" src="src/assets/images/partners/ma3had-abnaa-mostqbal.svg" />
             </div>
-            <figcaption class="partner-grid-name">معهد أبناء المستقبل
-            </figcaption>
+            <figcaption class="partner-grid-name">معهد أبناء المستقبل</figcaption>
           </figure>
         </li>
         <li>
           <figure class="partner-logo-container">
             <div class="partner-logo">
-              <img alt=""  src="src/assets/images/partners/national-center-ta3leem.svg" />
+              <img alt="" src="src/assets/images/partners/national-center-ta3leem.svg" />
             </div>
-            <figcaption class="partner-grid-name">المركز الوطنى للتعليم
-              الالكترونى
-            </figcaption>
+            <figcaption class="partner-grid-name">المركز الوطنى للتعليم الالكترونى</figcaption>
           </figure>
         </li>
         <li>
@@ -1648,8 +1640,7 @@
             <div class="partner-logo">
               <img alt="" src="src/assets/images/partners/high-fliers.svg" />
             </div>
-            <figcaption class="partner-grid-name">هاي فلايرز للتدريب
-            </figcaption>
+            <figcaption class="partner-grid-name">هاي فلايرز للتدريب</figcaption>
           </figure>
         </li>
         <li>
@@ -1657,9 +1648,7 @@
             <div class="partner-logo">
               <img alt="" src="src/assets/images/partners/tazamon.svg" />
             </div>
-            <figcaption class="partner-grid-name">التزامن للتعليم
-              الرقمي
-            </figcaption>
+            <figcaption class="partner-grid-name">التزامن للتعليم الرقمي</figcaption>
           </figure>
         </li>
         <li>
@@ -1667,14 +1656,12 @@
             <div class="partner-logo">
               <img alt="" src="src/assets/images/partners/hay2a.svg" />
             </div>
-            <figcaption class="partner-grid-name">التزامن للتعليم
-              الرقمي
-            </figcaption>
+            <figcaption class="partner-grid-name">التزامن للتعليم الرقمي</figcaption>
           </figure>
         </li>
       </ul>
     </section>
-    <!-- #endregion Partners section end -->
+    <!-- Partners section end -->
 
     <!-- #region professional license section -->
     <section class="pb-14" id="professional-license-section">
