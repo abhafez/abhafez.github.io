@@ -730,6 +730,10 @@
     width: calc(var(--spacing) * 8);
     height: calc(var(--spacing) * 8);
   }
+  .size-\[100px\] {
+    width: 100px;
+    height: 100px;
+  }
   .size-\[560px\] {
     width: 560px;
     height: 560px;
@@ -1202,6 +1206,9 @@
   }
   .w-\[300px\] {
     width: 300px;
+  }
+  .w-\[301\.5����\7f 0px\] {
+    width: 301.5  ��0px;
   }
   .w-\[301\.50px\] {
     width: 301.50px;
