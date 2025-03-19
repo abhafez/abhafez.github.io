@@ -351,7 +351,7 @@ button:hover {
 /*tabs end*/
 
 .slider {
-    max-width: 500px;
+    max-width: 600px;
     max-height: 300px;
     position: relative;
     overflow: hidden;
