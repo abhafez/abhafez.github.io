@@ -1896,6 +1896,9 @@
   .px-0 {
     padding-inline: calc(var(--spacing) * 0);
   }
+  .px-1 {
+    padding-inline: calc(var(--spacing) * 1);
+  }
   .px-1\.5 {
     padding-inline: calc(var(--spacing) * 1.5);
   }
@@ -2627,6 +2630,20 @@
       }
     }
   }
+  .hover\:bg-logo {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-logo);
+      }
+    }
+  }
+  .hover\:bg-meta-light-2 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-meta-light-2);
+      }
+    }
+  }
   .hover\:bg-primary-200 {
     &:hover {
       @media (hover: hover) {
@@ -2680,6 +2697,13 @@
     &:hover {
       @media (hover: hover) {
         text-decoration-line: underline;
+      }
+    }
+  }
+  .hover\:accent-meta-light-2 {
+    &:hover {
+      @media (hover: hover) {
+        accent-color: var(--color-meta-light-2);
       }
     }
   }
