@@ -6,6 +6,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-50: oklch(0.971 0.013 17.38);
     --color-red-100: #b50929;
     --color-red-200: #923262;
     --color-red-300: #df164c;
@@ -1443,6 +1444,9 @@
   .gap-24 {
     gap: calc(var(--spacing) * 24);
   }
+  .gap-48 {
+    gap: calc(var(--spacing) * 48);
+  }
   .gap-\[5px\] {
     gap: 5px;
   }
@@ -1784,6 +1788,9 @@
   .bg-primary-title\/14 {
     background-color: color-mix(in oklab, var(--color-primary-title) 14%, transparent);
   }
+  .bg-red-50 {
+    background-color: var(--color-red-50);
+  }
   .bg-red-100 {
     background-color: var(--color-red-100);
   }
@@ -2053,6 +2060,9 @@
   }
   .pt-6 {
     padding-top: calc(var(--spacing) * 6);
+  }
+  .pt-7 {
+    padding-top: calc(var(--spacing) * 7);
   }
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
@@ -2954,11 +2964,6 @@
       align-self: stretch;
     }
   }
-  .sm\:px-0 {
-    @media (width >= 40rem) {
-      padding-inline: calc(var(--spacing) * 0);
-    }
-  }
   .sm\:px-2 {
     @media (width >= 40rem) {
       padding-inline: calc(var(--spacing) * 2);
@@ -3074,6 +3079,11 @@
       margin-bottom: calc(var(--spacing) * 8);
     }
   }
+  .md\:mb-10 {
+    @media (width >= 48rem) {
+      margin-bottom: calc(var(--spacing) * 10);
+    }
+  }
   .md\:block {
     @media (width >= 48rem) {
       display: block;
@@ -3102,11 +3112,6 @@
   .md\:w-1\/3 {
     @media (width >= 48rem) {
       width: calc(1/3 * 100%);
-    }
-  }
-  .md\:w-\[300px\] {
-    @media (width >= 48rem) {
-      width: 300px;
     }
   }
   .md\:grid-cols-2 {
@@ -3347,6 +3352,11 @@
       margin-bottom: calc(var(--spacing) * 8);
     }
   }
+  .lg\:mb-10 {
+    @media (width >= 64rem) {
+      margin-bottom: calc(var(--spacing) * 10);
+    }
+  }
   .lg\:mb-12 {
     @media (width >= 64rem) {
       margin-bottom: calc(var(--spacing) * 12);
@@ -3491,11 +3501,6 @@
   .lg\:w-\[288px\] {
     @media (width >= 64rem) {
       width: 288px;
-    }
-  }
-  .lg\:w-\[300px\] {
-    @media (width >= 64rem) {
-      width: 300px;
     }
   }
   .lg\:w-\[405px\] {
@@ -3693,6 +3698,11 @@
       gap: calc(var(--spacing) * 12);
     }
   }
+  .lg\:gap-24 {
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 24);
+    }
+  }
   .lg\:gap-\[50px\] {
     @media (width >= 64rem) {
       gap: 50px;
@@ -3771,6 +3781,11 @@
   .lg\:pe-20 {
     @media (width >= 64rem) {
       padding-inline-end: calc(var(--spacing) * 20);
+    }
+  }
+  .lg\:pt-8 {
+    @media (width >= 64rem) {
+      padding-top: calc(var(--spacing) * 8);
     }
   }
   .lg\:pt-10 {
@@ -4747,17 +4762,6 @@ button:hover {
   text-align: center;
   max-height: 100%;
   max-width: 100%;
-}
-.laptop__screen::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient( to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100% );
-  pointer-events: none;
-  border-radius: 20px;
 }
 .slider__dots {
   display: flex;
