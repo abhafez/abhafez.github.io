@@ -395,7 +395,7 @@ button:hover {
     font-weight: 600;
     font-size: 18px;
     opacity: 0.8;
-    transition: opacity 0.3s ease;
+    transition: opacity 1s ease;
 }
 
 .control--prev:hover,
@@ -486,3 +486,26 @@ button:hover {
     border-radius: 20px;
 }
 
+
+/* Dots container */
+.slider__dots {
+    display: flex;
+    justify-content: center; /* Centers the dots horizontally */
+    gap: 8px; /* Adds space between dots */
+    margin-top: 16px; /* Optional: Adjust spacing between slider and dots */
+}
+
+/* Dot item */
+.slider__dot {
+    width: 12px;
+    height: 12px;
+    background-color: #ccc; /* Default color for inactive dots */
+    border-radius: 50%; /* Makes the dot circular */
+    cursor: pointer; /* Makes the dots interactable */
+    transition: background-color 0.3s ease; /* Smooth transition for active/inactive state */
+}
+
+/* Active dot */
+.slider__dot.active {
+    background-color: #56369b; /* Highlighted color for the active dot */
+}
