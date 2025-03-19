@@ -349,3 +349,140 @@ button:hover {
 
 }
 /*tabs end*/
+
+.slider {
+    max-width: 500px;
+    max-height: 300px;
+    position: relative;
+    overflow: hidden;
+    margin: 20px auto 0;
+    border-radius: 4px;
+}
+
+.slider__container {
+    display: flex;
+    align-items: stretch;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.slider__item {
+    flex: 0 0 auto;
+    position: relative;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    background: #ccc;
+    text-align: center;
+    line-height: 300px;
+}
+
+.control--prev,
+.control--next {
+    position: absolute;
+    top: 40%;
+    z-index: 999;
+    display: block;
+    padding: 4% 3%;
+    width: auto;
+    height: auto;
+    background: #2a2a2a;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.control--prev:hover,
+.control--next:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.control--prev {
+    border-radius: 0 2px 2px 0;
+}
+
+.control--next {
+    right: 0;
+    border-radius: 2px 0 0 2px;
+}
+
+.sliderOption {
+    position: relative;
+    margin: 10px auto;
+    width: 160px;
+    font-size: 18px;
+}
+
+/* Laptop Frame Styles */
+.laptop {
+    max-width: 500px; /* Adjust the size of the laptop */
+    max-height: 200px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.laptop__screen {
+    background: #000;
+    padding: 6px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.laptop__bottom {
+    background: #949494;
+    height: 30px;
+    border-radius: 0 0 20px 20px;
+    position: relative;
+}
+
+.laptop__trackpad {
+    width: 100px;
+    height: 10px;
+    background: #555;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Adjust Slider to Fit Inside Laptop Screen */
+.slider {
+    max-width: 100%; /* Make the slider fill the laptop screen */
+    margin: 0;
+    border-radius: 10px; /* Match the laptop screen's rounded corners */
+    overflow: hidden;
+}
+
+.slider__item {
+    line-height: 300px; /* Adjust as needed */
+    background: #ccc;
+    text-align: center;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/* Optional: Add a glossy effect to the laptop screen */
+.laptop__screen::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.1) 0%,
+            rgba(255, 255, 255, 0) 100%
+    );
+    pointer-events: none;
+    border-radius: 20px;
+}
+
