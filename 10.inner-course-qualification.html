@@ -427,7 +427,7 @@
                 </div>
               </figure>
               <button
-              id="openCheckoutModal"
+              onclick="scrollToCourseSchedule()"
                 class="text-primary-title inline-flex h-[57.04px] items-center justify-center gap-[9.20px] rounded-[92px] bg-white px-[29.44px] pt-[11.04px] pb-[7.36px] shadow-[0px_11.039999961853027px_48.76000213623047px_0px_rgba(0,0,0,0.04)]"
               >
                 <span class="text-primary-title text-lg font-medium">الانضمام الآن | 299 </span>
@@ -546,166 +546,6 @@
             </div>
           </footer>
         </section>
-        <div id="checkoutModal" class="absolute top-28 left-0 z-50 flex hidden h-fit w-full items-center justify-center rounded-3xl bg-white bg-opacity-50 p-4 shadow-lg md:w-1/3">
-          <div class="w-full max-w-lg bg-white p-6">
-            <!-- Step 1: Payment Methods -->
-            <div id="step1" class="step">
-              <h2 class="mb-4 text-center text-base font-semibold text-[#321F6B]">الدفع باستخدام</h2>
-              <div class="space-y-4">
-                <button data-method="apple-pay" class="flex h-10 w-full justify-center rounded-full bg-black p-3 py-0.5">
-                  <img src="src/assets/images/apple-pay.svg" alt="Apple Pay" class="inline-block" />
-                </button>
-                <button data-method="google-pay" class="flex h-10 w-full items-center justify-center rounded-full bg-[#e4e4e4] p-3 py-0.5">
-                  <img src="src/assets/images/g-pay.svg" alt="Google Pay" class="inline-block h-[60px]" />
-                </button>
-                <button data-method="visa-mastercard" class="flex h-10 w-full items-center justify-evenly rounded-full bg-[#e4e4e4] p-3 py-0.5">
-                  <img src="src/assets/images/visa.svg" alt="Visa" class="inline-block h-3.5" />
-                  <img src="src/assets/images/mada.png" alt="Mastercard" class="inline-block h-4" />
-                  <img src="src/assets/images/master-card.png" alt="Mastercard" class="inline-block h-5" />
-                </button>
-                <button data-method="tamara" class="flex h-10 w-full items-center justify-center rounded-full bg-[#e4e4e4] p-3 py-0.5">
-                  <img src="src/assets/images/tamara.svg" alt="Tamara" class="inline-block h-6" />
-                </button>
-                <button data-method="tabby" class="flex h-10 w-full items-center justify-center rounded-full bg-[#e4e4e4] p-3 py-0.5">
-                  <img src="src/assets/images/tabby.png" alt="Tabby" class="inline-block h-6" />
-                </button>
-              </div>
-              <div class="my-4 h-px bg-zinc-300"></div>
-              <div class="relative flex h-10 overflow-hidden rounded-lg bg-white px-2 outline-1 outline-offset-[-1px] outline-[#dbdce3]">
-                <img src="src/assets/images/icons/ticket-discount.svg" alt="Discount" class="" />
-                <input type="text" id="discountCode" placeholder="كود الخصم" class="w-full rounded-lg p-2" />
-                <button id="applyDiscount" class="justify-start text-right text-sm font-bold text-[#6639c6] opacity-40">تفعيل</button>
-              </div>
-              <section id="summary" class="mt-4 hidden">
-                <section class="self-stretch inline-flex flex-col justify-start items-start gap-4 w-full">
-                  <!-- Base Price -->
-                  <dl class="self-stretch inline-flex justify-between items-center">
-                    <dt class="text-right justify-start text-zinc-600 text-sm font-normal">السعر الأساسى</dt>
-                    <dd class="text-right justify-start">
-                      <span class="text-black text-sm font-normal">$100</span>
-                      <span class="text-black text-xs font-normal">.00</span>
-                    </dd>
-                  </dl>
-                
-                  <!-- VAT -->
-                  <dl class="self-stretch inline-flex justify-between items-center">
-                    <dt class="text-right justify-start text-zinc-600 text-sm font-normal">ضريبة القيمة المضافة (15%)</dt>
-                    <dd class="text-right justify-start">
-                      <span class="text-black text-sm font-normal">$15</span>
-                      <span class="text-black text-xs font-normal">.00</span>
-                    </dd>
-                  </dl>
-                
-                  <!-- Discount Coupon -->
-                  <dl class="self-stretch inline-flex justify-between items-center">
-                    <dt class="text-right justify-start text-[#20b486] text-sm font-normal">كوبون خصم</dt>
-                    <dd class="text-right justify-start">
-                      <span class="text-[#20b486] text-sm font-normal">$10</span>
-                      <span class="text-[#20b486] text-xs font-normal">.00</span>
-                      <span class="text-[#20b486] text-sm font-normal"> -</span>
-                    </dd>
-                  </dl>
-                
-                  <!-- Total Price -->
-                  <dl class="self-stretch inline-flex justify-between items-center">
-                    <dt class="text-right justify-start text-[#311e6a] text-base font-bold">الإجمالى</dt>
-                    <dd class="text-right justify-start">
-                      <span class="text-[#311e6a] text-base font-bold">$105</span>
-                      <span class="text-[#311e6a] text-sm font-bold">.00</span>
-                    </dd>
-                  </dl>
-                </section>
-              </section>
-              <div class="mt-6 flex justify-end">
-                <button id="nextStep1" class="rounded-lg bg-[#6639c6] p-3 text-white">التالي</button>
-              </div>
-            </div>
-
-            <!-- Step 2: Card Details -->
-            <div id="step2" class="step hidden">
-              <h2 class="mb-4 text-xl font-bold text-[#6639c6]">الدفع باستخدام بطاقة</h2>
-              <form id="cardForm">
-                <div class="space-y-4">
-                  <input
-                    type="text"
-                    placeholder="اسم صاحب البطاقة"
-                    class="relative h-10 w-full overflow-hidden rounded-lg bg-zinc-100 p-2 outline-1 outline-offset-[-1px] outline-[#dbdce3]"
-                    required
-                  />
-                  <input type="text" placeholder="رقم البطاقة" class="relative h-10 w-full overflow-hidden rounded-lg bg-zinc-100 p-2 outline-1 outline-offset-[-1px] outline-[#dbdce3]" required />
-                  <div class="flex gap-4">
-                    <input
-                      type="text"
-                      placeholder="تاريخ الانتهاء (MM/YY)"
-                      class="relative h-10 w-1/2 overflow-hidden rounded-lg bg-zinc-100 p-2 outline-1 outline-offset-[-1px] outline-[#dbdce3]"
-                      required
-                    />
-                    <input type="text" placeholder="CVV" class="relative h-10 w-1/2 overflow-hidden rounded-lg bg-zinc-100 p-2 outline-1 outline-offset-[-1px] outline-[#dbdce3]" required />
-                  </div>
-                  <label class="flex items-center justify-center">
-                    <span class="text-center text-sm font-semibold text-[#6639c6]">بالاستمرار أنت توافق علي الشروط والاحكام</span>
-                  </label>
-                </div>
-                <div class="mt-6 flex justify-center gap-4">
-                  <!-- <button type="button" id="backStep2" class="rounded-lg bg-gray-300 p-3 text-gray-700">رجوع</button> -->
-                  <button type="submit" class="rounded-lg bg-[#6639c6] p-3 text-white w-full">الدفع الآن</button>
-                </div>
-                <div class="inline-flex items-center justify-center gap-3 w-full mt-6">
-                  <div class="inline-flex items-center justify-end gap-1.5">
-                    <div class="relative h-6 w-6 overflow-hidden">
-                      <img src="src/assets/images/icons/lock-01.svg" alt="Lock" class="h-[18px]" />
-                    </div>
-                    <p class="justify-start">
-                      <span class="text-sm font-bold text-zinc-600">دفع آمن و مضمون</span><span class="text-sm font-bold text-[#311e6a]"> </span
-                      ><span class="text-xs font-medium text-[#818182]">مشفر بواسطة SSL</span>
-                    </p>
-                  </div>
-                </div>
-              </form>
-            </div>
-
-            <!-- Step 3: Success/Failure Message -->
-            <div id="step3" class="step hidden">
-              <div id="resultImg" class="mb-4 flex justify-center"></div>
-              <h2 id="resultMessage" class="mb-4 text-2xl font-extrabold text-center"></h2>
-              <div class="my-4 h-px bg-gray-300"></div>
-              <section class="self-stretch inline-flex flex-col justify-start items-start gap-4 w-full">
-                <!-- Order Details -->
-                <dl class="self-stretch inline-flex justify-between items-center">
-                  <dt class="text-right justify-start text-[#808ea1] text-sm font-normal">رقم الطلب</dt>
-                  <dd class="text-right justify-start text-black text-sm font-normal">184440</dd>
-                </dl>
-              
-                <!-- Date Details -->
-                <dl class="self-stretch inline-flex justify-between items-center">
-                  <dt class="text-right justify-start text-[#808ea1] text-sm font-normal">التاريخ</dt>
-                  <dd class="text-right justify-start text-black text-sm font-normal">2 فبراير 2025</dd>
-                </dl>
-              
-                <!-- Email Details -->
-                <dl class="self-stretch inline-flex justify-between items-center">
-                  <dt class="text-right justify-start text-[#808ea1] text-sm font-normal">بريد الكتروني</dt>
-                  <dd class="text-right justify-start text-black text-sm font-normal">hebanabil452@gmail.com</dd>
-                </dl>
-              
-                <!-- Payment Method Details -->
-                <dl class="self-stretch inline-flex justify-between items-center">
-                  <dt class="text-right justify-start text-[#808ea1] text-sm font-normal">طريقة الدفع</dt>
-                  <dd class="inline-flex flex-col justify-center items-end">
-                    <div class="inline-flex justify-center items-center gap-2">
-                      <img src="src/assets/images/tamara.svg" alt="Visa" class="h-6" />
-                    </div>
-                  </dd>
-                </dl>
-              </section>
-              <div class="mt-6 flex flex-col justify-end gap-4 w-full">
-                <button id="reorder" class="hidden rounded-lg bg-[#6639c6] p-3 text-white w-full">المحاولة مرة أخرى</button>
-                <button id="print" class="hidden rounded-lg bg-[#6639c6] p-3 text-white w-full">طباعة</button>
-                <!-- <button id="closeModal" class="rounded-lg bg-gray-300 p-3 text-gray-700">إغلاق</button> -->
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
       <!-- Banner Section End -->
       <!-- Summary Section start -->
@@ -754,7 +594,7 @@
       <!-- Summary Section End -->
       <!-- Tags Section Start -->
       <section class="container mx-auto mb-10 px-4 lg:px-0">
-        <section class="inline-flex flex-wrap content-start items-start justify-start gap-6">
+        <section class="inline-flex flex-wrap content-start items-start justify-start gap-6 relative">
           <!-- Section Heading -->
           <h2 class="justify-start text-right text-[26px] font-bold tracking-wide text-[#311e6a]">ماذا تتعلم فى هذه الدورة</h2>
 
@@ -795,8 +635,8 @@
       </section>
       <!-- Tags Section End -->
       <!-- Course Schedule Start -->
-      <section class="container mx-auto mb-10 px-4 lg:px-0">
-        <section class="inline-flex w-full flex-col items-start justify-start gap-6">
+      <section id="courseSchedule" class="container mx-auto mb-10 px-4 lg:px-0">
+        <section class="inline-flex w-full flex-col items-start justify-start gap-6 relative">
           <!-- Section Heading -->
           <h2 class="text-Text justify-start text-right text-[26px] font-bold tracking-wide">مواعيد الدورة</h2>
 
@@ -815,7 +655,7 @@
 
                 <div class="flex items-center justify-end gap-2.5">
                   <img class="h-6 w-6" src="src/assets/images/icons/bar-chart-03.svg" alt="chart Icon" />
-                  <p class="text-nowrap justify-center text-right text-sm font-medium text-zinc-600">المستوى الأول </p>
+                  <p class="text-nowrap justify-center text-right text-sm font-medium text-zinc-600">المستوى الأول </p>
                 </div>
 
                 <div class="flex items-center justify-end gap-2.5">
@@ -825,11 +665,11 @@
 
                 <div class="flex items-center justify-end gap-2.5">
                   <img class="h-6 w-6" src="src/assets/images/icons/bank-note-01.svg" alt="Calendar Icon" />
-                  <p class="text-nowrap justify-center text-right text-sm font-medium text-zinc-600">690.00 ريال</p>
+                  <p class="text-nowrap justify-center text-right text-sm font-medium text-zinc-600">690.00 ريال</p>
                 </div>
 
                 <!-- Button -->
-                <button class="outline-primary-title flex items-center justify-center gap-1 rounded-[32px] px-6 py-3.5 shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)] outline-2 outline-offset-[-2px]">
+                <button class="join-now-btn outline-primary-title flex items-center justify-center gap-1 rounded-[32px] px-6 py-3.5 shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)] outline-2 outline-offset-[-2px]">
                   <span class="text-primary-title flex items-end justify-start gap-1.5 font-semibold"> الانضمام الآن </span>
                 </button>
               </div>
@@ -848,7 +688,7 @@
 
                 <div class="flex items-center justify-end gap-2.5">
                   <img class="h-6 w-6" src="src/assets/images/icons/bar-chart-03.svg" alt="chart Icon" />
-                  <p class="text-nowrap justify-center text-right text-sm font-medium text-zinc-600">المستوى الأول </p>
+                  <p class="text-nowrap justify-center text-right text-sm font-medium text-zinc-600">المستوى الأول </p>
                 </div>
 
                 <div class="flex items-center justify-end gap-2.5">
@@ -858,16 +698,176 @@
 
                 <div class="flex items-center justify-end gap-2.5">
                   <img class="h-6 w-6" src="src/assets/images/icons/bank-note-01.svg" alt="Calendar Icon" />
-                  <p class="text-nowrap justify-center text-right text-sm font-medium text-zinc-600">700 ريال</p>
+                  <p class="text-nowrap justify-center text-right text-sm font-medium text-zinc-600">700 ريال</p>
                 </div>
 
                 <!-- Button -->
-                <button class="outline-primary-title flex items-center justify-center gap-1 rounded-[32px] px-6 py-3.5 shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)] outline-2 outline-offset-[-2px]">
+                <button class="join-now-btn outline-primary-title flex items-center justify-center gap-1 rounded-[32px] px-6 py-3.5 shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)] outline-2 outline-offset-[-2px]">
                   <span class="text-primary-title flex items-end justify-start gap-1.5 font-semibold"> الانضمام الآن </span>
                 </button>
               </div>
             </li>
           </ul>
+          <div id="checkoutModal" class="absolute top-28 left-0 z-50 flex hidden h-fit w-full items-center justify-center rounded-3xl bg-white bg-opacity-50 p-4 shadow-lg md:w-1/3">
+            <div class="w-full max-w-lg bg-white p-6">
+              <!-- Step 1: Payment Methods -->
+              <div id="step1" class="step">
+                <h2 class="mb-4 text-center text-base font-semibold text-[#321F6B]">الدفع باستخدام</h2>
+                <div class="space-y-4">
+                  <button data-method="apple-pay" class="flex h-10 w-full justify-center rounded-full bg-black p-3 py-0.5">
+                    <img src="src/assets/images/apple-pay.svg" alt="Apple Pay" class="inline-block" />
+                  </button>
+                  <button data-method="google-pay" class="flex h-10 w-full items-center justify-center rounded-full bg-[#e4e4e4] p-3 py-0.5">
+                    <img src="src/assets/images/g-pay.svg" alt="Google Pay" class="inline-block h-[60px]" />
+                  </button>
+                  <button data-method="visa-mastercard" class="flex h-10 w-full items-center justify-evenly rounded-full bg-[#e4e4e4] p-3 py-0.5">
+                    <img src="src/assets/images/visa.svg" alt="Visa" class="inline-block h-3.5" />
+                    <img src="src/assets/images/mada.png" alt="Mastercard" class="inline-block h-4" />
+                    <img src="src/assets/images/master-card.png" alt="Mastercard" class="inline-block h-5" />
+                  </button>
+                  <button data-method="tamara" class="flex h-10 w-full items-center justify-center rounded-full bg-[#e4e4e4] p-3 py-0.5">
+                    <img src="src/assets/images/tamara.svg" alt="Tamara" class="inline-block h-6" />
+                  </button>
+                  <button data-method="tabby" class="flex h-10 w-full items-center justify-center rounded-full bg-[#e4e4e4] p-3 py-0.5">
+                    <img src="src/assets/images/tabby.png" alt="Tabby" class="inline-block h-6" />
+                  </button>
+                </div>
+                <div class="my-4 h-px bg-zinc-300"></div>
+                <div class="relative flex h-10 overflow-hidden rounded-lg bg-white px-2 outline-1 outline-offset-[-1px] outline-[#dbdce3]">
+                  <img src="src/assets/images/icons/ticket-discount.svg" alt="Discount" class="" />
+                  <input type="text" id="discountCode" placeholder="كود الخصم" class="w-full rounded-lg p-2" />
+                  <button id="applyDiscount" class="justify-start text-right text-sm font-bold text-[#6639c6] opacity-40">تفعيل</button>
+                </div>
+                <section id="summary" class="mt-4 hidden">
+                  <section class="self-stretch inline-flex flex-col justify-start items-start gap-4 w-full">
+                    <!-- Base Price -->
+                    <dl class="self-stretch inline-flex justify-between items-center">
+                      <dt class="text-right justify-start text-zinc-600 text-sm font-normal">السعر الأساسى</dt>
+                      <dd class="text-right justify-start">
+                        <span class="text-black text-sm font-normal">$100</span>
+                        <span class="text-black text-xs font-normal">.00</span>
+                      </dd>
+                    </dl>
+                  
+                    <!-- VAT -->
+                    <dl class="self-stretch inline-flex justify-between items-center">
+                      <dt class="text-right justify-start text-zinc-600 text-sm font-normal">ضريبة القيمة المضافة (15%)</dt>
+                      <dd class="text-right justify-start">
+                        <span class="text-black text-sm font-normal">$15</span>
+                        <span class="text-black text-xs font-normal">.00</span>
+                      </dd>
+                    </dl>
+                  
+                    <!-- Discount Coupon -->
+                    <dl class="self-stretch inline-flex justify-between items-center">
+                      <dt class="text-right justify-start text-[#20b486] text-sm font-normal">كوبون خصم</dt>
+                      <dd class="text-right justify-start">
+                        <span class="text-[#20b486] text-sm font-normal">$10</span>
+                        <span class="text-[#20b486] text-xs font-normal">.00</span>
+                        <span class="text-[#20b486] text-sm font-normal"> -</span>
+                      </dd>
+                    </dl>
+                  
+                    <!-- Total Price -->
+                    <dl class="self-stretch inline-flex justify-between items-center">
+                      <dt class="text-right justify-start text-[#311e6a] text-base font-bold">الإجمالى</dt>
+                      <dd class="text-right justify-start">
+                        <span class="text-[#311e6a] text-base font-bold">$105</span>
+                        <span class="text-[#311e6a] text-sm font-bold">.00</span>
+                      </dd>
+                    </dl>
+                  </section>
+                </section>
+                <div class="mt-6 flex justify-end">
+                  <button id="nextStep1" class="rounded-lg bg-[#6639c6] p-3 text-white">التالي</button>
+                </div>
+              </div>
+  
+              <!-- Step 2: Card Details -->
+              <div id="step2" class="step hidden">
+                <h2 class="mb-4 text-xl font-bold text-[#6639c6]">الدفع باستخدام بطاقة</h2>
+                <form id="cardForm">
+                  <div class="space-y-4">
+                    <input
+                      type="text"
+                      placeholder="اسم صاحب البطاقة"
+                      class="relative h-10 w-full overflow-hidden rounded-lg bg-zinc-100 p-2 outline-1 outline-offset-[-1px] outline-[#dbdce3]"
+                      required
+                    />
+                    <input type="text" placeholder="رقم البطاقة" class="relative h-10 w-full overflow-hidden rounded-lg bg-zinc-100 p-2 outline-1 outline-offset-[-1px] outline-[#dbdce3]" required />
+                    <div class="flex gap-4">
+                      <input
+                        type="text"
+                        placeholder="تاريخ الانتهاء (MM/YY)"
+                        class="relative h-10 w-1/2 overflow-hidden rounded-lg bg-zinc-100 p-2 outline-1 outline-offset-[-1px] outline-[#dbdce3]"
+                        required
+                      />
+                      <input type="text" placeholder="CVV" class="relative h-10 w-1/2 overflow-hidden rounded-lg bg-zinc-100 p-2 outline-1 outline-offset-[-1px] outline-[#dbdce3]" required />
+                    </div>
+                    <label class="flex items-center justify-center">
+                      <span class="text-center text-sm font-semibold text-[#6639c6]">بالاستمرار أنت توافق علي الشروط والاحكام</span>
+                    </label>
+                  </div>
+                  <div class="mt-6 flex justify-center gap-4">
+                    <!-- <button type="button" id="backStep2" class="rounded-lg bg-gray-300 p-3 text-gray-700">رجوع</button> -->
+                    <button type="submit" class="rounded-lg bg-[#6639c6] p-3 text-white w-full">الدفع الآن</button>
+                  </div>
+                  <div class="inline-flex items-center justify-center gap-3 w-full mt-6">
+                    <div class="inline-flex items-center justify-end gap-1.5">
+                      <div class="relative h-6 w-6 overflow-hidden">
+                        <img src="src/assets/images/icons/lock-01.svg" alt="Lock" class="h-[18px]" />
+                      </div>
+                      <p class="justify-start">
+                        <span class="text-sm font-bold text-zinc-600">دفع آمن و مضمون</span><span class="text-sm font-bold text-[#311e6a]"> </span
+                        ><span class="text-xs font-medium text-[#818182]">مشفر بواسطة SSL</span>
+                      </p>
+                    </div>
+                  </div>
+                </form>
+              </div>
+  
+              <!-- Step 3: Success/Failure Message -->
+              <div id="step3" class="step hidden">
+                <div id="resultImg" class="mb-4 flex justify-center"></div>
+                <h2 id="resultMessage" class="mb-4 text-2xl font-extrabold text-center"></h2>
+                <div class="my-4 h-px bg-gray-300"></div>
+                <section class="self-stretch inline-flex flex-col justify-start items-start gap-4 w-full">
+                  <!-- Order Details -->
+                  <dl class="self-stretch inline-flex justify-between items-center">
+                    <dt class="text-right justify-start text-[#808ea1] text-sm font-normal">رقم الطلب</dt>
+                    <dd class="text-right justify-start text-black text-sm font-normal">184440</dd>
+                  </dl>
+                
+                  <!-- Date Details -->
+                  <dl class="self-stretch inline-flex justify-between items-center">
+                    <dt class="text-right justify-start text-[#808ea1] text-sm font-normal">التاريخ</dt>
+                    <dd class="text-right justify-start text-black text-sm font-normal">2 فبراير 2025</dd>
+                  </dl>
+                
+                  <!-- Email Details -->
+                  <dl class="self-stretch inline-flex justify-between items-center">
+                    <dt class="text-right justify-start text-[#808ea1] text-sm font-normal">بريد الكتروني</dt>
+                    <dd class="text-right justify-start text-black text-sm font-normal">hebanabil452@gmail.com</dd>
+                  </dl>
+                
+                  <!-- Payment Method Details -->
+                  <dl class="self-stretch inline-flex justify-between items-center">
+                    <dt class="text-right justify-start text-[#808ea1] text-sm font-normal">طريقة الدفع</dt>
+                    <dd class="inline-flex flex-col justify-center items-end">
+                      <div class="inline-flex justify-center items-center gap-2">
+                        <img src="src/assets/images/tamara.svg" alt="Visa" class="h-6" />
+                      </div>
+                    </dd>
+                  </dl>
+                </section>
+                <div class="mt-6 flex flex-col justify-end gap-4 w-full">
+                  <button id="reorder" class="hidden rounded-lg bg-[#6639c6] p-3 text-white w-full">المحاولة مرة أخرى</button>
+                  <button id="print" class="hidden rounded-lg bg-[#6639c6] p-3 text-white w-full">طباعة</button>
+                  <!-- <button id="closeModal" class="rounded-lg bg-gray-300 p-3 text-gray-700">إغلاق</button> -->
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </section>
       <!-- Course Schedule End -->
@@ -1462,6 +1462,31 @@
     <!-- FOOTER END -->
     <!-- Include jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      function scrollToCourseSchedule() {
+        const courseScheduleSection = document.getElementById('courseSchedule');
+        courseScheduleSection.scrollIntoView({ behavior: 'smooth' });
+      }
+
+      $(document).ready(function () {
+        // Accordion functionality
+        $(".unit-header").click(function () {
+          // Toggle the visibility of the associated content
+          $(this).siblings(".unit-content").slideToggle();
+
+          // Close other units when one is opened
+          $(".unit-content").not($(this).siblings(".unit-content")).slideUp();
+        });
+
+        // Open modal when any join button is clicked
+        $(".join-now-btn").click(function () {
+          $("#checkoutModal").removeClass("hidden");
+          $("#step1").removeClass("hidden");
+          $("#step2").addClass("hidden");
+          $("#step3").addClass("hidden");
+        });
+      });
+    </script>
     <script>
       $(document).ready(function () {
         // Accordion functionality
