@@ -13,7 +13,7 @@
       data-theme-url="https://d2rboqy70y74sa.cloudfront.net/wp-content/themes/AanaabB2B-v2/src/">
 <!--Header Start-->
 <!--Header Start-->
-<header class="border-b-meta-light bg-[#6639c6] dark:bg-primary-500 dark:border-white flex h-20 items-center justify-between border-b px-5">
+<header class="border-b-meta-light dark:border-sep/20 bg-[#6639c6] dark:bg-primary-500 flex h-20 items-center justify-between border-b px-5">
   <div class="container m-auto flex flex-row items-center justify-between">
     <div class="flex items-center gap-10">
       <img src="src/assets/images/logo/logo-white.svg" alt="logo" class="h-9" />
@@ -448,13 +448,13 @@
           </li>
         </ul>
         <nav class="inline-flex items-start justify-start gap-4">
-          <a href="#" class="flex items-center justify-center gap-1 rounded-[32px] bg-white px-8 py-[18px]">
+          <a href="#" class="flex items-center justify-center gap-1 rounded-[32px] bg-white hover:bg-logo px-8 py-[18px]">
                 <span class="flex items-end justify-start gap-1.5">
                   <span class="text-base font-bold leading-none text-[#311e6a]">الدورات التعليمية</span>
                 </span>
           </a>
           <a href="#"
-             class="flex items-center justify-center gap-1 rounded-[32px] border-2 border-white px-8 py-[18px] shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)]">
+             class="flex items-center justify-center gap-1 rounded-[32px] border-2 border-white px-8 py-[18px] hover:border-logo hover:[&_span]:text-logo shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)]">
                 <span class="flex items-end justify-start gap-1.5">
                   <span class="text-base font-bold leading-none text-white">أستكشف الباقات</span>
                 </span>
@@ -471,6 +471,11 @@
 
 <!-- <div id="empty-space" class="dark:bg-dark hidden h-16 md:block"></div> -->
 <main class="">
+
+
+</main>
+
+<main class="dark:bg-dark">
   <!--Logos Section Start-->
   <section class="container mx-auto flex justify-center py-3">
     <section
@@ -517,7 +522,7 @@
   <div class="container mx-auto">
     <section class="flex justify-center py-3">
       <section
-        class="flex flex-col items-start justify-start gap-5 border-t border-b border-zinc-300 px-4 py-[60px] lg:flex-row">
+        class="flex flex-col items-start justify-start gap-5 border-t border-b border-zinc-300 dark:border-zinc-300/20 px-4 py-[60px] lg:flex-row">
         <!-- Card 1: Educational Courses and Interactive Meetings -->
         <div class="flex shrink grow basis-0 flex-col items-start justify-center gap-5 self-stretch">
           <!-- Sub-Card 1: Educational Courses -->
@@ -704,19 +709,14 @@
     </section>
   </div>
   <!-- Services Section End -->
-
   <!-- Team Development Section Start -->
-  <section class="border-sep container m-auto mb-6 flex justify-center border-b lg:mb-12">
-    <section
-      class="dark:bg-dark container mx-auto inline-flex flex-col items-center justify-between bg-white px-4 py-[60px] lg:h-[467.59px] lg:w-[1440px] lg:flex-row lg:px-[114px]">
+  <section class="border-sep dark:border-sep/20 container m-auto mb-6 flex justify-center border-b lg:mb-12">
+    <section class="container mx-auto inline-flex flex-col items-center justify-between bg-white px-4 py-[60px] lg:h-[467.59px] lg:w-[1440px] lg:flex-row lg:px-[114px] dark:bg-dark">
       <!-- Image Section -->
       <figure class="relative w-full lg:h-[347.59px] lg:w-[540.67px]">
-        <img class="left-0 top-0 w-[540.67px] lg:absolute lg:h-[347.59px] lg:min-w-[540.67px]"
-             src="src/assets/images/laptop.png" alt="Laptop with analytics dashboard" />
+        <img class="left-0 top-0 w-[540.67px] lg:absolute lg:h-[347.59px] lg:min-w-[540.67px]" src="src/assets/images/laptop.png" alt="Laptop with analytics dashboard" />
         <!-- Image Navigation Dots -->
-        <div
-          class="left-2/5 absolute bottom-10 inline-flex h-[17px] items-center justify-start gap-2 lg:left-[229.84px] lg:bottom-16"
-          aria-hidden="true">
+        <div class="left-2/5 absolute bottom-10 inline-flex h-[17px] items-center justify-start gap-2 lg:left-[229.84px] lg:bottom-16" aria-hidden="true">
           <div class="bg-primary-title h-[17px] w-[17px] rounded-full"></div>
           <div class="h-[17px] w-[17px] rounded-full bg-[#d9d9d9]"></div>
           <div class="h-[17px] w-[17px] rounded-full bg-[#d9d9d9]"></div>
@@ -724,95 +724,80 @@
       </figure>
 
       <!-- Content Section -->
-      <article
-        class="dark:bg-dark mt-6 inline-flex flex-col items-start justify-start gap-1.5 lg:mt-0 lg:w-[658px] lg:gap-4">
+      <article class="mt-6 inline-flex flex-col items-start justify-start gap-1.5 lg:mt-0 lg:w-[658px] lg:gap-4 dark:bg-dark">
         <!-- Heading -->
-        <h2 class="text-green text-right text-2xl font-bold lg:w-[542px] lg:text-[42px] lg:leading-[42px]">جميع الأرقام
-          أمامك</h2>
+        <h2 class="text-green text-right text-2xl font-bold lg:w-[542px] lg:text-[42px] lg:leading-[42px]">جميع الأرقام أمامك</h2>
         <!-- Subheading -->
-        <h3
-          class="text-right text-lg font-bold capitalize leading-[49px] text-[#311e6a] dark:text-white lg:w-[518px] lg:text-[32px]">
-          كيف يتطور فريقك في مختلف المجالات؟</h3>
+        <h3 class="text-right text-lg font-bold capitalize leading-[49px] text-[#311e6a] lg:w-[518px] lg:text-[32px] dark:text-white">كيف يتطور فريقك في مختلف المجالات؟</h3>
         <!-- Description -->
-        <p class="text-right text-base font-normal text-[#311e6a] dark:text-white lg:w-[572px]">
-          تقييم أداء المدرسين من خلال تقارير وإحصائيات شاملة، مع رصد رصيد الشهادات وتوفير أدوات لقياس الأثر الفعلي
-        </p>
+        <p class="text-right text-base font-normal text-[#311e6a] lg:w-[572px] dark:text-white">تقييم أداء المدرسين من خلال تقارير وإحصائيات شاملة، مع رصد رصيد الشهادات وتوفير أدوات لقياس الأثر الفعلي</p>
 
         <!-- Features List -->
         <ul class="mb-4 grid grid-cols-1 items-center justify-end gap-1.5 self-stretch lg:mb-0 lg:grid-cols-3 lg:gap-4">
           <li class="flex items-start justify-start gap-2">
             <div data-svg-wrapper>
               <svg width="20" height="25" viewBox="0 0 20 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.6667 9.12891L7.50004 18.2956L3.33337 14.1289" stroke="#20B486" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16.6667 9.12891L7.50004 18.2956L3.33337 14.1289" stroke="#20B486" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </div>
             <div class="inline-flex flex-col items-start justify-start">
-              <span class="text-nowrap dark:text-primary-title-2 text-base font-bold leading-7 text-[#6639c6]">تقارير مفصلة عن أداء المتدربين</span>
+              <span class="text-nowrap text-base font-bold leading-7 text-[#6639c6] dark:text-primary-title-2">تقارير مفصلة عن أداء المتدربين</span>
             </div>
           </li>
           <li class="flex items-start justify-start gap-2 lg:justify-center">
             <div data-svg-wrapper>
               <svg width="20" height="25" viewBox="0 0 20 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.6667 9.12891L7.50004 18.2956L3.33337 14.1289" stroke="#20B486" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16.6667 9.12891L7.50004 18.2956L3.33337 14.1289" stroke="#20B486" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </div>
             <div class="inline-flex flex-col items-start justify-start">
-              <span class="text-nowrap dark:text-primary-title-2 text-base font-bold leading-7 text-[#6639c6]">تائج اجتياز الدورات</span>
+              <span class="text-nowrap text-base font-bold leading-7 text-[#6639c6] dark:text-primary-title-2">تائج اجتياز الدورات</span>
             </div>
           </li>
           <li class="flex items-start justify-start gap-2 lg:justify-center">
             <div data-svg-wrapper>
               <svg width="20" height="25" viewBox="0 0 20 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.6666 9.12891L7.49998 18.2956L3.33331 14.1289" stroke="#20B486" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16.6666 9.12891L7.49998 18.2956L3.33331 14.1289" stroke="#20B486" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </div>
             <div class="inline-flex flex-col items-start justify-start">
-              <span class="text-nowrap dark:text-primary-title-2 text-base font-bold leading-7 text-[#6639c6]">أداة رصيد الشهادات</span>
+              <span class="text-nowrap text-base font-bold leading-7 text-[#6639c6] dark:text-primary-title-2">أداة رصيد الشهادات</span>
             </div>
           </li>
           <li class="flex items-start justify-start gap-2">
             <div data-svg-wrapper>
               <svg width="20" height="25" viewBox="0 0 20 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.6667 9.12891L7.50004 18.2956L3.33337 14.1289" stroke="#20B486" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16.6667 9.12891L7.50004 18.2956L3.33337 14.1289" stroke="#20B486" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </div>
             <div class="inline-flex flex-col items-start justify-start">
-              <span class="text-nowrap dark:text-primary-title-2 text-base font-bold leading-7 text-[#6639c6]">أدوات قياس الأثر</span>
+              <span class="text-nowrap text-base font-bold leading-7 text-[#6639c6] dark:text-primary-title-2">أدوات قياس الأثر</span>
             </div>
           </li>
           <li class="flex items-start justify-start gap-2 lg:justify-center">
             <div data-svg-wrapper>
               <svg width="20" height="25" viewBox="0 0 20 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.6667 9.12891L7.50004 18.2956L3.33337 14.1289" stroke="#20B486" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16.6667 9.12891L7.50004 18.2956L3.33337 14.1289" stroke="#20B486" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </div>
             <div class="inline-flex flex-col items-start justify-start">
-              <span class="text-nowrap dark:text-primary-title-2 text-base font-bold leading-7 text-[#6639c6]">قائمة الالتحاقات/ الاجتيازات</span>
+              <span class="text-nowrap text-base font-bold leading-7 text-[#6639c6] dark:text-primary-title-2">قائمة الالتحاقات/ الاجتيازات</span>
             </div>
           </li>
           <li class="flex items-start justify-start gap-2 lg:justify-center">
             <div data-svg-wrapper>
               <svg width="20" height="25" viewBox="0 0 20 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16.6666 9.12891L7.49998 18.2956L3.33331 14.1289" stroke="#20B486" stroke-width="2"
-                      stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16.6666 9.12891L7.49998 18.2956L3.33331 14.1289" stroke="#20B486" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </div>
             <div class="inline-flex flex-col items-start justify-start">
-              <span class="text-nowrap dark:text-primary-title-2 text-base font-bold leading-7 text-[#6639c6]">إحصائيات المتدربين/ الدورات</span>
+              <span class="text-nowrap text-base font-bold leading-7 text-[#6639c6] dark:text-primary-title-2">إحصائيات المتدربين/ الدورات</span>
             </div>
           </li>
         </ul>
 
         <!-- Call-to-Action Button -->
-        <a
-          href="#"
-          class="bg-primary-title dark:bg-primary-500 inline-flex items-center justify-center gap-1 overflow-hidden rounded-[32px] px-8 py-[18px] shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)]"
-        >
+        <a href="#" class="bg-primary-title inline-flex items-center justify-center gap-1 overflow-hidden rounded-[32px] px-8 py-[18px] dark:bg-primary-500 shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)]">
               <span class="flex items-end justify-start gap-1.5">
                 <span class="text-base font-bold leading-none text-white">أكتشف الباقات</span>
               </span>
@@ -823,28 +808,21 @@
   <!-- Team Development Section End -->
 
   <!--communication Section Start-->
-  <section class="dark:bg-dark container m-auto mb-12 flex justify-center overflow-hidden">
-    <div
-      class="dark:bg-dark flex flex-col items-center justify-start gap-11 bg-white px-4 py-4 lg:h-[389px] lg:w-[1440px] lg:flex-row lg:px-[114px] lg:py-[60px]">
+  <section class="container m-auto mb-12 flex justify-center dark:bg-dark overflow-hidden">
+    <div class="flex flex-col items-center justify-start gap-11 bg-white px-4 py-4 lg:h-[389px] lg:w-[1440px] lg:flex-row lg:px-[114px] lg:py-[60px] dark:bg-dark">
       <!-- Content Section -->
       <article class="flex flex-col items-start justify-start gap-2 lg:w-[628px] lg:gap-4">
         <!-- Heading -->
         <h2 class="text-green text-right text-2xl font-bold lg:w-[542px] lg:text-[42px] lg:leading-[42px]">المجتمع</h2>
         <!-- Subheading -->
-        <h3
-          class="text-right text-lg font-bold capitalize leading-[49px] text-[#311e6a] dark:text-white lg:w-[518px] lg:text-[32px]">
-          سهولة التواصل و محاذاة الأهداف</h3>
+        <h3 class="text-right text-lg font-bold capitalize leading-[49px] text-[#311e6a] lg:w-[518px] lg:text-[32px] dark:text-white">سهولة التواصل و محاذاة الأهداف</h3>
         <!-- Description -->
-        <p class="mb-6 text-right text-base font-normal text-[#311e6a] dark:text-white lg:mb-0 lg:w-[572px]">
-          هو نص وهمي يستخدم في صناعة الطباعة وتصميم المواقع كحشو في التصميمات قبل إدخال النصوص النهائية. يُستخدم لتمثيل
-          النصوص وكيفية تنظيمها داخل التصميمات. النص في الأصل مأخوذ من كتابات قديمة
+        <p class="mb-6 text-right text-base font-normal text-[#311e6a] lg:mb-0 lg:w-[572px] dark:text-white">
+          هو نص وهمي يستخدم في صناعة الطباعة وتصميم المواقع كحشو في التصميمات قبل إدخال النصوص النهائية. يُستخدم لتمثيل النصوص وكيفية تنظيمها داخل التصميمات. النص في الأصل مأخوذ من كتابات قديمة
           باللغة اللاتينية.
         </p>
         <!-- Call-to-Action Button -->
-        <a
-          href="#"
-          class="bg-primary-title dark:bg-primary-500 inline-flex items-center justify-center gap-1 overflow-hidden rounded-[32px] px-8 py-[18px] shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)]"
-        >
+        <a href="#" class="bg-primary-title inline-flex items-center justify-center gap-1 overflow-hidden rounded-[32px] px-8 py-[18px] shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)] dark:bg-primary-500">
               <span class="flex items-end justify-start gap-1.5">
                 <span class="text-base font-bold leading-none text-white">تسجيل دخول</span>
               </span>
@@ -853,8 +831,7 @@
 
       <!-- Image Section -->
       <figure>
-        <img class="hidden h-[263px] w-[524px] rounded-[15px] lg:block lg:min-w-[263px]"
-             src="src/assets/images/communication.jpeg" alt="Community communication illustration" />
+        <img class="h-[263px] w-[524px] rounded-[15px] hidden lg:block lg:min-w-[263px]" src="src/assets/images/communication.jpeg" alt="Community communication illustration" />
       </figure>
     </div>
   </section>
@@ -863,14 +840,12 @@
   <section class="border-sep dark:border-sep/20 border-y-1 bg-box dark:bg-dark border-t py-6 pt-24" dir="rtl">
     <header class="mb-12 flex flex-col items-center justify-center">
       <div class="flex h-[51px] w-8/12 flex-col items-start justify-start gap-2 sm:w-[400px]">
-        <div class="text-primary-title dark:text-primary-600 self-stretch text-center text-[32px] font-bold">باقات
-          الجهات الاستشارية
-        </div>
+        <div class="text-primary-title dark:text-primary-600 self-stretch text-center text-[32px] font-bold">باقات الجهات الرياضيه</div>
       </div>
     </header>
     <article class="flex flex-col flex-wrap items-center justify-center gap-20 sm:px-5 pb-10 md:flex-row lg:gap-12">
       <section
-        class="dark:bg-box-2 dark:border-sep/20 xs:w-auto flex h-[503px] w-[300px] flex-col items-center justify-start gap-[26px] rounded-[20px] border border-zinc-300 bg-white p-[26px] shadow-[0px_4px_6px_-2px_rgba(16,24,40,0.03)]"
+        class="dark:bg-box-2 dark:border-sep/20 flex h-[503px] w-[300px] xs:w-auto flex-col items-center justify-start gap-[26px] rounded-[20px] border border-zinc-300 bg-white p-[26px] shadow-[0px_4px_6px_-2px_rgba(16,24,40,0.03)]"
       >
         <div class="flex flex-col items-center justify-start gap-[9px] py-0.5">
           <div class="flex flex-col items-center justify-start">
@@ -878,10 +853,8 @@
           </div>
           <div class="text-primary-title dark:text-primary-title-2 flex items-baseline justify-center gap-1.5">
             <div class="text-[42px] font-bold capitalize">2500</div>
-            <svg class="SAR size-7 fill-primary-title dark:fill-primary-title-2" width="150" height="168"
-                 viewBox="0 0 150 168" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M93.2676 148.377C90.5934 154.307 88.8257 160.742 88.1484 167.49L144.74 155.46C147.414 149.532 149.181 143.095 149.859 136.347L93.2676 148.377Z" />
+            <svg class="SAR size-7 fill-primary-title dark:fill-primary-title-2" width="150" height="168" viewBox="0 0 150 168" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M93.2676 148.377C90.5934 154.307 88.8257 160.742 88.1484 167.49L144.74 155.46C147.414 149.532 149.181 143.095 149.859 136.347L93.2676 148.377Z" />
               <path
                 d="M144.74 119.419C147.415 113.491 149.182 107.055 149.859 100.307L105.776 109.682V91.6588L144.739 83.3789C147.413 77.4506 149.181 71.0144 149.858 64.2662L105.775 73.6339V8.81581C99.0202 12.6085 93.0213 17.6569 88.1448 23.6119V77.3826L70.5145 81.13V0C63.7596 3.79134 57.7607 8.84114 52.8842 14.7961V84.876L13.4363 93.2585C10.7621 99.1869 8.99311 105.623 8.31456 112.371L52.8842 102.9V125.597L5.11911 135.747C2.44491 141.676 0.677216 148.112 0 154.86L49.9967 144.235C54.0667 143.389 57.5647 140.982 59.839 137.671L69.0081 124.077V124.075C69.9599 122.668 70.5145 120.972 70.5145 119.146V99.1522L88.1448 95.4048V131.452L144.739 119.417L144.74 119.419Z"
               />
@@ -898,14 +871,11 @@
                 </div>
                 <div data-svg-wrapper="true" class="absolute left-[3px] top-[3px]">
                   <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="white" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </div>
               </div>
-              <div class="text-text dark:text-text-invert h-10 w-[258px] text-right text-sm font-normal leading-[23px]">
-                10 دورات مدفوعة
-              </div>
+              <div class="text-text dark:text-text-invert h-10 w-[258px] text-right text-sm font-normal leading-[23px]">10 دورات مدفوعة</div>
             </div>
           </div>
           <div class="flex h-10 flex-col items-end justify-center gap-5 md:self-stretch">
@@ -916,14 +886,11 @@
                 </div>
                 <div data-svg-wrapper="true" class="absolute left-[3px] top-[3px]">
                   <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="white" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </div>
               </div>
-              <div class="text-text dark:text-text-invert h-10 w-[258px] text-right text-sm font-normal leading-[23px]">
-                10 شهادات
-              </div>
+              <div class="text-text dark:text-text-invert h-10 w-[258px] text-right text-sm font-normal leading-[23px]">10 شهادات</div>
             </div>
           </div>
           <div class="flex h-10 flex-col items-end justify-center gap-5 md:self-stretch">
@@ -934,14 +901,11 @@
                 </div>
                 <div data-svg-wrapper="true" class="absolute left-[3px] top-[3px]">
                   <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="white" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </div>
               </div>
-              <div class="text-text dark:text-text-invert h-10 w-[258px] text-right text-sm font-normal leading-[23px]">
-                أي عدد من الدورات المجانية
-              </div>
+              <div class="text-text dark:text-text-invert h-10 w-[258px] text-right text-sm font-normal leading-[23px]">أي عدد من الدورات المجانية</div>
             </div>
           </div>
           <div class="flex h-10 flex-col items-end justify-center gap-5 md:self-stretch">
@@ -952,14 +916,11 @@
                 </div>
                 <div data-svg-wrapper="true" class="absolute left-[3px] top-[3px]">
                   <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="white" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </div>
               </div>
-              <div class="text-text dark:text-text-invert h-10 w-[258px] text-right text-sm font-normal leading-[23px]">
-                تستهلك خلال 3 سنوات
-              </div>
+              <div class="text-text dark:text-text-invert h-10 w-[258px] text-right text-sm font-normal leading-[23px]">تستهلك خلال 3 سنوات</div>
             </div>
           </div>
         </div>
@@ -974,7 +935,7 @@
       </section>
 
       <section
-        class="shadow-[0px_4px_6px_-2px_rgba(16 24 40 0.03)] bg-primary-title xs:w-auto flex h-[503px] w-[300px] flex-col items-center justify-start gap-[26px] rounded-[20px] border border-zinc-300 p-[26px] dark:border-none sm:w-[374px]"
+        class="shadow-[0px_4px_6px_-2px_rgba(16 24 40 0.03)] bg-primary-title flex h-[503px] w-[300px] xs:w-auto flex-col items-center justify-start gap-[26px] rounded-[20px] border border-zinc-300 p-[26px] dark:border-none sm:w-[374px]"
       >
         <div class="flex flex-col items-center justify-start gap-[9px] py-0.5">
           <div class="flex flex-col items-center justify-start">
@@ -983,10 +944,8 @@
           <div class="flex items-baseline justify-center gap-1.5 text-white">
             <span class="text-sm font-bold capitalize">سنويًا</span>
             <div class="text-[42px] font-bold capitalize">5000</div>
-            <svg class="SAR size-7 dark:fill-white-2 fill-white" width="150" height="168" viewBox="0 0 150 168"
-                 fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M93.2676 148.377C90.5934 154.307 88.8257 160.742 88.1484 167.49L144.74 155.46C147.414 149.532 149.181 143.095 149.859 136.347L93.2676 148.377Z" />
+            <svg class="SAR size-7 dark:fill-white-2 fill-white" width="150" height="168" viewBox="0 0 150 168" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M93.2676 148.377C90.5934 154.307 88.8257 160.742 88.1484 167.49L144.74 155.46C147.414 149.532 149.181 143.095 149.859 136.347L93.2676 148.377Z" />
               <path
                 d="M144.74 119.419C147.415 113.491 149.182 107.055 149.859 100.307L105.776 109.682V91.6588L144.739 83.3789C147.413 77.4506 149.181 71.0144 149.858 64.2662L105.775 73.6339V8.81581C99.0202 12.6085 93.0213 17.6569 88.1448 23.6119V77.3826L70.5145 81.13V0C63.7596 3.79134 57.7607 8.84114 52.8842 14.7961V84.876L13.4363 93.2585C10.7621 99.1869 8.99311 105.623 8.31456 112.371L52.8842 102.9V125.597L5.11911 135.747C2.44491 141.676 0.677216 148.112 0 154.86L49.9967 144.235C54.0667 143.389 57.5647 140.982 59.839 137.671L69.0081 124.077V124.075C69.9599 122.668 70.5145 120.972 70.5145 119.146V99.1522L88.1448 95.4048V131.452L144.739 119.417L144.74 119.419Z"
               />
@@ -1003,14 +962,11 @@
                 </div>
                 <div data-svg-wrapper="true" class="absolute left-[3px] top-[3px]">
                   <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="#6639C6" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="#6639C6" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </div>
               </div>
-              <div class="h-10 w-[258px] text-right text-sm font-normal leading-[23px] text-neutral-50">عدد 200 متدرب و
-                مسؤول على لوحة المتابعة المباشرة
-              </div>
+              <div class="h-10 w-[258px] text-right text-sm font-normal leading-[16px] text-neutral-50">عدد 200 متدرب و مسؤول على لوحة المتابعة المباشرة</div>
             </div>
           </div>
           <div class="flex h-10 flex-col items-end justify-center gap-5 md:self-stretch">
@@ -1021,14 +977,11 @@
                 </div>
                 <div data-svg-wrapper="true" class="absolute left-[3px] top-[3px]">
                   <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="#6639C6" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="#6639C6" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </div>
               </div>
-              <div class="h-10 w-[258px] text-right text-sm font-normal leading-[23px] text-neutral-50">عدد 200 متدرب و
-                مسؤول على لوحة المتابعة المباشرة
-              </div>
+              <div class="h-10 w-[258px] text-right text-sm font-normal leading-[16px] text-neutral-50">عدد 200 متدرب و مسؤول على لوحة المتابعة المباشرة</div>
             </div>
           </div>
           <div class="flex h-10 flex-col items-end justify-center gap-5 md:self-stretch">
@@ -1039,14 +992,11 @@
                 </div>
                 <div data-svg-wrapper="true" class="absolute left-[3px] top-[3px]">
                   <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="#6639C6" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="#6639C6" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </div>
               </div>
-              <div class="h-10 w-[258px] text-right text-sm font-normal leading-[23px] text-neutral-50">عدد 200 متدرب و
-                مسؤول على لوحة المتابعة المباشرة
-              </div>
+              <div class="h-10 w-[258px] text-right text-sm font-normal leading-[16px] text-neutral-50">عدد 200 متدرب و مسؤول على لوحة المتابعة المباشرة</div>
             </div>
           </div>
           <div class="flex h-10 flex-col items-end justify-center gap-5 md:self-stretch">
@@ -1057,14 +1007,11 @@
                 </div>
                 <div data-svg-wrapper="true" class="absolute left-[3px] top-[3px]">
                   <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="#6639C6" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="#6639C6" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </div>
               </div>
-              <div class="h-10 w-[258px] text-right text-sm font-normal leading-[23px] text-neutral-50">عدد 200 متدرب و
-                مسؤول على لوحة المتابعة المباشرة
-              </div>
+              <div class="h-10 w-[258px] text-right text-sm font-normal leading-[16px] text-neutral-50">عدد 200 متدرب و مسؤول على لوحة المتابعة المباشرة</div>
             </div>
           </div>
         </div>
@@ -1079,7 +1026,7 @@
       </section>
 
       <section
-        class="dark:bg-box-2 dark:border-sep/20 xs:w-auto flex h-[503px] w-[300px] flex-col items-center justify-start gap-[26px] rounded-[20px] border border-zinc-300 bg-white p-[26px] shadow-[0px_4px_6px_-2px_rgba(16,24,40,0.03)] sm:w-[374px]"
+        class="dark:bg-box-2 dark:border-sep/20 flex h-[503px] w-[300px] xs:w-auto  flex-col items-center justify-start gap-[26px] rounded-[20px] border border-zinc-300 bg-white p-[26px] shadow-[0px_4px_6px_-2px_rgba(16,24,40,0.03)] sm:w-[374px]"
       >
         <div class="flex flex-col items-center justify-start gap-[9px] py-0.5">
           <div class="flex flex-col items-center justify-start">
@@ -1088,10 +1035,8 @@
           <div class="text-primary-title dark:text-primary-title-2 flex items-baseline justify-center gap-1.5">
             <span class="text-sm font-bold capitalize">سنويًا</span>
             <div class="text-[42px] font-bold capitalize">10,000</div>
-            <svg class="SAR size-7 fill-primary-title dark:fill-primary-title-2" width="150" height="168"
-                 viewBox="0 0 150 168" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M93.2676 148.377C90.5934 154.307 88.8257 160.742 88.1484 167.49L144.74 155.46C147.414 149.532 149.181 143.095 149.859 136.347L93.2676 148.377Z" />
+            <svg class="SAR size-7 fill-primary-title dark:fill-primary-title-2" width="150" height="168" viewBox="0 0 150 168" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M93.2676 148.377C90.5934 154.307 88.8257 160.742 88.1484 167.49L144.74 155.46C147.414 149.532 149.181 143.095 149.859 136.347L93.2676 148.377Z" />
               <path
                 d="M144.74 119.419C147.415 113.491 149.182 107.055 149.859 100.307L105.776 109.682V91.6588L144.739 83.3789C147.413 77.4506 149.181 71.0144 149.858 64.2662L105.775 73.6339V8.81581C99.0202 12.6085 93.0213 17.6569 88.1448 23.6119V77.3826L70.5145 81.13V0C63.7596 3.79134 57.7607 8.84114 52.8842 14.7961V84.876L13.4363 93.2585C10.7621 99.1869 8.99311 105.623 8.31456 112.371L52.8842 102.9V125.597L5.11911 135.747C2.44491 141.676 0.677216 148.112 0 154.86L49.9967 144.235C54.0667 143.389 57.5647 140.982 59.839 137.671L69.0081 124.077V124.075C69.9599 122.668 70.5145 120.972 70.5145 119.146V99.1522L88.1448 95.4048V131.452L144.739 119.417L144.74 119.419Z"
               />
@@ -1108,14 +1053,11 @@
                 </div>
                 <div data-svg-wrapper="true" class="absolute left-[3px] top-[3px]">
                   <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="white" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </div>
               </div>
-              <div class="text-text dark:text-text-invert h-10 w-[258px] text-right text-sm font-normal leading-[23px]">
-                10 دورات مدفوعة
-              </div>
+              <div class="text-text dark:text-text-invert h-10 w-[258px] text-right text-sm font-normal leading-[23px]">10 دورات مدفوعة</div>
             </div>
           </div>
           <div class="flex h-10 flex-col items-end justify-center gap-5 md:self-stretch">
@@ -1126,14 +1068,11 @@
                 </div>
                 <div data-svg-wrapper="true" class="absolute left-[3px] top-[3px]">
                   <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="white" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </div>
               </div>
-              <div class="text-text dark:text-text-invert h-10 w-[258px] text-right text-sm font-normal leading-[23px]">
-                10 شهادات
-              </div>
+              <div class="text-text dark:text-text-invert h-10 w-[258px] text-right text-sm font-normal leading-[23px]">10 شهادات</div>
             </div>
           </div>
           <div class="flex h-10 flex-col items-end justify-center gap-5 md:self-stretch">
@@ -1144,14 +1083,11 @@
                 </div>
                 <div data-svg-wrapper="true" class="absolute left-[3px] top-[3px]">
                   <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="white" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </div>
               </div>
-              <div class="text-text dark:text-text-invert h-10 w-[258px] text-right text-sm font-normal leading-[23px]">
-                أي عدد من الدورات المجانية
-              </div>
+              <div class="text-text dark:text-text-invert h-10 w-[258px] text-right text-sm font-normal leading-[23px]">أي عدد من الدورات المجانية</div>
             </div>
           </div>
           <div class="flex h-10 flex-col items-end justify-center gap-5 md:self-stretch">
@@ -1162,14 +1098,11 @@
                 </div>
                 <div data-svg-wrapper="true" class="absolute left-[3px] top-[3px]">
                   <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="white" stroke-width="1.25"
-                          stroke-linecap="round" stroke-linejoin="round"></path>
+                    <path d="M10.3012 5.64844L6.45117 9.49844L4.70117 7.74844" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </div>
               </div>
-              <div class="text-text dark:text-text-invert h-10 w-[258px] text-right text-sm font-normal leading-[23px]">
-                تستهلك خلال 3 سنوات
-              </div>
+              <div class="text-text dark:text-text-invert h-10 w-[258px] text-right text-sm font-normal leading-[23px]">تستهلك خلال 3 سنوات</div>
             </div>
           </div>
         </div>
@@ -1186,9 +1119,8 @@
   </section>
   <!--Price Comparison END-->
 </main>
-
 <!-- FOOTER START -->
-<footer class="border-sep bg-box dark:bg-dark text-meta-light border-t py-6 text-center">
+<footer class="border-sep dark:border-sep/20 bg-box dark:bg-dark text-meta-light border-t py-6 text-center">
   <div class="container m-auto"></div>
   <!--  Keep flex row reverse because of the rtl and the order in the mobile screens -->
   <div
