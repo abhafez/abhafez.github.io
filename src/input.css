@@ -4,6 +4,13 @@
 @custom-variant light (&:where(.light, .light *));
 
 @font-face {
+  font-family: "Riyal";
+  src: url("./fonts/rial.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "PingAR+LT";
   src: url("./fonts/PingAR+LT-Hairline.otf") format("opentype");
   font-weight: 100;
