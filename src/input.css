@@ -74,6 +74,7 @@
 }
 
 @theme {
+  --breakpoint-xxs: 20rem;
   --breakpoint-xs: 30rem;
   --breakpoint-1300: 1300px;
   --beadkpoint-main: 1536px;
