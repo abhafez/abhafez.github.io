@@ -860,6 +860,9 @@
   .h-\[49px\] {
     height: 49px;
   }
+  .h-\[50px\] {
+    height: 50px;
+  }
   .h-\[51px\] {
     height: 51px;
   }
@@ -1001,6 +1004,9 @@
   .min-h-20 {
     min-height: calc(var(--spacing) * 20);
   }
+  .min-h-\[151px\] {
+    min-height: 151px;
+  }
   .min-h-\[359px\] {
     min-height: 359px;
   }
@@ -1132,6 +1138,9 @@
   }
   .w-\[47\.09px\] {
     width: 47.09px;
+  }
+  .w-\[50px\] {
+    width: 50px;
   }
   .w-\[56\.59px\] {
     width: 56.59px;
