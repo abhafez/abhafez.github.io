@@ -8,6 +8,18 @@
     <script src="src/js/jquery.js"></script>
     <script src="src/js/scripts.js" defer></script>
     <title>Aanaab</title>
+    <style>
+      /* Remove Safari arrow from details/summary */
+      details summary::-webkit-details-marker {
+        display: none;
+      }
+      details summary {
+        list-style: none;
+      }
+      details summary::marker {
+        display: none;
+      }
+    </style>
   </head>
   <body dir="rtl" class="light" data-theme-url="https://d2rboqy70y74sa.cloudfront.net/wp-content/themes/AanaabB2B-v2/src/">
     <!--Header Start-->
@@ -892,24 +904,6 @@
 
                 <!-- Buttons -->
                 <div class="flex items-center gap-2">
-                  <!-- PDF Preview Button -->
-                  <button
-                    class="preview-pdf-btn flex items-center justify-center gap-1 rounded-[32px] border border-[#D4D4D8] bg-white px-6 py-3.5 shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)] hover:bg-gray-50 dark:border-[#3B3B3B] dark:bg-[#1C1C1C] dark:hover:bg-[#2D2D2D]"
-                    onclick="document.getElementById('pdfPreviewModal').classList.remove('hidden')"
-                  >
-                    <img class="h-5 w-5" src="src/assets/images/icons/file-text.svg" alt="PDF Icon" />
-                    <span class="text-sm font-semibold text-zinc-900 dark:text-white">معاينة PDF</span>
-                  </button>
-
-                  <!-- Video Preview Button -->
-                  <button
-                    class="preview-video-btn flex items-center justify-center gap-1 rounded-[32px] border border-[#D4D4D8] bg-white px-6 py-3.5 shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)] hover:bg-gray-50 dark:border-[#3B3B3B] dark:bg-[#1C1C1C] dark:hover:bg-[#2D2D2D]"
-                    onclick="document.getElementById('videoPreviewModal').classList.remove('hidden')"
-                  >
-                    <img class="h-5 w-5" src="src/assets/images/icons/play.svg" alt="Play Icon" />
-                    <span class="text-sm font-semibold text-zinc-900 dark:text-white">معاينة 3د مجانية</span>
-                  </button>
-
                   <!-- Join Now Button -->
                   <button
                     class="join-now-btn outline-primary-title flex items-center justify-center gap-1 rounded-[32px] px-6 py-3.5 shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)] outline-2 outline-offset-[-2px] dark:bg-[#6639c6] dark:text-white dark:hover:bg-[#a882fb]"
@@ -1240,12 +1234,12 @@
           <!-- FAQ List -->
           <div class="flex w-full flex-col items-start justify-start gap-2.5">
             <!-- FAQ Item 1 -->
-            <details class="flex flex-col items-start justify-start gap-2.5 self-stretch rounded-[10px] bg-white py-5 outline-1 outline-offset-[-1px] outline-zinc-300 dark:bg-zinc-950 dark:outline-zinc-300/10">
-              <summary class="inline-flex cursor-pointer items-center justify-between self-stretch px-5">
-                <div class="relative h-[30px]">
+            <details class="flex flex-col items-start justify-start gap-2.5 self-stretch rounded-[10px] bg-white py-5 outline-1 outline-offset-[-1px] outline-zinc-300 dark:bg-zinc-950 dark:outline-zinc-300/10 list-none">
+              <summary class="inline-flex cursor-pointer items-center justify-between self-stretch px-5 list-none">
+                <div class="relative h-[30px] flex-1">
                   <span class="justify-start text-right text-base font-bold leading-[30px] text-zinc-600 dark:text-[#d2d2d4]"> هل هذه الدورة متاحة ضمن دورات المدارس؟ </span>
                 </div>
-                <div class="flex items-center justify-start gap-[7px]">
+                <div class="flex items-center justify-start gap-[7px] ms-2">
                   <img class="-rotate-90 ms-1 w-3" src="src/assets/images/icons/arrow.svg" />
                 </div>
               </summary>
@@ -1255,16 +1249,30 @@
 
             <!-- FAQ Item 2 -->
             <details class="flex flex-col items-start justify-start gap-2.5 self-stretch rounded-[10px] bg-white py-5 outline-1 outline-offset-[-1px] outline-zinc-300 dark:bg-zinc-950 dark:outline-zinc-300/10">
-              <summary class="inline-flex cursor-pointer items-center justify-between self-stretch px-5">
-                <div class="relative h-[30px]">
-                  <span class="justify-start text-right text-base font-bold leading-[30px] text-zinc-600 dark:text-[#d2d2d4]"> هل هذه الدورة متاحة ضمن دورات المدارس؟ </span>
+              <summary class="inline-flex cursor-pointer items-center justify-between self-stretch px-5 list-none">
+                <div class="relative h-[30px] flex-1">
+                  <span class="justify-start text-right text-base font-bold leading-[30px] text-zinc-600 dark:text-[#d2d2d4]"> ما هي مدة الدورة؟ </span>
                 </div>
-                <div class="flex items-center justify-start gap-[7px]">
+                <div class="flex items-center justify-start gap-[7px] ms-2">
                   <img class="-rotate-90 ms-1 w-3" src="src/assets/images/icons/arrow.svg" />
                 </div>
               </summary>
               <!-- FAQ Answer -->
-              <div class="px-5 py-3 text-right text-base font-medium leading-[30px] text-zinc-600 dark:text-[#d2d2d4]">نعم، هذه الدورة متاحة ضمن دورات المدارس. يمكنك التسجيل من خلال الموقع الرسمي.</div>
+              <div class="px-5 py-3 text-right text-base font-medium leading-[30px] text-zinc-600 dark:text-[#d2d2d4]">مدة الدورة 8 ساعات تدريبية مقسمة على 4 أيام.</div>
+            </details>
+
+            <!-- FAQ Item 3 -->
+            <details class="flex flex-col items-start justify-start gap-2.5 self-stretch rounded-[10px] bg-white py-5 outline-1 outline-offset-[-1px] outline-zinc-300 dark:bg-zinc-950 dark:outline-zinc-300/10">
+              <summary class="inline-flex cursor-pointer items-center justify-between self-stretch px-5 list-none">
+                <div class="relative h-[30px] flex-1">
+                  <span class="justify-start text-right text-base font-bold leading-[30px] text-zinc-600 dark:text-[#d2d2d4]"> هل يمكنني الحصول على شهادة إتمام الدورة؟ </span>
+                </div>
+                <div class="flex items-center justify-start gap-[7px] ms-2">
+                  <img class="-rotate-90 ms-1 w-3" src="src/assets/images/icons/arrow.svg" />
+                </div>
+              </summary>
+              <!-- FAQ Answer -->
+              <div class="px-5 py-3 text-right text-base font-medium leading-[30px] text-zinc-600 dark:text-[#d2d2d4]">نعم، سيتم إصدار شهادة إتمام الدورة بعد اجتياز الاختبار النهائي.</div>
             </details>
           </div>
         </section>
