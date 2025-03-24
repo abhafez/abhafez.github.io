@@ -890,184 +890,79 @@
                   <p class="text-nowrap justify-center text-right text-sm font-medium text-zinc-600 dark:text-neutral-50">700 ريال</p>
                 </div>
 
-                <!-- Button -->
-                <button
-                  class="join-now-btn outline-primary-title flex items-center justify-center gap-1 rounded-[32px] px-6 py-3.5 shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)] outline-2 outline-offset-[-2px] dark:bg-[#6639c6] dark:text-white dark:hover:bg-[#a882fb]"
-                >
-                  <span class="text-primary-title flex items-end justify-start gap-1.5 font-semibold dark:text-white dark:hover:text-white"> الانضمام الآن </span>
-                </button>
+                <!-- Buttons -->
+                <div class="flex items-center gap-2">
+                  <!-- PDF Preview Button -->
+                  <button
+                    class="preview-pdf-btn flex items-center justify-center gap-1 rounded-[32px] border border-[#D4D4D8] bg-white px-6 py-3.5 shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)] hover:bg-gray-50 dark:border-[#3B3B3B] dark:bg-[#1C1C1C] dark:hover:bg-[#2D2D2D]"
+                    onclick="document.getElementById('pdfPreviewModal').classList.remove('hidden')"
+                  >
+                    <img class="h-5 w-5" src="src/assets/images/icons/file-text.svg" alt="PDF Icon" />
+                    <span class="text-sm font-semibold text-zinc-900 dark:text-white">معاينة PDF</span>
+                  </button>
+
+                  <!-- Video Preview Button -->
+                  <button
+                    class="preview-video-btn flex items-center justify-center gap-1 rounded-[32px] border border-[#D4D4D8] bg-white px-6 py-3.5 shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)] hover:bg-gray-50 dark:border-[#3B3B3B] dark:bg-[#1C1C1C] dark:hover:bg-[#2D2D2D]"
+                    onclick="document.getElementById('videoPreviewModal').classList.remove('hidden')"
+                  >
+                    <img class="h-5 w-5" src="src/assets/images/icons/play.svg" alt="Play Icon" />
+                    <span class="text-sm font-semibold text-zinc-900 dark:text-white">معاينة 3د مجانية</span>
+                  </button>
+
+                  <!-- Join Now Button -->
+                  <button
+                    class="join-now-btn outline-primary-title flex items-center justify-center gap-1 rounded-[32px] px-6 py-3.5 shadow-[0px_2px_4px_0px_rgba(40,41,61,0.04)] outline-2 outline-offset-[-2px] dark:bg-[#6639c6] dark:text-white dark:hover:bg-[#a882fb]"
+                  >
+                    <span class="text-primary-title flex items-end justify-start gap-1.5 font-semibold dark:text-white dark:hover:text-white"> الانضمام الآن </span>
+                  </button>
+                </div>
               </div>
-              <div id="checkoutModal" class="checkoutModal hidden absolute z-50 top-[90%] lg:top-[80%] my-0 mx-auto max-w-[280px]">
-                <div class="relative w-[280px] rounded-lg bg-white p-4 shadow-lg">
-                  <div class="w-6 h-6 bg-white absolute -top-3 rounded rotate-45 inset-1/4 lg:inset-3/4"></div>
-                  <!-- Step 1: Payment Methods -->
-                  <div id="step1" class="step">
-                    <h2 class="mb-4 text-center text-base font-semibold text-[#321F6B] flex justify-between">
-                      <span>الدفع باستخدام</span>
-                      <button class="flex items-center justify-center gap-1" onclick="$(this).closest('.checkoutModal').addClass('hidden')">
-                        <img src="src/assets/images/icons/close.svg" alt="Close" class="h-4 w-4" />
-                      </button>
-                    </h2>
-                    <!-- Divider -->
-                    <div class="my-4 h-px bg-zinc-300"></div>
-                    <!-- Payment Methods -->
-                    <div class="space-y-4">
-                      <button data-method="apple-pay" class="flex h-10 w-full justify-center rounded-full bg-black p-3 py-0.5">
-                        <img src="src/assets/images/apple-pay.svg" alt="Apple Pay" class="inline-block" />
-                      </button>
-                      <button data-method="google-pay" class="flex h-10 w-full items-center justify-center rounded-full bg-[#e4e4e4] p-3 py-0.5">
-                        <img src="src/assets/images/g-pay.svg" alt="Google Pay" class="inline-block h-[60px]" />
-                      </button>
-                      <button data-method="visa-mastercard" class="flex h-10 w-full items-center justify-evenly rounded-full bg-[#e4e4e4] p-3 py-0.5">
-                        <img src="src/assets/images/visa.svg" alt="Visa" class="inline-block h-3.5" />
-                        <img src="src/assets/images/mada.png" alt="Mastercard" class="inline-block h-4" />
-                        <img src="src/assets/images/master-card.png" alt="Mastercard" class="inline-block h-5" />
-                      </button>
-                      <button data-method="tamara" class="flex h-10 w-full items-center justify-center rounded-full bg-[#e4e4e4] p-3 py-0.5">
-                        <img src="src/assets/images/tamara.svg" alt="Tamara" class="inline-block h-6" />
-                      </button>
-                      <button data-method="tabby" class="flex h-10 w-full items-center justify-center rounded-full bg-[#e4e4e4] p-3 py-0.5">
-                        <img src="src/assets/images/tabby.png" alt="Tabby" class="inline-block h-6" />
-                      </button>
-                    </div>
-                    <div class="my-4 h-px bg-zinc-300"></div>
-                    <div class="relative flex h-10 overflow-hidden rounded-lg bg-white px-2 outline-1 outline-offset-[-1px] outline-[#dbdce3]">
-                      <img src="src/assets/images/icons/ticket-discount.svg" alt="Discount" class="" />
-                      <input type="text" id="discountCode" placeholder="كود الخصم" class="w-full rounded-lg p-2" />
-                      <button id="applyDiscount" class="justify-start text-right text-sm font-bold text-[#6639c6] opacity-40">تفعيل</button>
-                    </div>
-                    <section id="summary" class="mt-4 hidden">
-                      <section class="inline-flex w-full flex-col items-start justify-start gap-4 self-stretch">
-                        <!-- Base Price -->
-                        <dl class="inline-flex items-center justify-between self-stretch">
-                          <dt class="justify-start text-right text-sm font-normal text-zinc-600">السعر الأساسى</dt>
-                          <dd class="justify-start text-right">
-                            <span class="text-sm font-normal text-black">$100</span>
-                            <span class="text-xs font-normal text-black">.00</span>
-                          </dd>
-                        </dl>
-    
-                        <!-- VAT -->
-                        <dl class="inline-flex items-center justify-between self-stretch">
-                          <dt class="justify-start text-right text-sm font-normal text-zinc-600">ضريبة القيمة المضافة (15%)</dt>
-                          <dd class="justify-start text-right">
-                            <span class="text-sm font-normal text-black">$15</span>
-                            <span class="text-xs font-normal text-black">.00</span>
-                          </dd>
-                        </dl>
-    
-                        <!-- Discount Coupon -->
-                        <dl class="inline-flex items-center justify-between self-stretch">
-                          <dt class="justify-start text-right text-sm font-normal text-[#20b486]">كوبون خصم</dt>
-                          <dd class="justify-start text-right">
-                            <span class="text-sm font-normal text-[#20b486]">$10</span>
-                            <span class="text-xs font-normal text-[#20b486]">.00</span>
-                            <span class="text-sm font-normal text-[#20b486]"> -</span>
-                          </dd>
-                        </dl>
-    
-                        <!-- Total Price -->
-                        <dl class="inline-flex items-center justify-between self-stretch">
-                          <dt class="justify-start text-right text-base font-bold text-[#311e6a]">الإجمالى</dt>
-                          <dd class="justify-start text-right">
-                            <span class="text-base font-bold text-[#311e6a]">$105</span>
-                            <span class="text-sm font-bold text-[#311e6a]">.00</span>
-                          </dd>
-                        </dl>
-                      </section>
-                    </section>
-                    <div class="mt-6 flex justify-end">
-                      <button id="nextStep1" class="rounded-lg bg-[#6639c6] p-3 text-white">التالي</button>
+
+              <!-- PDF Preview Modal -->
+              <div id="pdfPreviewModal" class="fixed inset-0 z-50 hidden">
+                <!-- <div class="fixed inset-0 bg-black bg-opacity-50"></div> -->
+                <div class="fixed left-1/2 top-1/2 z-50 w-full max-w-4xl -translate-x-1/2 -translate-y-1/2 transform">
+                  <div class="relative rounded-lg bg-white p-6 shadow-xl dark:bg-[#1C1C1C]">
+                    <button
+                      class="absolute left-4 top-4 flex items-center justify-center gap-1 rounded-full bg-zinc-100 p-2 hover:bg-zinc-200 dark:bg-[#2D2D2D] dark:hover:bg-[#3B3B3B]"
+                      onclick="document.getElementById('pdfPreviewModal').classList.add('hidden')"
+                    >
+                      <img src="src/assets/images/icons/close.svg" alt="Close" class="h-4 w-4" />
+                    </button>
+                    <h2 class="mb-6 text-center text-xl font-semibold text-zinc-900 dark:text-white">معاينة المحتوى</h2>
+                    <div class="aspect-video w-full">
+                      <iframe
+                        src="https://docs.google.com/viewer?url=https://example.com/sample.pdf&embedded=true"
+                        class="h-full w-full rounded-lg"
+                        frameborder="0"
+                        allowfullscreen
+                      ></iframe>
                     </div>
                   </div>
-    
-                  <!-- Step 2: Card Details -->
-                  <div id="step2" class="step hidden">
-                    <h2 class=" text-xl font-bold text-[#6639c6] flex justify-between">
-                      <span>الدفع باستخدام بطاقة</span>
-                      <button id="backToStep1">
-                        <img src="src/assets/images/icons/arrow.svg" />
-                      </button>
-                    </h2>
-                    <div class="self-stretch h-px bg-zinc-300 my-4"></div>
-                    <form id="cardForm">
-                      <div class="space-y-4">
-                        <input
-                          type="text"
-                          placeholder="اسم صاحب البطاقة"
-                          class="relative h-10 w-full overflow-hidden rounded-lg bg-zinc-100 p-2 outline-1 outline-offset-[-1px] outline-[#dbdce3]"
-                          required
-                        />
-                        <input type="text" placeholder="رقم البطاقة" class="relative h-10 w-full overflow-hidden rounded-lg bg-zinc-100 p-2 outline-1 outline-offset-[-1px] outline-[#dbdce3]" required />
-                        <div class="flex gap-4">
-                          <input
-                            type="text"
-                            placeholder="انتهاء (MM/YY)"
-                            class="relative h-10 w-1/2 overflow-hidden rounded-lg bg-zinc-100 p-2 outline-1 outline-offset-[-1px] outline-[#dbdce3] text-xs"
-                            required
-                          />
-                          <input type="text" placeholder="CVV" class="relative h-10 w-1/2 overflow-hidden rounded-lg bg-zinc-100 p-2 outline-1 outline-offset-[-1px] outline-[#dbdce3]" required />
-                        </div>
-                        <label class="flex items-center justify-center">
-                          <span class="text-center text-xs font-semibold text-[#6639c6]">بالاستمرار أنت توافق علي الشروط والاحكام</span>
-                        </label>
-                      </div>
-                      <div class="mt-6 flex justify-center gap-4">
-                        <!-- <button type="button" id="backStep2" class="rounded-lg bg-gray-300 p-3 text-gray-700">رجوع</button> -->
-                        <button type="submit" class="w-full rounded-lg bg-[#6639c6] p-3 text-white">الدفع الآن</button>
-                      </div>
-                      <div class="mt-6 inline-flex w-full items-center justify-center gap-3">
-                        <div class="inline-flex items-center justify-end gap-1.5">
-                          <div class="relative h-6 w-6 overflow-hidden">
-                            <img src="src/assets/images/icons/lock-01.svg" alt="Lock" class="h-[18px]" />
-                          </div>
-                          <p class="justify-start">
-                            <span class="text-xs font-bold text-zinc-600">دفع آمن و مضمون</span><span class="text-sm font-bold text-[#311e6a]"> </span
-                            ><span class="text-xs font-medium text-[#818182]">مشفر بواسطة SSL</span>
-                          </p>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-    
-                  <!-- Step 3: Success/Failure Message -->
-                  <div id="step3" class="step hidden">
-                    <div id="resultImg" class="mb-4 flex justify-center"></div>
-                    <h2 id="resultMessage" class="mb-4 text-center text-2xl font-extrabold"></h2>
-                    <div class="my-4 h-px bg-gray-300"></div>
-                    <section class="inline-flex w-full flex-col items-start justify-start gap-4 self-stretch">
-                      <!-- Order Details -->
-                      <dl class="inline-flex items-center justify-between self-stretch">
-                        <dt class="justify-start text-right text-sm font-normal text-[#808ea1]">رقم الطلب</dt>
-                        <dd class="justify-start text-right text-sm font-normal text-black">184440</dd>
-                      </dl>
-    
-                      <!-- Date Details -->
-                      <dl class="inline-flex items-center justify-between self-stretch">
-                        <dt class="justify-start text-right text-sm font-normal text-[#808ea1]">التاريخ</dt>
-                        <dd class="justify-start text-right text-sm font-normal text-black">2 فبراير 2025</dd>
-                      </dl>
-    
-                      <!-- Email Details -->
-                      <dl class="inline-flex items-center justify-between self-stretch">
-                        <dt class="justify-start text-right text-sm font-normal text-[#808ea1]">بريد الكتروني</dt>
-                        <dd class="justify-start text-right text-sm font-normal text-black">hebanabil452@gmail.com</dd>
-                      </dl>
-    
-                      <!-- Payment Method Details -->
-                      <dl class="inline-flex items-center justify-between self-stretch">
-                        <dt class="justify-start text-right text-sm font-normal text-[#808ea1]">طريقة الدفع</dt>
-                        <dd class="inline-flex flex-col items-end justify-center">
-                          <div class="inline-flex items-center justify-center gap-2">
-                            <img src="src/assets/images/tamara.svg" alt="Visa" class="h-6" />
-                          </div>
-                        </dd>
-                      </dl>
-                    </section>
-                    <div class="mt-6 flex w-full flex-col justify-end gap-4">
-                      <button id="reorder" class="hidden w-full rounded-lg bg-[#6639c6] p-3 text-white">المحاولة مرة أخرى</button>
-                      <button id="print" class="hidden w-full rounded-lg bg-[#6639c6] p-3 text-white">طباعة</button>
-                      <!-- <button id="closeModal" class="rounded-lg bg-gray-300 p-3 text-gray-700">إغلاق</button> -->
+                </div>
+              </div>
+
+              <!-- Video Preview Modal -->
+              <div id="videoPreviewModal" class="fixed inset-0 z-50 hidden">
+                <div class="fixed inset-0 bg-black bg-opacity-50"></div>
+                <div class="fixed left-1/2 top-1/2 z-50 w-full max-w-4xl -translate-x-1/2 -translate-y-1/2 transform">
+                  <div class="relative rounded-lg bg-white p-6 shadow-xl dark:bg-[#1C1C1C]">
+                    <button
+                      class="absolute left-4 top-4 flex items-center justify-center gap-1 rounded-full bg-zinc-100 p-2 hover:bg-zinc-200 dark:bg-[#2D2D2D] dark:hover:bg-[#3B3B3B]"
+                      onclick="document.getElementById('videoPreviewModal').classList.add('hidden')"
+                    >
+                      <img src="src/assets/images/icons/close.svg" alt="Close" class="h-4 w-4" />
+                    </button>
+                    <h2 class="mb-6 text-center text-xl font-semibold text-zinc-900 dark:text-white">معاينة الفيديو</h2>
+                    <div class="aspect-video w-full">
+                      <iframe
+                        src="https://www.youtube.com/embed/VIDEO_ID"
+                        class="h-full w-full rounded-lg"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                      ></iframe>
                     </div>
                   </div>
                 </div>
@@ -1139,7 +1034,7 @@
                     <span class="text-meta-light justify-start text-center text-xs text-nowrap font-medium block lg:hidden"> 3 صفحات </span>
                   </div>
                   <div class="flex w-full items-center justify-end lg:w-1/4">
-                    <button class="preview-pdf-btn bg-primary-title outline-Primary lg:me-6 flex h-[31px] w-[164px] items-center justify-end gap-[5px] rounded-[30px] pl-4 pr-[11px] outline-1 outline-offset-[-1px]">
+                    <button class="preview-pdf-btn bg-primary-title outline-Primary lg:me-6 flex h-[31px] w-[164px] items-center justify-end gap-[5px] rounded-[30px] pl-4 pr-[11px] outline-1 outline-offset-[-1px]" onclick="document.getElementById('pdf-modal').classList.remove('hidden')">
                       <div class="relative h-[17px] w-4">
                         <img src="src/assets/images/icons/book-open-01 (1).svg" />
                       </div>
@@ -1161,7 +1056,7 @@
                     <time class="text-meta-light justify-start text-center text-xs text-nowrap font-medium block lg:hidden"> 2س 15د </time>
                   </div>
                   <div class="flex w-full items-center justify-end lg:w-1/4">
-                    <button class="preview-video-btn bg-primary-title outline-Primary lg:me-6 flex h-[31px] w-[164px] items-center justify-end gap-[5px] rounded-[30px] pl-4 pr-[11px] outline-1 outline-offset-[-1px]">
+                    <button class="preview-video-btn bg-primary-title outline-Primary lg:me-6 flex h-[31px] w-[164px] items-center justify-end gap-[5px] rounded-[30px] pl-4 pr-[11px] outline-1 outline-offset-[-1px]" onclick="document.getElementById('video-modal').classList.remove('hidden')">
                       <div class="relative h-[17px] w-4">
                         <img src="src/assets/images/icons/play.svg" />
                       </div>
@@ -1200,7 +1095,7 @@
                     <time class="text-meta-light justify-start text-center text-xs font-medium block lg:hidden"> 1س 30د </time>
                   </div>
                   <div class="flex w-full items-center justify-end lg:w-1/4">
-                    <button class="preview-video-btn bg-primary-title outline-Primary lg:me-6 flex h-[31px] w-[164px] items-center justify-end gap-[5px] rounded-[30px] pl-4 pr-[11px] outline-1 outline-offset-[-1px]">
+                    <button class="preview-video-btn bg-primary-title outline-Primary lg:me-6 flex h-[31px] w-[164px] items-center justify-end gap-[5px] rounded-[30px] pl-4 pr-[11px] outline-1 outline-offset-[-1px]" onclick="document.getElementById('video-modal').classList.remove('hidden')">
                       <div class="relative h-[17px] w-4">
                         <img src="src/assets/images/icons/play.svg" />
                       </div>
@@ -1895,19 +1790,6 @@
         }).removeClass('hidden');
       }
     </script>
-    <!-- Video Preview Modal -->
-    <div id="videoModal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black bg-opacity-50 w-1/2 mx-auto">
-      <div class="relative w-full max-w-4xl">
-        <button id="closeVideoModal" class="absolute -top-10 right-0 text-white hover:text-gray-300">
-          <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-        <div class="relative pt-[56.25%]">
-          <iframe id="videoFrame" class="absolute inset-0 h-full w-full" src="vv.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
     <script>
       $(document).ready(function() {
         // Video preview functionality
@@ -1936,19 +1818,6 @@
         });
       });
     </script>
-    <!-- PDF Preview Modal -->
-    <div id="pdfModal" class="fixed inset-0 z-50 hidden flex items-center justify-center bg-black bg-opacity-50 w-1/2 mx-auto">
-      <div class="relative w-full max-w-4xl">
-        <button id="closePdfModal" class="absolute -top-10 right-0 text-white hover:text-gray-300">
-          <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-        <div class="relative h-[80vh] w-full bg-white">
-          <iframe id="pdfFrame" class="h-full w-full" src="" frameborder="0"></iframe>
-        </div>
-      </div>
-    </div>
     <script>
       $(document).ready(function () {
         // Existing ready function code...
@@ -1994,6 +1863,22 @@
             <source src="vv.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
+        </div>
+      </div>
+    </div>
+    <!-- PDF Preview Modal -->
+    <div id="pdf-modal" class="hidden">
+      <div class="fixed inset-0 z-50 px-5 flex items-center justify-center bg-black/50 bg-opacity-40">
+        <div class="relative w-full max-w-2xl p-10 rounded-lg shadow-lg">
+          <div class="absolute top-14 right-14 p-2 cursor-pointer z-50">
+            <button onclick="document.getElementById('pdf-modal').classList.add('hidden')" class="text-black text-2xl mb-3 rounded-3xl bg-white p-2 hover:bg-gray-200 cursor-pointer hidden md:block">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+          <iframe src="https://www.orimi.com/pdf-test.pdf" class="w-full h-[80vh]" frameborder="0"></iframe>
         </div>
       </div>
     </div>
