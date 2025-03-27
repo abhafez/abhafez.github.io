@@ -292,6 +292,9 @@
   .static {
     position: static;
   }
+  .sticky {
+    position: sticky;
+  }
   .inset-0 {
     inset: calc(var(--spacing) * 0);
   }
@@ -486,6 +489,9 @@
   }
   .z-50 {
     z-index: 50;
+  }
+  .z-60 {
+    z-index: 60;
   }
   .container {
     width: 100%;
@@ -2939,6 +2945,11 @@
       width: var(--container-md);
     }
   }
+  .sm\:max-w-3\/4 {
+    @media (width >= 40rem) {
+      max-width: calc(3/4 * 100%);
+    }
+  }
   .sm\:grid-cols-4 {
     @media (width >= 40rem) {
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -2997,6 +3008,11 @@
   .sm\:px-3\.5 {
     @media (width >= 40rem) {
       padding-inline: calc(var(--spacing) * 3.5);
+    }
+  }
+  .sm\:px-4 {
+    @media (width >= 40rem) {
+      padding-inline: calc(var(--spacing) * 4);
     }
   }
   .sm\:px-5 {
@@ -3135,6 +3151,11 @@
   .md\:h-fit {
     @media (width >= 48rem) {
       height: fit-content;
+    }
+  }
+  .md\:max-w-\[65\%\] {
+    @media (width >= 48rem) {
+      max-width: 65%;
     }
   }
   .md\:grid-cols-2 {
@@ -3494,6 +3515,11 @@
   .lg\:w-3xl {
     @media (width >= 64rem) {
       width: var(--container-3xl);
+    }
+  }
+  .lg\:w-10\/12 {
+    @media (width >= 64rem) {
+      width: calc(10/12 * 100%);
     }
   }
   .lg\:w-\[84\.83px\] {
@@ -3929,6 +3955,11 @@
       display: none;
     }
   }
+  .xl\:w-11\/12 {
+    @media (width >= 80rem) {
+      width: calc(11/12 * 100%);
+    }
+  }
   .xl\:grid-cols-3 {
     @media (width >= 80rem) {
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -4199,13 +4230,6 @@
       outline-color: color-mix(in oklab, var(--color-zinc-300) 10%, transparent);
     }
   }
-  .dark\:placeholder\:text-red-100 {
-    &:where(.dark, .dark *) {
-      &::placeholder {
-        color: var(--color-red-100);
-      }
-    }
-  }
   .dark\:placeholder\:text-white {
     &:where(.dark, .dark *) {
       &::placeholder {
@@ -4340,6 +4364,11 @@
       &:where(.dark, .dark *) {
         background-color: var(--color-box-2);
       }
+    }
+  }
+  .\[\&_span\]\:text-text {
+    & span {
+      color: var(--color-text);
     }
   }
   .\[\&_span\]\:text-white {
