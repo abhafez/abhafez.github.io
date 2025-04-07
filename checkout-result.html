@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" class="light dark:bg-dark" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/output.css" />
+    <script src="src/js/jquery.js"></script>
+    <script src="src/js/scripts.js" defer></script>
+    <title>Aanaab - checkout</title>
+  </head>
+  <body dir="rtl" class="light" data-theme-url="https://d2rboqy70y74sa.cloudfront.net/wp-content/themes/AanaabB2B-v2/src/">
+    <!--Header Start-->
+    <header class="border-sep bg-box dark:bg-dark dark:border-sep/20 text-meta-light flex h-20 items-center justify-between border-b px-5">
+      <nav class="border-Sep inline-flex w-full items-center justify-between self-stretch px-4 py-4 lg:px-14" aria-label="Checkout navigation">
+        <!-- Logo/Brand Section -->
+        <div class="logo-section min-h-11">
+          <a href="/" class="logo-link min-h-11 inline-flex w-32 items-center justify-start" aria-label="Return to homepage">
+            <div class="min-h-11 inline-flex w-24 items-center justify-center rounded-[40px] lg:w-32 lg:px-5">
+              <img src="src/assets/images/logo/logo.svg" alt="Aanaab" class="h-full w-full" />
+            </div>
+          </a>
+        </div>
+
+        <!-- Back Button -->
+        <a href="/" class="text-meta hover:text-primary flex items-center gap-2 transition-colors" aria-label="Go back">
+          <span>الرجوع</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="rotate-180"
+          >
+            <path d="m9 18 6-6-6-6" />
+          </svg>
+        </a>
+      </nav>
+    </header>
+    <!--Header End -->
+
+    <main class="dark:bg-dark bg-box min-h-[calc(100vh-130px)]">
+      <section class="flex min-h-[calc(100vh-130px)] justify-center bg-zinc-100">
+        <div class="flex w-full flex-col items-center gap-10 p-8 pt-14 lg:w-1/3">
+
+          <!-- Fail -->
+          <!-- <div class="inline-flex flex-col items-center justify-start gap-2.5 self-stretch">
+            <img src="src/assets/images/icons/fail.svg" alt="Aanaab" class="mb-4 h-20 w-20" />
+            <div class="justify-start self-stretch text-center text-2xl font-extrabold text-[#ff2d55]">لم يتم الدفع</div>
+          </div> -->
+
+          <!-- Success -->
+          <div class="inline-flex items-center justify-start gap-4">
+            <div class="relative h-[100px] w-[100px] overflow-hidden rounded-lg bg-white outline-1 outline-offset-[-1px] outline-[#dbdce3]">
+              <img class="h-[101px] w-[148px] border-b border-black border-opacity-10" src="src/assets/images/cart-item.png" />
+            </div>
+            <div class="inline-flex flex-1 flex-col items-end justify-start gap-[13px]">
+              <div class="flex flex-col items-end justify-center gap-2.5 self-stretch">
+                <div class="justify-start text-right text-base font-normal text-zinc-600">تنمية مهارات الإتيكيت الوظيفي في المؤسسات التعليمية</div>
+              </div>
+              <div class="justify-start self-stretch text-right text-base font-bold text-[#311e6a]">$20.00</div>
+            </div>
+          </div>
+          <div class="flex w-full flex-col items-center gap-10 p-4 lg:w-1/3">
+            <div class="inline-flex flex-col items-center justify-start gap-2.5 self-stretch">
+              <img src="src/assets/images/icons/success.svg" alt="Aanaab" class="mb-4 h-20 w-20" />
+              <div class="justify-start self-stretch text-center text-2xl font-extrabold text-[#20b486]">تم الدفع بنجاح</div>
+            </div>
+          </div>
+          <div class="inline-flex flex-col items-start justify-start gap-4 self-stretch">
+            <div class="inline-flex items-center self-stretch">
+              <div class="w-1/3 justify-start text-right text-sm font-normal text-[#808ea1] lg:w-1/4">رقم الطلب</div>
+              <div class="w-[401px] justify-start text-right text-sm font-normal text-black">184440</div>
+            </div>
+            <div class="inline-flex items-center self-stretch">
+              <div class="w-1/3 justify-start text-right text-sm font-normal text-[#808ea1] lg:w-1/4">التاريخ</div>
+              <div class="w-[400px] justify-start text-right text-sm font-normal text-black">2 فبراير 2025</div>
+            </div>
+            <div class="inline-flex items-center self-stretch">
+              <div class="w-1/3 justify-start text-right text-sm font-normal text-[#808ea1] lg:w-1/4">بريد الكتروني</div>
+              <div class="w-[401px] justify-start text-right text-sm font-normal text-black">hebanabil452@gmail.com</div>
+            </div>
+            <div class="inline-flex items-center self-stretch">
+              <div class="w-1/3 justify-start text-right text-sm font-normal text-[#808ea1] lg:w-1/4">طريقة الدفع</div>
+              <div class="inline-flex justify-start">
+                <img src="src/assets/images/tamara.svg" alt="Aanaab" class="" />
+              </div>
+            </div>
+            <div class="inline-flex items-center justify-between self-stretch bg-white p-2.5">
+              <div class="justify-start text-right text-base font-bold text-[#311e6a]">$40.00</div>
+              <div class="justify-start text-right text-base font-bold text-[#311e6a]">الاجمالى</div>
+            </div>
+          </div>
+          <div class="inline-flex flex-col items-start justify-start gap-2.5 self-stretch">
+            <div class="inline-flex items-center justify-center gap-2 self-stretch rounded-lg bg-[#6639c6] px-2 pt-[17px] pb-4">
+              <button class="justify-start text-right  text-base font-bold text-white">أبدأ الدورة</button>
+            </div>
+            <div class="inline-flex items-center justify-center gap-2 self-stretch rounded-lg px-2 pt-[17px] pb-4 outline outline-1 outline-offset-[-1px] outline-[#6639c6]">
+              <button class="justify-start text-right  text-base font-bold text-[#6639c6]">شهاداتى</button>
+            </div>
+            <div class="inline-flex items-center justify-center gap-2 self-stretch rounded-lg px-2 pt-[17px] pb-4 outline outline-1 outline-offset-[-1px] outline-[#6639c6]">
+              <button class="justify-start text-right  text-base font-bold text-[#6639c6]">الصفحة الرئيسية</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER START -->
+    <footer class="border-sep dark:border-sep/20 bg-box dark:bg-dark text-meta-light border-t py-6 px-5 text-center">
+      <div class="inline-flex w-full items-center justify-between px-4 lg:px-14">
+        <div class="flex h-8 w-[69.07px] items-center justify-center gap-[5.63px] pt-[5.07px]">
+          <img src="src/assets/images/footer_logo.svg" alt="Aanaab" class="h-full w-full" />
+        </div>
+        <div class="justify-start text-center text-xs font-normal leading-normal text-[#818182]">جميع الحقوق محفوظة © منصة أعناب</div>
+      </div>
+    </footer>
+    <!-- FOOTER END -->
+  </body>
+</html>
