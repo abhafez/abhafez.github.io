@@ -46,31 +46,43 @@
 
     <main class="dark:bg-dark bg-box min-h-[calc(100vh-130px)]">
       <section class="flex min-h-[calc(100vh-130px)] justify-center bg-zinc-100">
-        <div class="flex w-full flex-col items-center gap-10 p-8 pt-14 lg:w-1/3">
+        <div class="flex w-full flex-col items-center gap-6 p-8 pt-14 lg:w-1/3">
+          <!-- Random success/fail message -->
+          <div id="payment-status">
+            <script>
+              // Generate random boolean
+              const isSuccess = Math.random() < 0.5;
 
-          <!-- Fail -->
-          <!-- <div class="inline-flex flex-col items-center justify-start gap-2.5 self-stretch">
-            <img src="src/assets/images/icons/fail.svg" alt="Aanaab" class="mb-4 h-20 w-20" />
-            <div class="justify-start self-stretch text-center text-2xl font-extrabold text-[#ff2d55]">لم يتم الدفع</div>
-          </div> -->
-
-          <!-- Success -->
-          <div class="inline-flex items-center justify-start gap-4">
-            <div class="relative h-[100px] w-[100px] overflow-hidden rounded-lg bg-white outline-1 outline-offset-[-1px] outline-[#dbdce3]">
-              <img class="h-[101px] w-[148px] border-b border-black border-opacity-10" src="src/assets/images/cart-item.png" />
-            </div>
-            <div class="inline-flex flex-1 flex-col items-end justify-start gap-[13px]">
-              <div class="flex flex-col items-end justify-center gap-2.5 self-stretch">
-                <div class="justify-start text-right text-base font-normal text-zinc-600">تنمية مهارات الإتيكيت الوظيفي في المؤسسات التعليمية</div>
-              </div>
-              <div class="justify-start self-stretch text-right text-base font-bold text-[#311e6a]">$20.00</div>
-            </div>
-          </div>
-          <div class="flex w-full flex-col items-center gap-10 p-4 lg:w-1/3">
+              if (isSuccess) {
+                document.write(`
+                  <div class="inline-flex items-center justify-start gap-4">
+                    <div class="relative h-[100px] w-[100px] overflow-hidden rounded-lg bg-white outline-1 outline-offset-[-1px] outline-[#dbdce3]">
+                      <img class="h-[101px] w-[148px] border-b border-black border-opacity-10" src="src/assets/images/cart-item.png" />
+                    </div>
+                    <div class="inline-flex flex-1 flex-col items-end justify-start gap-[13px]">
+                      <div class="flex flex-col items-end justify-center gap-2.5 self-stretch">
+                        <div class="justify-start text-right text-base font-normal text-zinc-600">تنمية مهارات الإتيكيت الوظيفي في المؤسسات التعليمية</div>
+                      </div>
+                      <div class="justify-start self-stretch text-right text-base font-bold text-[#311e6a]">$20.00</div>
+                    </div>
+                  </div>
+                  <div class="w-full border-t border-gray-200 my-6"></div>
+                  <div class="flex w-full flex-col items-center gap-10 p-4">
             <div class="inline-flex flex-col items-center justify-start gap-2.5 self-stretch">
               <img src="src/assets/images/icons/success.svg" alt="Aanaab" class="mb-4 h-20 w-20" />
               <div class="justify-start self-stretch text-center text-2xl font-extrabold text-[#20b486]">تم الدفع بنجاح</div>
             </div>
+          </div>
+                `);
+              } else {
+                document.write(`
+                  <div class="inline-flex flex-col items-center justify-start gap-2.5 self-stretch">
+                    <img src="src/assets/images/icons/fail.svg" alt="Aanaab" class="mb-4 h-20 w-20" />
+                    <div class="justify-start self-stretch text-center text-2xl font-extrabold text-[#ff2d55]">لم يتم الدفع</div>
+                  </div>
+                `);
+              }
+            </script>
           </div>
           <div class="inline-flex flex-col items-start justify-start gap-4 self-stretch">
             <div class="inline-flex items-center self-stretch">
@@ -98,13 +110,13 @@
           </div>
           <div class="inline-flex flex-col items-start justify-start gap-2.5 self-stretch">
             <div class="inline-flex items-center justify-center gap-2 self-stretch rounded-lg bg-[#6639c6] px-2 pt-[17px] pb-4">
-              <button class="justify-start text-right  text-base font-bold text-white">أبدأ الدورة</button>
+              <button class="justify-start text-right text-base font-bold text-white">أبدأ الدورة</button>
             </div>
             <div class="inline-flex items-center justify-center gap-2 self-stretch rounded-lg px-2 pt-[17px] pb-4 outline outline-1 outline-offset-[-1px] outline-[#6639c6]">
-              <button class="justify-start text-right  text-base font-bold text-[#6639c6]">شهاداتى</button>
+              <button class="justify-start text-right text-base font-bold text-[#6639c6]">شهاداتى</button>
             </div>
             <div class="inline-flex items-center justify-center gap-2 self-stretch rounded-lg px-2 pt-[17px] pb-4 outline outline-1 outline-offset-[-1px] outline-[#6639c6]">
-              <button class="justify-start text-right  text-base font-bold text-[#6639c6]">الصفحة الرئيسية</button>
+              <button class="justify-start text-right text-base font-bold text-[#6639c6]">الصفحة الرئيسية</button>
             </div>
           </div>
         </div>
