@@ -214,7 +214,11 @@ const moreButton = document.getElementById("more-button");
 const moreMenu = document.getElementById("more-menu");
 
 // Exclude 'more' button from the buttons array
-let buttons = Array.from(container.querySelectorAll(".nav-button")).filter((btn) => btn !== moreButton);
+let buttons = [];
+
+if (container && moreButton) {
+  buttons = Array.from(container.querySelectorAll(".nav-button")).filter((btn) => btn !== moreButton);
+}
 
 function updateMenu() {
   // Reset: move all buttons back into container (except moreContainer)
@@ -223,8 +227,8 @@ function updateMenu() {
     btn.style.display = "flex"; // Ensure all buttons are visible initially
   });
 
-  const containerWidth = container.clientWidth;
-  const moreButtonWidth = moreContainer.offsetWidth;
+  const containerWidth = container?.clientWidth;
+  const moreButtonWidth = moreContainer?.offsetWidth;
   let availableWidth = containerWidth - moreButtonWidth - 16; // 16px margin
 
   let totalWidth = 0;
@@ -267,7 +271,7 @@ function debounce(func, wait = 100) {
 const debouncedUpdateMenu = debounce(updateMenu, 150); // 150ms delay feels smooth
 
 // Toggle dropdown on click
-moreButton.addEventListener("click", () => {
+moreButton?.addEventListener("click", () => {
   moreMenu.classList.toggle("hidden");
 });
 
@@ -280,7 +284,9 @@ document.addEventListener("click", (e) => {
 
 // Resize observer using debounced version
 const resizeObserver = new ResizeObserver(debouncedUpdateMenu);
-resizeObserver.observe(container);
+if (resizeObserver && container) {
+  resizeObserver.observe(container);
+}
 
 // Initial load and resize handling
 window.addEventListener("load", updateMenu);
@@ -307,7 +313,7 @@ function openTab(evt, tabId) {
 // Slider
 // ###################################
 
-$(document).ready(init);
+$(document).ready(initializeSlider);
 
 var slideDuration = 3000;
 var transitionDuration = 500; // faster transition for smoother feel
@@ -331,7 +337,7 @@ var autoplay;
 var currentIndex = 0;
 var isAnimating = false;
 
-function init() {
+function initializeSlider() {
   itemWidth();
   eventClickPrev();
   eventClickNext();
@@ -480,3 +486,110 @@ function eventClickDot() {
     autoplay = setInterval(moveRight, slideDuration);
   });
 }
+$(document).ready(function() {
+  // Handle navigation with view transitions
+  if (document.startViewTransition) {
+    document.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const href = link.getAttribute('href');
+        
+        // Start view transition
+        const transition = document.startViewTransition(() => {
+          window.location.href = href;
+        });
+      });
+    });
+  }
+
+  // Handle join-now-btn clicks
+  $(document).on('click', '.join-now-btn', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    const button = $(this);
+    const modalId = button.data('modal-id');
+    const modal = $("#" + modalId);
+    const buttonRect = button[0].getBoundingClientRect();
+    
+    modal.css({
+      top: buttonRect.bottom + window.scrollY + 10,
+      left: buttonRect.left + window.scrollX
+    });
+    
+    modal.removeClass("hidden");
+  });
+
+  // Close modal when clicking outside
+  $(document).on('click', function(e) {
+    if (!$(e.target).closest('.hidden.absolute').length && !$(e.target).closest('.join-now-btn').length) {
+      $('.hidden.absolute').addClass("hidden");
+    }
+  });
+
+  // Close modal when clicking close button
+  $(document).on('click', '.close-modal', function() {
+    const modal = $(this).closest('.hidden.absolute');
+    modal.addClass("hidden");
+  });
+
+  // Accordion functionality
+  $(".unit-header").click(function () {
+    $(this).siblings(".unit-content").slideToggle();
+    $(".unit-content").not($(this).siblings(".unit-content")).slideUp();
+  });
+});
+
+/* View Transition Styles with Slower Animations */
+const style = document.createElement('style');
+style.innerHTML = `
+  @keyframes fade-in {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  
+  @keyframes fade-out {
+    from { opacity: 1; transform: scale(1); }
+    to { opacity: 0; transform: scale(0.9); }
+  }
+  
+  @keyframes slide-from-right {
+    from { transform: translateX(150px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+  
+  @keyframes slide-to-left {
+    from { transform: translateX(0); opacity: 1; }
+    to { transform: translateX(-150px); opacity: 0; }
+  }
+  
+  ::view-transition-old(root) {
+    animation: 700ms cubic-bezier(0.4, 0, 1, 1) both fade-out, 1000ms cubic-bezier(0.4, 0, 0.3, 1) both slide-to-left;
+  }
+  
+  ::view-transition-new(root) {
+    animation: 700ms cubic-bezier(0, 0, 0.3, 1) 150ms both fade-in, 1000ms cubic-bezier(0.4, 0, 0.3, 1) both slide-from-right;
+  }
+  
+  .nav-link {
+    view-transition-name: nav-link;
+    transition: all 0.6s ease;
+  }
+  
+  .nav-link:hover {
+    transform: translateX(-8px);
+    color: #6639c6;
+  }
+  
+  .course-title {
+    view-transition-name: course-title;
+  }
+  
+  .course-image {
+    view-transition-name: course-image;
+  }
+  
+  * {
+    transition: background-color 0.6s ease, color 0.6s ease, transform 0.6s ease;
+  }
+`;
+document.head.appendChild(style);
