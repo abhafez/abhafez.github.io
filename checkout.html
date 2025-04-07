@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" class="light dark:bg-dark" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/output.css" />
+    <script src="src/js/jquery.js"></script>
+    <script src="src/js/scripts.js" defer></script>
+    <title>Aanaab - checkout</title>
+  </head>
+  <body dir="rtl" class="light" data-theme-url="https://d2rboqy70y74sa.cloudfront.net/wp-content/themes/AanaabB2B-v2/src/">
+    <!--Header Start-->
+    <header class="border-sep bg-box dark:bg-dark dark:border-sep/20 text-meta-light flex h-20 items-center justify-between border-b px-5">
+      <nav class="border-Sep inline-flex w-full items-center justify-between self-stretch px-4 py-4 lg:px-14" aria-label="Checkout navigation">
+        <!-- Logo/Brand Section -->
+        <div class="logo-section min-h-11">
+          <a href="/" class="logo-link min-h-11 inline-flex w-32 items-center justify-start" aria-label="Return to homepage">
+            <div class="min-h-11 inline-flex w-24 items-center justify-center rounded-[40px] lg:w-32 lg:px-5">
+              <img src="src/assets/images/logo/logo.svg" alt="Aanaab" class="h-full w-full" />
+            </div>
+          </a>
+        </div>
+
+        <!-- Back Button -->
+        <a href="/" class="text-meta hover:text-primary flex items-center gap-2 transition-colors" aria-label="Go back">
+          <span>الرجوع</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="rotate-180"
+          >
+            <path d="m9 18 6-6-6-6" />
+          </svg>
+        </a>
+      </nav>
+    </header>
+    <!--Header End -->
+
+    <main class="dark:bg-dark bg-box min-h-[calc(100vh-130px)]">
+      <section class="grid min-h-[calc(100vh-130px)] grid-cols-1 lg:grid-cols-2">
+        <!-- Cart Review Section -->
+        <div class="flex flex-col items-end justify-start gap-[29px] self-stretch overflow-hidden bg-zinc-100 px-10 py-[54px] lg:px-20">
+          <div class="flex flex-col items-start justify-start gap-10 self-stretch">
+            <!-- Cart Header and Items -->
+            <div class="flex flex-col items-end justify-start gap-6 self-stretch">
+              <div class="self-stretch text-right text-xl font-bold text-[#311e6a]">قم بمراجعة سلة التسوق الخاصة بك</div>
+              <div class="flex flex-col items-start justify-start gap-6 self-stretch">
+                <!-- Cart Item -->
+                <div class="inline-flex items-center justify-start gap-4 self-stretch">
+                  <div class="relative h-[100px] w-[100px] overflow-hidden rounded-lg bg-white outline-1 outline-offset-[-1px] outline-[#dbdce3]">
+                    <img class="h-full w-full border-b border-black border-opacity-10" src="src/assets/images/cart-item.png" alt="Course thumbnail" />
+                  </div>
+                  <div class="inline-flex flex-1 flex-col items-start justify-start gap-[13px]">
+                    <div class="flex flex-col items-start justify-center gap-2.5 self-stretch">
+                      <div class="text-right text-base font-normal text-zinc-600">
+                        تنمية مهارات الإتيكيت الوظيفي<br />
+                        في المؤسسات التعليمية
+                      </div>
+                    </div>
+                    <div class="self-stretch text-right text-base font-bold text-[#311e6a]">$20.00</div>
+                  </div>
+                </div>
+              </div>
+              <div class="h-0 w-full outline-1 outline-offset-[-0.50px] outline-zinc-300"></div>
+            </div>
+
+            <!-- Discount Code Section -->
+            <div class="relative self-stretch overflow-hidden rounded-lg bg-white outline-1 outline-offset-[-1px] outline-[#dbdce3]">
+              <img src="src/assets/images/icons/ticket-discount.svg" alt="Discount ticket icon" class="absolute right-4 top-1/2 h-5 w-5 -translate-y-1/2" />
+              <input type="text" placeholder="كود الخصم" class="ps-10 w-full px-4 py-3 text-right text-base font-normal text-[#808ea1] focus:outline-none" />
+              <button class="absolute left-4 top-1/2 -translate-y-1/2 text-base font-bold text-[#6639c6] opacity-40 transition-opacity hover:opacity-100">تفعيل</button>
+            </div>
+
+            <!-- Price Summary Section -->
+            <div class="flex flex-col items-end justify-start gap-10 self-stretch">
+              <div class="flex flex-col items-end justify-start gap-6 self-stretch">
+                <div class="flex flex-col items-start justify-start gap-4 self-stretch">
+                  <div class="inline-flex items-center justify-between self-stretch">
+                    <div class="text-right text-sm font-normal text-[#808ea1]">السعر الأساسي</div>
+                    <div class="text-right text-sm font-normal text-black">$45.00</div>
+                  </div>
+                  <div class="inline-flex items-center justify-between self-stretch">
+                    <div class="text-right text-sm font-normal text-[#808ea1]">ضريبة القيمة المضافة(15%)</div>
+                    <div class="text-right text-sm font-normal text-black">$10.00</div>
+                  </div>
+                  <div class="inline-flex items-center justify-between self-stretch">
+                    <div class="text-right text-base font-bold text-[#311e6a]">الاجمالى</div>
+                    <div class="text-right text-base font-bold text-[#311e6a]">$40.00</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-col items-end justify-start gap-[29px] self-stretch overflow-hidden bg-white px-10 py-[54px] lg:px-20">
+          <div class="inline-flex flex-col items-end justify-start gap-[27px] self-stretch">
+            <div class="justify-start self-stretch text-right text-2xl font-extrabold text-zinc-900">إنهاء عملية الشراء</div>
+            <div class="justify-start self-stretch text-right text-base font-bold text-[#311e6a]">اختر طريقة الدفع</div>
+          </div>
+          <!-- Payment Method Tabs -->
+          <div class="flex w-full flex-col gap-6">
+            <!-- Tab Headers -->
+            <div class="flex w-full flex-wrap justify-between gap-4">
+              <button
+                class="inline-flex h-[55px] flex-col items-center justify-center rounded-[10px] bg-[#f6f1ff] px-[13px] py-3 outline-1 outline-offset-[-1px] outline-zinc-900"
+                id="tab-1"
+                onclick="switchTab(1)"
+              >
+                <img src="src/assets/images/visa.png" alt="Credit Card" class="ml-2 w-full" />
+              </button>
+              <button
+                class="inline-flex h-[55px] w-[90px] flex-col items-center justify-center rounded-[10px] px-[13px] py-3 outline-1 outline-offset-[-1px] outline-zinc-900"
+                id="tab-2"
+                onclick="switchTab(2)"
+              >
+                <img src="src/assets/images/apple-pay-black.svg" alt="Apple Pay" class="w-full" />
+              </button>
+              <button
+                class="inline-flex h-[55px] w-[90px] flex-col items-center justify-center rounded-[10px] px-[13px] py-3 outline-1 outline-offset-[-1px] outline-zinc-900"
+                id="tab-3"
+                onclick="switchTab(3)"
+              >
+                <img src="src/assets/images/g-pay.svg" alt="PayPal" class="w-full" />
+              </button>
+              <button
+                class="inline-flex h-[55px] w-[90px] flex-col items-center justify-center rounded-[10px] px-[13px] py-3 outline-1 outline-offset-[-1px] outline-zinc-900"
+                id="tab-4"
+                onclick="switchTab(4)"
+              >
+                <img src="src/assets/images/tamara.svg" alt="Bank Transfer" class="w-full" />
+              </button>
+              <button
+                class="inline-flex h-[55px] w-[90px] flex-col items-center justify-center rounded-[10px] px-[13px] py-3 outline-1 outline-offset-[-1px] outline-zinc-900"
+                id="tab-5"
+                onclick="switchTab(5)"
+              >
+                <img src="src/assets/images/tabby.png" alt="STC Pay" class="w-full" />
+              </button>
+            </div>
+
+            <!-- Tab Contents -->
+            <div class="tab-content">
+              <!-- Credit Card Tab -->
+              <div class="tab-pane" id="content-1">
+                <div class="mb-6 w-[606px] justify-start text-right text-base font-medium text-[#6639c6]">بطاقة الائتمان / الخصم</div>
+                <form class="flex flex-col gap-6">
+                  <div class="flex flex-col gap-2">
+                    <label class="text-right text-sm font-medium text-zinc-900">رقم البطاقة <span class="text-red-500">*</span></label>
+                    <input type="text" class="w-full rounded-lg border border-gray-300 px-4 py-3 text-right" placeholder="اكتب رقم البطاقه" required />
+                  </div>
+                  <div class="flex gap-4">
+                    <div class="flex-1">
+                      <label class="text-right text-sm font-medium text-zinc-900">تاريخ أنتهاء الصلاحية</label>
+                      <input type="text" class="w-full rounded-lg border border-gray-300 px-4 py-3 text-right" placeholder="MM/YY" />
+                    </div>
+                    <div class="flex-1">
+                      <label class="text-right text-sm font-medium text-zinc-900">CVV</label>
+                      <input type="text" class="w-full rounded-lg border border-gray-300 px-4 py-3 text-right" placeholder="CVV" />
+                    </div>
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <div class="inline-flex items-center justify-start gap-2">
+                      <input
+                        type="checkbox"
+                        id="terms"
+                        class="relative h-5 w-5 cursor-pointer appearance-none rounded-[5px] bg-[#415be7]/10 outline-[1.25px] outline-offset-[-1.25px] outline-[#6639c6] checked:before:absolute checked:before:left-1/2 checked:before:top-1/2 checked:before:h-[6px] checked:before:w-[10px] checked:before:-translate-x-1/2 checked:before:-translate-y-1/2 checked:before:rotate-[315deg] checked:before:border-[1.5px] checked:before:border-t-0 checked:before:border-r-0 checked:before:border-[#6639c6] checked:before:content-['']"
+                        required
+                      />
+                      <label for="terms" class="flex cursor-pointer gap-2">
+                        <div class="justify-start">
+                          <span class="text-sm font-normal text-zinc-600">تاكيد عملية الدفع يعني موافقتك علي </span>
+                          <span class="text-sm font-normal text-zinc-600 underline">الشروط والاحكام</span>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+              <!-- Apple Pay Tab -->
+              <div class="tab-pane hidden" id="content-2">
+                <div class="py-10 text-center">
+                  <div class="inline-flex flex-col items-start justify-start gap-2.5 py-[22px]">
+                    <div class="w-[606px] justify-start text-center text-base font-medium text-[#6639c6]">الدفع عن طريق اّبل باى</div>
+                    <div class="w-[606px] justify-start text-center text-base font-medium text-[#311e6a]">سيتم إعادة توجيهنا إلى موقع Apple</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- g-pay Tab -->
+              <div class="tab-pane hidden" id="content-3">
+                <div class="py-10 text-center">
+                  <div class="inline-flex flex-col items-start justify-start gap-2.5 py-[22px]">
+                    <div class="w-[606px] justify-start text-center text-base font-medium text-[#6639c6]">الدفع عن طريق g-pay</div>
+                    <div class="w-[606px] justify-start text-center text-base font-medium text-[#311e6a]">سيتم إعادة توجيهنا إلى موقع g-pay</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- tamara Tab -->
+              <div class="tab-pane hidden" id="content-4">
+                <div class="py-10 text-center">
+                  <div class="inline-flex flex-col items-start justify-start gap-2.5 py-[22px]">
+                    <div class="w-[606px] justify-start text-center text-base font-medium text-[#6639c6]">الدفع عن طريق تمارا</div>
+                    <div class="w-[606px] justify-start text-center text-base font-medium text-[#311e6a]">سيتم إعادة توجيهنا إلى موقع تمارا</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- tabby Tab -->
+              <div class="tab-pane hidden" id="content-5">
+                <div class="py-10 text-center">
+                  <div class="inline-flex flex-col items-start justify-start gap-2.5 py-[22px]">
+                    <div class="w-[606px] justify-start text-center text-base font-medium text-[#6639c6]">الدفع عن طريق tabby</div>
+                    <div class="w-[606px] justify-start text-center text-base font-medium text-[#311e6a]">سيتم إعادة توجيهنا إلى موقع tabby</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Payment Button -->
+            <button class="self-stretch rounded-lg bg-[#6639c6] py-4 text-base font-bold text-white transition-colors hover:bg-[#5330a5]">أدفع ألان | 40 $</button>
+            <div class="inline-flex flex-col items-start justify-start gap-3 self-stretch">
+              <div class="inline-flex items-center justify-start gap-3">
+                <div class="relative h-6 w-6 overflow-hidden">
+                  <img src="src/assets/images/icons/lock-01.svg" alt="Secure Payment" class="h-full w-full" />
+                </div>
+                <div class="justify-start text-sm font-bold text-[#311e6a]">الدفع الآمن - مشفر بواسطة SSL</div>
+              </div>
+              <div class="justify-start self-stretch text-right text-sm font-normal leading-relaxed text-[#808ea1]">ضمان أمان بياناتك المالية والشخصية أثناء كل معاملة.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER START -->
+    <footer class="border-sep dark:border-sep/20 bg-box dark:bg-dark text-meta-light border-t py-6 px-5 text-center">
+      <div class="inline-flex items-center justify-between w-full px-4 lg:px-14">
+        <div class="flex h-8 w-[69.07px] items-center justify-center gap-[5.63px] pt-[5.07px]">
+          <img src="src/assets/images/footer_logo.svg" alt="Aanaab" class="h-full w-full" />
+        </div>
+        <div class="justify-start text-center  text-xs font-normal leading-normal text-[#818182]">جميع الحقوق محفوظة © منصة أعناب</div>
+      </div>
+    </footer>
+    <!-- FOOTER END -->
+    <script>
+      function switchTab(tabNumber) {
+        // Remove active class and border from all tabs
+        document.querySelectorAll('[id^="tab-"]').forEach((tab) => {
+          tab.classList.remove("outline-[#6639c6]", "bg-[#f6f1ff]", "outline-[3px]");
+          tab.classList.add("outline-1", "outline-zinc-900");
+        });
+
+        // Add active class and border to selected tab
+        const selectedTab = document.getElementById(`tab-${tabNumber}`);
+        selectedTab.classList.add("outline-[#6639c6]", "bg-[#f6f1ff]", "outline-[3px]");
+        selectedTab.classList.remove("outline-1", "outline-zinc-900");
+
+        // Hide all tab contents
+        document.querySelectorAll(".tab-pane").forEach((content) => {
+          content.classList.add("hidden");
+        });
+
+        // Show selected tab content
+        const selectedContent = document.getElementById(`content-${tabNumber}`);
+        selectedContent.classList.remove("hidden");
+      }
+
+      // Initialize first tab as active
+      window.addEventListener("load", () => switchTab(1));
+    </script>
+  </body>
+</html>

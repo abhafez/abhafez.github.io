@@ -214,11 +214,7 @@ const moreButton = document.getElementById("more-button");
 const moreMenu = document.getElementById("more-menu");
 
 // Exclude 'more' button from the buttons array
-let buttons = [];
-
-if (container && moreButton) {
-  buttons = Array.from(container.querySelectorAll(".nav-button")).filter((btn) => btn !== moreButton);
-}
+let buttons = Array.from(container.querySelectorAll(".nav-button")).filter((btn) => btn !== moreButton);
 
 function updateMenu() {
   // Reset: move all buttons back into container (except moreContainer)
@@ -227,8 +223,8 @@ function updateMenu() {
     btn.style.display = "flex"; // Ensure all buttons are visible initially
   });
 
-  const containerWidth = container?.clientWidth;
-  const moreButtonWidth = moreContainer?.offsetWidth;
+  const containerWidth = container.clientWidth;
+  const moreButtonWidth = moreContainer.offsetWidth;
   let availableWidth = containerWidth - moreButtonWidth - 16; // 16px margin
 
   let totalWidth = 0;
@@ -271,7 +267,7 @@ function debounce(func, wait = 100) {
 const debouncedUpdateMenu = debounce(updateMenu, 150); // 150ms delay feels smooth
 
 // Toggle dropdown on click
-moreButton?.addEventListener("click", () => {
+moreButton.addEventListener("click", () => {
   moreMenu.classList.toggle("hidden");
 });
 
@@ -284,9 +280,7 @@ document.addEventListener("click", (e) => {
 
 // Resize observer using debounced version
 const resizeObserver = new ResizeObserver(debouncedUpdateMenu);
-if (resizeObserver && container) {
-  resizeObserver.observe(container);
-}
+resizeObserver.observe(container);
 
 // Initial load and resize handling
 window.addEventListener("load", updateMenu);
@@ -313,7 +307,7 @@ function openTab(evt, tabId) {
 // Slider
 // ###################################
 
-$(document).ready(initializeSlider);
+$(document).ready(init);
 
 var slideDuration = 3000;
 var transitionDuration = 500; // faster transition for smoother feel
@@ -337,7 +331,7 @@ var autoplay;
 var currentIndex = 0;
 var isAnimating = false;
 
-function initializeSlider() {
+function init() {
   itemWidth();
   eventClickPrev();
   eventClickNext();
