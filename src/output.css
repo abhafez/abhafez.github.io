@@ -597,6 +597,9 @@
   .my-14 {
     margin-block: calc(var(--spacing) * 14);
   }
+  .my-40 {
+    margin-block: calc(var(--spacing) * 40);
+  }
   .ms-1 {
     margin-inline-start: calc(var(--spacing) * 1);
   }
@@ -3634,6 +3637,11 @@
   .md\:justify-between {
     @media (width >= 48rem) {
       justify-content: space-between;
+    }
+  }
+  .md\:justify-end {
+    @media (width >= 48rem) {
+      justify-content: flex-end;
     }
   }
   .md\:gap-4 {
