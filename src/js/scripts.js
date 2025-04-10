@@ -149,6 +149,25 @@ if ($(".anb-accordion").length) {
 document.addEventListener("DOMContentLoaded", function () {
   document.body.addEventListener("touchstart", playVideo);
 
+  const searchInput = document.querySelector('input[placeholder="البحث"]');
+  const clearButton = document.getElementById("clearSearch");
+
+  // Handle input changes
+  searchInput.addEventListener("input", function () {
+    if (this.value) {
+      clearButton.classList.remove("hidden");
+    } else {
+      clearButton.classList.add("hidden");
+    }
+  });
+
+  // Handle clear button click
+  clearButton.addEventListener("click", function () {
+    searchInput.value = "";
+    this.classList.add("hidden");
+    searchInput.focus();
+  });
+
   function playVideo() {
     const video = document.getElementById("myVideo");
     if (video.playing) {
@@ -486,14 +505,14 @@ function eventClickDot() {
     autoplay = setInterval(moveRight, slideDuration);
   });
 }
-$(document).ready(function() {
+$(document).ready(function () {
   // Handle navigation with view transitions
   if (document.startViewTransition) {
-    document.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', e => {
+    document.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", (e) => {
         e.preventDefault();
-        const href = link.getAttribute('href');
-        
+        const href = link.getAttribute("href");
+
         // Start view transition
         const transition = document.startViewTransition(() => {
           window.location.href = href;
@@ -503,32 +522,32 @@ $(document).ready(function() {
   }
 
   // Handle join-now-btn clicks
-  $(document).on('click', '.join-now-btn', function(e) {
+  $(document).on("click", ".join-now-btn", function (e) {
     e.preventDefault();
     e.stopPropagation();
     const button = $(this);
-    const modalId = button.data('modal-id');
+    const modalId = button.data("modal-id");
     const modal = $("#" + modalId);
     const buttonRect = button[0].getBoundingClientRect();
-    
+
     modal.css({
       top: buttonRect.bottom + window.scrollY + 10,
-      left: buttonRect.left + window.scrollX
+      left: buttonRect.left + window.scrollX,
     });
-    
+
     modal.removeClass("hidden");
   });
 
   // Close modal when clicking outside
-  $(document).on('click', function(e) {
-    if (!$(e.target).closest('.hidden.absolute').length && !$(e.target).closest('.join-now-btn').length) {
-      $('.hidden.absolute').addClass("hidden");
+  $(document).on("click", function (e) {
+    if (!$(e.target).closest(".hidden.absolute").length && !$(e.target).closest(".join-now-btn").length) {
+      $(".hidden.absolute").addClass("hidden");
     }
   });
 
   // Close modal when clicking close button
-  $(document).on('click', '.close-modal', function() {
-    const modal = $(this).closest('.hidden.absolute');
+  $(document).on("click", ".close-modal", function () {
+    const modal = $(this).closest(".hidden.absolute");
     modal.addClass("hidden");
   });
 
@@ -540,7 +559,7 @@ $(document).ready(function() {
 });
 
 /* View Transition Styles with Slower Animations */
-const style = document.createElement('style');
+const style = document.createElement("style");
 style.innerHTML = `
   @keyframes fade-in {
     from { opacity: 0; transform: scale(0.9); }

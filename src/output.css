@@ -396,6 +396,12 @@
   .top-\[3px\] {
     top: 3px;
   }
+  .top-\[6\.77px\] {
+    top: 6.77px;
+  }
+  .top-\[8\.23px\] {
+    top: 8.23px;
+  }
   .top-\[18px\] {
     top: 18px;
   }
@@ -428,6 +434,9 @@
   }
   .right-16 {
     right: calc(var(--spacing) * 16);
+  }
+  .right-full {
+    right: 100%;
   }
   .-bottom-6 {
     bottom: calc(var(--spacing) * -6);
@@ -462,8 +471,14 @@
   .left-7\/12 {
     left: calc(7/12 * 100%);
   }
+  .left-\[3\.25px\] {
+    left: 3.25px;
+  }
   .left-\[3px\] {
     left: 3px;
+  }
+  .left-\[16\.66px\] {
+    left: 16.66px;
   }
   .left-\[22px\] {
     left: 22px;
@@ -491,6 +506,9 @@
   }
   .left-\[150px\] {
     left: 150px;
+  }
+  .left-full {
+    left: 100%;
   }
   .z-0 {
     z-index: 0;
@@ -760,10 +778,6 @@
     width: calc(var(--spacing) * 40);
     height: calc(var(--spacing) * 40);
   }
-  .size-52 {
-    width: calc(var(--spacing) * 52);
-    height: calc(var(--spacing) * 52);
-  }
   .size-\[560px\] {
     width: 560px;
     height: 560px;
@@ -825,6 +839,12 @@
   }
   .h-60 {
     height: calc(var(--spacing) * 60);
+  }
+  .h-\[9\.54px\] {
+    height: 9.54px;
+  }
+  .h-\[12\.46px\] {
+    height: 12.46px;
   }
   .h-\[14\.70px\] {
     height: 14.70px;
@@ -903,9 +923,6 @@
   }
   .h-\[60px\] {
     height: 60px;
-  }
-  .h-\[67px\] {
-    height: 67px;
   }
   .h-\[74\.15px\] {
     height: 74.15px;
@@ -1042,14 +1059,8 @@
   .min-h-40 {
     min-height: calc(var(--spacing) * 40);
   }
-  .min-h-52 {
-    min-height: calc(var(--spacing) * 52);
-  }
   .min-h-\[151px\] {
     min-height: 151px;
-  }
-  .min-h-\[265px\] {
-    min-height: 265px;
   }
   .min-h-\[359px\] {
     min-height: 359px;
@@ -1144,8 +1155,17 @@
   .w-72 {
     width: calc(var(--spacing) * 72);
   }
+  .w-\[6\.09px\] {
+    width: 6.09px;
+  }
   .w-\[11\.38px\] {
     width: 11.38px;
+  }
+  .w-\[13\.41px\] {
+    width: 13.41px;
+  }
+  .w-\[13px\] {
+    width: 13px;
   }
   .w-\[16\.25px\] {
     width: 16.25px;
@@ -1234,6 +1254,9 @@
   .w-\[148px\] {
     width: 148px;
   }
+  .w-\[161px\] {
+    width: 161px;
+  }
   .w-\[162px\] {
     width: 162px;
   }
@@ -1273,6 +1296,9 @@
   .w-\[344px\] {
     width: 344px;
   }
+  .w-\[379px\] {
+    width: 379px;
+  }
   .w-\[400px\] {
     width: 400px;
   }
@@ -1287,9 +1313,6 @@
   }
   .w-\[524px\] {
     width: 524px;
-  }
-  .w-\[895px\] {
-    width: 895px;
   }
   .w-auto {
     width: auto;
@@ -1333,6 +1356,12 @@
   .min-w-5 {
     min-width: calc(var(--spacing) * 5);
   }
+  .min-w-6 {
+    min-width: calc(var(--spacing) * 6);
+  }
+  .min-w-10 {
+    min-width: calc(var(--spacing) * 10);
+  }
   .min-w-14 {
     min-width: calc(var(--spacing) * 14);
   }
@@ -1341,9 +1370,6 @@
   }
   .min-w-40 {
     min-width: calc(var(--spacing) * 40);
-  }
-  .min-w-52 {
-    min-width: calc(var(--spacing) * 52);
   }
   .min-w-\[100px\] {
     min-width: 100px;
@@ -1600,11 +1626,17 @@
   .gap-\[29px\] {
     gap: 29px;
   }
+  .gap-\[31px\] {
+    gap: 31px;
+  }
   .gap-\[41px\] {
     gap: 41px;
   }
   .gap-\[46px\] {
     gap: 46px;
+  }
+  .gap-\[50px\] {
+    gap: 50px;
   }
   .space-y-1 {
     :where(& > :not(:last-child)) {
@@ -1771,6 +1803,9 @@
   .border-\[\#6639c6\] {
     border-color: #6639c6;
   }
+  .border-\[\#923161\] {
+    border-color: #923161;
+  }
   .border-\[\#D4D4D8\] {
     border-color: #D4D4D8;
   }
@@ -1879,6 +1914,9 @@
   .bg-\[\#e4e4e4\] {
     background-color: #e4e4e4;
   }
+  .bg-\[\#f2d2e2\] {
+    background-color: #f2d2e2;
+  }
   .bg-\[\#f2f2f3\] {
     background-color: #f2f2f3;
   }
@@ -1980,6 +2018,9 @@
   }
   .fill-\[\#6639c6\]\/14 {
     fill: color-mix(in oklab, #6639c6 14%, transparent);
+  }
+  .fill-\[\#52525B\] {
+    fill: #52525B;
   }
   .fill-meta {
     fill: var(--color-meta);
@@ -2161,6 +2202,9 @@
   .py-\[60px\] {
     padding-block: 60px;
   }
+  .ps-4 {
+    padding-inline-start: calc(var(--spacing) * 4);
+  }
   .ps-5 {
     padding-inline-start: calc(var(--spacing) * 5);
   }
@@ -2200,9 +2244,6 @@
   .pt-6 {
     padding-top: calc(var(--spacing) * 6);
   }
-  .pt-8 {
-    padding-top: calc(var(--spacing) * 8);
-  }
   .pt-10 {
     padding-top: calc(var(--spacing) * 10);
   }
@@ -2236,6 +2277,9 @@
   .pb-0 {
     padding-bottom: calc(var(--spacing) * 0);
   }
+  .pb-0\.5 {
+    padding-bottom: calc(var(--spacing) * 0.5);
+  }
   .pb-1 {
     padding-bottom: calc(var(--spacing) * 1);
   }
@@ -2266,6 +2310,9 @@
   .pb-14 {
     padding-bottom: calc(var(--spacing) * 14);
   }
+  .pb-15 {
+    padding-bottom: calc(var(--spacing) * 15);
+  }
   .pb-24 {
     padding-bottom: calc(var(--spacing) * 24);
   }
@@ -2292,6 +2339,15 @@
   }
   .text-start {
     text-align: start;
+  }
+  .font-\[\'Ping_AR\'\] {
+    font-family: 'Ping AR';
+  }
+  .font-\[\'Ping_Ar\'\] {
+    font-family: 'Ping Ar';
+  }
+  .font-\[\'SF_Pro_Text\'\] {
+    font-family: 'SF Pro Text';
   }
   .font-\[Riyal\] {
     font-family: Riyal;
@@ -2536,8 +2592,14 @@
   .text-\[\#18181B\] {
     color: #18181B;
   }
+  .text-\[\#561636\] {
+    color: #561636;
+  }
   .text-\[\#818182\] {
     color: #818182;
+  }
+  .text-\[\#923161\] {
+    color: #923161;
   }
   .text-\[\#d2a8ff\] {
     color: #d2a8ff;
@@ -2648,6 +2710,12 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+  .caret-black {
+    caret-color: var(--color-black);
+  }
+  .caret-meta {
+    caret-color: var(--color-meta);
+  }
   .accent-primary-title {
     accent-color: var(--color-primary-title);
   }
@@ -2656,6 +2724,9 @@
   }
   .opacity-50 {
     opacity: 50%;
+  }
+  .opacity-70 {
+    opacity: 70%;
   }
   .bg-blend-color {
     background-blend-mode: color;
@@ -2727,12 +2798,19 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1.25px;
   }
+  .outline-\[1\.50px\] {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1.50px;
+  }
   .outline-\[3px\] {
     outline-style: var(--tw-outline-style);
     outline-width: 3px;
   }
   .outline-offset-\[-0\.50px\] {
     outline-offset: -0.50px;
+  }
+  .outline-offset-\[-0\.75px\] {
+    outline-offset: -0.75px;
   }
   .outline-offset-\[-1\.25px\] {
     outline-offset: -1.25px;
@@ -2748,6 +2826,9 @@
   }
   .outline-\[\#6639c6\]\/30 {
     outline-color: color-mix(in oklab, #6639c6 30%, transparent);
+  }
+  .outline-\[\#923161\] {
+    outline-color: #923161;
   }
   .outline-\[\#D4D4D8\] {
     outline-color: #D4D4D8;
@@ -2827,6 +2908,16 @@
   .ease-out {
     --tw-ease: var(--ease-out);
     transition-timing-function: var(--ease-out);
+  }
+  .group-\[\.has-value\]\:fill-white {
+    &:is(:where(.group):is(.has-value) *) {
+      fill: var(--color-white);
+    }
+  }
+  .placeholder\:text-meta {
+    &::placeholder {
+      color: var(--color-meta);
+    }
   }
   .placeholder\:text-meta-100 {
     &::placeholder {
@@ -3103,6 +3194,21 @@
   .has-\[\:checked\]\:text-zinc-600 {
     &:has(*:is(:checked)) {
       color: var(--color-zinc-600);
+    }
+  }
+  .has-\[input\:not\(\:placeholder-shown\)\]\:block {
+    &:has(*:is(input:not(:placeholder-shown))) {
+      display: block;
+    }
+  }
+  .has-\[input\:not\(\:placeholder-shown\)\]\:bg-primary-title {
+    &:has(*:is(input:not(:placeholder-shown))) {
+      background-color: var(--color-primary-title);
+    }
+  }
+  .has-\[input\:not\(\:placeholder-shown\)\]\:fill-white {
+    &:has(*:is(input:not(:placeholder-shown))) {
+      fill: var(--color-white);
     }
   }
   .largest\:left-36 {
@@ -4004,11 +4110,6 @@
       grid-template-columns: repeat(8, minmax(0, 1fr));
     }
   }
-  .lg\:flex-col {
-    @media (width >= 64rem) {
-      flex-direction: column;
-    }
-  }
   .lg\:flex-row {
     @media (width >= 64rem) {
       flex-direction: row;
@@ -4655,6 +4756,13 @@
       }
     }
   }
+  .has-\[input\:not\(\:placeholder-shown\)\]\:\[\&_\#icon-search\]\:fill-white {
+    &:has(*:is(input:not(:placeholder-shown))) {
+      & #icon-search {
+        fill: var(--color-white);
+      }
+    }
+  }
   .\[\&_h6\]\:hover\:text-green\/60 {
     & h6 {
       &:hover {
@@ -4716,6 +4824,13 @@
     & li {
       &:where(.dark, .dark *) {
         color: var(--color-white);
+      }
+    }
+  }
+  .has-\[input\:not\(\:placeholder-shown\)\]\:\[\&_path\]\:fill-white {
+    &:has(*:is(input:not(:placeholder-shown))) {
+      & path {
+        fill: var(--color-white);
       }
     }
   }
