@@ -200,14 +200,14 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       // make click outside the modal close the modal
-      modal.addEventListener("click", function (e) {
-        if (e.target !== modal) {
-          const video = document.getElementById("modal-video");
-          video.pause();
-          modal.classList.add("hidden");
-          document.body.style.overflow = "auto";
-        }
-      });
+      // modal.addEventListener("click", function (e) {
+      //   if (e.target !== modal) {
+      //     const video = document.getElementById("modal-video");
+      //     video.pause();
+      //     modal.classList.add("hidden");
+      //     document.body.style.overflow = "auto";
+      //   }
+      // });
 
       // on click esc while modal is open close the modal and stop video
       document.addEventListener("keydown", function (e) {
