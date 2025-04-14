@@ -197,6 +197,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const video = document.getElementById("modal-video");
         video.pause();
         modal.classList.add("hidden");
+        // make page scrollable again
+        document.body.style.overflow = "auto";
       });
 
       // make click outside the modal close the modal
