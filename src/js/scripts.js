@@ -553,7 +553,7 @@ $(document).ready(function () {
     modal.addClass("hidden");
   });
 
-  // Accordion functionality
+  // // Accordion functionality
   $(".unit-header").click(function () {
     $(this).siblings(".unit-content").slideToggle();
     $(".unit-content").not($(this).siblings(".unit-content")).slideUp();
