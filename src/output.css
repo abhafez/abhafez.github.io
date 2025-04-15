@@ -100,11 +100,17 @@
     --default-mono-font-variation-settings: var(
       --font-mono--font-variation-settings
     );
+    --breakpoint-xxs: 20rem;
+    --breakpoint-xs: 30rem;
+    --breakpoint-1300: 1300px;
+    --beadkpoint-main: 1536px;
+    --breakpoint-largest: 1900px;
     --color-sep: #d4d4d8;
     --color-box: #f4f4f5;
     --color-wheat: #d2d2d4;
     --color-meta-light: #818182;
     --color-meta: #52525b;
+    --color-twitter: #1da1f2;
     --color-logo: #c78fff;
     --color-primary-title-2: #a983fc;
     --color-primary-title: #6639c6;
@@ -117,6 +123,7 @@
     --color-primary-600: #8b5cf6;
     --color-primary-700: #623fbe;
     --color-text: #311e6a;
+    --color-category-1: #441457;
     --color-text-invert: #fafafa;
     --color-meta-100: #d4d4d4;
     --color-meta-dark: #d2d2d5;
@@ -1121,6 +1128,9 @@
   .min-h-11 {
     min-height: calc(var(--spacing) * 11);
   }
+  .min-h-20 {
+    min-height: calc(var(--spacing) * 20);
+  }
   .min-h-40 {
     min-height: calc(var(--spacing) * 40);
   }
@@ -1426,6 +1436,9 @@
   }
   .max-w-20 {
     max-width: calc(var(--spacing) * 20);
+  }
+  .max-w-32 {
+    max-width: calc(var(--spacing) * 32);
   }
   .max-w-60 {
     max-width: calc(var(--spacing) * 60);
@@ -2258,6 +2271,9 @@
   .px-1 {
     padding-inline: calc(var(--spacing) * 1);
   }
+  .px-1\.5 {
+    padding-inline: calc(var(--spacing) * 1.5);
+  }
   .px-2 {
     padding-inline: calc(var(--spacing) * 2);
   }
@@ -2606,6 +2622,10 @@
   }
   .text-\[42px\] {
     font-size: 42px;
+  }
+  .leading-5 {
+    --tw-leading: calc(var(--spacing) * 5);
+    line-height: calc(var(--spacing) * 5);
   }
   .leading-6 {
     --tw-leading: calc(var(--spacing) * 6);
@@ -3275,6 +3295,13 @@
       }
     }
   }
+  .hover\:bg-primary-400 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-primary-400);
+      }
+    }
+  }
   .hover\:bg-primary-title\/10 {
     &:hover {
       @media (hover: hover) {
@@ -3329,6 +3356,13 @@
     &:hover {
       @media (hover: hover) {
         color: var(--color-primary-title);
+      }
+    }
+  }
+  .hover\:text-primary-title\/90 {
+    &:hover {
+      @media (hover: hover) {
+        color: color-mix(in oklab, var(--color-primary-title) 90%, transparent);
       }
     }
   }
@@ -3509,6 +3543,11 @@
       margin: auto;
     }
   }
+  .sm\:mx-2\.5 {
+    @media (width >= 40rem) {
+      margin-inline: calc(var(--spacing) * 2.5);
+    }
+  }
   .sm\:mx-5 {
     @media (width >= 40rem) {
       margin-inline: calc(var(--spacing) * 5);
@@ -3644,6 +3683,16 @@
       align-self: stretch;
     }
   }
+  .sm\:bg-primary-title {
+    @media (width >= 40rem) {
+      background-color: var(--color-primary-title);
+    }
+  }
+  .sm\:px-0 {
+    @media (width >= 40rem) {
+      padding-inline: calc(var(--spacing) * 0);
+    }
+  }
   .sm\:px-2 {
     @media (width >= 40rem) {
       padding-inline: calc(var(--spacing) * 2);
@@ -3662,6 +3711,11 @@
   .sm\:px-5 {
     @media (width >= 40rem) {
       padding-inline: calc(var(--spacing) * 5);
+    }
+  }
+  .sm\:py-0 {
+    @media (width >= 40rem) {
+      padding-block: calc(var(--spacing) * 0);
     }
   }
   .sm\:text-lg {
@@ -3917,6 +3971,12 @@
   .md\:text-\[42px\] {
     @media (width >= 48rem) {
       font-size: 42px;
+    }
+  }
+  .md\:leading-7 {
+    @media (width >= 48rem) {
+      --tw-leading: calc(var(--spacing) * 7);
+      line-height: calc(var(--spacing) * 7);
     }
   }
   .md\:leading-loose {
@@ -4700,6 +4760,12 @@
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
+  .dark\:border-t-0 {
+    &:where(.dark, .dark *) {
+      border-top-style: var(--tw-border-style);
+      border-top-width: 0px;
+    }
+  }
   .dark\:border-none {
     &:where(.dark, .dark *) {
       --tw-border-style: none;
@@ -4709,6 +4775,11 @@
   .dark\:border-\[\#4a4a4d\] {
     &:where(.dark, .dark *) {
       border-color: #4a4a4d;
+    }
+  }
+  .dark\:border-box-2 {
+    &:where(.dark, .dark *) {
+      border-color: var(--color-box-2);
     }
   }
   .dark\:border-sep\/20 {
@@ -4999,6 +5070,13 @@
       }
     }
   }
+  .\[\&_div\]\:dark\:text-white {
+    & div {
+      &:where(.dark, .dark *) {
+        color: var(--color-white);
+      }
+    }
+  }
   .\[\&_h6\]\:hover\:text-green\/60 {
     & h6 {
       &:hover {
@@ -5061,6 +5139,11 @@
       &:where(.dark, .dark *) {
         color: var(--color-white);
       }
+    }
+  }
+  .\[\&_path\]\:fill-primary-title {
+    & path {
+      fill: var(--color-primary-title);
     }
   }
   .\[\&_section\]\:w-full {
