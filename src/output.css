@@ -1473,8 +1473,17 @@
   .min-w-\[144px\] {
     min-width: 144px;
   }
+  .min-w-\[150px\] {
+    min-width: 150px;
+  }
+  .min-w-\[160px\] {
+    min-width: 160px;
+  }
   .min-w-\[164px\] {
     min-width: 164px;
+  }
+  .min-w-\[180px\] {
+    min-width: 180px;
   }
   .min-w-\[185px\] {
     min-width: 185px;
@@ -1916,11 +1925,17 @@
   .rounded-tr-\[76\.06px\] {
     border-top-right-radius: 76.06px;
   }
+  .rounded-br-\[20px\] {
+    border-bottom-right-radius: 20px;
+  }
   .rounded-br-\[72\.43px\] {
     border-bottom-right-radius: 72.43px;
   }
   .rounded-br-\[76\.06px\] {
     border-bottom-right-radius: 76.06px;
+  }
+  .rounded-bl-\[20px\] {
+    border-bottom-left-radius: 20px;
   }
   .rounded-bl-\[27px\] {
     border-bottom-left-radius: 27px;
@@ -3429,9 +3444,56 @@
       font-size: 64px;
     }
   }
+  .xxs\:container {
+    @media (width >= 20rem) {
+      width: 100%;
+      @media (width >= 1300px) {
+        max-width: 1300px;
+      }
+      @media (width >= 1900px) {
+        max-width: 1900px;
+      }
+      @media (width >= 20rem) {
+        max-width: 20rem;
+      }
+      @media (width >= 30rem) {
+        max-width: 30rem;
+      }
+      @media (width >= 40rem) {
+        max-width: 40rem;
+      }
+      @media (width >= 48rem) {
+        max-width: 48rem;
+      }
+      @media (width >= 64rem) {
+        max-width: 64rem;
+      }
+      @media (width >= 80rem) {
+        max-width: 80rem;
+      }
+      @media (width >= 96rem) {
+        max-width: 96rem;
+      }
+    }
+  }
+  .xxs\:m-auto {
+    @media (width >= 20rem) {
+      margin: auto;
+    }
+  }
   .xxs\:w-\[310px\] {
     @media (width >= 20rem) {
       width: 310px;
+    }
+  }
+  .xxs\:grid-cols-2 {
+    @media (width >= 20rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .xxs\:gap-5 {
+    @media (width >= 20rem) {
+      gap: calc(var(--spacing) * 5);
     }
   }
   .xs\:w-\[350px\] {
@@ -3686,6 +3748,11 @@
   .sm\:px-5 {
     @media (width >= 40rem) {
       padding-inline: calc(var(--spacing) * 5);
+    }
+  }
+  .sm\:px-\[30px\] {
+    @media (width >= 40rem) {
+      padding-inline: 30px;
     }
   }
   .sm\:text-lg {
