@@ -330,6 +330,18 @@ function openTab(evt, tabId) {
   document.getElementById(tabId).classList.remove("hidden");
   evt.currentTarget.classList.add("active-tab", "bg-primary-title");
 }
+
+// privacy policy tab
+function openTabInPrivacyPolicy(evt, tabId) {
+  const contents = document.querySelectorAll(".tab-content");
+  const buttons = document.querySelectorAll(".privacy-tab-btn");
+
+  contents.forEach((content) => content.classList.add("hidden"));
+  buttons.forEach((button) => button.classList.remove("active-tab", "text-white", "bg-primary-title"));
+  document.getElementById(tabId).classList.remove("hidden");
+
+  evt.currentTarget.classList.add("active-tab", "bg-primary-title", "text-white");
+}
 // ###################################
 // Slider
 // ###################################

@@ -232,7 +232,7 @@ input:focus-visible {
 }
 
 .text-clickable {
-    @apply hover:text-primary-title/90 cursor-pointer;
+    @apply hover: text-primary-title-title/90 cursor-pointer;
 }
 
 .course-card {
@@ -300,7 +300,7 @@ footer {
     }
 
     a {
-        @apply hover:text-primary-title;
+        @apply hover: text-primary-title-title;
     }
 
     svg:hover {
