@@ -2021,8 +2021,17 @@
   .bg-sep {
     background-color: var(--color-sep);
   }
+  .bg-special-blue {
+    background-color: var(--color-special-blue);
+  }
+  .bg-special-green {
+    background-color: var(--color-special-green);
+  }
   .bg-special-red {
     background-color: var(--color-special-red);
+  }
+  .bg-special-teal {
+    background-color: var(--color-special-teal);
   }
   .bg-teal-1 {
     background-color: var(--color-teal-1);
