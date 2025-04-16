@@ -107,10 +107,11 @@
     --color-meta-dark: #d2d2d5;
     --color-meta-light-2: #a1a1aa;
     --color-box-1: #242428;
-    --color-box-2: #242429;
-    --color-box-3: #27272a;
-    --color-dark: #131316;
-    --color-dark-2: #09090b;
+    --color-box-2: #361272;
+    --color-box-3: #40317d;
+    --color-dark: #220c45;
+    --color-dark-2: #220c45;
+    --color-special-red: #f3d3e3;
 
     --color-red-100: #b50929;
     --color-red-200: #923262;
@@ -125,6 +126,15 @@
     --color-teal-1: #a2dddf;
 
     --color-blue-1: #2f40ad;
+}
+
+.dark {
+    --color-placehoder: #9f93ff;
+    --color-special-red: #62183d;
+    --color-meta: #a094ff;
+    --color-meta-light: #a094ff;
+    --color-meta-light-2: #a094ff;
+    --color-box: #1A0934;
 }
 
 .container {
