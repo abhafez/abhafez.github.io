@@ -112,6 +112,9 @@
     --color-dark: #220c45;
     --color-dark-2: #220c45;
     --color-special-red: #f3d3e3;
+    --color-special-blue: #e3daf1;
+    --color-special-green: #dfeed7;
+    --color-special-teal: #a2dddf;
 
     --color-red-100: #b50929;
     --color-red-200: #923262;
@@ -131,6 +134,9 @@
 .dark {
     --color-placehoder: #9f93ff;
     --color-special-red: #62183d;
+    --color-special-blue: #361272;
+    --color-special-green: #1d3a31;
+    --color-special-teal: #1d5f7c;
     --color-meta: #a094ff;
     --color-meta-light: #a094ff;
     --color-meta-light-2: #a094ff;

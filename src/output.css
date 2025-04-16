@@ -5050,8 +5050,11 @@
   font-style: normal;
 }
 .dark {
-  --color-placeholder: #9f93ff;
+  --color-placehoder: #9f93ff;
   --color-special-red: #62183d;
+  --color-special-blue: #361272;
+  --color-special-green: #1d3a31;
+  --color-special-teal: #1d5f7c;
   --color-meta: #a094ff;
   --color-meta-light: #a094ff;
   --color-meta-light-2: #a094ff;
