@@ -626,3 +626,30 @@ style.innerHTML = `
   }
 `;
 document.head.appendChild(style);
+
+// Toggle between main and user menus in mobile screens
+document.addEventListener("DOMContentLoaded", function () {
+  const mobMainBtn = document.getElementById("mob-main-btn");
+  const mobUserBtn = document.getElementById("mob-user-btn");
+  const mobMainMenu = document.getElementById("mob-main-menu");
+  const mobUserMenu = document.getElementById("mob-user-menu");
+
+  // Function to toggle menu visibility
+  function toggleMenus(showMain) {
+    if (showMain) {
+      mobMainBtn.style.display = "flex";
+      mobMainMenu.style.display = "block";
+      mobUserBtn.style.display = "none";
+      mobUserMenu.style.display = "none";
+    } else {
+      mobMainBtn.style.display = "none";
+      mobMainMenu.style.display = "none";
+      mobUserBtn.style.display = "flex";
+      mobUserMenu.style.display = "block";
+    }
+  }
+
+  // Event listeners for buttons
+  mobMainBtn.addEventListener("click", () => toggleMenus(false));
+  mobUserBtn.addEventListener("click", () => toggleMenus(true));
+});
